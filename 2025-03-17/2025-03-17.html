@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title id="title"></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .section { margin-bottom: 20px; }
+        .wordclouds img { width: 300px; height: auto; margin: 10px; }
+
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Banner -->
+    <div id="banner" class="w-full">
+        <img src="/images/banner.jpg" alt="News Banner">
+    </div>
+    
+    <div id="title" class="w-full flex items-center" style="background-color: #fc4535;">
+      <a href="/index.html"><img src="/images/logo.jpg" alt="News Logo" class="h-auto"></a>
+      <div class="flex-grow text-center">
+          <h1 id="title_heading1" style="color:#1a6198;"></h1>
+          <h1 id="title_heading2" style="color:#1a6198;"></h1>
+      </div>
+    </div>
+
+    <div id="news-summary" class="section news-summary text-center">
+        <h2 id="news-summary-heading"></h2>
+        <iframe id="news-summary-iframe" width="100%" height="600px"></iframe>
+    </div>
+
+    <div id="wordclouds" class="section wordclouds text-center">
+        <h2 id="wordclouds-heading"></h2>
+        <table id="wordclouds-table" class="w-90% border-collapse mx-auto"></table>
+    </div>
+
+    <script>
+        // Save website's name in global JS variable
+        var websiteName = "News'n'Clues";
+        // Generate title heading with current date
+        var currentDate = '2025-03-17';
+
+        var title = `Aggregated News Summary`;
+        
+
+        // Generate title element
+        document.getElementById("title").innerHTML = `${title} - ${currentDate}`;
+
+        var titleHeading1 = document.getElementById("title_heading1")
+        titleHeading1.innerHTML = `${title}`;
+        titleHeading1.className = "text-4xl font-bold mb-4";
+
+        var titleHeading2 = document.getElementById("title_heading2")
+        titleHeading2.innerHTML = `${currentDate}`;
+        titleHeading2.className = "text-4xl font-bold mb-4";
+
+        // Generate news summary section
+        var newsSummaryHeading = document.getElementById("news-summary-heading");
+        newsSummaryHeading.innerHTML = "Trending News & Stories";
+        newsSummaryHeading.className = "text-2xl";
+
+        var newsSummaryIframe = document.getElementById("news-summary-iframe");
+        newsSummaryIframe.src = `${currentDate}_summary.html`;
+
+
+        // Generate wordclouds section
+        var wordcloudsHeading = document.getElementById("wordclouds-heading");
+        wordcloudsHeading.innerHTML = "Wordclouds & Articles";
+        wordcloudsHeading.className = "text-2xl";
+
+        var wordcloudsTable = document.getElementById("wordclouds-table");
+        var categories = ["world", "business", "cryptocurrency", "science", "technology", "health", "sports", "tennis", "entertainment"];
+        for (let i = 0; i < categories.length; i++) {
+          if (i % 3 == 0) {
+              var row = document.createElement("tr");
+              wordcloudsTable.appendChild(row);
+          }
+          var category = categories[i];
+          var wordcloudPath = `${currentDate}_wordcloud_${category}.jpg`;
+          var cell = document.createElement("td");
+          cell.className = "text-center p-4 border";
+          var imageLink = document.createElement("a");
+          imageLink.href = "#";
+          imageLink.addEventListener("click", function(event) {
+              event.preventDefault();
+              popupImage(wordcloudPath);
+          });
+          var image = document.createElement("img");
+          image.src = wordcloudPath;
+          image.alt = `${category.charAt(0).toUpperCase() + category.slice(1)} Wordcloud`;
+          image.className = "w-full h-full object-cover mb-0";
+          imageLink.appendChild(image);
+          cell.appendChild(imageLink);
+          var linkDiv = document.createElement("div");
+          linkDiv.id = `${category}_link`;
+          linkDiv.className = "text-sm";
+          linkDiv.innerHTML = `${category.charAt(0).toUpperCase() + category.slice(1)}`;
+          cell.appendChild(linkDiv);
+          row.appendChild(cell);
+      
+          (function(category, linkDiv, wordcloudPath) {
+              let categoryName = `${category.charAt(0).toUpperCase() + category.slice(1)}`
+              // Check if wordcloud JPG exists
+              fetch(wordcloudPath, { method: 'HEAD' })
+                  .then(response => {
+                      if (!response.ok) {
+                          linkDiv.innerHTML = `No wordcloud available for ${categoryName}`;
+                      }
+                  })
+                  .catch(() => {
+                      linkDiv.innerHTML = `No wordcloud available for ${categoryName}`;
+                  });
+      
+              // Check for articles
+              fetch(`${currentDate}_${category}_articles.html`, { method: 'HEAD' })
+                  .then(response => {
+                      if (response.ok) {
+                          linkDiv.innerHTML = `<a href="${currentDate}_${category}_articles.html" class="text-lg">${categoryName}</a>`;
+                      }
+                  })
+                  .catch(() => {
+                      // Do nothing
+                  });
+          })(category, linkDiv, wordcloudPath);
+      }
+
+
+
+        // Create a popup image viewer
+        function popupImage(imagePath) {
+          // Create a popup container
+          let popup = document.createElement('div');
+          popup.className = 'fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-75 flex justify-center items-center';
+
+          // Create an image element
+          let image = document.createElement('img');
+          image.src = imagePath;
+          image.className = 'max-w-3xl max-h-3xl';
+
+          // Add the image to the popup container
+          popup.appendChild(image);
+
+          // Add the popup container to the body
+          document.body.appendChild(popup);
+
+          // Add event listeners to remove the popup
+          document.addEventListener('keydown', function(event) {
+              if (event.key === 'Escape') {
+                  popup.remove();
+              }
+          });
+        }
+
+    </script>
+
+    <footer class="text-center text-sm text-gray-500 mt-12">
+      <b>Copyright &copy; <script>document.write(new Date().getFullYear());</script> - <a href='mailto:newsnclues@gmail.com?subject=News Aggregator Inquiry'>News And Clues</a></b>
+    </footer>
+    
+  </body>
+</html>
