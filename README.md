@@ -5,3 +5,8 @@ Such models may be used to calculate accurate sentiment analysis or find aggrega
 
 Website URL:
 https://softmillennium.github.io/newsnclues
+
+I also generate daily news boradcast video to my youtube channel: https://www.youtube.com/@news_n_clues 
+Entire video content is 100% AI driven and generated without any human supervision.
+
+If you are a news outlet or another entity interested in purchasing or licensing my code (Python) for automatically generating  html, video and more - send me a note!
