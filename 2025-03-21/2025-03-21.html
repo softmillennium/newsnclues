@@ -25,7 +25,6 @@
 </head>
 <body class="bg-gray-100 text-gray-900">
 
-    <!-- Banner -->
     <div id="banner" class="w-full">
         <img src="../images/banner.jpg" alt="News Banner">
     </div>
@@ -84,10 +83,12 @@
           cell.className = "text-center p-4 border";
           var imageLink = document.createElement("a");
           imageLink.href = "#";
-          imageLink.addEventListener("click", function(event) {
-              event.preventDefault();
-              popupImage(wordcloudPath);
-          });
+          (function(path) {
+            imageLink.addEventListener("click", function(event) {
+                event.preventDefault();
+                popupImage(path);
+            });
+          })(wordcloudPath);
           var image = document.createElement("img");
           image.src = wordcloudPath;
           image.alt = `${category.charAt(0).toUpperCase() + category.slice(1)} Wordcloud`;
