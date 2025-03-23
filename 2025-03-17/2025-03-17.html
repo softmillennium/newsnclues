@@ -1,172 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-    <title id="title"></title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        .section { margin-bottom: 20px; }
-        .wordclouds img { width: 300px; height: auto; margin: 10px; }
-        .heading {
-            font-size: 2rem;
-            font-weight: bold;
-            background: linear-gradient(90deg, #fc4535, #1a6198);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-            line-height: 1.3; /* Prevents letters from being cut off */
-            padding-bottom: 5px; /* Ensures space below the text */
-            margin: 30px;
-        }
-    </style>
-</head>
-<body class="bg-gray-100 text-gray-900">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <title id="title"></title>
+        <script src="https://cdn.tailwindcss.com"></script>
 
-    <div id="banner" class="w-full">
-        <img src="../images/banner.jpg" alt="News Banner">
-    </div>
-    
-    <div id="title" class="w-full flex items-center" style="background-color: #fc4535;">
-      <a href="../index.html"><img src="../images/logo.jpg" alt="News Logo" class="h-auto"></a>
-      <div class="flex-grow text-center">
-          <h1 id="title_heading1" style="color:#1a6198;"></h1>
-          <h1 id="title_heading2" style="color:#1a6198;"></h1>
-      </div>
-    </div>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
 
-    <div id="news-summary" class="section news-summary text-center">
-        <h2 id="news-summary-heading" class="heading">Trending News & Stories</h2>
-        <iframe id="news-summary-iframe" width="100%" height="600px"></iframe>
-    </div>
+            #pager {
+                display: grid;
+                grid-template-columns: repeat(7, 1fr); /* Three equal columns */
+                gap: 10px; /* Space between columns */
+                justify-content: center;
+                text-align: center;
+                margin-top: 20px;
+            }
+            #pager div {
+                background-color: #1a6198;
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+            #pager div a {
+                color: white;
+                text-decoration: none;
+            }
+            #pager div a:hover {
+                text-decoration: underline;
+            }            
+        </style>
+            
+    </head>
+    <body class="bg-gray-100 text-gray-900">
 
-    <div id="wordclouds" class="section wordclouds text-center">
-        <h2 id="wordclouds-heading" class="heading">Wordclouds & Articles</h2>
-        <table id="wordclouds-table" class="w-90% border-collapse mx-auto"></table>
-    </div>
+        <!-- Banner -->
+        <div id="banner" class="w-full">
+            <img src="images/banner.jpg" alt="News Banner">
+        </div>
+        
+        
+        <div id="title" class="w-full flex items-center" style="background-color: #fc4535;">
+        <a href="index.html"><img src="images/logo.jpg" alt="News Logo" class="h-auto"></a>
+        <div class="flex-grow text-center">
+            <h1 id="title_heading" class="text-4xl font-bold mb-4" style="color:#1a6198;">News'n'Clues</h1>
+        </div>
+        </div>
 
-    <script>
-        // Save website's name in global JS variable
-        var websiteName = "News'n'Clues";
-        // Generate title heading with current date
-        var currentDate = '2025-03-17';
+        <div id="navigation" class="section text-center">
+            <h2 id="summaries_heading" class="heading">Daily News</h2>
+            <div id="daily_summaries_pages" >
+                <ul id="pager" class="w-full flex justify-center"></ul>
+            </div>
+        </div>
 
-        var title = `Aggregated News Summary`;
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const today = new Date();
+                let daysChecked = 0;
+                let daysAvailable = 0;
+                let availableLinks = [];
+                let days = 14; //two weeks
+            
+                function checkFileExists(dateString, callback) {
+                    let filePath = `${dateString}/${dateString}.html`;
+                    fetch(filePath, { method: 'HEAD' })
+                        .then(response => {
+                            callback(response.ok, dateString, filePath);
+                        })
+                        .catch(() => {
+                            callback(false, dateString, filePath);
+                        });
+                }
+            
+                function updatePager() {
+                    if (daysAvailable > 0) {
+                        // Sort links by date (most recent first)
+                        availableLinks.sort((a, b) => new Date(b.dateString) - new Date(a.dateString));
+            
+                        let pager = document.getElementById("pager");
+                        pager.innerHTML = availableLinks.map((link) => {
+                            return `<div><a href="${link.filePath}">${link.dateString}</a></div>`;
+                        }).join("");
+                    } else {
+                        document.getElementById("no-news").style.display = "block";
+                    }
+                }
+            
+                for (let i = 0; i < days; i++) {
+                    let date = new Date();
+                    date.setDate(today.getDate() - i);
+                    let dateString = date.toISOString().split('T')[0];
+            
+                    checkFileExists(dateString, function(exists, dateString, filePath) {
+                        daysChecked++;
+                        if (exists) {
+                            availableLinks.push({ dateString, filePath });
+                            daysAvailable++;
+                        }
+                        if (daysChecked === days) {
+                            updatePager();
+                        }
+                    });
+                }
+            });
+        </script>
         
 
-        // Generate title element
-        document.getElementById("title").innerHTML = `${title} - ${currentDate}`;
-
-        var titleHeading1 = document.getElementById("title_heading1")
-        titleHeading1.innerHTML = `${title}`;
-        titleHeading1.className = "text-4xl font-bold mb-4";
-
-        var titleHeading2 = document.getElementById("title_heading2")
-        titleHeading2.innerHTML = `${currentDate}`;
-        titleHeading2.className = "text-4xl font-bold mb-4";
-
-        var newsSummaryIframe = document.getElementById("news-summary-iframe");
-        newsSummaryIframe.src = `${currentDate}_summary.html`;
-
-        var wordcloudsTable = document.getElementById("wordclouds-table");
-        var categories = ['world', 'national', 'business', 'cryptocurrency', 'science', 'technology', 'health', 'sports', 'tennis', 'entertainment'];
-        for (let i = 0; i < categories.length; i++) {
-          if (i % 3 == 0) {
-              var row = document.createElement("tr");
-              wordcloudsTable.appendChild(row);
-          }
-          var category = categories[i];
-          var wordcloudPath = `${currentDate}_wordcloud_${category}.jpg`;
-          var cell = document.createElement("td");
-          cell.className = "text-center p-4 border";
-          var imageLink = document.createElement("a");
-          imageLink.href = "#";
-          (function(path) {
-            imageLink.addEventListener("click", function(event) {
-                event.preventDefault();
-                popupImage(path);
-            });
-          })(wordcloudPath);
-          var image = document.createElement("img");
-          image.src = wordcloudPath;
-          image.alt = `${category.charAt(0).toUpperCase() + category.slice(1)} Wordcloud`;
-          image.className = "w-full h-full object-cover mb-0";
-          imageLink.appendChild(image);
-          cell.appendChild(imageLink);
-          var linkDiv = document.createElement("div");
-          linkDiv.id = `${category}_link`;
-          linkDiv.className = "text-sm";
-          linkDiv.innerHTML = `${category.charAt(0).toUpperCase() + category.slice(1)}`;
-          cell.appendChild(linkDiv);
-          row.appendChild(cell);
-      
-          (function(category, linkDiv, wordcloudPath) {
-              let categoryName = `${category.charAt(0).toUpperCase() + category.slice(1)}`
-              // Check if wordcloud JPG exists
-              fetch(wordcloudPath, { method: 'HEAD' })
-                  .then(response => {
-                      if (!response.ok) {
-                          linkDiv.innerHTML = `No wordcloud available for ${categoryName}`;
-                      }
-                  })
-                  .catch(() => {
-                      linkDiv.innerHTML = `No wordcloud available for ${categoryName}`;
-                  });
-      
-              // Check for articles
-              fetch(`${currentDate}_${category}_articles.html`, { method: 'HEAD' })
-                  .then(response => {
-                      if (response.ok) {
-                          linkDiv.innerHTML = `<a href="${currentDate}_${category}_articles.html" class="text-lg">${categoryName}</a>`;
-                      }
-                  })
-                  .catch(() => {
-                      // Do nothing
-                  });
-          })(category, linkDiv, wordcloudPath);
-      }
-
-
-
-        // Create a popup image viewer
-        function popupImage(imagePath) {
-          // Create a popup container
-          let popup = document.createElement('div');
-          popup.className = 'fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-75 flex justify-center items-center';
-
-          // Create an image element
-          let image = document.createElement('img');
-          image.src = imagePath;
-          image.className = 'max-w-3xl max-h-3xl';
-
-          // Add the image to the popup container
-          popup.appendChild(image);
-
-          // Add the popup container to the body
-          document.body.appendChild(popup);
-
-          // Add event listeners to remove the popup
-          document.addEventListener('keydown', function(event) {
-              if (event.key === 'Escape') {
-                  if(popup) {
-                    popup.remove();
-                  }
-              }
-          });
-
-          popup.addEventListener('click', function(event) {
-              if (event.target === popup && popup) {
-                  popup.remove();
-              }
-          });
-        }
-
-    </script>
-
-    <footer class="text-center text-sm text-gray-500 mt-12">
-    </footer>
+        <footer class="text-center text-sm text-gray-500 mt-12">
+            <div>
+            <a href="https://www.youtube.com/@news_n_clues" target="_blank" rel="noopener noreferrer">News'n'Clues Daily Podcast</a>
+            </div>
+            <div>
+            <b>SoftMillennium <script>document.write(new Date().getFullYear());</script> - <a href='mailto:newsnclues@gmail.com?subject=News Aggregator Inquiry'>News And Clues</a></b>
+                <!--
+            <b>Copyright &copy; <script>document.write(new Date().getFullYear());</script> - <a href='mailto:newsnclues@gmail.com?subject=News Aggregator Inquiry'>News And Clues</a></b>
+            -->
+            </div>
+        </footer>
     
-  </body>
+    </body>
 </html>
