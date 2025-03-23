@@ -49,79 +49,78 @@
     </head>
     <body class="bg-gray-100 text-gray-900">
 
-        <!-- Banner -->
-        <div id="banner" class="w-full">
-            <img src="images/banner.jpg" alt="News Banner">
-        </div>
-        
-        
-        <div id="title" class="w-full flex items-center" style="background-color: #fc4535;">
-        <a href="index.html"><img src="images/logo.jpg" alt="News Logo" class="h-auto"></a>
-        <div class="flex-grow text-center">
-            <h1 id="title_heading" class="text-4xl font-bold mb-4" style="color:#1a6198;">News'n'Clues</h1>
-        </div>
-        </div>
+    <!-- Banner -->
+    <div id="banner" class="w-full">
+        <img src="images/banner.jpg" alt="News Banner">
+    </div>
+    
+    
+    <div id="title" class="w-full flex items-center" style="background-color: #fc4535;">
+      <a href="index.html"><img src="images/logo.jpg" alt="News Logo" class="h-auto"></a>
+      <div class="flex-grow text-center">
+          <h1 id="title_heading" class="text-4xl font-bold mb-4" style="color:#1a6198;">News'n'Clues</h1>
+      </div>
+    </div>
 
-        <div id="navigation" class="section text-center">
-            <h2 id="summaries_heading" class="heading">Daily News</h2>
-            <div id="daily_summaries_pages" >
-                <ul id="pager" class="w-full flex justify-center"></ul>
-            </div>
+    <div id="navigation" class="section text-center">
+        <h2 id="summaries_heading" class="heading">Daily News</h2>
+        <div id="daily_summaries_pages" >
+            <ul id="pager" class="w-full flex justify-center"></ul>
         </div>
+    </div>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const today = new Date();
-                let daysChecked = 0;
-                let daysAvailable = 0;
-                let availableLinks = [];
-                let days = 14; //two weeks
-            
-                function checkFileExists(dateString, callback) {
-                    let filePath = `${dateString}/${dateString}.html`;
-                    fetch(filePath, { method: 'HEAD' })
-                        .then(response => {
-                            callback(response.ok, dateString, filePath);
-                        })
-                        .catch(() => {
-                            callback(false, dateString, filePath);
-                        });
-                }
-            
-                function updatePager() {
-                    if (daysAvailable > 0) {
-                        // Sort links by date (most recent first)
-                        availableLinks.sort((a, b) => new Date(b.dateString) - new Date(a.dateString));
-            
-                        let pager = document.getElementById("pager");
-                        pager.innerHTML = availableLinks.map((link) => {
-                            return `<div><a href="${link.filePath}">${link.dateString}</a></div>`;
-                        }).join("");
-                    } else {
-                        document.getElementById("no-news").style.display = "block";
-                    }
-                }
-            
-                for (let i = 0; i < days; i++) {
-                    let date = new Date();
-                    date.setDate(today.getDate() - i);
-                    let dateString = date.toISOString().split('T')[0];
-            
-                    checkFileExists(dateString, function(exists, dateString, filePath) {
-                        daysChecked++;
-                        if (exists) {
-                            availableLinks.push({ dateString, filePath });
-                            daysAvailable++;
-                        }
-                        if (daysChecked === days) {
-                            updatePager();
-                        }
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date();
+            let daysChecked = 0;
+            let daysAvailable = 0;
+            let availableLinks = [];
+            let days = 14; //two weeks
+        
+            function checkFileExists(dateString, callback) {
+                let filePath = `${dateString}/${dateString}.html`;
+                fetch(filePath, { method: 'HEAD' })
+                    .then(response => {
+                        callback(response.ok, dateString, filePath);
+                    })
+                    .catch(() => {
+                        callback(false, dateString, filePath);
                     });
-                }
-            });
-        </script>
+            }
         
-
+            function updatePager() {
+                if (daysAvailable > 0) {
+                    // Sort links by date (most recent first)
+                    availableLinks.sort((a, b) => new Date(b.dateString) - new Date(a.dateString));
+        
+                    let pager = document.getElementById("pager");
+                    pager.innerHTML = availableLinks.map((link) => {
+                        return `<div><a href="${link.filePath}">${link.dateString}</a></div>`;
+                    }).join("");
+                } else {
+                    document.getElementById("no-news").style.display = "block";
+                }
+            }
+        
+            for (let i = 0; i < days; i++) {
+                let date = new Date();
+                date.setDate(today.getDate() - i);
+                let dateString = date.toISOString().split('T')[0];
+        
+                checkFileExists(dateString, function(exists, dateString, filePath) {
+                    daysChecked++;
+                    if (exists) {
+                        availableLinks.push({ dateString, filePath });
+                        daysAvailable++;
+                    }
+                    if (daysChecked === days) {
+                        updatePager();
+                    }
+                });
+            }
+        });
+    </script>
+    
         <footer class="text-center text-sm text-gray-500 mt-12">
             <div>
             <a href="https://www.youtube.com/@news_n_clues" target="_blank" rel="noopener noreferrer">News'n'Clues Daily Podcast</a>
@@ -133,6 +132,6 @@
             -->
             </div>
         </footer>
-    
+        
     </body>
 </html>
