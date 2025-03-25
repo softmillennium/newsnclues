@@ -49,12 +49,12 @@
         <a href="../index.html"><img src="../images/logo.jpg" alt="News Logo" class="h-auto"></a>
         <div class="flex-grow text-center">
             <h1 id="title_heading1" style="color:#1a6198;"></h1>
-            <h1 id="title_heading2" style="color:#1a6198;"></h1>
+            <a id="csv_data_file"><h1 id="title_heading2" style="color:#1a6198;"></h1></a>
         </div>
     </div>
 
     <div id="news-summary" class="section news-summary text-center">
-        <h2 id="news-summary-heading" class="heading">Trending News & Stories</h2>
+        <h2 id="news-summary-heading" class="heading">Trending News & Headlines</h2>
         <iframe id="news-summary-iframe" width="100%" height="600px"></iframe>
     </div>
 
@@ -82,6 +82,9 @@
         var titleHeading2 = document.getElementById("title_heading2")
         titleHeading2.innerHTML = `${currentDate}`;
         titleHeading2.className = "text-4xl font-bold mb-4";
+
+        var csv_link = document.getElementById("csv_data_file")
+        csv_link.href=`${currentDate}.csv`
 
         var newsSummaryIframe = document.getElementById("news-summary-iframe");
         newsSummaryIframe.src = `${currentDate}_summary.html`;
@@ -141,7 +144,7 @@
                             popupImage(image.src);
                         });                        
                     });
-            
+
                 // Check for articles
                 fetch(`${currentDate}_${category}_articles.html`, { method: 'HEAD' })
                     .then(response => {
