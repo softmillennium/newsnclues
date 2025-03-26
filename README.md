@@ -1,10 +1,12 @@
 This is essentially a website with daily news trends, headlines and articles in various categories. 
 Its main purpose is to have an easy access to latest aggregated and summarized articles.
 However, the uploaded csv files contain latest daily raw article data may also be used as input to train AI models on latest news content.
-Such models may then used to for example
-#calculate accurate sentiment analysis
-#find aggregated and balanced info on topics of interest
-#time based news analysis in various categories or topics
+For example, such models may then used to:
+<ul>
+<li>calculate accurate sentiment analysis</li>
+<li>find aggregated and balanced info on topics of interest</li>
+<li>time based news analysis in various categories or topics</li>
+</ul>
 
 Website URL:
 https://softmillennium.github.io/newsnclues
