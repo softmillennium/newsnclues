@@ -1,0 +1,1238 @@
+Input URL,Title,Link,Published,Description,Source
+https://scientificamerican.com,"Science Jigsaw: Sunday, March 16, 2025",https://scientificamerican.com/game/science-jigsaw-2025-03-16/,"Sun, 16 Mar 2025 00:00:00 GMT",We’d love to hear from you! E-mail us at games@sciam.com to share your experience.,scientificamerican
+https://livescience.com,AI algorithm used to unpack neuroscience of human language,https://www.livescience.com/health/neuroscience/ai-algorithm-used-to-unpack-neuroscience-of-human-language,"Sun, 16 Mar 2025 16:00:00 GMT","Scientists have used a type of artificial intelligence, called a large language model, to uncover new insights into how the human brain understands and produces language.
+
+Using artificial intelligence (AI), scientists have unraveled the intricate brain activity that unfolds during everyday conversations.
+
+The tool could offer new insights into the neuroscience of language, and someday, it could help improve technologies designed to recognize speech or help people communicate , the researchers say.
+
+Based on how an AI model transcribes audio into text, the researchers behind the study could map brain activity that takes place during conversation more accurately than traditional models that encode specific features of language structure — such as phonemes (the simple sounds that make up words) and parts of speech (such as nouns, verbs and adjectives).
+
+The model used in the study, called Whisper , instead takes audio files and their text transcripts, which are used as training data to map the audio to the text. It then uses the statistics of that mapping to ""learn"" to predict text from new audio files that it hasn't previously heard.
+
+Related: Your native language may shape the wiring of your brain
+
+As such, Whisper works purely through these statistics without any features of language structure encoded in its original settings. But nonetheless, in the study, the scientists showed that those structures still emerged in the model once it was trained.
+
+The study sheds light on how these types of AI models — called large language models (LLMs) — work. But the research team is more interested in the insight it provides into human language and cognition. Identifying similarities between how the model develops language processing abilities and how people develop these skills may be useful for engineering devices that help people communicate.
+
+Sign up for the Live Science daily newsletter now Get the world’s most fascinating discoveries delivered straight to your inbox. Contact me with news and offers from other Future brands Receive email from us on behalf of our trusted partners or sponsors
+
+""It's really about how we think about cognition,"" said lead study author Ariel Goldstein , an assistant professor at the Hebrew University of Jerusalem. The study's results suggest that ""we should think about cognition through the lens of this [statistical] type of model,"" Goldstein told Live Science.
+
+Unpacking cognition
+
+The study, published March 7 in the journal Nature Human Behaviour , featured four participants with epilepsy who were already undergoing surgery to have brain-monitoring electrodes implanted for clinical reasons.
+
+With consent, the researchers recorded all of the patients' conversations throughout their hospital stays, which ranged from several days to a week. They captured over 100 hours of audio, in total.
+
+Each of the participants had 104 to 255 electrodes installed to monitor their brain activity.
+
+Most studies that use recordings of conversations take place in a lab under very controlled circumstances over about an hour, Goldstein said. Although this controlled environment can be useful for teasing out the roles of different variables, Goldstein and his collaborators wanted to ""to explore the brain activity and human behavior in real life.""
+
+Their study revealed how different parts of the brain engage during the tasks required to produce and comprehend speech.
+
+Goldstein explained that there is ongoing debate as to whether distinct parts of the brain kick into gear during these tasks or if the whole organ responds more collectively. The former idea might suggest that one part of the brain processes the actual sounds that make up words while another interprets those words' meanings, and still another handles the movements needed to speak.
+
+In the alternate theory, it's more that these different regions of the brain work in concert, taking a ""distributed"" approach, Goldstein said.
+
+The researchers found that certain brain regions did tend to correlate with some tasks.
+
+For example, areas known to be involved in processing sound, such as the superior temporal gyrus, showed more activity when handling auditory information, and areas involved in higher-level thinking, such as the inferior frontal gyrus, were more active for understanding the meaning of language.
+
+They could also see that the areas became active sequentially.
+
+For example, the region most responsible for hearing the words was activated before the region most responsible for interpreting them. However, the researchers also clearly saw areas activate during activities they were not known to be specialized for.
+
+""I think it's the most comprehensive and thorough, real-life evidence for this distributed approach,"" Goldstein said.
+
+Related: New AI model converts your thought into full written speech by harnessing your brain's magnetic signals
+
+Linking AI models to the inner workings of the brain
+
+The researchers used 80% of the recorded audio and accompanying transcriptions to train Whisper so that it could then predict the transcriptions for the remaining 20% of the audio.
+
+The team then looked at how the audio and transcriptions were captured by Whisper and mapped those representations to the brain activity captured with the electrodes.
+
+After this analysis, they could use the model to predict what brain activity would go with conversations that had not been included in the training data. The model's accuracy surpassed that of a model based on features of language structure.
+
+Although the researchers didn't program what a phoneme or word is into their model from the outset, they found those language structures were still reflected in how the model worked out its transcripts. So it had extracted those features without being directed to do so.
+
+The research is a ""groundbreaking study because it demonstrates a link between the workings of a computational acoustic-to-speech-to language model and brain function,"" Leonhard Schilbach , a research group leader at the Munich Centre for Neurosciences in Germany who was not involved in the work, told Live Science in an email.
+
+However, he added that, ""Much more research is needed to investigate whether this relationship really implies similarities in the mechanisms by which language models and the brain process language.""
+
+""Comparing the brain with artificial neural networks is an important line of work,"" said Gašper Beguš , an associate professor in the Department of Linguistics at the University of California, Berkeley who was not involved in the study.
+
+“If we understand the inner workings of artificial and biological neurons and their similarities, we might be able to conduct experiments and simulations that would be impossible to conduct in our biological brain,"" he told Live Science by email.",livescience
+https://livescience.com,Mice administer 'first-aid' to friends — even trying to bring the dead back to life,https://www.livescience.com/animals/land-mammals/mice-administer-first-aid-to-friends-even-trying-to-bring-the-dead-back-to-life,"Sun, 16 Mar 2025 13:10:00 GMT","Mice will attempt to revive unconscious companions by licking and biting their faces, scientists discover.
+
+Mice appear to administer first-aid if they find a fellow mouse unconscious, scientists have discovered.
+
+They attempt to revive companions by licking at their faces, or even by pulling at their mouths or tongues, according to a study published Feb. 21 in the journal Science .
+
+More aggressive mouth-pulling, biting and licking behaviors were seen in mice that had spent more time with the mouse in need of help, resulting in a faster recovery, the researchers report.
+
+""The most striking discovery in this study is the existence of instinctive emergency responses in animals to revive unconscious — and even freshly deceased — partners. This study provides the first documented evidence of resuscitation-like behavior in naïve, untrained mice,"" study lead author Wenjian Sun , a researcher at the University of Southern California, told Live Science in an email.
+
+Helping other animals that are injured or sick has been observed in a number of species, including dolphins, elephants, and non-human primates, Sun explained.
+
+Related: Ants perform life saving operations — the only animal other than humans known to do so
+
+""These behaviors often include touching, grooming, nudging, and, in some cases, more intense physical actions such as striking. However, specific behaviors like tongue biting and tongue pulling, as observed in this study, have not been previously reported,"" Sun said.
+
+Sign up for the Live Science daily newsletter now Get the world’s most fascinating discoveries delivered straight to your inbox. Contact me with news and offers from other Future brands Receive email from us on behalf of our trusted partners or sponsors
+
+In the paper, the researchers describe how dozens of mice reacted after being introduced to another mouse in a state of need. These states included the other mouse being stressed and unconscious.
+
+Mice spent more time in physical contact with the other mouse if it was unconscious rather than awake, with the intensity of the grooming increasing over time if the other was unconscious. Mice spent an average of 47% of the 13-minute test interacting with an unconscious partner.
+
+Grooming increased in vigor over the test period from sniffing and licking to biting at the other mouse's mouth and tongue, with more aggressive actions being seen in pairs of mice that were more familiar with one another. Over 50% of the mice ended up pulling at the tongues of their unconscious companion.
+
+The mice were also able to detect that their companion was unconscious without relying on visual cues, initiating the grooming behaviors even in the dark.
+
+The more intense grooming behaviors were correlated with better recovery in the unconscious mice, with a more rapid return to consciousness afterwards. When their companion awoke, the first-aider mouse stopped performing the grooming behaviors.
+
+""The animal appears to be able to recognize the unconscious state of its partner, with the unresponsiveness triggering the behavior and regaining of responsiveness terminating the behavior,"" Sun said.
+
+While these findings indicate that mice have an instinct to help others like humans do, the researchers can't be certain why they act in this way.
+
+""We do not exclude the possibility that the animal is simply driven by instinctive impulses to perform these actions — an instinct that may have evolved over time during evolution — rather than acting with a conscious intent to revive its partner,"" Sun said.
+
+In another paper, also published on Feb. 21 in Science , other researchers from the University of California, Los Angeles describe the neuronal mechanisms behind this behavior. They found that the grooming is likely driven by the release of oxytocin — a hormone that plays a crucial role in social bonding, sex, and childbirth — in areas of the brain called the amygdala and hypothalamus.
+
+""Inactivation of oxytocin neurons or blocking oxytocin receptors impaired the behavior, confirming that oxytocin is essential for this emergency response. This aligns with the oxytocin's well-known role as the 'love hormone' which is associated with trust and affection in humans and promotes social bonding,"" Sun explained.
+
+""Since oxytocin receptors are expressed in many brain regions, future research will focus on identifying the specific neural circuits involved in this behavior.""",livescience
+https://livescience.com,Google's AI 'co-scientist' cracked 10-year superbug problem in just 2 days,https://www.livescience.com/technology/artificial-intelligence/googles-ai-co-scientist-cracked-10-year-superbug-problem-in-just-2-days,"Sun, 16 Mar 2025 12:00:00 GMT","Google's new artificial intelligence (AI) tool has cracked a problem that took scientists a decade to solve in just two days.
+
+José Penadés and his colleagues at Imperial College London spent 10 years figuring out how some superbugs gain resistance to antibiotics — a growing threat that claims millions of lives each year .
+
+But when the team gave Google's ""co-scientist"" — an AI tool designed to collaborate with researchers — this question in a short prompt, the AI's response produced the same answer as their then-unpublished findings in just two days.
+
+Astonished, Penadés emailed Google to check if they had access to his research. The company responded that it didn't. The researchers published their findings Feb. 19 on the preprint server bioRxiv , so they have not been peer reviewed yet.
+
+""What our findings show is that AI has the potential to synthesise all the available evidence and direct us to the most important questions and experimental designs,"" co-author Tiago Dias da Costa , a lecturer in bacterial pathogenesis at Imperial College London, said in a statement . ""If the system works as well as we hope it could, this could be game-changing; ruling out 'dead ends' and effectively enabling us to progress at an extraordinary pace.""
+
+Using AI to fight superbugs
+
+Antimicrobial resistance (AMR) occurs when infectious microbes — such as bacteria, viruses, fungi and parasites — gain resistance to antibiotics, rendering essential drugs ineffective. Dubbed a "" silent pandemic ,"" AMR represents one of the biggest health threats facing humanity as the overuse and misuse of antibiotics in both medicine and agriculture accelerate its prevalence.
+
+According to a 2019 report by the Centers for Disease Control and Prevention (CDC) , drug-resistant bacteria killed at least 1.27 million people globally that year. About 35,000 of those deaths were in the U.S. alone, meaning that U.S. fatalities from the issue had spiked by 52% since the CDC's last AMR report, in 2013 .
+
+Sign up for the Live Science daily newsletter now Get the world’s most fascinating discoveries delivered straight to your inbox. Contact me with news and offers from other Future brands Receive email from us on behalf of our trusted partners or sponsors
+
+To investigate the problem, Penadés and his team began searching for ways one type of superbug — a family of bacteria-infecting viruses known as capsid-forming phage-inducible chromosomal islands (cf-PICIs) — acquire their ability to infect diverse species of bacteria.
+
+Related: Dangerous 'superbugs' are a growing threat, and antibiotics can't stop their rise. What can?
+
+The scientists hypothesized that these viruses did this by taking tails, which are used to inject the viral genome into the host bacterial cell, from different bacteria-infecting viruses. Experiments proved their hunch to be correct, revealing a breakthrough mechanism in horizontal gene transfer that the scientific community was previously unaware of.
+
+Before anyone on the team shared their findings publicly, the researchers posed this same question to Google's AI co-scientist tool. After two days, the AI returned suggestions, one being what they knew to be the correct answer.
+
+""This effectively meant that the algorithm was able to look at the available evidence, analyse the possibilities, ask questions, design experiments and propose the very same hypothesis that we arrived at through years of painstaking scientific research, but in a fraction of the time,"" Penadés, a professor of microbiology at Imperial College London, said in the statement.
+
+The researchers noted that using the AI from the start wouldn't have removed the need to conduct experiments but that it would have helped them come up with the hypothesis much sooner, thus saving them years of work.",livescience
+https://livescience.com,Space photo of the week: James Webb telescope's view of the Flame Nebula is a 'quantum leap' forward for astronomers,https://www.livescience.com/space/astronomy/space-photo-of-the-week-james-webb-telescopes-view-of-the-flame-nebula-is-a-quantum-leap-forward-for-astronomers,"Sun, 16 Mar 2025 10:00:00 GMT","This collage of images from the Flame Nebula shows a near-infrared view from the Hubble Space Telescope on the left, with infrared views from the James Webb Space Telescope in the insets.
+
+What it is: The Flame Nebula (NGC 2024) star-forming region
+
+Where it is: 1,400 light-years away, in the constellation Orion
+
+When it was shared: March 10, 2025
+
+Why it's so special: What are the smallest stars? A deep dive into the star-forming Flame Nebula by the James Webb Space Telescope (JWST) has revealed free-floating, Jupiter-size objects that could help answer that key question in astronomy.
+
+The free-floating objects are brown dwarfs, which straddle the line between stars and planets. Brown dwarfs are often called "" failed stars "" because they don't get dense and hot enough to become stars and, instead, eventually cool to become dim, hard-to-see objects.
+
+However, exactly how small a brown dwarf can be is a mystery, largely because these objects are impossible to study using standard telescopes. But JWST is sensitive to infrared light, which it sees as heat. The telescope went looking for relatively warm and bright young brown dwarfs in the Flame Nebula, whose dense dust and gas proved no match for its infrared detectors.
+
+An uncropped view of the image. (Image credit: NASA, ESA, CSA, STScI, Michael Meyer (University of Michigan), Matthew De Furio (UT Austin), Massimo Robberto (STScI), Alyssa Pagan (STScI))
+
+Related: 42 jaw-dropping James Webb Space Telescope images
+
+Sign up for the Live Science daily newsletter now Get the world’s most fascinating discoveries delivered straight to your inbox. Contact me with news and offers from other Future brands Receive email from us on behalf of our trusted partners or sponsors
+
+It found free-floating objects two to three times the mass of Jupiter, though the telescope is capable of finding objects half the mass of the gas giant. That's smaller than scientists expected.
+
+NASA's Hubble Space Telescope has been hunting for brown dwarfs for decades. Previously, Hubble identified possible candidates in a region of the Flame Nebula called the Orion Molecular Cloud Complex. Now, JWST has picked up the baton and completed what scientists called ""a quantum leap"" in understanding brown dwarfs.
+
+""It's really difficult to do this work, looking at brown dwarfs down to even ten Jupiter masses, from the ground, especially in regions like this,"" Matthew De Furio , an astronomer at the University of Texas at Austin and lead author of a study published this week in The Astrophysical Journal Letters, said in a statement . ""Having existing Hubble data over the last 30 years or so allowed us to know that this is a really useful star-forming region to target. We needed to have Webb to be able to study this particular science topic.""
+
+The researchers hope JWST's ability to split the light from an object into its constituent wavelengths will help them clarify the boundaries between a planet, a brown dwarf and a full-fledged star.",livescience
+https://livescience.com,Do sperm really race to the egg?,https://www.livescience.com/health/sex/do-sperm-really-race-to-the-egg,"Sun, 16 Mar 2025 09:00:00 GMT","Egg fertilization is often described as an epic swim meet: Millions of sperm swim as fast as they can toward the egg until one — the fastest, strongest, healthiest sperm of them all — wins the race and wriggles into the egg, with the prize of passing its genes to future offspring.
+
+But is this really how it happens? Do sperm really race to the egg?
+
+Yes and no, David J. Miller , a professor in the animal sciences department at the University of Illinois Urbana-Champaign, told Live Science. ""The important player in all of this is actually the female reproductive tract.""
+
+Sperm do swim during this process, but ""the major movement is actually provided by contractions of the female tract,"" Miller explained. ""There are contractions of the uterus, for example, that are much like contractions of the GI tract that can move fluid through the uterus.""
+
+A 1996 study illustrated just how efficient these contractions are, Miller noted. Scientists deposited sperm-size beads into the uteruses of 64 women, and some of the beads traveled all the way to the fallopian tubes — where fertilization usually takes place — within minutes.
+
+Related: Are you genetically more similar to your mom or your dad?
+
+It makes sense that sperm would need some extra help, because while the sperm swim in one direction, the egg needs to travel in the opposite direction to meet them, Sabine Koelle , a full professor of anatomy and developmental biology at the University College Dublin School of Medicine and Medical Sciences, told Live Science. The egg can't swim, so instead tiny hairs called cilia help it along .
+
+Sign up for the Live Science daily newsletter now Get the world’s most fascinating discoveries delivered straight to your inbox. Contact me with news and offers from other Future brands Receive email from us on behalf of our trusted partners or sponsors
+
+""Cilia beat to transport the oocyte,"" or egg, Koelle said. ""Because the sperm are coming from the opposite direction, they have to struggle"" against the current created by the cilia.
+
+In fact, an individual sperm's movement is less of an effort to move forward and more of an effort to move inward, toward the middle of the tract, Koelle said. If the sperm get too close to the sides, they stick and lose their forward momentum.
+
+However, just because a sperm is the first to arrive doesn't mean it gets to do the fertilizing. ""Sperm require some final maturation that occurs in the female tract, and it's time dependent,"" Miller said. ""So the sperm that 'win the race,' so to speak, need more time before they can actually fertilize the egg.""
+
+""They may not be there when they've completed that maturation,"" Miller added. ""They might be replaced by some of the other more slowly transported sperm that have had time to complete that maturation.""
+
+But even those less-mature sperm are more successful than the vast majority of sperm that get deposited. As the female reproductive tract pushes the sperm along, it also cuts unlucky individuals from the swim team.
+
+""Less than 1% — maybe up to 2 or 3% of the sperm that are actually deposited — make it all the way to where the egg is,"" Miller said. ""A lot of them are flushed back out from the tract. Some are eaten up by immune cells in the uterus, because sperm are foreign.""
+
+Up to 70% of sperm don't even make it past the cervix, Koelle noted. ""The sperm are stuck there and can't free themselves,"" she said.
+
+For those few sperm that make it into the fallopian tube, the goal is to get as far as possible and then stick to the wall as they wait for the egg to arrive. This is another place where the female reproductive organs are choosing winners: Scientists have noticed that normal-looking sperm are more likely to bind to the wall, Miller said, and binding to the wall provides some metabolic benefits that increase their lifespan.
+
+Then, once the egg arrives, the fallopian tube — also known as the oviduct — allows only healthy-looking sperm to unstick from the wall. ""As soon as a sperm is not OK, the oviduct doesn't release it,"" Koelle said. ""It's the main selector of good sperm.""
+
+This isn't a perfect system, of course. "" Obviously, we have genetic diseases that come through sperm. So it's not always true that the fittest are the best ones genetically,"" Miller said.
+
+Every step of the way, the female reproductive tract is doing its best to weed out the less-fit sperm so that only healthy sperm reach the egg. In that way, fertilization is less like a race and more like a job interview.
+
+""There's certain qualifications that you need to be able to apply for the job,"" Miller said. ""But also, the sperm that have those qualifications would have to have them at the time the job is open — the time when the egg is ovulated."" But in the end, it's the female reproductive tract that chooses the best candidate.",livescience
+https://scientificamerican.com,"Science Jigsaw: Sunday, March 16, 2025",https://scientificamerican.com/game/science-jigsaw-2025-03-16/,"Sun, 16 Mar 2025 00:00:00 GMT",We’d love to hear from you! E-mail us at games@sciam.com to share your experience.,scientificamerican
+https://theconversation.com,"Covid, social networks: how conspiratorial culture made its nest in France",https://theconversation.com/covid-reseaux-sociaux-comment-la-culture-complotiste-a-fait-son-nid-en-france-249391,"Sun, 16 Mar 2025 14:16:43 GMT","According to a certain number of surveys, the global epidemic of COVID-19, associated with the use of social networks, would have played a key role in the dissemination of conspiratorial culture. From now on, the latter is no longer strictly minority. In 2023, 51 % of voters from Marine Le Pen and 50 % of those of Jean-Luc Mélenchon declared to believe in conspiracy theories. In the United States, 55 % of citizens adhere to these theories.
+
+COVVI-19 gave rise to a multiplication of conspiracy theses in France and all over the world. We can cite for example that claiming that the virus has been voluntarily developed in the laboratory or that imputing the development of the pandemic to the deployment of 5G.
+
+The conspiracy (or conspiratorial) theses are not new and many researchers have highlighted, in particular since the 2000s, the methods of structuring, the rhetorical mechanisms, the membership logics or the conditions of the development of the conspiracy theory. The world pandemic nevertheless seemed to mark as, before it, the attacks of September 11, 2001 an acceleration of its diffusion.
+
+The ""Yougov Cambridge Globalism Project - Conspiracy Theories"" study shows that in 2021, 28 % of people in France thought that an elite minority secretly rules the world, against 21 % just before the appearance of the COVVID. Two years later, a survey carried out by IFOP and the amb-usa.fr site shows that 29 % of French people still believe in the effectiveness of anti-Cavid treatment at Professor Raoult's chloroquine and that 35 % now adhere to conspiracy theories (these data reach 39 % and 55 % respectively for the citizens of the United States).
+
+From Monday to Friday + Sunday, receive the analyzes and decrypts from our experts for free for another look at the news. Subscribe today!
+
+This is the reason why we are trying to understand, in this article inspired by a research project for the Center for Research of INSEEC Grande École and the European higher education group Omnes Education, the elements that can explain such progression. We highlight in particular the characteristics which refer to the historical roots of this phenomenon and the attributes which illustrate the specificities of its most recent forms.
+
+Very strong links with the fundamentals of past conspiracy theses
+
+Political conspiracy can be defined as a theory affirming that there are minorities, to underground and secret activities, which manage to hide the truth and to determine the course of history thanks to the conspiracies they are fog. These plots are set up by an elite which thus benefits from the detriment of the interests of the majority.
+
+The strength of conspiracy is due in its logic. The absence of elements to uncover the plot demonstrates its existence. The emergence of evidence demonstrating his inexistence proves nothing, because the latter only conceal a broader plot.
+
+The ""protocols of the sages of Zion"", a striking example of the conspiracy theory, perfectly illustrate this logic. This so-called secret pact sealed by the Jews to dominate the world is a false invented by the Russian police after the First World War. However, when the Times revealed, on August 18, 1921, that this document was a montage, Jacques Bainville, one of the leaders of the French Action, despite everything its existence and affirms:
+
+The theory of conspiracy thus questions the conceptions of history and truth. For researcher Valérie Igounet, conspiracy offers
+
+The conspiracy that has appeared from the COVID does not really differ from its past versions and corroborates the assertion of Valérie Igounet according to which the theses are renewed ""essentially by the updating of pre -existing conspiracy myths"". According to conspiracy networks, the refusal of the French medical authorities to use the treatment of Professor Raoult's chloroquine to treat COVVID was no coincidence. This rejection of an inexpensive remedy was actually aimed at leaving the field free to the marketing of a new vaccine synonymous with huge financial gains for a pharmaceutical industry acting in the service of supposed Jewish financial interests. And thus echoed the anti -Semitic myth associating the Jews with the bait of the gain.
+
+The theories of the post-Cavid conspiracy have also kept the same logic. Any element asking questions or awakening the surprise is raised to the rank of irrefutable evidence and is perceived as necessarily intentional. Far from offering a clear and coherent alternative version to the story of the traditional media, conspiracy inspired by COVVID feeds on ""allegedly disturbing coincidences"" to contradict and discredit the official truth, whether it is the origin of the virus, the port of the mask or the side effects of the vaccine.
+
+Like conspiracy theses, for example, on the origins of the French Revolution, the Dreyfus affair or the Second World War, conspiracy linked to COVID also has an important political dimension. The new conspiracy theories thus continue to exercise a stronger power of attraction than the average on the most extreme right and left fringes of the political chessboard. According to IFOP’s 2023 survey, 51 % of Marine Le Pen voters in the presidential election of 2022 and 50 % of those of Jean-Luc Mélenchon thus declare to believe in conspiracy theories.
+
+The extreme right remains a key player in the development of the ""complosphere"". Through, for example, conspiracy theories conveyed by Donald Trump calling into question the foundations of Statunian democracy. Or conspiracy platforms as the site devoted to the writings of Alain Soral Equality & Reconciliation (E&R) in France.
+
+What COVVID revealed again and specific
+
+But conspiracy has also evolved at the time of the covid with an enlargement of its audience and trivialization and an ever stronger political instrumentalization.
+
+Conseilism is distinguished from previous periods due to its links with the Internet at a time when social networks have become one of the main sources of information. For researcher Alessandro Leiduan, social networks have reduced ""the time necessary for social incubation"" of conspiratorial theses and have expanded ""the territorial space subject to their influence"".
+
+States researchers have studied the impact of links between the pandemic and social networks on populations and have concluded that a generalized disruption of cognitive and social structures. Faced with uncertainties, individuals have mainly turned to social networks to learn and reassure themselves. This moment made them more open to the rejection of official stories and the speech of experts.
+
+For the sociologist Laurent Cordonier, the success of conspiracy inspired by the COVIR is also linked to the fear that the latter has generated, to his media coverage and to the fact that he affected individuals in their daily life. They were both afraid for their health and their use while having the feeling of not being able to control anything. The strong media coverage of the crisis has increased what Laurent Cordonier calls ""the contact surface"" between the reality experienced by conspiracy people and theories.
+
+The legitimate questions and uncertainties that surrounded the COVID also changed the citizens' relationship to scientific speech and public speech. As Alessandro Leiduan shows, in an interview ""conspiracy theory at the time of the covid pandemic"", these doubts were the source of general distrust against scientists and authorities, which continues today. In doing so, the sensitivity to conspiracy theses now exceeds the circles of psychologically unstable individuals, or in a situation of vulnerability, and political groups and concerns a broader fringe of the population.
+
+Beyond its trivialization, conspiracy has also become ""a new tool for disqualifying opposing speech"", as researcher Camille Némeau points out. Since the COVID, the accusation of conspiracy has now been taken up by all political forces of all stripes to discredit opponents and contradictors. This evolution testifies to the importance taken by this phenomenon. But also of his growing political instrumentalization and the difficulties that will be overcome to see him back down.",theconversation
+https://theconversation.com,"5 years after the COVVI-19 pandemic, the response capacity of several major health agencies could be threatened",https://theconversation.com/5-ans-apres-la-pandemie-de-covid-19-la-capacite-de-reponse-de-plusieurs-grandes-agences-de-sante-pourrait-etre-menacee-252330,"Sun, 16 Mar 2025 09:25:12 GMT","At the beginning of the 20th century, in the absence of major public health agencies, epidemics had the field. Five years after the COVVI-19 pandemic, when the funding of several of them is threatened by the new administration of the United States, a historic recall is necessary.
+
+On March 11, 2020, the World Health Organization (WHO) said that the COVVI-19 epidemic had now become a pandemic (five days later, on March 16, French President Emmanuel Macron announced the implementation of national confinement, effective on March 17, editor's note).
+
+It all started a few months earlier, in December 2019, with the report in Wuhan, China, a ""home of serious cases due to unknown origin"". The manager, quickly identified, turned out to be, an emerging coronavirus, called Sars-Cov-2. Three months later, the newcomer had spread in 114 countries according to the WHO, and more than 118,000 cases were reported, while 4,291 deaths were identified.
+
+During his press briefing on March 11, Tedros Adhanom Ghebreyesus, then OMS Managing Director, declared that the organization's experts were ""deeply concerned both by the propagation and gravity of the cases, the level of which is alarming, and by the insufficiency of the measures taken which is just as much"". He urged the leaders in the same speech to act quickly to intensify their responses, claiming that ""all countries [could] still modify the course of this pandemic"".
+
+During this period, and throughout the pandemic, public health agencies such as WHO and Centers for Disease Control and Prevention in the United States played a leading role, coordinating with local health services to test, trace and isolate cases of virus infection. The websites of these institutions have quickly become essential sources to follow the evolution of the epidemic, whether it is to learn about the number of new cases, hospitalizations and deaths or to find out about the means of prevention of the disease. In the United States, the National Institutes of Health also played a key role in the research and development of treatments and vaccines against the COVVI-19.
+
+Five years later, the Trump administration has already eliminated more than 5,000 employees in combined NIH and CDC, and works for the United States to disengage from WHO.
+
+And this, even though the United States is faced with several epidemics of tuberculosis, a resurgence of measles (due to a decline in vaccination levels in certain populations), and the worst flu season for the last 15 years ...
+
+What can be the consequences of these decisions? To understand it, and understand the role of WHO, CDC and other public health agencies, a large part of the activity takes place behind the scenes, far from the attention of the public, it is not useless to return to what public health was before the implementation of these major structures.
+
+Expanding and slow Epidemiah circulation of information
+
+Author of the works ""Build the epidemic: epidemics in the media and collective memory"", published in 2020, and ""capture the COVID: the media and the pandemic in the digital era"", published in 2025, I studied in depth the way in the health crises. Through my research, as a health communication specialist, I notably analyzed the essential role played by non -profit organizations and public agencies in the protection of public health.
+
+From Monday to Friday + Sunday, receive the analyzes and decrypts from our experts for free for another look at the news. Subscribe today!
+
+The creation of CDC and WHO dates back to the 1940s. Before the establishment of such national and international health agencies networks, there was no formalized protocol in terms of survey or collection of data, nor coordination concerning information sharing, regardless of the geographic area considered. Without such information sharing systems, it was much more difficult to list the outbreaks and follow the evolution of infections from one region to another.
+
+The 1918 influenza pandemic is a notable example of these shortcomings. Appeared for the first time in a Kansas military base in the spring, this disease, combining flu and pneumonia, then spread abroad. At the end of the summer, she touched Europe, then continued her progression to Asia. Back in the United States in August 1919, the illness was now the name-deceptive-of ""Spanish flu"". The lack of media coverage of the spring epidemic, associated with an absence of follow -up, had led to this confusion: most people believed that the deadly strain came from Europe.
+
+No official follow -up of the outbreaks had been put in place before the disease returned to the American troops which had parked in Europe at the end of the Second World War. In September, the general surgeon and the United States public health service sent telegrams to the health officials of the various states in order to measure the extent of the epidemic and the transmission of the flu.
+
+HEALTH REPORTS
+
+Unfortunately, it was already too late to stem the epidemic wave. The rare news that had been able to relate the epidemic flambés of spring in the spring had been drowned in the flow of world war -related news. Consequence: before their own city was hit hard by the disease, the citizens of the United States had only very little information about the ravages it would generate.
+
+Short of resources and caregivers, the populations have had all the sorrows of the world to set up the fortune hospitals required to welcome the patients, and to find healthy residents to treat them. Proof of the very degraded situation during the influenza pandemic, at the University of Kansas the professors who had to take care not only the students, but also the teacher and administrative staff, and were in charge of washing sheets and the preparation of meals.
+
+This situation has had broader consequences: in the absence of agencies such as CDCs and WHO and the CDC, documentation of the situation as well as the sharing of information - still hampered by the communication difficulties linked to war - have been reduced to the congruent portion. Many regions of the globe have only had limited access to data concerning the disease, possible processing, or even simply the number of cases and deaths.
+
+The influenza pandemic quickly disappeared from the collective memory, in particular due to the lack of testimonies and because few follow -up articles have been published once the number of cases has finally decreased. At least, until the COVVI-19 revives the public's interest in this 100-year-old crisis ...
+
+The polio epidemic benefited from a more coordinated response
+
+Epidemics of polio from the 1930s made it possible to demonstrate the benefits that the coordination of efforts could be coordinated.
+
+The National Foundation for Infantile Paralysis (National Foundation for Infantile Paraysis-today March of Dimes-a non-governmental organization founded in 1938 by the President of the United States Franklin Delano Roosevelt and the lawyer Basil O’Connor) distinguished himself in the fight against polio by launching large public awareness campaigns, by collecting funds, Accompanying the victims, from their hospitalization during the acute phase of the disease to their rehabilitation. This effort was particularly visible during the 1952 polio epidemic.
+
+Read More: polio or ""polio"": a disease always relevant
+
+During this summer, in fact, infections by the polio virus exploded in the United States: 57,628 cases were identified, and more than third of patients kept sequelae resulting in paralysis of various degrees. During the epidemic, the National Foundation for Infantile Paralysis coordinated its actions with its local sections. She informed the population about the propagation epidemic, created emergency hospital wings dedicated to polio, recruited nurses and health professionals, and shared her resources with affected areas.
+
+This mode of operation has served as a model for non -profit organizations and public health agencies to improve their communication and coordination between national and local levels. The vast vaccination efforts led to a massive reduction in polio cases in the United States in the 1960s. The National Foundation for Infantile Paralysis has then changed its name and mission, becoming the March of Dimes, a charity association aimed at improving the health of newborns by fighting against premature births, birth problems and infant mortality.
+
+The crucial role of public health agencies
+
+Created in 1946, CDCs were only a small organization based in Atlanta, whose mission was the fight against malaria in the United States. Two years later after its creation, the Constitution of the WHO was ratified by the representatives of 53 countries. This global organization has brought together nations of all continents Improving disease surveillance, prevention, treatments and research.
+
+During the 1950s and 1960s, these agencies extended their field of action to many areas related to public health, adopting various approaches and strategies drawn up by the National Foundation for Infantile Paralysis: Monitoring and registration of data, public education, surveillance and investigations concerning potential or proven threats, assistance in times of crisis and support for scientific research.
+
+Together, the CDC and the WHO have considerably improved public health, participating for example in the global eradication of smallpox, as well as in the decrease in a large number of other diseases through vaccination, or the development and implementation of treatments against HIV/AIDS.
+
+For decades, these agencies have rarely drawn attention to them, which his agents track in the field of infections by salmonella or by dangerous hemorrhagic fever viruses. Things have changed with the Cavid-19 pandemic. However, even if public opinion concerning the CDC and the WHO was able to fluctuate during the pandemic due to the SARS-COV-2 coronavirus, various recent surveys indicate that the majority of the inhabitants of the United States continue to trust the public health agencies, at least to a certain extent. A survey conducted in 2024 revealed that almost 60 % of adults interviewed believe that the United States has drawn profits from its membership in WHO.
+
+With reason, because without solid efforts coordinated between public health agencies, minor health crises can be transformed into epidemics, or even pandemics. That these structures are weakened, and it may be that tomorrow, the whole world is much less well prepared to face it.",theconversation
+https://theconversation.com,"In the United States, massive layoffs before a dismantling of the Ministry of Education?",https://theconversation.com/aux-etats-unis-des-licenciements-massifs-avant-un-demantelement-du-ministere-de-leducation-252232,"Sun, 16 Mar 2025 09:31:33 GMT","WANT TO WRITE?
+
+Write an Article and Join A Growing Community of More Than 200,000 Academics and Researchers from 5,149 Institutions.
+
+Register NOW",theconversation
+https://theconversation.com,Georgia: When the denunciation of current pro-Russian power is based on the memory of Soviet repressions,https://theconversation.com/georgie-quand-la-denonciation-du-pouvoir-pro-russe-actuel-sappuie-sur-la-memoire-des-repressions-sovietiques-251935,"Sun, 16 Mar 2025 14:14:11 GMT","In Georgia, in manifestations against power, references to repression and purges led by the Soviet regime are numerous. While the influence of Russia seems to grow, part of society establishes a clear link between the crimes of the past and the threats of a disturbing present.
+
+For more than 100 days, demonstrators have gone through the streets of Georgia. They dispute the legitimacy of the legislative elections of October 28, 2024, which renewed at the head of the country the pro-Russian Party Georgian, in power since 2012, and denounce the strengthening of the influence of Moscow. On January 13, 2025, a procession brought together descendants of victims of Soviet repression: most of the demonstrators held portraits of their ancestors, killed during the purges of 1937-1938 or during the crushing of the August 1924 insurrection.
+
+""This is what Russia is doing us right now, and we're here to protest against this. »»
+
+It is with these words that a young woman explains her arrival at the microphone of journalist Zarina Zabrisky. She evokes her great-grandfather, killed in 1938 ""by the Russians"", and her great-grandmother, imprisoned for five years. Also questioned, a young man says that his grandmother's uncle was executed in 1938, and recalls that thousands of other Georgians were killed or exile at that time. Another lady mentions her grandfather, a teacher victim of ""Russian repression"". A participant commemorates an ancestor killed in 1924 and believes that the current situation is ""quite comparable to that of a hundred years ago"".
+
+These Georgians register current manifestations not only in the history of national resistance in the 20th century, but also in that of repression: their testimonies often associate the situation of 2024-2025 with that of the years 1920-1930. Two points are particularly hitting: on the one hand, the memory of the victims of Soviet power today calls for action; On the other hand, the repression and purges of the years 1920-1930 are more considered ""Russian"" than ""Soviet"" or ""Bolshevic""-which is, in part, a historical deformation.
+
+Commemorate the victims: the condition of the rebirth of a national identity
+
+Because the purges also intended to bring out ""a new man"", a ""Soviet"", having largely broken with his culture and national traditions, to become aware of the political violence suffered in the 20th century, of their brutality and their inadmissible character seemed to be, in the USSR of Perestroika, an essential condition for reaffirming and consolidating national identities.
+
+From Monday to Friday + Sunday, receive the analyzes and decrypts from our experts for free for another look at the news. Subscribe today!
+
+It is the need for Georgian director Tenguiz Abouladzé in repentance. When it was released in January 1987, the film was an event and seemed to mark a turning point: to bury the past, it was necessary to tell the truth about the crimes committed-or at least that was most often interpreted. Such a process then started, in a different way depending on the place and the peoples, then stretched due to the social and economic difficulties of the 1990s.
+
+The Stalinist Georgia of Tenguiz Abouladze - Invitation to travel (April 21, 2023)
+
+In Ukraine, he resumed forcefully in the early 2000s and crystallized on the memory of the Holodomor, this great famine which, provoked by the collectivization of land and reinforced by Stalin's desire to break Ukrainian identity, led to the death of millions of peasants between 1932 and 1933. Rediscovered since the collapse of the latter, played a key role in the invigoration of a martyred Ukrainian identity and the rejection of the Soviet period.
+
+The difference between Russian and Ukrainian memory approaches quickly appeared. In 2003, during the 70th anniversary of the Holodomor, Viktor Chernomyrdine, Russian ambassador to Kyiv and former Prime Minister (1992-1998), launched that Russia-yet ""heiress"", ""lawyer in law"" (pravopreemnik), of the USSR-was not going to apologize for the great famine 1932-1933 ”.
+
+On April 20, 2005, three months after the Ukrainian Orange Revolution, Salomé Zourabichvili - then Minister of Foreign Affairs of Mikhail Saakachvili, who had become president of Georgia in 2004 after the 2003 rose revolution - went to Kyiv and filed a wreath in front of the monument to the victims of Holodomor.
+
+According to the Russian daily Kommers, this tribute from Salomé Zourabichvili was a response to a new declaration of Chernomyrdine which, the day before, in Lviv, had recommended that the Ukrainians to send their reproaches for the Holodomor to the Georgian government: ""The father of the people [Stalin] was from there. We, Russia, will not apologize before anyone. For whom, and for what purpose, would we repent? We had more dead [than the Ukrainians during the Holodomor] ”.
+
+Wouldn't it been an additional reason to cry all the victims of Soviet famines and violence together? Russia by Vladimir Putin did not wish it. Because she denied the sufferings of neighboring peoples-and her own ...-gradually rehabilitated Stalin and was increasingly aggressive, she dug memorial and political chasms with other ex-Soviet republics now independent.
+
+Read More: Memory of communism: a European controversy
+
+At the heart of the official Russian position: the refusal of any questioning of the Stalinist past
+
+More generally, the Russian authorities refuse any questioning of the Stalinist past, especially external, and less and less conceal this refusal.
+
+As early as 2007, textbooks commanded by the presidential administration and not yet imposed on everyone justified the Soviet purges: they would have been essential to improve the economy, to fight against external and interior opponents and, in the end, to prevail over Nazi Germany. At the time, President Medvedev called for condemning Stalinist repression, but Russian ""post-modernism"" made it possible to juxtapose contrary, contradictions and paradoxes, so as to make the primacy of the facts and the very meaning of meaning disappear. Since then, the situation has continued to deteriorate.
+
+In his book Radio Vladimir (2025), Filipp Dzyadko, Russian writer and journalist in exile since the invasion of Ukraine by Russia, notes that Putin ""engaged a war on memory"":
+
+“Historical fables in place of the condemnation of the crimes of Soviet power. Stalin's worship in place of recognition of repression committed on millions of people. The state in the place of man. Propaganda in place of truth. Because, as we know, memory is resistance. »»
+
+Read More: In Russia, a new history manual at the service of the ideology of power
+
+However, Russians have tried to continue the processes initiated during the Perestroika. Filipp Dzyadko thus underlines that the Memorial association - forcibly closed in December 2021 - ""did not stop [alert them to the serious sequelae left in society by the trauma of a poorly overcome past"", starting with ""a deep atomization"" and ""a visceral fear which was transmitted from generation to generation"".
+
+The memory approaches taken in Georgia or Ukraine fight, among other things, these ailments, but they are now associated with a de-security as well as with de-RUSSATION.
+
+Calls not to repeat the past
+
+This is what the remarks made during Georgian demonstrations or in a Ukraine again brutalized by Russia reflect. Even if forgetting the role of Georgian personalities such as Sergo Ordjonikidzé in the repressions of 1924 or those of Kandid Tcharkviani, Lavanti Béria and Stalin himself in the great terror in Georgia is a historical deformation which prohibits going to the end of the approach initiated by repentance.
+
+Some Georgians understand it. Thus, on November 28, 2024, when the new Georgian government announced its decision to postpone the opening of membership negotiations to the European Union - which revived the protest -, an intellectual from Tbilisi exploded on Facebook: ""Species of traitors! Ordjonikidzé of our time, what do you do in the country! Your descendants will be ashamed of you! ""The next day, she exclaimed:"" Exactly what was going on in 1921. Make a choice, do not become Sergo Ordjonikidé! By the evocation of this revolutionary, she recalled the involvement of certain Georgians in submission to Bolshevik Russia, but also to Putinian Russia.
+
+On the same social network, another Georgian written in December 2024:
+
+""Do you know what time it is?"" Imagine that we are in 1935 and that we can save Mikheïl Djavakhichvili, Petre Otskheli, Paolo Iachvili ... or rather, we are in February 1921 and we can save the whole country ... ""
+
+These words refer to the tragic death of three personalities from the cultural world, victims of the purges of 1937 (Djavakhichvili and Iachvili were two writers: the first was tortured and executed; the second, threatened, committed suicide. Petre Otskheli, theater decorator, was arrested and executed the same year, at the age of 30), and on the date of the invasion of Independent by the Bolshevian troops, in 1921. The user thus made the link between a terribly painful past and a disturbing present, and calls for individual responsibility and action so that the dramas of the past are not repeated.
+
+As we will have understood: the challenges of these events are identity and memorial as much as geopolitical. Admittedly, the oligarch Bidzina Ivanichvili, a true master of the country, seems very distant, by his luxurious lifestyle, from Stalin's practices. But it is since his party directed Georgia that Stalin statues have been reappeared in the country.",theconversation
+https://theconversation.com,«Homo Subscriptor»: Stade Supprême du Capitalism Numérique,https://theconversation.com/homo-subscriptor-stade-supreme-du-capitalisme-numerique-245691,"Sun, 16 Mar 2025 14:12:47 GMT","L'Albonnement est owe l'ad l'Mega de la consomamation numented. Derrière ce phénomène, unites nouvelle espèce of consommateur est appear: l'le homo subscriptor. AVEC Quel Équilibre between Accès Illimité to the UN Service et Revelation of Notre Liberté?
+
+Homo Subscriptor, ce neologisme est appear recaru dans la presse international, notamment Spagnole. Il Désigne L'Im Individu Modern Dont La Vie Quotidienne est Structurturée Autour of Multiples ABONNEments to Services Numerics. De la Musique en stream to La Livraison de Plates, en passant for Les Plates-Groered Farms of Demande, Homo Subscriber Incarne unites nouvelle ère of consomination, Fondée sur des paiements repuurants. DERNIER AVATAR D'HOMO NUMERICUS, POPULARISM PAR DANIEL COHEN - L'Im Individu Dont La Vie EST PROFONENCÉEE PAR LES TECHNOLOGIES NUMBERS - Homo Subscriptor VOIT SA DEPENDANCE AID AUDONNEMES NUMERIQUES ACCRUE.
+
+L'Avènement d'Nomo Subscriptor Pourrait Marquer Le Stade Ultime Du Capitalism Numérique. La Valeur Résiderait Moins Dans la possession that dans l'ccès continu aux resourceces numerics. CE Phénomène APPELLE A UNE RENEFLEXION PROPROFONDIE Sur In the Relations to La Technologie. Il Pose Même La Question de l'Equilibre between Les Avantages de l'Accès Illimité et la préervation by notre liberté.
+
+3.2 ABONNESMENTS NUMERIQUES PAR MONAGE FRANCE
+
+EN FRANCE, LA TENDANCE VERS ABONNESMENTS NUMBERS est Particulièrement Marquée. EN MOYENNE, CHAQUE MONAGE FRANCE POSSITE 3,2 ABONNESMENTS NUMBERIQUES, POUR UN [Montant d'Jaron 65] (https://www.cbnews.fr/etudes/image-ervices-abonnements-freen-ament-dovent-fire-cho-85303 pair mois, Devant L'Epani (60 €), L'Allemagne (57 €) or L'Isalie (50 €), plus Encore derrière Le Royaume-Uni (68 €). Un Service d'Abonnement universel.
+
+Du lundi au vendredi + le dimanche, replacement free les analysis et décryptages of us experts pour a autoner regard sur l'datualité. ABONNENEZ-VAS Dès Aujourd'hui!
+
+CETTE STATISTIQUE ILLUSTRE L'OMNIPRÉSENCE DE SERVICES D'ABONNEMENT DANS LA VIE QUOTIDIENNE. Les Services of Streaming Comme Netflix et Disney+, Les Plateforms of Musique Comme Spotify et Deezer, Aini who Les ABONNEments to the Services of Livraison Comme Uber Eats et Deliveroo, Sont de Éléments Esentiels du Quotidien. Les ABONNEments to Fitness Services en ligne, comme les yoga applications or coaching Sportif, Ont Également gagné en popularité. Transport Comme les Velos en libre-service comme le Vélib 'to Paris or Les Trottinettes Élutriques Comme Lime et Bird FonctionNement également suring sur UN modèle d'Abonnement.
+
+ACCès Continu at Un Service
+
+CETTE Multiplication des A abonnements Themoigne d'Un CHANGEMENT PROFOND DANS LES EBBERDISE OF CONSOMMATION: L'CCès Continu to De -Prevaut De -De -De -Services Sur La Possession of Biens Materiels. More celui-ci n'est qu'ne redcouverte d'Un modèle of Tarification Apparu au xviie siècle dans l'esdição en Angleterre. Il is popular in France to La Fin du Xixe Siècle Par Jacques Crespin (1824-1888).
+
+Le Crissur du Palais de la nouveauté dans le Quartier de Barbès to Paris Introduisit L'e Extension de la Vente «to Temperament» - Vento to Credit avec Assurance - to des Objects du Quotidien Comme les. UN Moyen Inhabile de Lever Le Frein à la Consmination des Classes Popular. CE Modèle de Tarification S'est Par La Suite Impion, Après-Guerre, Dans Les Services Comme L'Energie, La Téléphonie or Les Industries Culturelles, Souvent Fourni for Opérateurs Publics ENTION of Monopole.
+
+Liberté Illusoire
+
+Le modèle d'Abonnement offra unk liberté applicant aux consommateurs, avec la possibilité de jersilier to tout moment. Il PERMET Aussi d'Accéder to the vast Gamme of Contensus or Services pour un coût Défini to L'Avance. CEPENDANT, CETTE LIBERTÉ ESTUVENT ILLUSOIRE. Les Utilissent des Techniques from lock-in 'techniques pour Fidéliser Leurs clients; Elle Rend Plus Difficile Le Passage, Qui Serait Plus Coûteux, to a Concurrent who resters ABONNÉ.
+
+Les ABONNEments to the Comme Netflix or Spotify Son Conçus Dependence Leurs Algorithmes of Rewardation S'adapTent Aux Presidents of L'Utilisateur et certain Contenus ExclusFs Ne Son Processes that Sur Leur Plateform.
+
+Read more: propose by ABONNEments Automatiques APRès Essai, unit Strategie Loss Pour les Entreprises
+
+LA Multiplication des A abonnements peut Également entrepreneurs unk uninee «Fatigue de l'Abonnement» et des coûts cumulés Importants. Les consommateurs has retreated avec of nombreux abonnements qu'ils utilissento peu or pas du tout, more qui'ils continuent of payer par commodité or pair orbli. Aujourd'hui, DANS UN CONTEXTE OF RAULTISSEMENTE Economique, Près d'Un Quart des A abonnés en ligne Français admet avoir Eu Piratage recounts.
+
+TROP OF SERVICES? TROP D'ArPLICATIONS NUTILIISÉES? TROP Chères? Les Raisons Son Nombreuses de Perdre Homo Subscriber Dans La Jungle Numérique.
+
+Verrouillage Numérique
+
+Cette Situation Credit UNE Dependence Technologique et Financière Dans Laquelle Les Consommateurs Sont Verrohesu Au Sein d'Un Écosystème de Services numerics. CE VEROUILLAGE PUTTE VU VU COMME UNE CONTRONE FERME Economic, Où Quelques Entensing Les Thermos de la Consmation, et Démal de la Production, to Travers La Généralisation de l'Économie de la tâche.
+
+DANS CE TYPE D'OCONOMIE, L'Ondro individual n'OFFRE PAS SA FORCE OF TRAVAIL SOUS LA PROTECTION D'UN CONTRAT DE TRAVAIL, EN CONTREPARTIE D'UNE SOUMMISSON TO L'Entreprise. Il l'offra via a contract Commercial avec unites Plateform, craft to the degadées etc.
+
+L'CCumulation d'Albonnements en Tout Genre Fait Appaître, pour les consommateurs, unites nouvelle of depenses contrasts, qui s'ajoute aid Habituuelles pre-media or aux rembouarsments d'Alims. DANS UN CONTEXTE DE HAUSSE DES PRIX, HOMO SUBSCRIPTOR IS DONC DE PLUS EN PLUS LIBRE OF SES CLHAIX, MORE UNIQUEMENT TO L'Entérieur de Plateforms Ayant by Plus en Plus d'Emprise sur Lui. Unites Form of Liberté Surveillalé et Fortement Schedule.
+
+EN OUTTRE, LA COLLECTE MASSIVE OF DONENES Personnelles Soulève des Questions of Confidentialité et de Sécurité, Accentués to les Decisions Reenterers of L'O Administration Trump. Les Scandales RéCENTS CONCERNANT L'E USE DONNES Personnelles PAR GREAT ENTERPRISES TECHNOLOGIQUES OT MIS EN LUMIIR CES PRECCUPATIONS.
+
+Un defa plus qu'ne optimóté
+
+Homo Subscriptor Reprier to La Fois UNE OPPORTITÉ ET UN DEFIDE POUR NOTRE SOCIÉTÉTE. SI LE MODèle d'Abonnement Offer des Avantages IndéniaBles en Matière de Convenance et de Personalisation, Il Pose Également des Questions Cruciales sur la Dependance Technologique, La Confidentialité des Donées, et les unprecedented d'Accès.
+
+Pour that Cette nouvelle ère du Capitalism Nuérique Soit Bénéfa to Tous, Il Essentiel de Mettre en Place des Réguulations adapées et de Promouvoir Une Utility Éthique des Technologies. L'Avenir d'nomo Subscriptor Déperdra de Notre Capacité to the Résoudre Ces Défis avec Discernement et Responsibilité. NOTAMMENT DANS UN CONTEXTE MARQUÉ PAR L'LOSANCE BETWEEN LES GÉANTS DE LA TECH et Les Régimes Illibéraux or NON DEMocratiques.",theconversation
+https://theconversation.com,Digitization of knowledge: between democratic utopia and instrumentalization,https://theconversation.com/numerisation-des-savoirs-entre-utopie-democratique-et-instrumentalisation-245628,"Sun, 16 Mar 2025 14:16:13 GMT","The current universal digitization upsets our relationship with historical documents, memory and knowledge. An essential question arises: how to create a digital heritage that is both lasting, ethical, accessible, authentic and respectful of data protection?
+
+Correspondences, research files, recordings: Bruno Latour archives, a major figure in sociology, were given in Beaune in 2018 and in the National Archives in 2024. A project to digitize this documentary legacy is underway, piloted by the University of Burgundy Europe. This digital transition promises to democratize access to Latour intellectual heritage for researchers around the world, because the fund will be available in self-service in the coming years.
+
+This ""utopia of a documentary space"", however, raises complex issues: this easy access can lead to a loss of bearings and a transformation of the role of the reader. But it also exposes these documents at several risks: commodification of data, dependence on digital giants, fragmentation of collective memory, and above all, an increasing ecological footprint. In a world where digital infrastructures consume massive and growing quantities of energy and are based on limited natural resources, can we still consider a ""sustainable"" digitization of intellectual heritage?
+
+Bruno Latour throughout his work, questioned the way in which knowledge is publicized and transmitted in material and social infrastructure. Today, while its heritage is going through this digital mutation, it seems necessary to question our practices. Ecological and political tensions that shape digital technology cannot be ignored. Preserving the memory of an intellectual in an era where knowledge becomes a monetisable resource, even more with the arrival of generative artificial intelligence, is not just a technical operation, it is also a cultural and political choice.
+
+From Monday to Friday + Sunday, receive the analyzes and decrypts from our experts for free for another look at the news. Subscribe today!
+
+The proliferation of data: an obstacle to clear thought?
+
+In the digital age, an imperative seems to impose itself, everything must be preserved: historical archives, personal memories, cultural documents. This accumulation perhaps aims to build a virtual collective memory, but poses a paradox: by wanting to hold everything, do we not risk losing ourselves in an overload of information? This overabundance, qualified ""infobesity"", often drowns essential data from a multitude of secondary content, making their sorting and their hierarchy complex.
+
+Users, constantly solicited, are struggling to concentrate and attach as much importance to secondary information as to major content.
+
+In the heritage field, this mass of data creates confusion rather than a clarification. Instead of facilitating access to knowledge, digital can sometimes blur their understanding. The sociologist Dominique Boullier underlines that the disappearance of traditional intermediaries leads to an equal knowledge of validated knowledge and undelicated information, accentuating this loss of benchmarks and the de-hirarchy of knowledge.
+
+Oblivion, often perceived as a weakness, could paradoxically become a force. It would structure thought and focus on the essentials.
+
+Another issue is that of power over this communication space. Large technological companies (Amazon, Facebook, Google, Instagram, Tiktok) hold digital infrastructure and monetize data. Their algorithms, which filter and prioritize information, influence what we see and read, mixing knowledge and distraction. This dependence strengthens their control over the circulation of knowledge, raising the question of independence and the sovereignty of knowledge in the digital worlds.
+
+The fragmented web, between utopia and geopolitical reality
+
+When it started, the web bore an ideal of freedom, without commercial or political control. John Perry Barlow, cyberactivist and co -founder of the Electronic Frontier Foundation (an international NGO for the protection of freedoms on the Internet), expressed this vision in 1996 in his ""declaration of independence of cyberspace"", where he imagined a space of exchange freed from state regulations.
+
+This ideal has encountered geopolitical and economic realities. Today, the web is fragmented between national and commercial blocks, each power imposing its own rules. China controls access to content via ""the Grand Firewall"", while in Russia, citizens' data must be stored on national servers.
+
+In addition, the Internet is dominated by digital giants, especially those of Silicon Valley, who control infrastructure and capture most of the profits and jobs related to new technologies, including artificial intelligence.
+
+Europe, on the other hand, is struggling to establish itself as a major technological player. It depends on the technologies developed elsewhere and finds itself marginalized on the world digital scene, relegated to the rank of simple consumer. A European Parliament report thus calls for a strategy to reduce this dependence and strengthen its digital sovereignty.
+
+AI: opaque appropriation of knowledge
+
+Artificial intelligence uses enormous amounts of data, including protected works, often without the author's authorization, thus raising legal and ethical issues. Any information can be used to generate content, making data a key resource for the digital economy.
+
+This merchant logic disconnects the knowledge of their cultural and scientific value of origin. The exploitation of content for commercial purposes leads to their decontextualization and transforms them into simple goods at the service of the interests of digital giants.
+
+The example of Openai illustrates this drift. Created as a non -profit research laboratory, the organization has become a commercial company prioritizing marketing and growth and relegating to the background the ethical issues and data protection.
+
+In this context, preserving the cultural and symbolic wealth of knowledge becomes a crucial challenge. How to resist this merchant dynamic and protect the intellectual heritage against instrumentalization?
+
+Europe is trying to supervise large technological companies with initiatives such as Digital Markets Act (DMA) or the General Data Protection Regulations (GDPR). But faced with the transnational strategies of digital giants, which have considerable means to bypass or influence regulations, their effectiveness remains uncertain. In a quasi-monopoly situation, they shape the global digital infrastructure and impose their own rules, dictating the conditions of access to information.
+
+Thinking of digitization, a political and cultural issue
+
+The digitization of the archives of Bruno Latour highlights a contemporary dilemma: offering expanded access to knowledge while remaining dependent on energy-consuming infrastructure and private platforms which control the information. Far from being intangible, digital is based on limited resources and strengthens power logics that question its ecological, political and cultural impact.
+
+Bruno Latour would invite us to ""land"", that is to say to become aware of the material and systemic implications of these choices. For him, the environmental crisis is a geopolitical upheaval which forces us to rethink our relationship to territory, sovereignty and inequalities. We can no longer consider our societies regardless of terrestrial constraints and ecological interdependencies. Consequently, the question of digital heritage cannot be limited to a technical issue: it initiates political choices on access to knowledge, infrastructure governance and sustainability of supports. Who controls this data? Under what conditions and what ends? Rather than accumulating without reflection, it is essential to design digitization as a political project to question the possibility of access to lasting and independent knowledge.",theconversation
+https://theconversation.com,Cloud calculations: how to store and use the data safely ... and not too expensive,https://theconversation.com/calculs-sur-le-cloud-comment-stocker-et-exploiter-les-donnees-de-facon-sure-et-pas-trop-onereuse-249923,"Sun, 16 Mar 2025 14:14:57 GMT","Storing data in the cloud is now routine, both for individuals and for businesses, but the risk of cybersecurity still exists, in particular in the management of user authentication and access control.
+
+Researchers are developing new methods in order to ensure safe storage, which is not too energy delicious, and which allows effective exploitation of data. For this, they offer in particular to carry out the calculations directly on encrypted data.
+
+Due to the enormous quantity of sensitive data kept online, cloud systems have become an essential tool for modern commercial operations, but also a significant target of cyber attacks. Currently, more than 90 % of organizations are based on Clouds services for essential operations, and there are more than 3.6 billion users active worldwide - which means that 47 % of the world's population uses cloud services. The dependence on them is therefore generalized.
+
+Unfortunately, this intensive use involves increased risks. Data violations are increasing, both in their frequency and their severity, and 44 % of companies have expressed flaws in their cloud environment. 14 % of them had experienced data violation in the past twelve months.
+
+While organizations transfer more and more sensitive data on a cloud (almost half of the stored information is considered sensitive), the vulnerable surface to attacks is increasing for cybercriminals. Consequently, incidents are more frequent and at higher risk, since the loss of sensitive information can have significant effects, both financially and in terms of reputation. The average world cost of data violation in 2024 was estimated at $ 4.88 million.
+
+Today, what is called ""client -sided encryption"" makes it possible to effectively preserve data security and their confidentiality. However, so that encrypted data is useful, you must be able to use it safely - exploit them by making calculations, for example. For this, there is still a long way to go, because we are still facing major performance and scaling problems. The researchers continue to seek the means to fill this failure, in order to allow massive use of this data that is confidentially respectful, more efficient and accessible to large -scale applications.
+
+From Monday to Friday + Sunday, receive the analyzes and decrypts from our experts for free for another look at the news. Subscribe today!
+
+The deep causes of cloud safety incidents
+
+User authentication and access control are among the essential mechanisms to avoid data violations.
+
+User authentication is the procedure for verifying the identity of users trying to access the cloud resources. It constitutes the first line of defense, but it is largely considered to be the weakest link in the security chain: indeed, it is estimated that 81 % of the violations made by hackers are based on stolen or weak passwords. Even if user authentication has evolved a lot in recent years, attacks intended to compromise the procedure have followed the movement.
+
+Access control - which consists in regulating that can visualize, use or interact with cloud resources, whether data, applications or services - is the second line of defense. Effective access control guarantees that only authorized users or devices have essential permissions to access and modify certain resources, which minimizes safety risks and avoids unauthorized access to or fraudulent use of the cloud.
+
+In today's cloud environments, it is the servers who control access and are technically responsible for it. Thus, a defective configuration, whether due to a human error or a software bug, just like a cyber attack on servers, can lead to serious incidents. In fact, the NSA (National Security Agency in the United States) considers configuration defect as one of the main vulnerabilities of a cloud environment.
+
+Customer -side encryption allows you to store data in a safe way
+
+The data can be encrypted and deciphered on user devices before being transferred to the cloud. In this way, the data is encrypted during the transit and storage phases and therefore inaccessible to anyone who does not have the decryption keys, including service providers and potential cyberataters. As long as the decryption keys remain secure in the end user, the security and confidentiality of the data can be ensured even in the event of compromise of the user account on the cloud or the cloud server itself.
+
+Customer -side encryption solutions use private encryption keys or public keys (symmetrical or asymmetrical cryptography). For example, Google Workspace goes through an online server to distribute keys intended for encryption and sharing of data between authorized users. But a safety keys distribution server can limit both the performance and safety of the process.
+
+In order to deal with this problem, Mega, another client -side encryption service, uses public key cryptography, which avoids the stage of the online key distribution server. However, this strategy requires management of sophisticated electronic certificates, as the number of asymmetrical cryptography figures is proportional to the potential number of users to share a document, it is difficult to apply on a large scale.
+
+Read More: Hunt for waste in the Cloud and Data Centers
+
+Customer -side encryption requires significant calculation resources. How to exceed this limitation?
+
+Suppose that a hospital wants to entrust the storage of the electronic files of its patients to a cloud service and wishes to establish a specific policy of access to files. Before relocating a file, the hospital may specify that only cardiologists from the university hospital, or researchers from the Institute of Life Sciences will be able to access it. Note that ""CT"" designates the encrypted medical file and that ""AP"" = (cardiologist and university hospital) or (researcher and institute of life sciences) represents the policy of access. CT and AP are cryptographic linked at the time of transfer to the cloud for data storage. From there, only users fulfilling the AP conditions can decipher CT in order to access the decrypted medical file.
+
+This encryption system can be placed on the scale, because its access policy does not require lists all individuals with authorization to access data, only the characteristics of potential users. It is not the Cloud server that enforces access control (that is to say decryption) to encrypted data. This access control is implemented thanks to the encryption and deciphering algorithms themselves, which are demonstrated safe in theory.
+
+Beyond secure storage: operate effectively encrypted data
+
+This type of decryption, already in use, requires large calculation resources. For aircraft with limited resources, this is a major drawback in terms of efficiency. To cope with this problem, we have proposed a protocol that reduces the consumption of the two-ordinary deciphering operation for the end user by subcontracting the largest of the workload to a public cloud server.
+
+Another essential problem in the use of customer -side encryption is the ""dismissal of the user"": when a user leaves the system, changes position or loses their private key, the key must be revoked in order to prevent unauthorized access to sensitive data. Current systems mainly resort to horoditing to withdraw from dismissed users the possibility of deciphering new content. However, timeing requires regular updates, which can require significant calculation resources for the biggest systems. We therefore proposed a hardware -based encryption system (hardware) and revocable attributes, in order to make this process less expensive.
+
+Read More: ""Fog Computing"" is the future of the cloud - in addition to frugal and more efficient
+
+Do calculations directly on encrypted data
+
+Ideally, servers should be able to perform important operations on encrypted data without even having to decrypt it, which would preserve confidentiality at each stage.
+
+This is where what is called ""completely homomorphic encryption"" comes in. It is a advanced encryption technique that allows mathematical operations - in particular addition and multiplication - are carried out on encrypted data directly by a server, without going through deciphering.
+
+However, current cutting -edge systems cannot yet be used for large -scale operations due to ""noise"": random data is involuntarily introduced by encryption operations. This noise threatens the integrity of the results of calculations and makes frequent operations to delete inaccuracies - again, an expensive process in calculation resources, in particular on bulky data systems.
+
+We propose for this problem a new direct processing approach of encrypted data. It makes it possible to carry out an unlimited number of arithmetic operations without resorting to ""bootstrapping"" (the mathematical operation to reduce noise) and achieves higher performance for various secure calculation operations, for example the respectful reidentification of privacy.
+
+Created in 2007 to accelerate and to share scientific knowledge on major societal issues, the AXA for research fund has supported nearly 700 projects worldwide, led by researchers from 38 countries. To find out more, see the Axa Research Fund website or follow us on X (@Axaresearchfund).",theconversation
+https://theconversation.com,Grenoble Management School (GEM) on the conversation,https://theconversation.com/institutions/grenoble-ecole-de-management-gem-2181,"Sun, 16 Mar 2025 14:12:47 GMT","For 30 years, Grenoble School of Management has occupied a preponderant place in the landscape of French and international business and management schools. Its expertise in technology management and innovation makes GEM a school in which the future is built every day. Three strong values ​​animate the institution: excellence, entrepreneurship and commitment. Firmly established on its territory since its creation by the Grenoble Chamber of Commerce and Industry in 1984, Grenoble School of Management approaches this new decade with great ambitions: determined to make the difference, it is preparing to become an influential ""school for business"".
+
+With nearly 100 permanent researchers, solid doctoral programs, a large number of European and national research scholarships, important economic and institutional partnerships and a culture of dynamic and cooperative research, Grenoble School of Management is also among the key players in management in Europe, both by the quality of work and their impact.
+
+For the Past 30 Years, Grenoble School of Management (GEM) has developed its role in France and abroad as a leader among french business schools. We have helped shape the Future of Business Around the World through Our Expertise in Technology and Innovation. Three Key Values ​​Guide the Institution’s Development: Excellence, Entrepreneurship and Commitment. Our Fourth Decade as a Business School is marked by a new ambition: Committed to Having A Positive Impact on the World, Gem Has Set Its Sights on Becoming An Influenial “School for Business”.
+
+With Almost 100 Active, Permanent Researchers, Strong Doctoral Programms, A Large Number of European and National Research Grants, Substantial Corporate and Institutional Partnerships, and A Vibrant, Cooperative Research Culture, Grenoble Management School is Proud to Figure TODAY AMONG The Leading Management Research Organizations in Europe Research Output as well as impact.",theconversation
+https://theconversation.com,"Whatever happens to Star, the age of unfettered gambling revenue for casinos may have ended",https://theconversation.com/whatever-happens-to-star-the-age-of-unfettered-gambling-revenue-for-casinos-may-have-ended-251248,"Sun, 16 Mar 2025 19:28:36 GMT","Casino operator Star Entertainment has been under financial pressure for some time. The company’s share price has tanked, and the business, with its three casino properties, has been bleeding money.
+
+Last year’s opening of a new riverside casino in Queen’s Wharf, Brisbane, was seen as a way to revitalise the business. But Star has swung from one lifeline to another.
+
+Just as it was set to run out of cash on Friday March 7, Star announced a last-minute rescue package. This centred on selling its 50% stake in the Queens Wharf casino to Hong-Kong-based joint venture partners for $53 million.
+
+Star has also started documentation for a $250 million bridging loan but still needs to finalise a proposal for long-term refinancing.
+
+All of this remains subject to details being finalised, and regulatory approvals. An alternative $250 million takeover offer from US casino operator Bally’s currently isn’t Star’s preference because it is considered too low.
+
+But Star is far from out of the woods yet. Whatever happens to it and its casino assets, there are bigger questions about whether the age of unfettered gambling revenue for casinos may have already ended.
+
+Elsewhere, gambling is booming
+
+If Australian casinos are struggling, it’s not because punters are giving up gambling. Whereas most of the gambling market recovered rapidly after the end of pandemic restrictions, casinos floundered.
+
+Between 2018–19 and 2022–23, before and after pandemic restrictions were in place, total Australian gambling expenditure (in other words, gamblers’ losses) grew by 6.8% in real terms (adjusted for inflation).
+
+Real wagering losses grew by 45%. This segment has clearly emerged as the second-biggest gambling market in the country, with gambling expenditure of $8.4 billion.
+
+But over the same period, expenditure at casinos declined by more than 35% nationally, and by 42% in New South Wales.
+
+Read more: The rate of sports betting has surged more than 57% – and younger people are betting more
+
+Do casinos have a viable business model?
+
+Both Star and Australia’s other major casino operator, Crown, have emerged from a range of high-profile scandals in recent years.
+
+Media reporting, inquiries, and royal commissions into Crown, and then Star, give some insight into how the casino business used to be run in Australia.
+
+Star’s (and Crown’s) business model appears to have previously relied on two major revenue streams: benefiting from the proceeds of crime (by operating as a cash laundry for organised criminal gangs), and exploiting every vulnerable person who walked onto their premises.
+
+Both casinos facilitated money laundering, particularly via junket operators, organisers of casino visits by high rollers. Unfortunately, many of these people had strong links to organised crime gangs keen to launder their illegally acquired money.
+
+Former Star executives and board members are now facing Federal Court proceedings brought by ASIC, with two already having been fined.
+
+Read more: 'Multiple red flags': ASIC's court case against Star executives shows the risks of complacency
+
+Star and Crown preyed on addiction
+
+Both Star and Crown were also found to have encouraged significant expenditure by addicted gamblers.
+
+This wasn’t just high rollers. Ordinary people were also encouraged to use poker machines for hours without any attempt at encouraging a break, as mandated by “responsible gambling” codes.
+
+The Victorian Royal Commissioner, investigating Crown, regarded its “responsible gambling” failures as particularly heinous.
+
+The result was the turnover of the board and management, hundreds of millions of dollars in fines, and increased regulatory oversight.
+
+Although neither casino chain closed its doors, regulatory breaches led to appointment of special managers to oversee the business and hold the licences. Further change included beefing up regulators’ powers and resources.
+
+Turning a page
+
+Without significant funds from the proceeds of crime, or exploitation of the vulnerable, casinos are clearly struggling.
+
+In NSW and Victoria, the casinos have been required to introduce “cashless gaming” systems.
+
+This takes cash out of the system, deterring money launderers. Gamblers must also set a limit on their gambling spend, and adhere to it. The system is in the process of being introduced in Queensland.
+
+Certainly, overcapitalisation of new developments has played a part in casinos’ struggles. Crown Melbourne was effectively sold to Kerry Packer in 1998 on the back of its own financial issues. Overcapitalisation of the business was seen as an issue then.
+
+Stronger competition
+
+Competition from online wagering and pokie venues may also be playing a part. These businesses are not currently regulated as effectively as casinos.
+
+Precommitment systems for online wagering would be relatively easy to introduce. They would require punters to set a limit on deposits or bets, or indeed the time they spend gambling, and enforce these technically.
+
+Getting these in place, however, may be as formidable a task as getting gambling ads banned from sporting broadcasts, if not more so.
+
+The gambling industry understandably opposes this. After all, these measures would reduce the amount that people lose. From a public health perspective, however, they provide an effective system to prevent harm in the first place, rather than simply picking up the pieces.
+
+Without effective reform of local gambling venues and online wagering, casinos may try to mount an argument for less effective regulation. That would be an admission that their “tourism” attractiveness has waned. It’s also a powerful argument to speed up the transition of effective regulation to all gambling operators.",theconversation
+https://theconversation.com,"Cyclone Alfred to cost budget $1.2 billion, hit growth and push up inflation: Chalmers",https://theconversation.com/cyclone-alfred-to-cost-budget-1-2billion-hit-growth-and-push-up-inflation-chalmers-252171,"Sun, 16 Mar 2025 11:32:09 GMT","Cyclone Alfred will cost the March 25 budget at least A$1.2 billion, hit growth and put pressure on inflation, Treasurer Jim Chalmers says.
+
+In a Tuesday speech previewing the budget, Chalmers will also say that on preliminary estimates, the cyclone’s immediate hit to GDP is expected to be up to $1.2 billion, which could wipe a quarter of a percentage point off quarterly growth.
+
+“It could also lead to upward pressure on inflation. From building costs to damaged crops raising prices for staples like fruit and vegetables,” Chalmers says in the speech, an extract of which has been released ahead of delivery.
+
+The treasurer says the temporary shutting of businesses due to the cyclone lost about 12 million work hours.
+
+By last Thursday, 44,000 insurance claims had been lodged. Early modelling indicated losses covered by the Cyclone Reinsurance Pool were about $1.7 billion.
+
+The estimated costs to the budget, which are over the forward estimates period, are preliminary.
+
+The government has already co-sponsored with the states $30 million in support for immediate recovery costs, Chalmers says. Millions of dollars are being provided in hardship payments.
+
+“The budget will reflect some of those immediate costs and we’ll make sensible provisions for more to come,” he says.
+
+“I expect that these costs and these new provisions will be in the order of at least $1.2 billion […] and that means a big new pressure on the budget.”
+
+This is in addition to the already budgeted for disaster relief.
+
+“At MYEFO, we’d already booked $11.6 billion for disaster support nationally over the forward estimates.
+
+""With all of this extra funding we expect that to rise to at least $13.5 billion when accounting for our provisioning, social security costs and other disaster related support.”
+
+Chalmers will again argue in the speech his recent theme – that the economy has turned a corner. This is despite the global uncertainty that includes the Trump tariff policies, the full extent of which is yet to be spelled out.
+
+Australia is bracing for the possibility our beef export trade could be caught in a new tariff round to be unveiled early next month.
+
+Despite last week’s rebuff to its efforts to get an exemption from the aluminium and steel 25% tariffs, the government has vowed to fight on for a carve out from that, as well as trying to head off any further imposts on exports to the US.
+
+In seeking the exemption, Australia was unsuccessful in trying to leverage its abundance of critical minerals, which are much sought after by the US.
+
+Trade Minister Don Farrell told Sky on Sunday:
+
+What we need to do is find out what it is that the Americans want in terms of this relationship between Australia and the United States and then make President Trump an offer he can’t refuse.
+
+In Tuesday’s speech, Chalmers is expected to say the budget will contain fewer surprises than might be the case with other budgets.
+
+This is because this budget – which would have been avoided if the cyclone had not ruled out an April 12 election – comes after the flurry of announcements already made this year and before further announcements in the campaign for the May election.
+
+Those announcements already made include:
+
+$8.5 billion to boost Medicare
+
+$644 million for new Urgent Care Clinics
+
+a multi-billion dollar package to save Whyalla Steelworks
+
+$7.2 billion for the Bruce Highway and other infrastructure
+
+funds for enhanced childcare and to provide some student debt relief
+
+new and amended listings for contraception, endometriosis and IVF on the Pharmaceutical Benefits Scheme.
+
+Read more: Labor and the Coalition have pledged to raise GP bulk billing. Here's what the Medicare boost means for patients
+
+Deloitte Access Economics in its budget monitor predicts the budget will have a deficit of $26.1 billion for 2024-25.
+
+Deloitte’s Stephen Smith said that although a $26.1 billion deficit was slightly smaller than forecast in the December budget update, the longer-term structural deterioration should be “a reality check for politicians wanting to announce election sweeteners in the weeks ahead”.
+
+Deloitte projects a deficit of nearly $50 billion in 2025-26.
+
+Open to a ‘small’ Ukraine peacekeeping role
+
+Over the weekend, Prime Minister Anthony Albanese took part in the “coalition of the willing” virtual meeting convened by British Prime Minister Keir Starmer in support of Ukraine.
+
+The meeting also included Ukraine, France, Spain, Portugal, the Netherlands, Belgium, Denmark, Finland, Estonia, Lithuania, Latvia, Greece, Italy, Poland, Bulgaria, the Scandinavian countries, Canada and New Zealand. The United States did not participate. President Donald Trump is trying to force an agreement between Ukraine and Russia to end the conflict.
+
+Albanese reiterated after the meeting: “Australia is open to considering any requests to contribute to a future peacekeeping effort in support of the just and lasting peace we all want to Ukraine”.
+
+He added the obvious point: “Of course, peacekeeping missions by definition require a precondition of peace”.
+
+Albanese said that any Australian contribution to a Ukraine peacekeeping force would be “small”.
+
+Opposition Leader Peter Dutton has opposed sending Australians to a peacekeeping force.
+
+Read more: Politics with Michelle Grattan: Peter Dutton on why he's not Australia's Trump – 'I'm my own person'",theconversation
+https://theconversation.com,Australia’s next government may well be in minority. Here’s how that can be a good outcome for the country,https://theconversation.com/australias-next-government-may-well-be-in-minority-heres-how-that-can-be-a-good-outcome-for-the-country-252162,"Sun, 16 Mar 2025 19:28:05 GMT","Two months out from an Australian federal election, the polling is pointing to a very tight race between the two major parties. This means, if the polls are correct, neither party will likely win enough seats to command a parliamentary working majority.
+
+Australia’s most recent experience of a hung parliament was the Gillard-Rudd government of 2010–13. Many still see that as an unhappy era, with internal division within Labor’s party room in Canberra, and yet another leadership coup, as the lasting, bitter memory.
+
+So, it is time to reassess whether – or how well – Australia might be governed in similar circumstances.
+
+Building a stable coalition
+
+The answer depends on us being open to the meaning of a stable, inter-party coalition. This is particularly tricky in Australia for three reasons. First, although the political parties themselves are coalitions of philosophies and factions, this is often masked by high levels of party discipline. With very few exceptions, MPs elected through the major parties pretty much do as they are told when they go to Canberra.
+
+Second, the popular vote share that goes to the two major parties has been in long-term decline, from about 90% 40 years ago, to about 70% of late. The drift hasn’t just gone towards populist insurgents and protests, but increasingly to the benefit of the Greens and, more recently, the Teals. The national preferential voting system pushes candidates to compete in the traditional left-right middle ground. But this overlooks the fact that some voters’ sympathies lie in single-issue campaigns.
+
+Third, and most importantly, our model of minority government is conspicuously one-dimensional. For instance, party leaders and managers think purely in terms of confidence and supply agreements. These are important, of course, but they provide artificial stability by limiting disagreement in parliament that might bring down a government.
+
+One eye-catching proposition for stable minority government involves Labor and the Coalition coming together to agree not to topple the other for an arbitrary period of half a parliamentary term.
+
+There are several better options. The UK’s Conservatives and Liberal Democrats ran a joint government from 2010–15, with some distinction. A big party and small party formed a coalition, and once they had agreed to disagree, they ringfenced specific policy areas as belonging to one party and the other party signed up to it as a policy priority of the whole government. This resulted in the full implementation of their respectively most prized policies.
+
+And just two months ago, Ireland’s centre-right Fianna Fáil and Fine Gail parties, working with unaligned independents and a more formal Independent Ireland, came up with similar coalition agreement.
+
+The inference is that stable multi-party government involves a mature negotiation on the issues, priorities and policies that can unite across party lines. It also requires a readiness to prioritise policy issues within parties.
+
+Of course, this is an indirect way of asking if the Teals can and wish to operate as a de facto party. And while the Greens are a political party to begin with, the extent of their party discipline has not been tested to the full.
+
+Meanwhile, there is evidence of pressure to keep both the Teals and Greens at a distance from any such agreement, with reports that lobby groups for the hospitality and coal sectors respectively will fund major party candidates to help defeat hostile crossbenchers.
+
+As politicians mull these challenges, we should consider the likely “safe” issues – as against the “tricky” ones – in the coming parliament that a stable minority government or coalition would face. Their appetite to govern will be affected accordingly.
+
+‘Safe’ and ‘tricky’ issues in a minority government
+
+From Labor’s perspective, the nucleus is around a disparate set of economic and social modernisation policies. Since many of these have begun in this parliament, the focus in the next will be on pursuing them to full implementation.
+
+For the Coalition, reshaping tax and spending, increasing housing affordability checking workplace employee rights and a bold nuclear power proposal sit at the core. This is accompanied by wariness of immigration and identity politics. Survey research points to its broad appeal certainly but less is known about the depth of this support.
+
+Finding a middle path on these issues that would satisfy enough crossbenchers to help one of the major parties form government will be the challenge. It is not necessarily a bad outcome for the nation. But it means all MPs will have to take into account the greatly enhanced premium on stable government before any serious horse-trading happens.",theconversation
+https://theconversation.com,Australia has promised to end domestic violence within a generation. But are our strategies working?,https://theconversation.com/australia-has-promised-to-end-domestic-violence-within-a-generation-but-are-our-strategies-working-250525,"Sun, 16 Mar 2025 19:26:05 GMT","At last year’s conference marking the 50th anniversary of Elsie, Australia’s first feminist refuge, numerous speakers reflected on the ultimate aim of the feminist refuge movement, back in the 1970s: that in the near future, domestic violence would no longer exist and their services would no longer be needed.
+
+Half a century later, we’re in the middle of an ongoing “national crisis” – and our federal government has committed itself to ending family and domestic violence “in one generation”.
+
+This year, eight women have already been killed by violence according to Destroy the Joint, which has kept a Counting Dead Women tally since 2012. At the end of 2024, the tally stood at 78. In 2023, the sexual violence crime rate hit a 31-year high, bucking a wider decline in violent crimes.
+
+And while there has been major social and economic progress for women over the last 50 years, a recent report reveals a stark “employment gap” between women who have experienced domestic violence and those who have not.
+
+Review: Quarterly Essay 97: Losing It: Can We Stop Violence Against Women and Children? – Jess Hill (Black Inc.)
+
+From today’s standpoint, the aim of eradicating domestic violence may look rather utopian, even naïve. From a mid-1970s perspective, it is not hard to see why it seemed possible. As a historian who is currently collaborating on a history of domestic violence in Australia, the 1970s and 1980s stand out as decades of possibility and fast change.
+
+The problem had finally come out from “behind closed doors”. Feminists had unprecedented social and political influence. And governments had started to respond with legislation and funding for services and research. It was only a matter of time, right?
+
+Now, ending domestic violence is once again a stated goal – of the government, no less. But are our prevention strategies up to the task? Journalist and anti-violence campaigner Jess Hill investigates this question in her important new Quarterly Essay.
+
+Ending gendered violence ‘in one generation’
+
+“No other country in the world has eradicated gendered violence,” writes Hill. “Australia is the only one that’s even promised to do that.” With this ambitious goal in mind, her essay is offered as a contribution and an intervention.
+
+Hill describes herself as an “insider–outsider”. Since her award-winning, agenda-setting book See What You Made Do: Power, Control and Domestic Abuse (2019), she has been heavily involved in efforts to stop the gendered violence she has long reported on. She is deeply committed to the many victim–survivors who have shared their experiences with her.
+
+Mick Tsikas/AAP
+
+To date, Hill has perhaps been most influential in educating the public about coercive control, “a collection of behaviours designed to strip someone of their sense of autonomy and self-worth”. She has been a champion for its criminalisation, including by making a submission to the New South Wales Joint Select Committee on coercive control in 2021.
+
+From July 1 2024, NSW became the first state to make coercive control a criminal offence. Support for the measure is by no means uniform – and has been heavily criticised by First Nations women in particular, because it would likely result in further incarceration of Indigenous women rather than offer protection.
+
+Less controversially, Hill has drawn crucial attention to the enduring failures of the family court system when it comes to prioritising the safety of women and children who have been victims of family violence.
+
+In addition to her groundbreaking 2019 book, she has written a 2021 Quarterly Essay on #MeToo and hosted a three-part SBS series on consent and sexual violence in Australia, Asking For It (2023).
+
+How effective is promoting ‘gender equality’?
+
+In her new essay, Hill applies her considerable knowledge of domestic, family and sexual violence to government-endorsed primary prevention efforts, as featured in the first National Plan, initiated by the Gillard Government in 2010, and now the latest iteration, launched in 2023.
+
+“Governments would seek to prevent violence by raising awareness, improving gender equality, bettering community attitudes to violence, and teaching boys and girls how to think outside gender stereotypes and have more respectful relationships,” she writes.
+
+This approach, combined with increased resourcing to frontline services, was intended to make Australia a “world leader in prevention”. But in 2019, Commonwealth, state and territory leaders “flew the white flag” and conceded there would be no substantial reduction in violence against women by 2022.
+
+Hill questions whether promoting “gender equality” as the overarching, or primary, solution to eradicating gendered violence is the most effective use of government funds or sector expertise. (Though she doesn’t discount its importance.) If the government genuinely wishes to eradicate gendered violence within a generation, she suggests, the current prevention strategy is no longer fit for purpose – if it ever was.
+
+Hill highlights grim statistics and trends, well aware they have lost some of their capacity to shock. In 2022–23, domestic homicides rose by 28%, reversing a 30-year downward trajectory. Police are called out to a family violence incident every minute, almost double the reported cases in 2016. Both victims and perpetrators of sexual abuse are getting younger, as revealed by the Australian Child Maltreatment Study.
+
+In evaluating this failure, Hill notes contributing factors such as a revolving door of ministers during the last Coalition government, which was handed the National Plan “like a hot potato”. Her main target, though, is Our Watch, the national agency responsible for gender-based violence campaigns, and their Change the Story primary prevention strategy.
+
+Mick Tsikas/AAP
+
+Is Australia’s approach best practice?
+
+As Hill describes it, Change the Story, with its overarching emphasis on the “gendered drivers” of violence against women and children, is out of kilter with other best-practice prevention frameworks around the world, such as those of the World Health Organization and the Prevention Collaborative.
+
+These evidence-based frameworks, Hill continues, stress “multiple intersecting risk factors” for gendered violence, “such as childhood mistreatment, substance abuse, a weak criminal system and a culture of parental dominance over children (to name a few) alongside gendered risk factors, like harmful attitudes and gender inequality”.
+
+Our Watch’s education campaigns focused on encouraging respectful relationships (aimed at young people) are not up to the task of tackling the competing influences of social media, the “manosphere” and online pornography.
+
+On this point, Hill usefully pans out to survey the wider terrain, as Judith Butler did in her recent book Who’s Afraid of Gender? (2024). (Hill does it in a necessarily pithier fashion.) She sketches out a global gender “backlash” network, with world leaders like Trump and Putin up top, anti-rights groups in the middle, and influencers like Andrew Tate “on the factory floor”.
+
+John Locher/AAP
+
+At the local level, Hill draws on recent data from the Australian iteration of the Gender Compass survey to show that a “significant minority” of women were “very concerned about men being demonised” in the current climate. While many agreed gender equality is important, “there was a lot of confusion” over what the term means.
+
+In questioning the Our Watch framework, Hill builds on a position paper she co-authored in 2024 with UNSW professor Michael Salter: Rethinking Primary Prevention. It generated major media and sector interest.
+
+Some experts rightly pointed out the authors presented a somewhat over-simplified (or “straw”) version of primary prevention, and of Our Watch in particular – and that they selectively spotlighted statistics and trends to make their case. But there was general appreciation of their call for a “re-think” of prevention efforts.
+
+Holding governments to account
+
+In the wake of the report and nationwide No More protests, Hill was appointed by the government in April 2024 to an expert panel of six to conduct a rapid review of prevention responses. (It was criticised – rightly, Hill agrees – for not appointing an Aboriginal woman.)
+
+Their final report was delivered on August 23 2024. National Cabinet responded with increased funding and various commitments, Hill writes, but there has been “no response yet to many of the recommendations, including the one to review Change the Story”.
+
+Hill is using her big platform to hold governments to account. As she shows in Losing It, she and Salter are hardly alone in advocating for more targeted approaches to prevention and more accountability for existing prevention work.
+
+Her essay is at its strongest and most compelling when she showcases approaches that have been producing results, and when sharing insights from victim–survivors, frontline workers and researchers whose work is focused on specific areas, such as alcohol, gambling, and childhood trauma.
+
+Lukas Coch/AAP
+
+Victoria is the only state to make Respectful Relationships Education mandatory, Hill writes. Deanne Carson, CEO of Body Safety Australia, shares that when she goes into Victorian schools, in every classroom she enters:
+
+I have children who have been raped. I have children who have sexually abused other children. I have children living with family violence.
+
+Her “primary prevention” work also includes “early intervention and response work”, but more funding flows to the first.
+
+Hill, along with others, such as leading researchers Silke Meyer and Kate Fitz-Gibbon, is heartened that the second National Plan to Eliminate Violence against Women and Children (2022–32) now recognises children and young people as victims of domestic and family violence “in their own right”.
+
+Yet, as they all agree, much more work remains to be done on multiple fronts. We need more dedicated services like Amplify, Australia’s first dedicated family violence program for unaccompanied children and young people. We need more early intervention to prevent intergenerational transmission of violence and to address childhood trauma.
+
+And we need more recognition of specific and evolving forms of child abuse. As the Australian Child Maltreatment Study revealed, for example, while sexual abuse of children by adults has dramatically declined, young Australians are still experiencing high rates of sexual abuse. What has changed, writes Hill, is that “their perpetrator” is “now more likely to be another child than an adult”.
+
+Sobering, but galvanising
+
+Most urgently of all, she emphasises, “no amount of money will ever be enough until governments are willing to end the violence of their own systems”, particularly family law, child protection and youth justice.
+
+Rates of Indigenous child removal are so high, “it’s been labelled a second Stolen Generation”, Hill writes. In Victoria, the “progressive state that prides itself on leading the nation on gendered violence”, 2024 data revealed more than 1 in 10 Aboriginal children had been removed from their families: twice the national average.
+
+Hill points to the work of organisations such as Djirra, a wraparound support service for Aboriginal women headed by Antoinette Braybrook, and Yiliyapinya, a not-for-profit that works with Aboriginal and Torres Strait Islander children and their carers “to improve their brain health and to help them heal” as vanguard initiatives.
+
+As she acknowledges, “moving the dial on intractable social problems is outrageously difficult”. It doesn’t help that governments presently appear highly captive to alcohol and gambling lobbies.
+
+This makes it extra hard to respond to research that establishes links between substance abuse and all forms of gendered violence – or significant rises in family violence in areas with a high concentration of poker machines. Government-funded mental health services, as well as public education and public housing, are also in crisis and under unprecedented pressure.
+
+Throughout Losing It, Hill reminds readers that violence against women and children is not a problem to be treated in isolation, with a one-size-fits-all approach: it demands an all-systems response. Her essay is most effective when focused on that bigger picture, and on the stories and initiatives on the ground, rather than on the “fifty-year-old turf war” between competing approaches to solving gendered violence.
+
+With over 50 years of awareness and at least 40 years of government responses behind us, Hill is right to demand more, now our leaders have committed themselves to their boldest target yet. More solutions are available to us than ever before – but at the same time, as Hill shows, violence against women and children is also taking new forms and exhibiting new patterns.
+
+Losing It is a sobering read. But most of all, it’s a galvanising one, inviting Australia to solve the “wicked problem” of violence against women and children within one generation.",theconversation
+https://theconversation.com,When is workplace chat ‘just gossip’ and when is it ‘sharing information’? It depends who’s doing it,https://theconversation.com/when-is-workplace-chat-just-gossip-and-when-is-it-sharing-information-it-depends-whos-doing-it-251242,"Sun, 16 Mar 2025 18:05:37 GMT","When two junior employees bump into each other in the corridor and start chatting about their manager’s overbearing manner, it’s typically considered gossip. But what about when two managers have an off-record catch-up to discuss an under-performing employee?
+
+Both scenarios meet traditional definitions of gossip – the information being shared is about other people, the people it’s about are absent, the information is shared in a way that casts judgement on those people, and it’s informal. Yet the two situations are viewed very differently.
+
+What counts as gossip is much more slippery than we might think. I reviewed 184 academic articles to understand what really constitutes workplace gossip.
+
+The key, I found, is not any set of objective criteria, but rather people’s shared agreement that a situation counts as gossip.
+
+This understanding of gossip helps us make sense of the “workplace gossip paradox” – the idea that gossip can be considered both a reliable source of social information (“the inside word”) and an unreliable information source (“just gossip”).
+
+My work also provides insights into how businesses can manage gossip before it becomes a scandal.
+
+Knowledge is power – but power controls knowledge
+
+How does recognising the slipperiness of gossip help us understand the workplace paradox? The answer has to do with the role of power in legitimising information.
+
+Leaders and managers need information to justify action. If a manager is going to investigate a sexual harassment claim, they can’t do so based solely on a hunch. They need to hear about from it someone.
+
+If the victim of sexual harassment complains directly to their manager, an investigation is automatically justified. But what if the manager hears about harassment indirectly and unofficially (for example, through “gossip”), with the added complication that the alleged perpetrator is another manager?
+
+If the manager does something about what they’ve heard and the source turns out to be unreliable, they could face negative consequences for acting on what was essentially “just gossip.” But if they don’t act, and the information turns out to be credible, they could face repercussions for ignoring the “inside word.”
+
+There is evidence that such paradoxical situations play out quite frequently in real-world workplaces. For example, inside information about negligence towards patient safety in healthcare settings has, in the past, been dismissed as “just gossip” until it provoked a public scandal.
+
+The same thing happened in a university where gossip shared through a “whisper network” was eventually corroborated by an independent inquiry. In this case, the inquiry also found official complaints had been ignored.
+
+One case study from the United States found managers tended to keep an ear out for information passing through the grapevine and selectively use it to further their own interests.
+
+If gossip threatened their power, they repressed it as “just gossip”. But if gossip provided “useful” information – ammunition against a subversive employee, for example – management legitimised gossip as “official information”.
+
+How to manage the workplace gossip paradox
+
+To avoid scandals stemming from when gossip is ignored, managers might consider “co-opting” gossip, bringing it into official communication channels.
+
+But there’s a problem with this approach. Gossip gains its credibility as the inside word because it takes place outside official communication channels. Therefore, if managers try to co-opt gossip into formal management processes, it’s likely to have the unintended consequence of discrediting the shared information.
+
+Instead, “managing gossip” requires a better understanding of its functions and motivations.
+
+One function is to reduce uncertainty. Research suggests gossip often arises to fill information gaps. For example, people might speculate about a manager’s salary by gossiping about their expensive car or holiday.
+
+Such gossip is likely to be exaggerated and counterproductive. However, it could be managed simply by being transparent about staff salaries, filling the information gap before gossip does.
+
+Another key function of gossip is to warn against antisocial behaviours like bullying. But if employees feel comfortable speaking up about such behaviour — even when it’s perpetrated by those with official power – managers will not face the dilemma of whether to act on information that could turn out to be “just gossip.”
+
+Gossip is a slippery and paradoxical form of communication. Some would say it’s unmanageable. But what can be managed are the workplace behaviours and hierarchical relationships that gossip loves to sink its teeth into.
+
+The author would like to acknowledge Trish Corner, Helena Cooper-Thomas and Rachel Morrison for their contributions to developing this research.",theconversation
+https://theconversation.com,How long will you live? New evidence says its much more about your choices than your genes,https://theconversation.com/how-long-will-you-live-new-evidence-says-its-much-more-about-your-choices-than-your-genes-251054,"Sun, 16 Mar 2025 19:25:03 GMT","One of the most enduring questions humans have is how long we’re going to live. With this comes the question of how much of our lifespan is shaped by our environment and choices, and how much is predetermined by our genes.
+
+A study recently published in the prestigious journal Nature Medicine has attempted for the first time to quantify the relative contributions of our environment and lifestyle versus our genetics in how we age and how long we live.
+
+The findings were striking, suggesting our environment and lifestyle play a much greater role than our genes in determining our longevity.
+
+What the researchers did
+
+This study used data from the UK Biobank, a large database in the United Kingdom that contains in-depth health and lifestyle data from roughly 500,000 people. The data available include genetic information, medical records, imaging and information about lifestyle.
+
+A separate part of the study used data from a subset of more than 45,000 participants whose blood samples underwent something called “proteomic profiling”.
+
+Proteomic profiling is a relatively new technique that looks at how proteins in the body change over time to identify a person’s age at a molecular level. By using this method researchers were able to estimate how quickly an individual’s body was actually ageing. This is called their biological age, as opposed to their chronological age (or years lived).
+
+The researchers assessed 164 environmental exposures as well as participants’ genetic markers for disease. Environmental exposures included lifestyle choices (for example, smoking, physical activity), social factors (for example, living conditions, household income, employment status) and early life factors, such as body weight in childhood.
+
+They then looked for associations between genetics and environment and 22 major age-related diseases (such as coronary artery disease and type 2 diabetes), mortality and biological ageing (as determined by the proteomic profiling).
+
+These analyses allowed the researchers to estimate the relative contributions of environmental factors and genetics to ageing and dying prematurely.
+
+What did they find?
+
+When it came to disease-related mortality, as we would expect, age and sex explained a significant amount (about half) of the variation in how long people lived. The key finding, however, was environmental factors collectively accounted for around 17% of the variation in lifespan, while genetic factors contributed less than 2%.
+
+This finding comes down very clearly on the nurture side in the “nature versus nurture” debate. It suggests environmental factors influence health and longevity to a far greater extent than genetics.
+
+Not unexpectedly, the study showed a different mix of environmental and genetic influences for different diseases. Environmental factors had the greatest impact on lung, heart and liver disease, while genetics played the biggest role in determining a person’s risk of breast, ovarian and prostate cancers, and dementia.
+
+The environmental factors that had the most influence on earlier death and biological ageing included smoking, socioeconomic status, physical activity levels and living conditions.
+
+Interestingly, being taller at age ten was found to be associated with a shorter lifespan. Although this may seem surprising, and the reasons are not entirely clear, this aligns with previous research finding taller people are more likely to die earlier.
+
+Carrying more weight at age ten and maternal smoking (if your mother smoked in late pregnancy or when you were a newborn) were also found to shorten lifespan.
+
+Probably the most surprising finding in this study was a lack of association between diet and markers of biological ageing, as determined by the proteomic profiling. This flies in the face of the extensive body of evidence showing the crucial role of dietary patterns in chronic disease risk and longevity.
+
+But there are a number of plausible explanations for this. The first could be a lack of statistical power in the part of the study looking at biological ageing. That is, the number of people studied may have been too small to allow the researchers to see the true impact of diet on ageing.
+
+Second, the dietary data in this study, which was self-reported and only measured at one time point, is likely to have been of relatively poor quality, limiting the researchers’ ability to see associations. And third, as the relationship between diet and longevity is likely to be complex, disentangling dietary effects from other lifestyle factors may be difficult.
+
+So despite this finding, it’s still safe to say the food we eat is one of the most important pillars of health and longevity.
+
+What other limitations do we need to consider?
+
+Key exposures (such as diet) in this study were only measured at a single point in time, and not tracked over time, introducing potential errors into the results.
+
+Also, as this was an observational study, we can’t assume associations found represent causal relationships. For example, just because living with a partner correlated with a longer lifespan, it doesn’t mean this caused a person to live longer. There may be other factors which explain this association.
+
+Finally, it’s possible this study may have underestimated the role of genetics in longevity. It’s important to recognise genetics and environment don’t operate in isolation. Rather, health outcomes are shaped by their interplay, and this study may not have fully captured the complexity of these interactions.
+
+The future is (largely) in your hands
+
+It’s worth noting there were a number of factors such as household income, home ownership and employment status associated with diseases of ageing in this study that are not necessarily within a person’s control. This highlights the crucial role of addressing the social determinants of health to ensure everyone has the best possible chance of living a long and healthy life.
+
+At the same time, the results offer an empowering message that longevity is largely shaped by the choices we make. This is great news, unless you have good genes and were hoping they would do the heavy lifting.
+
+Ultimately, the results of this study reinforce the notion that while we may inherit certain genetic risks, how we eat, move and engage with the world seems to be more important in determining how healthy we are and how long we live.",theconversation
+https://theconversation.com,"Three years after Russia’s invasion, a global online army is still fighting for Ukraine",https://theconversation.com/three-years-after-russias-invasion-a-global-online-army-is-still-fighting-for-ukraine-251480,"Sun, 16 Mar 2025 19:24:45 GMT","More than three years after Russia’s full-scale invasion of Ukraine, a 30-day ceasefire between the two warring countries may be imminent. But much more needs to happen before a just and lasting peace is achieved.
+
+The Russian-Ukraine war is one of the most visible, analysed and documented wars in human history. Since the night of February 24 2022, millions of Ukrainian citizens, military personnel, journalists, officials and civil society activists have shared first-hand eyewitness accounts, updates, commentaries and opinions on the war.
+
+Around the world, many online communities have also sprung into action to counter Russian propaganda and raise awareness of what is happening inside Ukraine.
+
+We have been studying these communities for the past three years, conducting hours of interviews with members and observing their activity on social media. To conduct much of this research and connect with members, we had to join some of these communities – a common requirement for researchers working in online settings.
+
+Our work reveals a range of skills and strategies activists use in the online fight against Russia. More broadly, it shows how social media users can mobilise during times of war and other international crises and have a material impact offline.
+
+Russian war of disinformation
+
+Russia’s invasion of Ukraine was accompanied by online disinformation and propaganda campaigns. The aims of these campaigns are to sow discord, distrust and dismay among both Ukrainian and international audiences by, for example, depicting Ukraine as a failed state ruled by Nazis.
+
+Ukraine responded by launching its own information operations to counter Russian propaganda, appeal for help from the world and maintain the security of its defensive operations.
+
+In some cases, social media platforms have aided the Russian cause. At the same time, they have suppressed evidence of war crimes.
+
+For example, in the first year of the Russian invasion, independent investigative journalism organisations such as Disclose documented thousands of war crimes committed by Russian soldiers against Ukrainian civilians. These crimes included murder, torture, physical and sexual violence, forced relocation, looting, and damage to civilian infrastructure such as schools and hospitals.
+
+Much of this content included graphic imagery, violence and offensive language. As a result, it was permanently removed from platforms such as Instagram and YouTube.
+
+On the other hand, content containing disinformation evaded moderation. For example, a 2023 investigation by the BBC revealed thousands of fake TikTok accounts created as part of a Russian propaganda campaign spreading lies about Ukrainian officials.
+
+This often led to a distorted information environment online. Russian disinformation was visible, while the true extent of Russian violence against Ukrainians was hidden.
+
+Francisco Seco/AP
+
+Boosting Ukrainian voices
+
+In this context, thousands of internet users formed online communities to creatively support Ukraine without attracting the attention of content moderators.
+
+This isn’t new or unique to the war in Ukraine. For example, in 2019, US TikToker Feroza Aziz shared a makeup tutorial in which she subtly raised awareness of China’s treatment of the Uyghurs – a topic that is often suppressed on the Chinese-owned platform.
+
+One of the most prominent and well-known online communities that emerged following Russia’s invasion was the North Atlantic Fella Organisation.
+
+It started in May 2022 when a young man with the online name Kama mashed up a Reddit meme of a Shiba Inu dog nicknamed Cheems and a picture of a dilapidated Russian tank. This was a celebration of a Ukrainian battlefront victory. It was only intended to mock Russia.
+
+But as Kama changed his profile picture to the meme, the trend started spreading quickly to his followers on X (formerly Twitter). They quickly grew into an online collective dedicated to fighting Russia online. Members – or “fellas”, as they are known – from many regions around the world were brought together by its rituals using internet and popular culture memes.
+
+Calls to action
+
+In many similar posts across Facebook, X and TikTok, users share selfies or other images to achieve high visibility while calling followers to action. In most cases, this involves raising funds for urgent military or humanitarian efforts to benefit Ukraine.
+
+Another common strategy is storytelling. Some users share amusing or ridiculous anecdotes from their lives before closing with a donation request.
+
+These requests often have a clear target and beneficiary. They are also often time-sensitive. For example, they may be aimed at purchasing a particular model of a drone for a particular brigade of Ukraine’s armed forces that will be delivered to the battlefront within days.
+
+Through collaborations with Ukraine’s official fundraising platform, the North Atlantic Fella Organisation has collected more than US$700,000 towards Ukraine’s defence.
+
+Maria Senovilla/EPA
+
+Combatting propaganda
+
+Members of the North Atlantic Fella Organisation also try to combat Russian propaganda and disinformation.
+
+Instead of arguing in good faith with highly visible disinformation-spreading accounts (often controlled by the Russian government), members try to derail the disinformation campaigns. They highlight their ridiculousness by responding with memes and jokes. They call this practice “shitposting”.
+
+People spreading Russian disinformation often find themselves annoyed by the swarms of “meme dogs” in their replies. This has led some to respond aggressively. In turn, this has allowed North Atlantic Fella Organisation members to report them for violation of X’s terms of service and have their accounts suspended, as our forthcoming research documents.
+
+However, from late 2022 onward, North Atlantic Fella Organisation members we interviewed as a part of our research reported decreased effectiveness of X’s response to problematic user conduct. This was soon after tech billionaire Elon Musk bought the social media platform.
+
+Despite this, members continue to support each other and develop playful tactics to ensure they remain visible on the platform.
+
+It seems war will continue online for as long as Russia wages its war on Ukraine’s territory.",theconversation
+https://theconversation.com,"Chinese only introduced a feminine pronoun in the 1920s. Now, it might adopt a gender-inclusive one",https://theconversation.com/chinese-only-introduced-a-feminine-pronoun-in-the-1920s-now-it-might-adopt-a-gender-inclusive-one-221013,"Sun, 16 Mar 2025 19:24:20 GMT","Including pronouns in introductions, your email signature or your social media bio may seem like a minor detail. Pronouns are just small words we use in place of names all the time. But, like names, pronouns have personal significance. They say something about who we are.
+
+Trans, nonbinary and gender-diverse people face many issues more pressing than pronouns, including health and educational disparities and disproportionately higher rates of abuse, violence and discrimination. Getting pronouns right is a simple thing everyone can do to show respect.
+
+Linguistic shifts towards gender inclusivity are occurring worldwide, and the use of gender-neutral or inclusive pronouns is not a new nor exclusively Western phenomenon.
+
+Chinese, one of the world’s oldest languages and spoken by more than one billion people, illustrates how languages adapt to reflect shifting understanding of gender. Its pronoun system may be on the cusp of significant change.
+
+Developing pronouns
+
+In my newly published research, I’ve explored what is happening with Chinese third-person pronouns.
+
+The modern Chinese pronoun system is fascinating for two reasons.
+
+First, gendered pronouns have only been part of the Chinese language for 100 years: the feminine pronoun 她 (she) was only adopted in the 1920s.
+
+Second, although there are now distinct Chinese characters for “he”, 他, and “she”, 她, these are both pronounced tā in Mandarin. You can have a whole conversation about someone without revealing their gender.
+
+The lack of gender-distinct pronouns in spoken Mandarin has prompted calls for written Chinese to follow suit. Queer Chinese speakers have proposed several gender-inclusive pronouns that would be pronounced tā, just like 他 (he) and 她 (she).
+
+These include the romanised form “TA” and new Chinese characters 「⿰无也」 and 「⿰㐅也」. These new characters might look strange: they are written like this to clarify that they should be read as one Chinese character. Currently, they take up the space of two Chinese characters because they are not yet in Unicode and cannot be typed properly.
+
+Other people hope to see the now-masculine 他 regain its original function as an ungendered pronoun.
+
+What pronouns do queer Chinese speakers use?
+
+To understand how Chinese pronouns are changing, I surveyed more than 100 queer Chinese speakers across 12 countries. I asked survey respondents, a third of whom were nonbinary or otherwise gender-diverse, about their pronoun preferences and perceptions. I also analysed how pronouns are used in a large database of contemporary Chinese texts.
+
+My research found gender-inclusive pronouns accounted for about a quarter of first-choice pronouns, and nearly half of all pronouns used by survey respondents. TA was overwhelmingly preferred by gender-diverse individuals (70%), with the English “they” (20%) the next most popular option.
+
+While cisgender and transgender men almost exclusively used masculine pronouns, cis and trans women showed significant openness to using gender-inclusive pronouns alongside feminine ones. After 她 (she), TA was the second most common pronoun for women (40%) and second most common overall (17%).
+
+Notably, 他 (he) was not used by any women or gender-diverse people, except one who considered it gender-neutral. This suggests reviving its original ungendered usage may be difficult.
+
+TA emerged as the most recognised gender-inclusive pronoun, with nearly all respondents (97%) familiar with it regardless of their age, gender, region or language background. In contrast, fewer than 8% had encountered the new character-based pronouns 「⿰无也」 or「⿰㐅也」 and no one reported using them.
+
+What makes TA so popular?
+
+Survey participants were overwhelmingly positive about TA, with 63% expressing favourable views. As one respondent explained:
+
+The look and feel is good, it suits people’s everyday pronunciation habits, and doesn’t create issues with having to specify someone’s gender.
+
+TA functions similarly to English singular “they”. It works in two ways: as a gender-neutral pronoun when gender is unknown (like saying “someone left their umbrella”), and as a gender-inclusive pronoun specifically including gender-diverse people.
+
+Many survey respondents called TA “respectful” and “inclusive” but also simply “convenient”.
+
+However, some respondents were concerned TA is “untraditional” and “pollutes the Chinese language”.
+
+Practical considerations for using emerging Chinese pronouns also extend to the technical challenges of typing new Chinese characters. Before a new character can be typed on computers or phones, it needs to be officially encoded in Unicode, the global standard for digital text.
+
+My research shows this requirement is strongly influencing which emerging Chinese pronouns can gain traction.
+
+While some survey respondents hoped to see a gender-inclusive Chinese character adopted, they weren’t optimistic about 「⿰无也」or 「⿰㐅也」 becoming mainstream.
+
+As one noted:
+
+「⿰无也」is good, but it’s hard to type and it takes a long time to explain.
+
+User-friendly and easily understandable
+
+TA is currently the most popular emerging Chinese gender-inclusive pronoun, crucially because it mimics how people use tā in spoken Mandarin.
+
+It is already part of people’s vocabulary, and already used (at least as a gender-neutral pronoun) by mainstream Chinese media and on online platforms.
+
+Unlike other recently proposed pronouns, TA is versatile, user-friendly and easily understandable for queer and non-queer Chinese speakers alike. This makes TA a strong contender for widespread adoption into contemporary Chinese.
+
+Like the introduction of a Chinese feminine pronoun 她 (she) in the 1920s, the emergence of TA as a gender-inclusive pronoun in the 2020s is about recognising a wider spectrum of identities.
+
+Pronouns are not a political statement, just a personal statement. When you use someone’s correct pronouns, you’re saying, “I see you, and I respect who you are”. That’s something worth talking about, in any language.",theconversation
+https://theconversation.com,"New research, Australia New Zealand – News, Research and Analysis – The Conversation – page 1",https://theconversation.com/au/topics/new-research-australia-new-zealand-155951,"Sun, 16 Mar 2025 19:25:03 GMT","Rawpixel.com/Shutterstock March 16, 2025 How long will you live? New evidence says its much more about your choices than your genes Is our lifespan primarily dictated by our genetics, or do our behaviour and environment play the more important role?
+
+Andra C Taylor Jr/Unsplash March 16, 2025 Chinese only introduced a feminine pronoun in the 1920s. Now, it might adopt a gender-inclusive one Chinese is one of the world’s oldest languages and spoken by over one billion people. Its pronoun system may be on the cusp of significant change.
+
+Jennifer Lavers March 12, 2025 World-first analysis of seabirds who’ve eaten plastic reveals slow, insidious health impacts A bird might look and act outwardly healthy – but on the inside, ingested plastics are slowly wreaking havoc.
+
+Atstock Productions/Shutterstock March 12, 2025 Trans and non-binary New Zealanders earn less and are more likely to be unemployed – new study The trans and non-binary community may be increasingly visible in New Zealand, but their economic outcomes are still very different to the wider population.
+
+Miles Clifford Triniman/Shutterstock March 11, 2025 Australia’s superb lyrebirds ‘farm’ the forest floor to increase their prey – a behaviour rarely seen in nature “Farming” behaviour is very unusual in the non-human world. As lyrebirds forage, they cultivate the soil and shore up their own food sources.
+
+Farknot Architect/Shutterstock March 11, 2025 Fresh fruit down, junk food up: our modelling suggests Australians’ diets will get worse by 2030 Australians tend to eat too much junk food and not enough fruit and vegetables. But how might these trends change in the years to come?
+
+Jacob Lund/Shutterstock March 7, 2025 Diversity helps: a new study shows more women on boards can improve how businesses are managed Diversity in leadership isn’t just about ticking boxes. New research on lisetd New Zealand companies finds it’s also about making businesses stronger.
+
+Wirestock Creators, Shutterstock March 5, 2025 Hot frogs and sizzling salamanders: climate change is pushing amphibians to their limits New research shows frogs and other amphibians are already on the brink of overheating in a warming world. Here’s how many will suffer as global temperatures rise.
+
+Jamie Wood March 5, 2025 DNA detectives in Antarctica: probing 6,000 years of penguin poo for clues to the past New ancient DNA research on Adélie penguin poo in Antarctica shows how several species respond to environmental change over time, including southern elephant seals.
+
+World Obesity Federation March 3, 2025 We looked at what supermarkets in 97 countries are doing to our waistlines. Here’s what we found People in countries with the most chain grocery stores per person buy more unhealthy food and are more likely to be obese.
+
+Mongkolchon Akesin, Shutterstock March 3, 2025 Melting Antarctic ice will slow the world’s strongest ocean current – and the global consequences are profound Part of the system that pumps water, heat and nutrients around the globe is at risk. Climate change could slow the Antarctic Circumpolar Current down 20% by 2050.
+
+Romain Dancre/Unsplash February 27, 2025 Legal aid is a lifeline for vulnerable Australians, but consistent underfunding puts the system at risk The first-ever national census of legal aid private practitioners reveals lawyers are bearing the costs of the government-funded system.
+
+Hedley Herbert Finlayson, The Red Centre, 1935 February 25, 2025 Presumed extinct, this desert rat-kangaroo may still be alive in hiding. New analysis reveals its delicate diet Knowing what an animal eats can help biologists find it – especially when a species is as elusive as this one.
+
+Petr Jan Juracka / Shutterstock February 25, 2025 Giant glaciers pulverised Earth’s ancient rocks, setting the stage for complex life Hundreds of millions of years ago, rocks crushed under kilometres of ice injected vital nutrients into Earth’s oceans.",theconversation
+https://theconversation.com,Trump’s English language order upends America’s long multilingual history,https://theconversation.com/trumps-english-language-order-upends-americas-long-multilingual-history-252163,"Sun, 16 Mar 2025 12:36:39 GMT","Across its nearly 250-year history, the United States has never had an official language. On March 1, U.S. President Donald Trump changed that when he signed an executive order designating English as the country’s sole official language. The order marks a fundamental rupture from the American goverment’s long-standing approach to languages.
+
+“From the founding of our Republic, English has been used as our national language,” Trump’s order states. “It is in America’s best interest for the federal government to designate one — and only one — official language.”
+
+This new order also revokes a language-access provision contained in an earlier executive order from 2000 that aimed to improve access to services for people with limited English. Federal agencies now seem to have no obligation to provide vital information in other languages.
+
+Despite some reactions in the New York Times, Washington Post and elsewhere, it remains unclear whether Trump’s executive order will face legal or political challenges. Amid continual attacks from the Trump administration on established norms, this decree may pass with relatively little resistance, despite a deeper meaning that extends far beyond language.
+
+Multilingual realities and monolingual fantasies
+
+The U.S. has a long multilingual history, beginning with the hundreds of Indigenous languages indelibly linked to these lands. The secondary layer are colonial languages and their variants, including French in Louisiana and Spanish in the Southwest. In all historical periods, immigrant languages from around the world have added substantially to the linguistic mix that makes up the U.S.
+
+Today, New York is one of world’s most linguistically diverse cities, with other U.S. coastal cities not far behind. According to data from the Census Bureau, one-fifth of all Americans can speak two or more languages. The social, economic and cognitive benefits of bilingualism are well-established, and there is no data to support the assertion that speaking more than one language threatens the integrity of the nation state.
+
+English has long functioned as a pragmatic lingua franca for the U.S. Yet an American tendency towards ideological monolingualism is gathering momentum.
+
+The emergence of Spanish as the nation’s second language, with well over 40 million speakers, has generated a particular anxiety. During the last few decades, more than 30 American states have enshrined English as an official language.
+
+Linguistic insecurity
+
+The March 1 executive order is a crowning achievement for the “English-only movement.” Trump has tapped directly into this sentiment and its xenophobic preoccupations, rooted in white fragility and white supremacy.
+
+In 2015, during his first bid for the Oval Office, Trump reprimanded Jeb Bush, the bilingual former governor of Florida, during a televised debate, stating: “This is a country where we speak English, not Spanish.”
+
+Speaking at the Conservative Political Action Conference in February 2024, Trump gave voice to his own linguistic insecurity:
+
+“We have languages coming into our country. We don’t have one instructor in our entire nation that can speak that language…These are languages — it’s the craziest thing — they have languages that nobody in this country has ever heard of. It’s a very horrible thing.”
+
+Beyond the brazen untruths and intentional exaggerations, such statements only reflect weakness and fear. The March 1 executive order states that “a nationally designated language is at the core of a unified and cohesive society.”
+
+It is in fact a sign of strength that Americans have not needed such a mandate until now, effectively navigating their complex multilingual reality without top-down legislation.
+
+English around the world
+
+It’s instructive to compare the language policy of the U.S. with other settler colonial contexts where English is dominant.
+
+In neighbouring Canada, the 1969 Official Languages Act grants equal status to English and French — two languages that were brought European migrants — and requires all federal institutions to provide services in both languages on request. Revealingly, only 50 years later did Canada finally pass an Indigenous Languages Act granting modest recognition to the original languages of the land.
+
+While Australia’s constitution specifies no official language, the government promotes English as the “national language,” and then offers to translate some web pages into other languages.
+
+Navigating the distinction between de facto and de jure, New Zealand has taken a more considered approach. Recognizing that English is unthreatened and secure, even without legal backing, New Zealand legislators have focused their attention elsewhere. Te reo Māori was granted official language status in 1987, followed by New Zealand Sign Language in 2006.
+
+Even the colonial centre and origin point for the global spread of English, the United Kingdom assumes a nuanced position on language policy. Welsh and Irish have both received some official recognition, while in Scotland, the Bòrd na Gàidhlig continues to advocate for official recognition of Gaelic.
+
+Principle and practice
+
+Trump’s recent executive order is both practical and symbolic.
+
+Practically, it remains unclear what the order means for Spanish in Puerto Rico, the Indigenous languages of Hawaii and Alaska — which have received official recognition — for American Sign Language and for all the multilingual communities that make up the nation.
+
+Language access can be a matter of life or death.
+
+Interpretation in courts, hospitals and schools is a fundamental human right. No one should be barred from accessing vital services simply because they don’t speak English, whether that’s when dealing with a judge, a doctor or a teacher. The consequences of government agencies abandoning their already limited efforts at translation and interpretation could have huge ramifications.
+
+Symbolically, Trump’s order is red meat for his MAGA followers. Associating national integrity with the promotion of one language above others might seem to reflect American exceptionalism, but it in fact destroys the cultural and linguistic diversity that makes the U.S. exceptional.
+
+Ironically, this executive order brings the U.S. into alignment with most of the world’s other nation-states — albeit not the ones that speak English as their first language — which seek to impose the standardized language of an ethnic majority on all of their citizens. The consequences can be both polarizing and homogenizing.
+
+Most of the world’s people are resolutely multilingual and are only becoming more so. Americans will not stop speaking, writing and signing in languages other than English because of an executive order. The linguistic dynamism of the U.S. is essential to the country’s social fabric. It should be nurtured and defended.",theconversation
+https://theconversation.com,"Donald Trump thinks some accents are ‘beautiful,’ but what makes them so?",https://theconversation.com/donald-trump-thinks-some-accents-are-beautiful-but-what-makes-them-so-251458,"Sun, 16 Mar 2025 12:37:12 GMT","United States President Donald Trump has recently been commenting on accents while meeting foreign leaders and taking questions from foreign journalists. Trump praised British Prime Minister Keir Starmer’s “beautiful” accent, saying he would have been president 20 years ago if he’d had that accent.
+
+He didn’t answer an Afghan journalist’s question, saying her accent was “beautiful” but that he didn’t understand it, and he completely dismissed the question of a journalist from India during a joint news conference with Indian Prime Minister Narendra Modi, saying he didn’t understand his accent before abruptly moving on.
+
+What is a “beautiful” accent, and what makes one hard to understand? There is much evidence showing that opinions on language are not based in any objective standards of beauty or aesthetics, but rather on our attitudes about the people speaking them.
+
+Accent attitudes reflect our biases
+
+Consider long-standing attitudes regarding the southern American accent. Some might automatically assess an accent from Tennessee or Kentucky as sounding less smart than one from Michigan or California. However, there is no scientific relationship between accent and intelligence; these stereotypes are learned behaviour.
+
+Research shows young children of about five or six, for example, do not discriminate between U.S. northern and southern accents. As they get older, they start to develop the same attitudes of the adults around them, and by age 10 they start to find that northern-accented speakers sound “smarter” and more “in charge” than southern-accented speakers.
+
+Many negative stereotypes about accents and the people who have them are often based in racism or classism. Take, for example, the following quote from American writer Edward Larocque Tinker’s 1935 essay on “Gombo,” the dialect of French spoken by the Black population in Louisiana:
+
+“French, which had taken centuries to develop into a most subtle intricate form — the height of sophistication — was far too complex for these simple savages to learn. So they did their poor, primitive best and contrived a queer, simplified ‘pidgin’ French dialect of their own.”
+
+It is quite clear this judgment is not based in scientific fact, but rather on racist attitudes toward Black people. Today, language attitudes may be more subtle in their racism or classism, but they persist, using our biases about a group of people to affect how we feel about their way of speaking.
+
+How people judge accents
+
+Studies show that speakers tend to rate their own dialects as very pleasant. Research also shows that when people are unfamiliar with accents, they tend to not discriminate between them. In other words, when unfamiliar listeners have no knowledge about an accent or its place of origin, they rate accents equally.
+
+When speakers are familiar with an accent or dialect, however, they use their social knowledge to make judgments about the esthetics, determining which is more pleasing than another. This means that it’s not always the actual phonetic aspects of the language that drive our preferences, but rather social knowledge about the people who speak with that accent that we are assessing.
+
+In terms of foreign accents in particular, our native language shapes the way we categorize the sounds of other languages. When languages have unfamiliar sounds, our brains need a little more time to process the correspondences between the foreign accent and our own so we can accurately categorize the sounds in the foreign-accented speech. Understanding different accents is a skill that develops over time, and greater exposure to speakers with a particular accent helps us understand that accent more easily.
+
+Processing accents is more demanding for the brain. For example, in a noisy room, our brains might have to work more than usual to separate out the sounds in order to hear. On the telephone or when the speaker is wearing a mask, the listener doesn’t have access to cues such as lip movements. Older adults with hearing loss also have a harder time understanding foreign accents, as do people with dementia.
+
+The attitude we have about foreign accents is affected by our social knowledge of a person, their accent and where they come from. Having more frequent and positive associations with people from a particular region will make us more likely to find the accent pleasing and worth deciphering. Our ability to understand reflects the cognitive load that our brain is put through in order to categorize the different sounds that we are hearing.
+
+Putting these two together, it is easy to see how the historical prestige associated with European accents, as well as the political power of leaders like Emmanuel Macron of France, Starmer from the United Kingdom or Modi of India would be reflected in Trump’s positive attitude towards them.
+
+Similarly, he might consider a foreign journalist’s position on the world stage to be far less worth doing the cognitive work necessary to understand them.
+
+Fundamentally, there is no objective criteria for determining the “beauty” of someone’s accent. Our attitudes towards particular accents are often much more rooted in our biases and how we see others in our world.",theconversation
+https://theconversation.com,Why Gordie Howe’s elbows are Canada’s answer to Donald Trump,https://theconversation.com/why-gordie-howes-elbows-are-canadas-answer-to-donald-trump-252167,"Sun, 16 Mar 2025 12:36:31 GMT","When Canadian ice hockey centre Connor McDavid scored in overtime to lead Canada to victory over the United States in the National Hockey League’s 4 Nations Face-Off tournament in February, Canadian Prime Minister Justin Trudeau posted on social media, “You can’t take our country — and you can’t take our game.”
+
+Trudeau’s comment was a direct response to U.S. President Donald Trump’s repeated denigration of the prime minister as the “governor” of the “51st state.” It captured the escalating tensions between the two countries over trade, tariffs and Trump’s threats to annex Canada.
+
+Meanwhile, the tournament itself, which pitted the top Canadian and American players against one another for the first time in more than a decade, became a representation of these deepening political divisions and showed that hockey isn’t as politically neutral as is often suggested.
+
+Since the 4 Nations Face-Off ended, hockey analogies and imagery continue to dominate the conversation around Canada-U.S. relations. This time the focus is on Gordie Howe (or “Mr. Hockey” as he was widely known), whose strategic use of elbows on the ice has become a political rallying cry for Canadians.
+
+Canada is “elbows up”
+
+During his professional career from 1946 to 1980, Howe combined skill and scoring ability with toughness, physicality and a willingness to fight when necessary.
+
+In particular, Howe’s practice of keeping his “elbows up” in the corners to ward off belligerents on the opposing team has become a focal point for Canadians’ actions against Trump’s aggression.
+
+The hashtag #ElbowsUpCanada has been trending on social media. Howe’s guidance has been echoed by Canadian comedian Mike Myers on Saturday Night Live and by Trudeau at the Liberal leadership convention that marked the transition to Prime Minister Mark Carney.
+
+In his first speech as Liberal leader, Carney made another hockey reference when he said:
+
+“We didn’t ask for this fight, but Canadians are always ready when someone else drops the gloves. So the Americans, they should make no mistake: In trade, as in hockey, Canada will win.”
+
+While it may be surprising to see such enthusiasm for an “elbows up” approach and for “dropping the gloves” as one would in a hockey fight, this kind of strategic employment of violence fits perfectly with Howe’s longstanding brand of hockey manhood.
+
+“Mr. Elbows” and the “Bashful Basher”
+
+Although Howe’s early nickname of “Mr. Elbows” has received the bulk of the public’s attention recently, his other moniker used extensively by the Detroit media during his first season in the NHL — the “Bashful Basher” — captures even more effectively the style of masculinity that Canadians are currently calling upon in their clash with Trump.
+
+Writing in the Detroit Free Press in 1947, reporter Marshall Dann invited readers to “Meet Red Wings’ Bashful Basher.” Alongside a photo of a youthful Howe innocently sipping a milkshake through a pair of straws, Dann noted:
+
+“Howe not only had proven himself an exceptionally promising rookie, but he also had established the fact that while he might be a malted milk devotee off the ice, he positively was no milk-sop on a hockey rink.”
+
+Howe’s brand of violence was careful and calculated, rather than reckless or emotional. Even when he used his fists to batter an opponent — such as in his famous 1959 fight with New York Rangers enforcer Lou Fontinato — Howe presented himself as a reluctant and reasonable fighter who conformed to the idealized, manly “code” of hockey.
+
+He resorted to fighting only to defend smaller teammates and to deter even more harmful forms of violence, such as stick attacks or overly aggressive hits. Far from a wild brawler, Howe was a calm protector, governed by a sense of honest accountability for his actions.
+
+Author Don O'Reilly’s 1975 biography Mr. Hockey also highlights the image of “two Gordie Howes — quiet, unassuming, and bashful off the ice and aggressive and competitive on the ice.”
+
+O'Reilly contrasts “the mild-mannered, smiling, innocent-faced Howe, the clean-cut All-Canadian-American boy” with his more ruthless counterpart: “The guy who excels with his elbows as weapons, a man who, his opponents say, is skilled with the illegal high stick and so devious that the officials often fail to see the offense.”
+
+Likewise, a 1962 Time magazine profile quoted a rival coach as saying:
+
+“When Howe gets knocked down, he looks like he doesn’t care. But when he’s getting up, he looks for the other guy’s number. A little later, the guy will have four stitches in his head.”
+
+THE CANADIAN PRESS/Justin Tang
+
+Mr. Hockey and Canadianness
+
+A combination of humble manliness and controlled violence firmly established Howe’s masculine credentials within the culture of hockey. More broadly, Mr. Hockey became an admirable embodiment of the most valued manly qualities of the postwar period in North America.
+
+Howe’s strategic use of fighting also normalized the high level of violence in hockey by showing that it could be measured and purposeful, in accordance with the informal code of expectations that governed the game.
+
+Although critics of fighting and violence have become more outspoken in recent years, these values remain integral to hockey culture at the highest level and an influential point of reference for what it means to be a “true” hockey fan and a patriotic Canadian.
+
+In the current political climate, it is perhaps the title of the story that appeared in Life magazine in 1959 that resonates most clearly: “Don’t mess around with Gordie. Hockey’s tough guy (Lou Fontinato) discovers that the game’s best player (Gordie Howe) is a rough man in a fight.”
+
+With their “elbows up,” Canadians are counting on a Gordie Howe-style response — rational, expert and effective — in a trade war with the United States that may just be getting started.",theconversation
