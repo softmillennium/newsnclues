@@ -1,6 +1,6 @@
 This is essentially a website with daily news trends, headlines and articles in various categories. 
 Its main purpose is to have an easy access to latest aggregated and summarized articles.
-However, the uploaded csv files contain latest daily raw article data may also be used as input to train AI models on latest news content.
+The provided csv files contain latest daily headlines summaries and cleaned up (for the most part...) summaries of raw article data with links to the originals.  These could be used as textual input to train AI models on latest news content.
 For example, such models may then used to:
 <ul>
 <li>calculate accurate sentiment analysis</li>
