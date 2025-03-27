@@ -1,5 +1,6 @@
 
 <html>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -23,6 +24,9 @@
                 padding-bottom: 5px; /* Ensures space below the text */
                 margin: 30px;
             }
+            .hidden {
+                display: none;
+            }            
             
         </style>
     </head>
@@ -42,15 +46,15 @@
         </div>
         <div id="articles">
             
-                <div id='article_title' class='text-3xl font-extrabold text-gray-100 leading-tight'>
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
                     <a target='_blank' href='https://news-medical.net/drugs/Brufen-Plus-200128.aspx'>Breaks plus 200/12.8</a>
                 </div>
-                <div id='article_attribution'>
-                    <span class='text-2xl font-extrabold text-gray-100 leading-tight'>Source:</span> news-medical&nbsp;&nbsp;&nbsp;
-                    <span class='text-2xl font-extrabold text-gray-100 leading-tight'>Published:</span> 2028-01-20 00:00:00
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> news-medical&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2028-01-20 00:00:00
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
                 </div>
-                <br/>
-                <p>NOTICE: This Consumer Medicine Information (CMI) is intended for persons living in Australia.
+                <p class='hidden' class='text-gray-500'>NOTICE: This Consumer Medicine Information (CMI) is intended for persons living in Australia.
 
 Consumer Medicine Information (CMI) summary The full CMI on the next page has more details. If you are worried about using this medicine, speak to your doctor or pharmacist. WARNING: Important safety information is provided in a boxed warning in the full CMI. Read before using this medicine.
 
@@ -158,12 +162,32 @@ This medicine is only available with a doctor's prescription.
 
 What BRUFEN PLUS 200/12.8 contains Active ingredient (main ingredient) Ibuprofen and codeine phosphate hemihydrate Other ingredients (inactive ingredients) pregelatinised maize starch microcrystalline cellulose croscarmellose sodium colloidal anhydrous silica Opadry complete film coating system OY-58900 White (ID 3446) Do not take this medicine if you are allergic to any of these ingredients.
 
-What BRUFEN PLUS 200/12.8 looks like BRUFEN PLUS 200/12.8 are white to off-white capsule-shaped, biconvex, film-coated tablets (AUST R 298439). BRUFEN PLUS 200/12.8 are available in blister packs containing 30 tablets.</p></b>
-                <br/>
+What BRUFEN PLUS 200/12.8 looks like BRUFEN PLUS 200/12.8 are white to off-white capsule-shaped, biconvex, film-coated tablets (AUST R 298439). BRUFEN PLUS 200/12.8 are available in blister packs containing 30 tablets.</p>
                 <br/>
                 
 
         </div>
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
 
         <footer class="text-center text-sm text-gray-500 mt-12">
             <div class="inline-block align-middle">
