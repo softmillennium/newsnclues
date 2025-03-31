@@ -1,0 +1,994 @@
+Input URL,Title,Link,Published,Description,Source
+https://webmd.com,Why Having a Support System Is Important,https://blogs.webmd.com/migraine/20250331/why-having-a-support-system-is-important,"Mon, 31 Mar 2025 00:00:00 GMT","Waking up with a migraine made migraine management the priority on my to-do list. I had obligations to meet, so I had to take a triptan tablet and keep going. The medicine kicked in and worked its magic while Mom and I waited in her cardiologist’s exam room. Thank goodness triptans are so effective for me.
+
+I popped into the grocery store for a few items after getting Mom back to her apartment. My thoughts moved ahead to the next items on the list, like writing a blog and catching up on laundry. I was good at tuning out the world when I started attacking a lengthy to-do list. One of my second cousins walked into the store while I was walking out. I looked up from my own agenda just in time to notice her.
+
+We’ve only spoken in person with each other a couple of times, but it felt like we knew each other well. We both have migraine disease. We discovered our painful connection on social media and reached out a caring emoji to each other when times were difficult. I inherited episodic migraines from my dad’s side of the family. My cousin developed chronic migraines later in life. Her situation was much worse than mine, and my heart went out to her.",webmd
+https://news-medical.net,New AI voice screening method improves detection of anxiety and depression,https://news-medical.net/news/20250331/New-AI-voice-screening-method-improves-detection-of-anxiety-and-depression.aspx,"Mon, 31 Mar 2025 00:00:00 GMT","Scientists at the National Center for Supercomputing Applications and the University of Illinois College of Medicine Peoria (UICOMP) were authors of a research paper published in the Journal of Acoustical Society of America Express Letters that demonstrates improved, automated screening methods for anxiety and major depressive disorders.
+
+In the project titled, ""Automated acoustic voice screening techniques for comorbid depression and anxiety disorders,"" Mary Pietrowicz, along with colleagues from the University of Illinois Urbana-Champaign and UICOMP, explored how machine learning could effectively distinguish individuals with comorbid depression and anxiety disorders from healthy controls using acoustic and phonemic analysis of semantic verbal fluency data.
+
+More and more people are being diagnosed with these disorders, yet many suffering remain undiagnosed due to known perceptual, attitudinal and structural barriers. Anxiety affects 19.1% of adults in the United States and major depression 8.3% while being the leading cause of disability in individuals under 40 years old. Despite this high prevalence, treatment rates are low and, if left untreated, can lead to decreased productivity, poor functioning in society, erosion of cognitive abilities, strained relationships and suicide.
+
+New methods, tools and technologies – such as automated acoustic voice analysis – are needed to overcome these barriers and improve screening rates.
+
+This research demonstrates that analysis of short samples of acoustic voice, specifically one-minute verbal fluency tests, can be used in screening for anxiety and depression disorders, and can function online, at any time, addressing many of the barriers to screening and treatment. In addition, our AI models provide explainability, and therefore insight, into the impact that depression and anxiety have on speech and language. This work enables the development of clinical screening and tracking systems at scale. Mary Pietrowicz, NCSA Senior Research Scientist
+
+Researchers tested a custom dataset curated specifically for this study that included both healthy people and people with comorbid depression and anxiety across the spectrum of severity. People with other comorbid conditions known to affect speech and language were excluded from the study. Acoustic models using only data from one-minute verbal fluency tests discerned the presence of comorbid disorders at a highly successful rate.
+
+""The data for this study were collected by multiple medical students at the University of Illinois College of Medicine Peoria,"" said UICOMP Director of Research Services Sarah Donohue. ""These students interviewed each of the participants, recorded the interviews and did an animal naming task at the end of the interviews with the participants.""
+
+A primary benefit of these acoustic tests is that they're accessible. They may be administered either online, in-app or in-clinic, which directly addresses known barriers to screening, including factors such as stigma, low self-perception of need, costs, transportation issues and limited access to healthcare.
+
+""The development of an efficient, accurate and easy-to-use method for screening patients who may be suffering from depression or anxiety offers tremendous promise,"" said UICOMP Chair and Professor of Clinical Psychiatry Ryan Finkenbine. ""The application of advanced machine learning models to the clinical setting provides a remarkable path for clinicians to screen for signs of mental illness in an adaptive and practical way. Patients and clinicians alike will benefit from improved methods for comprehensive medical and mental health care.""",news-medical
+https://news-medical.net,New genetic discovery sheds light on PHTS-related vascular malformations,https://news-medical.net/news/20250331/New-genetic-discovery-sheds-light-on-PHTS-related-vascular-malformations.aspx,"Mon, 31 Mar 2025 00:00:00 GMT","During development, cells grow, expand, and migrate to generate tissues and organs in a highly controlled manner. Many intracellular pathways – series of signalling cascades within a cell – regulate these actions to avoid non-programmed growth that could lead to malformations or cancer. One of these pathways is the PTEN / PI3K axis, a complex series of perfectly balanced chemical reactions.
+
+Mutations in the PTEN gene usually result in the overactivation of PI3K and the imbalance of the system. This may trigger the onset of different types of cancer, like breast and prostate, and when present in the germline cause several disorders. From the clinical perspective, these disorders are grouped under the umbrella of the PTEN Hamartoma Tumour Syndrome (PHTS), producing a highly heterogenic spectrum of effects on patients yet to be addressed, mainly due to the poor understanding of the disease. Precisely, the limited understanding of the origin of PHTS-related phenotypes has impeded the development of preclinical models and the implementation of molecular therapies.
+
+What scientists do know is that PI3K mutations affecting endothelial cells, the ones lining the inner layer of blood vessels, lead to vascular malformations. Not surprisingly, up to one in two PHTS patients also develop vascular malformations during early childhood. These lesions are associated with severe pain and swelling, with surgery and embolization – the deliberate blocking of the affected vessels – as the main therapeutic strategies. However, depending on the localization and extension, these strategies might not be possible, leaving patients without any other therapeutical option.
+
+The Endothelial Pathobiology and Microenvironment group at the Josep Carreras Institute, led by Dr. Mariona Graupera together with Dr. Sandra Castillo, former lab member and currently researcher at SDJ Pediatric Cancer Center Barcelona, and Dr. Eulàlia Baselga, head of the paediatric dermatology unit at Hospital Sant Joan de Deu, have investigated the genetic cause of PHTS-related vascular malformations. After a thorough analysis of biopsies and patient-derived endothelial cells, they have discovered that PHTS patients had replaced one of their functional PTEN copies with a non-functional one, in a mechanism called ""uniparental disomy"". In a series of experiments in mice, they could demonstrate that this alteration could explain most of the effects seen afterwards in the vasculature.
+
+This genetic discovery, recently published at the high impact scientific journal Cancer Discovery, of the American Association for Cancer Research, has allowed them to generate the first mouse model of PHTS-related vascular malformations and use it as a benchmark to study the effects of two anticancer drugs known to counterbalance PI3K action, as PTEN would do if present. The studies have identified that blocking PI3K downstream effectors – down in the metabolic cascade – with rapamycin or capivasertib inhibitors significantly reduce vascular growth. However, the specific inhibition of PI3K with alpelisib gives no substantial benefit. Given these results, the team provides, as proof-of-concept for clinical activity, the off-label treatment with rapamycin of two patients with PHTS who indeed showed reduced vascular overgrowth and abrogated lesion-associated pain.
+
+These new findings are of paramount importance since the ability to stop PHTS effects from the very beginning would greatly improve patients' survival and quality of life. Also, PHTS is usually diagnosed when cancer has already grown in adults. Given that vascular malformations are pediatric manifestations of PHTS, we believe that this offers a unique clinical opportunity for early diagnosis.
+
+This research has been funded by the PTEN Research Foundation, the Spanish Ministry of Science, Innovation and Universities of Spain and ""la Caixa"" Foundation.",news-medical
+https://news-medical.net,Artificial intelligence tool predicts virus outbreak hotspots,https://news-medical.net/news/20250331/Artificial-intelligence-tool-predicts-virus-outbreak-hotspots.aspx,"Mon, 31 Mar 2025 00:00:00 GMT","A new artificial intelligence tool could aid in limiting or even prevent pandemics by identifying animal species that may harbor and spread viruses capable of infecting humans.
+
+Created by Washington State University researchers, the machine learning model analyzes host characteristics and virus genetics to identify potential animal reservoirs and geographic areas where new outbreaks are more likely to occur. The model focuses on orthopoxviruses - which includes the viruses that cause smallpox and mpox.
+
+The researchers recently published a study on their work using the model in the journal Communications Biology. Their findings could help scientists anticipate emerging zoonotic threats and, importantly, be adapted for other viruses.
+
+""Nearly three-quarters of emerging viruses that infect humans come from animals,"" said Stephanie Seifert, an expert in viral emergence and cross species transmission and an assistant professor in the WSU College of Veterinary Medicine's Paul G. Allen School for Global Health who helped to lead the project. ""If we can better predict which species pose the greatest risk, we can take proactive measures to prevent pandemics.""
+
+The model identified Southeast Asia, equatorial Africa, and the Amazon as potential hotspots for orthopoxvirus outbreaks. These regions not only have high concentrations of potential hosts but also overlap with areas where smallpox vaccination rates are low. While the smallpox vaccine provides cross-protection against other orthopoxviruses, vaccination efforts stopped after smallpox was eradicated in 1980.
+
+The study also identified several animal families as likely hosts for mpox, including rodents, cats, canids (dogs and related species), skunks, mustelids (weasels and otters) and raccoons. The model correctly excluded rats, which have been shown in laboratory studies to be resistant to mpox infection.
+
+Katie Tseng, a veterinary medicine graduate student and the study's first author, noted the model not only demonstrated higher predictive accuracy than previous models, but it can be useful in predicting hosts for other viruses as well.
+
+While we used the model specifically for orthopoxviruses, we can also go in a lot of different directions and start fine tuning this model for other viruses."" Katie Tseng, a veterinary medicine graduate student and study's first author
+
+Pilar Fernandez, a disease ecologist and assistant professor in the Allen School who helped to lead the project with Seifert, said previous machine learning models used to predict potential hosts for orthopoxviruses relied on the ecological traits of animals, such as habitat and diet, and other characteristics that influence their interactions with the environment, such as resource use and survival. While effective, these models ignored a crucial part of the equation – the genetic makeup of the viruses.
+
+""Previous models were more based on the characteristics of the host, but we wanted to add the other side of the story, the characteristics of the viruses,"" Fernandez said. ""Our model improves the accuracy of host predictions and provides a clearer picture of how viruses may spread across species.""
+
+Orthopoxviruses typically cause small, localized outbreaks, but recent events, including the global spread of mpox in 2022, have raised concerns about these viruses establishing new endemic areas and spreading through new animal reservoirs.
+
+Identifying possible reservoirs is key to anticipating spillover events, however, accomplishing that through traditional field sampling is a resource-intensive and impractical endeavor. The new model simplifies that task and can be used to target wildlife surveillance efforts.
+
+""If you are looking for the reservoir for mpox virus in Central Africa, that's one of the most biodiverse places on Earth, so where do you start?"" Seifert said. ""If we can use these machine learning models to help us prioritize sampling efforts, then that's going to be really beneficial in identifying where these viruses are coming from and in understanding the risks they pose.""
+
+The research team also included Heather Koehler, an assistant professor in the School of Molecular Biosciences who has extensively studied mpox. Daniel J. Becker, University of Oklahoma; Rory Gibb, University College London; and Collin Carlson, Yale University, also contributed as members of the Viral Emergence Research Institute, a collaborative network of scientists studying host-virus interactions to predict virus spread on a global scale that is funded by the National Science Foundation. The group includes experts in data science, computational biology, virology, ecology, and evolutionary biology.",news-medical
+https://news-medical.net,New virtual reality system aims to revolutionize psychiatric diagnosis,https://news-medical.net/news/20250331/New-virtual-reality-system-aims-to-revolutionize-psychiatric-diagnosis.aspx,"Mon, 31 Mar 2025 00:00:00 GMT","Researchers have developed a virtual reality-based system that shows promise in improving the differentiation between common mental health conditions, potentially paving the way for earlier and more personalized treatment. The work is published in the March edition of the peer-reviewed journal European Neuropsychopharmacology, with a subsequent (31 March) comment also being published in the same journal.
+
+Accurate diagnosis remains one of the biggest challenges in psychiatry, with more than half of psychiatric patients changing their diagnosis within 10 years. Most psychiatric diagnoses rely on patients reporting their symptoms, but many mental health conditions share overlapping features. For example, apathy, hallucinations, and cognitive problems may be present in both schizophrenia and bipolar disorder, making it difficult to distinguish between the two. Misdiagnosis can lead to suboptimal treatment and poorer outcomes.
+
+
+
+Now, a group of Danish scientists have combined virtual reality with physiological measurements (such as skin conductivity) to explore a more objective method for identifying different mental health conditions.
+
+Lead researcher Professor Kamilla Miskowiak (University of Copenhagen) said, ""This is an important step forward. Until now, diagnosis has largely depended on self-reporting of symptoms, but our findings suggest that virtual reality scenarios combined with physiological measures may help differentiate between similar conditions. This is an area where psychiatry has long faced difficulties.""
+
+
+
+The researchers recruited 100 participants, including individuals with bipolar disorder, borderline personality disorder, schizophrenia, and healthy controls. Participants were exposed to various immersive virtual reality scenarios designed to elicit emotional and physiological responses, such as a video of a crying baby, a discussion in a canteen, and a cramped elevator scenario. The researchers measured emotional responses and skin conductivity during these scenarios.
+
+Their results indicate that these responses differed systematically between diagnostic groups, suggesting that this approach has the potential to enhance diagnostic accuracy. However, larger studies are needed to confirm these findings and to explore how such methods might be used in clinical practice.
+
+
+
+Professor Miskowiak said, ""This study is part of the VIRDIS project, which aims to develop objective tools to support psychiatric diagnosis. Our initial findings are promising, but further large-scale research is needed to validate this approach and develop it into a practical clinical tool. We are now launching a follow-up study with 300 participants and implementing machine learning methods to improve individual-level diagnostic predictions. Our long-term goal is to improve early and personalised treatment for patients with mental health disorders.""
+
+
+
+The European Neuropsychopharmacology paper has attracted attention since it was placed online, including a published commentary from Dr Sijia Liu at the Liaoning University of Traditional Chinese Medicine, Shenyang, China, stating:
+
+
+
+""This study offers a groundbreaking approach to addressing the persistent challenges in psychiatric diagnosis and treatment by leveraging virtual reality (VR) technology. I suggest that future research should consider integrating artificial intelligence algorithms to analyse the extensive data generated from these VR scenarios. I believe this work holds significant promise for advancing our understanding and clinical practices in mental health care"".
+
+
+
+This project is a collaboration between the Copenhagen Mental Health Centre, Khora Virtual Reality and EXP360. This study was supported by the Ivan Nielsen Foundation.",news-medical
+https://news-medical.net,AI model achieves high accuracy in detecting odontogenic sinusitis in dental X-rays,https://news-medical.net/news/20250331/AI-model-achieves-high-accuracy-in-detecting-odontogenic-sinusitis-in-dental-X-rays.aspx,"Mon, 31 Mar 2025 00:00:00 GMT","The Ateneo Laboratory for Intelligent Visual Environments (ALIVE) and international researchers have developed a deep learning model that aims to revolutionize dentistry, with the capability to identify tooth and sinus structures in dental X-rays with an accuracy of 98.2%.
+
+Using a sophisticated object detection algorithm, the system was specifically trained to help quickly and more accurately detect odontogenic sinusitis—a condition that is often misdiagnosed as general sinusitis and, if left unchecked, could spread infection to the face, eyes, and even the brain.
+
+Odontogenic sinusitis, caused by infections or complications related to the upper teeth, is notoriously difficult to diagnose. Its symptoms—nasal congestion, foul-smelling nasal discharge, and occasional tooth pain—are nearly identical to those of ordinary general sinusitis. To make matters worse, only about a third of patients experience noticeable dental pain, meaning the condition is frequently overlooked by general practitioners. Traditional diagnosis requires collaboration between dentists and otolaryngologists, often leading to delayed treatment.
+
+By training deep learning models on dental panoramic radiograph (DPR) images, the researchers found a way to detect key anatomical relationships—such as the proximity of tooth roots to sinuses—with unprecedented accuracy. The study used the YOLO 11n deep learning model, achieving an impressive 98.2% accuracy, outperforming traditional detection methods.
+
+YOLO (You Only Look Once) is a state-of-the-art object detection algorithm known for its speed and accuracy. The YOLO 11n model, an improved version, is optimized for medical imaging tasks, enabling it to identify teeth and sinus structures with high precision in a single pass through the image. Unlike conventional diagnostic methods, which require multiple steps and expert interpretation, YOLO 11n rapidly pinpoints the affected areas in real time, making it an invaluable tool for dental professionals.
+
+Beyond accuracy, this AI-driven approach also offers practical benefits. It minimizes patient exposure to radiation by reducing the need for CT scans, which are currently the gold standard for diagnosing odontogenic sinusitis. It also provides a cost-effective screening tool, particularly useful in resource-limited areas where advanced imaging technology may not be available. And by flagging potential cases early, the system allows for prompt intervention, preventing complications and reducing the burden on healthcare providers.
+
+This breakthrough highlights AI's growing role in medical diagnostics, bridging gaps where human expertise alone may fall short. With further validation, this technology could become a standard tool in dental and ENT clinics, ensuring that more patients receive timely and accurate diagnoses.
+
+ALIVE head Dr. Patricia Angela R. Abu and her colleagues from Taiwan's Chang Gung Memorial Hospital, National Cheng Kung University, Chung Yuan Christian University, and Ming Chi University of Technology published their findings in the journal, ""Bioengineering.""",news-medical
+https://news-medical.net,Blood test offers insight into Alzheimer's stage and severity,https://news-medical.net/news/20250331/Blood-test-offers-insight-into-Alzheimers-stage-and-severity.aspx,"Mon, 31 Mar 2025 00:00:00 GMT","A newly developed blood test for Alzheimer's disease not only aids in the diagnosis of the neurodegenerative condition but also indicates how far it has progressed, according to a study by researchers at Washington University School of Medicine in St. Louis and Lund University in Sweden.
+
+Several blood tests for Alzheimer's disease are already clinically available, including two based on technology licensed from WashU. Such tests help doctors diagnose the disease in people with cognitive symptoms, but do not indicate the clinical stage of the disease symptoms – that is, the degree of impairment in thinking or memory due to Alzheimer's dementia. Current Alzheimer's therapies are most effective in early stages of the disease, so having a relatively easy and reliable way to gauge how far the disease has progressed could help doctors determine which patients are likely to benefit from drug treatment and to what extent. The new test can also provide insight on whether a person's symptoms are likely due to Alzheimer's versus some other cause.
+
+The study is published March 31 in Nature Medicine.
+
+In the study, the researchers found that levels of a protein called MTBR-tau243 in the blood accurately reflect the amount of toxic accumulation of tau aggregates in the brain and correlate with the severity of Alzheimer's disease. Analyzing blood levels of MTBR-tau243 from a group of people with cognitive decline, the researchers were able to distinguish between people with early- or later-stage Alzheimer's disease and separate both groups of Alzheimer's patients from people whose symptoms were caused by something other than Alzheimer's disease.
+
+This blood test clearly identifies Alzheimer's tau tangles, which is our best biomarker measure of Alzheimer's symptoms and dementia. In clinical practice right now, we don't have easy or accessible measures of Alzheimer's tangles and dementia, and so a tangle blood test like this can provide a much better indication if the symptoms are due to Alzheimer's and may also help doctors decide which treatments are best for their patients."" Randall J. Bateman, MD, co-senior author, the Charles F. and Joanne Knight Distinguished Professor of Neurology at WashU Medicine
+
+Tracking Alzheimer's disease progression from blood
+
+Alzheimer's disease involves a build-up of a protein, called amyloid, into plaques in the brain, followed by the development of tangles of tau protein years later. Cognitive symptoms emerge around the time tau tangles become detectable, and symptoms worsen as the tangles spread. The gold standard for staging Alzheimer's disease is positron emission tomography (PET) brain scans for amyloid plaques and tau tangles. Amyloid scans yield information about the presymptomatic and early symptomatic stages, while tau scans are useful for tracking later stages of the disease. PET brain scans are highly accurate but expensive, time-consuming and frequently unavailable outside of major research centers, so they are not widely used.
+
+Bateman leads a team that is developing blood tests for Alzheimer's disease as a more accessible alternative to brain scans. They have developed two blood tests that correlate closely with the amount of amyloid plaques in the brain. Both are now used by doctors to aid diagnosis. But until now, there has been no blood test that reports on tau levels in the brain.
+
+In a previous study, Bateman and colleagues - including co-first authors Kanta Horie, PhD, a research associate professor of neurology at WashU Medicine, and Gemma Salvadó, PhD, then a postdoctoral researcher at Lund University, and co-senior author Oskar Hansson, MD, PhD, a professor of neurology at Lund University - showed that cerebrospinal fluid levels of MTBR-tau243 correlate closely with tau tangles in the brain. In the current study, the team extended the analysis to blood. A blood sample is easier to collect than cerebrospinal fluid, which is obtained via spinal tap.
+
+The researchers developed a technique to measure MTBR-tau243 levels in people's blood and compared it to the amount of tau tangles in their brains as measured by brain scans. They piloted the approach on data from two cohorts: volunteers at WashU Medicine's Charles F. and Joanne Knight Alzheimer Disease Research Center, which included 108 people, and a subset of 55 people from the Swedish BioFINDER-2 cohort. To assess whether the approach was generalizable, they validated it in an independent dataset consisting of the remaining 739 people in the BioFINDER-2 cohort.
+
+The people in the two cohorts represented all but the most severe end of the spectrum of Alzheimer's disease, from the presymptomatic stage when brain amyloid levels are elevated but people remain cognitively healthy, through early-stage disease with mild cognitive impairments, to late symptomatic disease when patients exhibit full-blown dementia. For comparison, cognitively healthy people with normal amyloid levels, and people with cognitive symptoms due to conditions other than Alzheimer's disease, were included.
+
+The researchers' analysis showed that blood MTBR-tau243 levels reflected the amount of tau tangles in the brain with 92% accuracy. MTBR-tau243 levels in the blood were normal in asymptomatic people regardless of amyloid status, meaning that blood MTBR-tau243 levels do not change between healthy people and people in the presymptomatic stage of Alzheimer's disease with amyloid plaques.
+
+Among people with cognitive symptoms due to Alzheimer's disease, MTBR-tau243 levels were significantly elevated for people in the mild cognitive impairment phase of Alzheimer's disease and much higher - up to 200 times - for those in the dementia phase. Those differences translated into clear separation of people in early- and late-stage Alzheimer's disease. At the same time, MTBR-tau243 levels were normal in people with cognitive symptoms due to diseases other than Alzheimer's, meaning that the test effectively distinguished Alzheimer's dementia from other kinds of dementia.
+
+The technology underlying the blood test for tau aggregates has been licensed by WashU to C2N Diagnostics, a WashU startup that developed the blood tests for amyloid. These amyloid tests incorporate measures of another form of tau called p-tau217.
+
+""I believe we will use blood-based p-tau217 to determine whether an individual has Alzheimer's disease, but MTBR-tau243 will be a highly valuable complement in both clinical settings and research trials,"" said Hansson. ""When both of these biomarkers are positive, the likelihood that Alzheimer's is the underlying cause of a person's cognitive symptoms increases significantly, compared to when only p-tau217 is abnormal. This distinction is crucial for selecting the most appropriate treatment for each patient.""
+
+Blood tests could inform personalized Alzheimer's treatment
+
+Two Alzheimer's therapies have been approved by the Food and Drug Administration (FDA) to slow progression of the disease, and both work by lowering amyloid levels in the brain. Horie said the number and variety of available Alzheimer's medications may soon be expanding, as several experimental drugs that target tau or other aspects of Alzheimer's disease are in the pipeline. With blood tests to diagnose and stage the disease, doctors would be able to tailor treatments to the patient's particular disease state.
+
+""We're about to enter the era of personalized medicine for Alzheimer's disease,"" Horie said. ""For early stages with low tau tangles, anti-amyloid therapies could be more efficacious than in late stages. But after the onset of dementia with high tau tangles, anti-tau therapy or one of the many other experimental approaches may be more effective. Once we have a clinically available blood test for staging, plus treatments that work at different stages of the disease, doctors will be able to optimize their treatment plans for the specific needs of each patient.""",news-medical
+https://news-medical.net,"How Artificial Sweeteners Disrupt the Gut Microbiome, Or Do They?",https://news-medical.net/health/How-Artificial-Sweeteners-Disrupt-the-Gut-Microbiome-Or-Do-They.aspx,"Mon, 31 Mar 2025 05:39:00 GMT","What are artificial sweeteners, and why are they controversial?
+
+The gut microbiome: Key to health or overhyped?
+
+What the research says about sweeteners and gut flora?
+
+Industry innovation: Microbiome testing and personalized diets
+
+Where the science is going next?
+
+Artificial sweeteners promise sweetness with few or no calories, driving both their popularity and controversy. Recent studies have raised questions about their impact on the gut microbiome- a complex community of microorganisms vital for metabolism, immunity, and overall health.
+
+However, research findings remain inconsistent: some studies report significant microbial disruption, while others suggest minimal effects, even at high consumption levels.
+
+Advances in microbiome analysis technologies and biotechnology startups developing personalized dietary recommendations may help clarify individual differences in response.
+
+As regulators like the European Food Safety Authority (EFSA) and the United States Food and Drug Administration (FDA) reassess sweetener safety, nutrition science faces a pivotal moment- distinguishing genuine risks from exaggerated fears.1,2
+
+This article provides a balanced overview of the current scientific evidence and emerging innovations shaping our understanding of artificial sweeteners and the gut microbiome.
+
+Image Credit: Anastassiya Bezhekeneva/Shutterstock.com
+
+What are artificial sweeteners, and why are they controversial?
+
+Artificial sweeteners are sugar substitutes widely used to mimic sweetness with fewer or no calories compared to sugar. Common types include synthetic sweeteners like aspartame, sucralose, and saccharin, as well as natural ones like stevia.
+
+They are prevalent in diet sodas, desserts, chewing gums, and many sugar-free products. Despite regulatory approval affirming their safety within recommended limits, artificial sweeteners remain controversial.2
+
+The controversy primarily arises from concerns about their long-term health impacts, especially their potential role in obesity, metabolic syndrome, and type 2 diabetes. Some studies indicate that regular consumption of artificial sweeteners may disrupt gut microbiota, altering the balance of beneficial bacteria.
+
+Specifically, research suggests saccharin and sucralose could significantly shift microbiome composition, potentially affecting glucose tolerance and metabolism. Natural sweeteners like stevia also raise similar questions about their microbiota interactions.2
+
+Moreover, polyol sweeteners (e.g., xylitol, maltitol) can cause digestive issues like bloating and diarrhea at high consumption levels, although some may positively influence gut bacteria as prebiotics.2
+
+Are artificial sweeteners harming your gut? | Dr. Eran Elinav and Prof. Tim Spector Play
+
+The gut microbiome: Key to health or overhyped?
+
+The gut microbiome, comprising trillions of microorganisms, is increasingly seen as vital for digestion, immunity, and overall health- but is this enthusiasm justified or exaggerated? Cutting-edge biotech startups use advanced sequencing methods, such as 16S ribosomal Ribonucleic acid (rRNA) sequencing and metagenomics, to map how diet affects microbiome diversity and function.
+
+Yet, some researchers caution that correlations between microbial patterns and specific health outcomes do not always imply causation. While personalized nutrition platforms promise diets tailored precisely to one's microbiota, evidence of consistent clinical benefits remains sparse.2
+
+Regulatory bodies, including the FDA and EFSA, acknowledge the microbiome’s significance but emphasize that claims about health impacts require rigorous validation.
+
+As startups invest in microbiome-driven dietary interventions, distinguishing genuine scientific advancement from commercial hype is crucial. Ultimately, while microbiome research holds great promise, careful interpretation and further studies are essential before fully embracing its purported health benefits.2,3
+
+The Rise of Postbiotics for Gut Health
+
+What the research says about sweeteners and gut flora?
+
+Sweeteners have become widely used as sugar substitutes due to their low-calorie content. However, recent research has raised questions about their effects on gut microbiota.2,4
+
+Studies indicate that sweeteners can significantly alter gut flora, potentially leading to dysbiosis- a disruption associated with metabolic disorders like insulin resistance, obesity, and inflammation. Saccharin and sucralose specifically have been observed to impact gut microbiota composition in various studies consistently.
+
+Saccharin consumption, even at moderate levels, has shown inhibitory effects on beneficial bacteria such as Lactobacillus and Akkermansia muciniphila, contributing to glucose intolerance and inflammation in animal models. Human studies corroborated these results, suggesting that saccharin can cause gut microbial imbalances linked to metabolic dysfunction.4
+
+Sucralose, minimally metabolized by the human body, reaches the colon largely intact, significantly affecting gut bacteria diversity.
+
+Animal studies report a decrease in beneficial groups like bifidobacteria, lactobacilli, and Clostridium clusters, while clinical trials have also highlighted its potential to disrupt microbial populations associated with gut health.2,4
+
+In contrast, the findings regarding aspartame and acesulfame-K are less consistent. Aspartame, rapidly metabolized in the small intestine, theoretically minimizes direct gut microbiota interactions.
+
+However, animal studies show that aspartame alters microbiota diversity, increasing Enterobacteriaceae and Clostridium leptum populations, and is linked to impaired glucose metabolism. Human studies, however, report mixed results, suggesting that dietary habits and individual differences significantly influence outcomes.4
+
+Acesulfame-K studies have similarly yielded conflicting results. While some research shows minimal microbiota impact due to its rapid urinary excretion, other studies indicate changes in specific bacteria, particularly with prolonged high-dose intake.4
+
+Overall, the evidence suggests caution in the widespread use of sweeteners due to their potential dysbiotic effects. The scientific community emphasizes that responses can vary widely due to differences in study designs, dosages, duration of consumption, and individual microbiota profiles.
+
+Therefore, more controlled, longitudinal human trials are necessary to clarify these effects and establish safe consumption guidelines for sweeteners regarding gut microbiota health.2,4
+
+Download your PDF copy now!
+
+Industry innovation: Microbiome testing and personalized diets
+
+Microbiome testing has become a transformative force within the nutrition industry, promising highly personalized diets that target gut health for optimal wellness. The surge in interest stems from compelling evidence linking the gut microbiome, the vast ecosystem of bacteria residing in our intestines, to overall health, metabolism, immunity, and even mental well-being.6
+
+Artificial sweeteners, long celebrated as calorie-free sugar substitutes, have recently come under scrutiny for potentially disrupting gut bacteria.
+
+Emerging microbiome research indicates that substances like sucralose, aspartame, and saccharin may alter the balance of beneficial bacteria, possibly influencing metabolic responses and glucose tolerance. However, conflicting studies leave significant uncertainty about these effects, underscoring the complexity and variability of individual microbiomes.6
+
+Personalized diets have emerged, with companies utilizing advanced microbiome analysis via at-home stool tests and genomic sequencing to provide customized dietary recommendations.
+
+These personalized approaches consider unique microbiome profiles, dietary habits, and physiological responses, enabling precise nutritional advice to optimize gut health. For example, individuals showing microbiome sensitivity to artificial sweeteners might receive guidance favoring natural sweeteners or specific dietary fibers that support beneficial gut bacteria.6
+
+Despite this promise, challenges persist, as variability in microbiome composition makes universal conclusions about artificial sweeteners elusive. Personalized diets require extensive data collection, scientific validation, and consumer willingness to adopt tailored recommendations consistently.6
+
+Dairy and Gut Health: The Good, the Bad, and the Controversial
+
+Where the science is going next?
+
+Nevertheless, microbiome testing combined with personalized nutrition is poised to transform dietary practices, empowering individuals to manage their health proactively. Emerging research increasingly utilizes personalized microbiome assessments to decode individual responses to artificial sweeteners.
+
+Advanced technologies-including metagenomics, metabolomics, and single-cell sequencing are instrumental in capturing detailed microbial shifts and their functional consequences.6
+
+Future directions involve leveraging microbiome insights to formulate personalized dietary guidelines, develop targeted probiotic therapies, and create microbiota-specific treatments that counteract disruptions caused by artificial sweeteners.
+
+Additionally, sophisticated Artificial Intelligence (AI) algorithms integrating microbiome, metabolome, and genetic profiles will enhance predictions of individual metabolic reactions to sweeteners, significantly advancing precision nutrition. Concurrently, research into natural sweetener alternatives with microbiome-friendly characteristics is expanding, promising healthier consumer choices.
+
+As scientific understanding of artificial sweeteners deepens, microbiome-informed diets will likely become central to wellness strategies, offering unmatched accuracy in dietary management and health optimization.
+
+Ultimately, this integration of microbiome science and personalized nutrition holds vast potential to reshape dietary practices, drive informed policy decisions, and safeguard gut health at both individual and population levels.2,6,7
+
+References",news-medical
+https://news-medical.net,A smarter alternative to syringe pumps for precision fluid dispensing,https://news-medical.net/whitepaper/20250331/A-smarter-alternative-to-syringe-pumps-for-precision-fluid-dispensing.aspx,"Mon, 31 Mar 2025 00:00:00 GMT","Engineers working in the life sciences sector are facing increasing pressure to improve throughput and reduce total cost of ownership.
+
+Image Credit: Fluid Metering, Inc.
+
+Syringe pumps or inline piston pumps are typically used in dispensing systems, but these pumps tend to be slow and require regular maintenance over the life of the pumps to maintain satisfactory throughput.
+
+Fluid Metering has developed the FENYX, a groundbreaking variable dispense pump that is able to increase throughput and decrease costs in the majority of syringe pump applications.
+
+Fluid Metering’s CeramPumps® have been used throughout the life sciences industry for more than 60 years, but until now, these pumps have been limited to precision dispensing with a fixed volume.
+
+The FENYX variable dispense pump allows users to alter the pump’s dispense volume in the same way as is possible with a syringe pump or inline piston pump, but while leveraging all the advantages of using a ceramic rotating reciprocating piston.
+
+FENYX Versus Syringe Pump
+
+The FENYX offers a number of advantages over traditional syringe pumps:
+
+Increase throughput by 10x-40x with the highest degree of accuracy and precision
+
+Self-priming up to 15 ft H 2 O
+
+O Adjustable dispense volume 2-1150 µL/stroke
+
+High resolution 0.037 µL/step dispense volume adjustment
+
+Valveless design with one moving component
+
+Video Credit: Fluid Metering, Inc.
+
+The FENYX is an ideal drop-in replacement for syringe pumps, especially for OEMs seeking high uptime and zero maintenance. For those considering a syringe pump in their design, the FENYX offers solutions to key concerns, including the below.
+
+High Maintenance Requirements Equate to High Cost of Ownership
+
+The Problem:
+
+Syringes wear over time, leading to a decline in volumetric and positional accuracy and precision.
+
+Syringe pumps generally require servicing following 100-250 K cycles. Depending on the pump’s duty cycle, this may involve sourcing replacement parts every few weeks or months. Recalibration could also be necessary, even in cases where the syringe pump is replaced entirely.
+
+All of these maintenance requirements result in considerable additional costs and significant losses in working time.
+
+The Solution:
+
+The FENYX features a maintenance-free rotating reciprocating piston design. The pump’s ceramic parts are both chemically inert and dimensionally stable, meaning that they will not stretch, distort, or change shape over time.
+
+Because it features a single moving component, the FENYX undergoes little to no wear, meaning that it will remain maintenance-free throughout the lifetime of the instrument.
+
+Expensive Supporting Fluidics
+
+The Problem:
+
+OEMs often have to include expensive supporting fluidic architecture in order to maintain high throughput.
+
+Image Credit: Fluid Metering, Inc.
+
+For example, requiring separate pumps to prime, flush, and dispense requires extra lines of often frail tubing, additional risky leak points, and increased OEM machine size.
+
+The Solution:
+
+The FENYX is valveless and able to self-prime 10x-40x faster than a syringe pump, helping OEMs eliminate unnecessary fluidic components such as flushing pumps, prime pumps, selector valves, and tubing.
+
+Priming Low-Volume Syringes
+
+The Problem:
+
+Syringe pumps are prone to trapping substantial amounts of air between the tip of the syringe and the valve. This air can only be removed through multiple priming cycles in small-volume syringe pumps, slowing down the priming process and creating problematic delays in time-sensitive applications. Syringe pumps also necessitate the use of a separate pump to prime.
+
+The Solution:
+
+The FENYX can be rapidly self-primed at higher dispense volumes before being adjusted to accommodate the target dispense. This removes any risk of bubble entrapment while addressing the priming issues common to smaller syringe barrel sizes.
+
+Restrictions with Flow and Viscous Mediums
+
+The Problem:
+
+Syringe pumps work by exerting linear force on a plunger in order to dispense fluid. This means that highly viscous mediums cannot be handled because they tend to create more intense friction than the pump can accommodate.
+
+Attempting to pump viscous fluids will lead to rapid pump degradation and failure, with the syringe pump’s flow rate constricted even with lower-viscosity fluids. In these cases, throughput is fully dependent on the syringe diameter.
+
+The Solution:
+
+The FENYX variable dispense pump has been developed with more robust components. It is able to accommodate more powerful motors, meaning that it can overcome the resistance required to accommodate a wider range of fluid viscosities with no performance degradation.
+
+The FENYX draws fluid from a reservoir as required, meaning that its flow rate can operate continuously at a wider range, spanning from 1 mL per minute at 1 rpm up to 400 mL per minute at 1000 rpm.
+
+Non-Contact Dispensing
+
+The Problem:
+
+Syringe pumps lack the capacity for non-contact dispensing, requiring life science OEMs to use touch-off or submersion methods in order to dispense single microliter volumes.
+
+This approach necessitates regular probe tip changes or washing in order to prevent cross-contamination, increasing costs and reducing throughput.
+
+The Solution:
+
+The FENYX variable dispense pump is able to accommodate non-contact dispensing capability down to 4 µL while maintaining excellent accuracy and precision. This removes the need for washing or probe tip changes, reducing system costs and improving life science OEMs’ throughput.
+
+Improvements
+
+There are limitations to the viable improvement of syringe pumps, but variable dispense pumps have been specifically designed to ensure flexibility. The FENYX variable dispense pump boasts a number of improvements over its predecessor, the FVD model:
+
+A calibratable flag, featuring updated home positioning and dispense options. This means the pump does not have to be recalibrated when changing dispense volumes, and applications will offer the same functionality pump to pump, with a pump variation of less than 0.5 % of max dispense volume. An anti-backlash mechanism reduces dispensing variation when the linear actuator changes direction. An electronic encoder confidently informs the system of the linear actuator’s location, removing the need to guess if the pump has taken the correct number of steps. Sensor orientation has been changed so that the flag goes through the sensor without touching it. A corrosion-resistant internal spring steel (1065 spring steel to 301 stainless steel) connector links the variable head to the actuator, meaning that no maintenance is required. The linear sensor is also dual-mounted, ensuring a stable home position that will not be impacted by manipulation of the pump during shipping.
+
+Applications
+
+The FENYX is the ultimate long-term solution for applications requiring continuous operation and more rapid, accurate, and reliable results.
+
+The FENYX can accommodate a much more diverse array of applications than a syringe pump, with Fluid Metering’s CeramPump® technology seeing routine use in the following applications:
+
+Analytical instruments
+
+Liquid chromatography
+
+Gas chromatography
+
+Flow cytometry
+
+In vitro diagnostics (IVD)
+
+Clinical diagnostics
+
+Genomics and proteomics
+
+Sample preparation
+
+Drug discovery
+
+Liquid handling systems
+
+Mass spectrometry (MS)
+
+Bioprocessing
+
+Acknowledgments
+
+Produced from materials originally authored by Blake Webb from Fluid Metering, Inc.
+
+About Fluid Metering, Inc.
+
+Fluid Metering, Inc. (FMI) is a worldwide leader in life science pumps and dispensers, having pioneered the first valve-less piston pump over 64 years ago. With specialized expertise in fluidics and applications, Fluid Metering, Inc. supports instrument developers in tackling complex fluidic challenges.
+
+Committed to innovation through collaboration, Fluid Metering, Inc. advances health, sustainability, and quality of life. ISO 9001:2015 certified.
+
+Sponsored Content Policy: AZoLifeSciences publishes articles and related content that may be derived from sources where we have existing commercial relationships, provided such content adds value to the core editorial ethos of AZoLifeSciences which is to educate and inform site visitors interested in life science news and information.",news-medical
+https://news-medical.net,How to manage fluid crystallization in life science applications,https://news-medical.net/whitepaper/20250331/How-to-manage-fluid-crystallization-in-life-science-applications.aspx,"Mon, 31 Mar 2025 00:00:00 GMT","Under specific conditions, a liquid solution can form solid crystals, often due to environmental factors like temperature shifts, concentration changes, or air exposure. In life science OEM and laboratory research applications, crystallizing fluids pose a significant challenge, as conventional equipment often struggles to process them efficiently.
+
+Image Credit: Fluid Metering, Inc.
+
+That’s why selecting a pump designed to handle these fluids with ease is essential for maintaining reliable performance.
+
+Why You Need a Pump to Handle Crystallizing Fluids
+
+Pump users are increasingly experiencing crystallization concerns, not only with traditional high-salt fluids but also with more diluted solutions that do not typically produce deposits.
+
+As a precaution, many industry professionals utilize buffer solutions in their equipment to keep the fluid's pH steady while mixing it with the buffer.
+
+This approach, however, is not always sufficient. If crystallization occurs within the pump, it could cause a variety of issues:
+
+Clogged and disrupted flow
+
+Costly, messy, and hazardous leaks
+
+Increased wear due to abrasion
+
+Limited efficiency, consistency, and accuracy
+
+Expensive downtime and maintenance
+
+Pump stalling or breakage
+
+Reduced system lifespan
+
+To address these challenges, we must investigate what causes fluids to precipitate in a pump.
+
+Why Do Fluids Crystallize?
+
+Temperature changes, pressure variations, contact with pump materials, air exposure, mechanical stress, and vibrations can all trigger fluid crystallization. Air, in particular, accelerates drying and precipitation, making it a common culprit in crystallization issues.
+
+This phenomenon is a frequent challenge across various applications. Dialysis instruments, for example, handle highly concentrated dialysate, which crystallizes easily.
+
+Sodium hypochlorite, commonly used in disinfectants and bleaching agents, tends to become supersaturated in closed systems and can crystallize in cooler temperatures. Similarly, hard water, salt water, and saline solutions used in industrial, environmental, and medical applications are especially prone to crystallization due to the strong ionic bonds in salt.
+
+While fluid crystallization may seem inevitable, there are effective strategies to minimize its occurrence and maintain smooth system operation.
+
+How Fluid Metering Solves for Crystalizing Fluids
+
+Fluid Metering has created some efficient techniques to avoid and reduce the problems produced by crystallizing fluids. This includes:
+
+Valveless Design – Avoids a common place for deposit buildup and blockages.
+
+– Avoids a common place for deposit buildup and blockages. Secondary Flush Ports - Users can flush viscous or crystallizing fluids through the second set of ports using gravity or pressure. These ports produce a liquid barrier between the crystal-forming chemical and the air, preventing air exposure. Flush ports are available on several Fluid Metering devices, including Q Pump Heads and RH Pump Heads.
+
+- Users can flush viscous or crystallizing fluids through the second set of ports using gravity or pressure. These ports produce a liquid barrier between the crystal-forming chemical and the air, preventing air exposure. Flush ports are available on several Fluid Metering devices, including Q Pump Heads and RH Pump Heads. Hydrophobic Piston Coating - Reduces crystal adherence to the piston
+
+- Reduces crystal adherence to the piston Custom Seal and Ceramic Configurations - Corrosion-resistant ceramics and seals to fight abrasive wear.
+
+- Corrosion-resistant ceramics and seals to fight abrasive wear. Optimized Internal Geometry - Reduces the amount of dead volume where crystalizing fluids might precipitate and collect.
+
+- Reduces the amount of dead volume where crystalizing fluids might precipitate and collect. Consistent Flow - Keeping the fluid in constant motion eliminates stagnation and reduces the possibility of precipitates accumulating.
+
+- Keeping the fluid in constant motion eliminates stagnation and reduces the possibility of precipitates accumulating. Routine Flushing - Appropriate flushing with compatible solvents, such as isopropyl alcohol, clears residuals and prevents crystallization during downtime.
+
+These customized setups have a high success rate in reducing seepage and eliminating crystallization.
+
+Is Crystallization Clogging Your Path to Success?
+
+Don’t allow crystallizing fluids to keep you from achieving your goals. Contact one of Fluid Metering’s technical specialists to learn about the latest fluid handling technologies and tailored solutions.
+
+Fluid Metering can assist you in troubleshooting current issues or getting a jump start on your new application. For additional information and to locate pumps that fit your specific fluid requirements, visit Fluid Metering now.
+
+About Fluid Metering, Inc.
+
+Fluid Metering, Inc. (FMI) is a worldwide leader in life science pumps and dispensers, having pioneered the first valve-less piston pump over 64 years ago. With specialized expertise in fluidics and applications, Fluid Metering, Inc. supports instrument developers in tackling complex fluidic challenges.
+
+Committed to innovation through collaboration, Fluid Metering, Inc. advances health, sustainability, and quality of life. ISO 9001:2015 certified.
+
+Sponsored Content Policy: AZoLifeSciences publishes articles and related content that may be derived from sources where we have existing commercial relationships, provided such content adds value to the core editorial ethos of AZoLifeSciences which is to educate and inform site visitors interested in life science news and information.",news-medical
+https://news-medical.net,How bacteria develop antibiotic resistance and what science is doing about it,https://news-medical.net/whitepaper/20250331/How-bacteria-develop-antibiotic-resistance-and-what-science-is-doing-about-it.aspx,"Mon, 31 Mar 2025 00:00:00 GMT","According to a recent study, superbugs could kill up to 40 million people by 2050.1 The World Health Organization has identified antimicrobial resistance (AMR) as one of the most serious global public health threats.
+
+Image Credit: Norgen Biotek Corp.
+
+Several factors contribute to the emergence and spread of AMR, the most significant of which is the misuse and overuse of antibiotics in clinical settings.
+
+How does antimicrobial resistance occur?
+
+The mechanism of antimicrobial resistance is well studied and is generally divided into two categories.
+
+Intrinsic resistance
+
+The first way AMR develops is through intrinsic resistance, which refers to a microorganism’s natural ability to withstand antibiotics. ""For example, an antibiotic that affects the wall-building mechanism of the bacteria, such as penicillin, cannot affect bacteria that do not have a cell wall.""10
+
+Acquired resistance
+
+The second mechanism is acquired resistance, which occurs when antibiotic-susceptible bacteria gain the ability to resist the effects of an antibiotic, allowing them to survive and multiply under selective pressure.
+
+Acquired resistance can result from either modification to existing genetic material (gene mutation) or the acquisition of new genetic material from another source (horizontal gene transfer).
+
+These acquired resistance genes may enable bacteria to degrade or chemically modify antibiotics, rendering them ineffective. Bacteria may also produce or upregulate efflux pumps, which actively transport antibiotics out of the cell, preventing the drug from reaching its intracellular target.
+
+They may also modify the drug’s target site or develop an alternative metabolic pathway that bypasses the action of the drug.2
+
+Gene mutation and selection
+
+When exposed to antibiotics, approximately one out of every 108-109 bacteria develops resistance due to spontaneous mutation. For instance, E. coli, when exposed to high quantities of streptomycin, develops resistance at a rate of about 109.
+
+Mutation is a rare event, but due to the rapid growth rate of bacteria, it does not take long for resistance to develop within a population.3
+
+Horizontal gene transfer
+
+Horizontal gene transfer (HGT) is the exchange of genetic information between organisms that are more or less closely related. Bacteria can acquire resistance by obtaining additional genetic material from resistant organisms.
+
+HGT can occur across strains of the same species or between different bacterial species. There are three main pathways for HGT:
+
+Image Credit: Norgen Biotek Corp.
+
+Transformation: Bacteria absorb extracellular, bare DNA from their surroundings. This DNA is typically found in the external environment because of another bacteria's death and lysis.
+
+Bacteria absorb extracellular, bare DNA from their surroundings. This DNA is typically found in the external environment because of another bacteria's death and lysis. Conjugation: Conjugation refers to the direct transfer of DNA between cells. During conjugation, a gram-negative bacterium often transfers plasmid-containing resistance genes to a neighboring bacterium via an extended protein structure known as a pilus. Gram-positive bacteria, on the other hand, typically initiate conjugation by producing sex pheromones, which promote clumping of donor and recipient cells, facilitating DNA exchange.
+
+Conjugation refers to the direct transfer of DNA between cells. During conjugation, a gram-negative bacterium often transfers plasmid-containing resistance genes to a neighboring bacterium via an extended protein structure known as a pilus. Gram-positive bacteria, on the other hand, typically initiate conjugation by producing sex pheromones, which promote clumping of donor and recipient cells, facilitating DNA exchange. Transduction: Transduction refers to bacteriophage-mediated DNA transfer. Bacteriophages are viruses that infect bacterial cells and replicate within them. After replicating, these viruses assemble and may occasionally incorporate a fragment of the host bacterium’s DNA. When such a bacteriophage infects a new bacterial cell, the bacterial DNA can be integrated into the new host's genome. Many scientists use bacteriophages to transfer new genetic elements into different host cells.4
+
+Norgen Biotek provides various kits for isolating high-quality bacterial DNA and RNA (both gram-positive and gram-negative) from a wide range of sample types, including stool, cell culture, sand, urine, plasma, tissue, and more.
+
+Image Credit: Norgen Biotek Corp.
+
+The role of biofilm in antimicrobial resistance
+
+Pathogens can also create a protective barrier around themselves, making treatment more difficult. This is referred to as a biofilm. A biofilm forms when bacteria cling to a surface and combine to form an extracellular polysaccharide (EPS) matrix, which has a glue-like consistency.
+
+The microorganisms in the biofilm can continue to reproduce and even join other biofilm colonies. This complex structure has been shown to significantly increase antibiotic resistance.
+
+Bacteria that live in a biofilm can exhibit a 10 to 1000-fold increase in resistance compared to bacteria that do not exist in a biofilm.5
+
+Image Credit: Norgen Biotek Corp.
+
+Mechanisms of antimicrobial resistance
+
+In any battle, the side that best understands its opponent has the advantage. Similarly, the more we understand about antibiotic-resistant microorganisms, the more effectively we can treat them.
+
+Understanding the mechanisms of resistance is critical to developing new antibiotics to combat these pathogens. Various bacteria exhibit resistance, each using unique strategies.
+
+Efflux pumps
+
+One of the primary mechanisms of antibiotic resistance in gram-negative bacteria is the use of efflux pumps. These protein pumps are designed to remove hazardous compounds (such as antibiotics) from within the bacterial cell.6
+
+They reduce the intracellular concentration of antibiotics, limiting their potency and ability to target essential cellular functions.
+
+Enzymatic inactivation
+
+β-lactams, known as penicillins, are among the most widely used antimicrobials. They contain a four-membered β-lactam ring. Bacteria have developed multiple resistance mechanisms against these drugs.
+
+The most common method involves β-lactamase enzymes, which hydrolyze the β-lactam rings, rendering the antibiotics ineffective.
+
+Despite the development of β-lactamase inhibitors such as clavulanic acid and avibactam, newer and more resilient bacterial strains, like carbapenem-resistant Enterobacteriaceae (CRE), pose significant challenges.7
+
+Target site modification
+
+Bacteria also use other mechanisms to resist β-lactams. Gram-positive bacteria, for example, may modify the shape or number of penicillin-binding proteins (PBPs), reducing or entirely preventing antibiotic binding to the target.7 PBPs are bacterial cell membrane proteins involved in the formation of peptidoglycans (PG).8
+
+Gram-negative bacteria are intrinsically resistant to drugs such as vancomycin, a glycopeptide that inhibits cell wall synthesis, and daptomycin, a lipopeptide that depolarizes the cell membrane.
+
+Some bacteria can develop resistance to glycopeptides by altering the structure of PG precursors, reducing glycopeptide binding.
+
+In other cases, gene mutations change the charge of the cell membrane, preventing calcium from binding, a step required for daptomycin activity. This reduces daptomycin's binding ability and its capacity to depolarize the cell membrane.7
+
+Discovery of new AMR mechanisms
+
+There are likely many undiscovered resistance mechanisms. The mechanisms of AMR are studied using a combination of molecular, microbiological, and bioinformatic techniques.
+
+Researchers employ various approaches to discover, classify, and understand how bacteria develop and transmit resistance. Clinical bacterial isolates are collected from humans, animals, and the environment to track changes in resistance.
+
+Phenotypic testing, such as standard antibiotic susceptibility tests (for example, disk diffusion and broth microdilution), can be used to detect resistant organisms.
+
+Researchers may also use genotypic analysis, including molecular approaches such as PCR and whole-genome sequencing, to screen for known resistance genes and mutations.9
+
+The most common molecular method used by clinical laboratories to study the mechanisms behind observed phenotypic resistance is PCR-based testing, including conventional PCR, real-time PCR, and qRT-PCR.
+
+This strategy involves amplifying and sequencing genes known to be involved in resistance. The sequences are then compared to those of the wild-type strain to identify potential mutations.
+
+qRT-PCR can also be used to analyze and compare the expression levels of resistance genes between mutant strains with resistant phenotypes and wild-type strains.9
+
+Functional genomics can help identify new antibiotic-resistance genes that encode enzymes based on their function. This approach involves extracting DNA fragments and creating a specific library of homogenous size. The library is then cloned into an expression vector, which is screened based on the antibiotic being studied.
+
+The development of genomic approaches that enable the study of diverse microbial communities without the need for cultivation has been critical in identifying novel resistance pathways. Moreover, cultivating harmful bacteria poses major risks to the scientists handling them and requires specialized equipment and strict safety protocols.
+
+Modern sequencing technologies offer significant potential in addressing the growing problem of antibiotic resistance. Metagenomic sequencing, in particular, has uncovered a vast reservoir of antibiotic resistance genes within the complex microbial communities found in the gastrointestinal systems of humans and animals, as well as in natural environments such as surface water and soil.
+
+This has been made possible by the rapid decrease in sequencing costs, which has led to the identification of an increasing number of resistance genes.
+
+Integrating genetic analysis with continuously updated databases is a powerful and expanding strategy. It enables access to large volumes of information and enhances our ability to investigate antibiotic resistance while offering deeper insights into bacterial behavior.10
+
+The role of gene sequencing in AMR
+
+The prediction of new antimicrobial resistance through genome sequencing can be accelerated by prior knowledge of all variables that contribute to phenotypic resistance, such as inactivating enzymes, porin mutations, influx system alterations, binding site mutations, gene inactivation, and promoter mutations.
+
+Sequence-based identification of known resistance markers covers only a small portion of the resistance spectrum, whereas transcriptome analysis may provide a more comprehensive phenotypic profile.
+
+Bacterial expression patterns can differ significantly in the presence or absence of antibiotics, offering the potential to detect resistance at the RNA level in response to environmental stressors.11
+
+Transcriptome analysis is a promising alternative to genome sequencing for resistance gene identification.
+
+High-throughput RNA sequencing (RNA-Seq) is a cutting-edge technology that uses deep sequencing techniques to analyze an RNA population converted into a library of complementary DNA (cDNA) fragments. These sequences are then bioinformatically assembled to reconstruct the entire transcriptome and accurately measure gene expression levels.12
+
+The study of RNA offers a feasible alternative for exploring the genetic factors driving antibiotic resistance. For example, recent research on colistin (a polymyxin antibiotic used to treat infections caused by susceptible gram-negative bacteria) has combined genome sequencing with transcriptional profiling via RNA-Seq.
+
+This approach led to the identification of crr genes, previously reported as uncharacterized histidine kinases, as additional regulators of colistin resistance. These discoveries expand the range of genes implicated in colistin resistance and highlight the many ways bacteria may respond to antimicrobial peptides.13
+
+The future of antibiotic resistance
+
+Pathogens continually evolve, finding new ways to become stronger and evade our treatments. As they become more resistant, the challenge of infection control intensifies.
+
+But there is hope! Innovative research is paving the way for discoveries that may shift the balance back in our favor. Scientists are developing new approaches to combat disease and protect global health by staying one step ahead of these clever microorganisms.
+
+That’s why Norgen is here to support you every step of the way.
+
+Image Credit: Norgen Biotek Corp.
+
+Phage therapy
+
+Phage therapy offers a promising alternative to antibiotics in the fight against AMR. Bacteriophages, commonly known as phages, are viruses that infect bacteria and replicate within them, causing cell lysis and, ultimately, bacterial death.
+
+Unlike traditional antibiotics, phages specifically target and destroy bacteria, offering a precise method of treatment that preserves beneficial microbes. Due to its targeted action, phage therapy is a valuable strategy for managing multidrug-resistant infections, where conventional treatments often fail.
+
+To advance phage therapy research, reliable technologies for isolating and studying bacteriophages are essential. Norgen Biotek’s Phage DNA Isolation Kit simplifies this process by providing a fast and efficient method for isolating high-quality phage DNA.
+
+Phage therapy research highlights
+
+Researchers at Bu-Ali Sina University studied a new lytic bacteriophage isolated from poultry slaughterhouse wastewater to evaluate its potential as an antibiotic alternative.
+
+They tested Escherichia phage VaT-2019a isolate PE17 and a novel phage, Escherichia phage AG-MK-2022 Basu. The host range, environmental stability, genetic makeup, and bactericidal activity against 100 MDR-APEC bacteria were investigated.
+
+Based on the morphology of Escherichia phage AG-MK-2022 Basu, the research team identified its family as Myoviridae. More importantly, they analyzed the phage genome using Norgen’s Phage DNA Isolation Kit and found that it lacks antibiotic resistance genes, mobile genetic elements, and E. coli virulence-associated genes.
+
+They also tested the phage’s stability and found it to be stable at temperatures ranging from 4 °C to 80 °C, pH levels between 4 and 10, and NaCl concentrations ranging from 1 % to 13 %. These findings support the potential of Escherichia phage AG-MK-2022 Basu as a safe biocontrol agent.
+
+The team stated that it “may safely be used as a biocontrol agent” but cautioned that ""more work, such as whole genome sequencing of the isolated phage, is necessary to achieve more information regarding its safe use"".14
+
+AMR is a clear threat to global health, and the rise of superbugs is increasingly concerning. The misuse and overuse of antibiotics, combined with natural microbial evolution, have created a problem that requires urgent attention.
+
+Innovative solutions like phage therapy offer hope, demonstrating that advanced research and cutting-edge technologies can help us outpace resistant infections. Norgen Biotek is committed to supporting researchers in this effort by providing reliable tools like the Phage DNA Isolation Kit, helping to drive progress in the fight against AMR.
+
+The future of global health depends on staying ahead of these emerging threats. Through investment in research, responsible antibiotic use, and continued technological innovation, we can combat antimicrobial resistance.
+
+References and further reading
+
+Naghavi, M., et al. (2024). Global Burden of Bacterial Antimicrobial Resistance 1990–2021: a Systematic Analysis with Forecasts to 2050. The Lancet, (online) 404(10459), pp.1199–1226. https://doi.org/10.1016/s0140-6736(24)01867-1. Tenover, F.C. (2006). Mechanisms of Antimicrobial Resistance in Bacteria. The American Journal of Medicine, 119(6), pp.S3–S10. https://doi.org/10.1016/j.amjmed.2006.03.011. Bacterial Resistance to Antibiotics (page 3) Antibiotic Method of resistance. (n.d.). Available at: https://www.mifami.org/eLibrary/Bacterial%20Resistance%20to%20Antibiotics.pdf. Michaelis, C. and Grohmann, E. (2023). Horizontal Gene Transfer of Antibiotic Resistance Genes in Biofilms. Antibiotics, 12(2), p.328. https://doi.org/10.3390/antibiotics12020328. Prinzi, A. and Rohde, R. (2023). The Role of Bacterial Biofilms in Antimicrobial Resistance. (online) ASM. Available at: https://asm.org/Articles/2023/March/The-Role-of-Bacterial-Biofilms-in-Antimicrobial-Re. Soto, S.M. (2013). Role of efflux pumps in the antibiotic resistance of bacteria embedded in a biofilm. Virulence, 4(3), pp.223–229. https://doi.org/10.4161/viru.23724. Reygaert, W.C. (2018). An overview of the antimicrobial resistance mechanisms of bacteria. AIMS Microbiology, (online) 4(3), pp.482–501. https://doi.org/10.3934/microbiol.2018.3.482. Sharifzadeh, S., et al. (2020). Chemical tools for selective activity profiling of bacterial penicillin-binding proteins. Methods in enzymology, (online) 638, pp.27–55. https://doi.org/10.1016/bs.mie.2020.02.015. Hamel, M., Rolain, J.-M. and Baron, S.A. (2021). The History of Colistin Resistance Mechanisms in Bacteria: Progress and Challenges. Microorganisms, 9(2), p.442. https://doi.org/10.3390/microorganisms9020442. Crofts, T.S., Gasparrini, A.J. and Dantas, G. (2017). Next-generation approaches to understand and combat the antibiotic resistome. Nature Reviews Microbiology, (online) 15(7), pp.422–434. https://doi.org/10.1038/nrmicro.2017.28. Barczak, A.K., et al. (2012). RNA signatures allow rapid identification of pathogens and antibiotic susceptibilities. Proceedings of the National Academy of Sciences of the United States of America, (online) 109(16), pp.6217–6222. https://doi.org/10.1073/pnas.1119540109. Guigo, R. and de Hoon, M. (2018). Recent advances in functional genome analysis. F1000Research, 7, p.1968. https://doi.org/10.12688/f1000research.15274.1. Wright, M.S., et al. (2014). Genomic and Transcriptomic Analyses of Colistin-Resistant Clinical Isolates of Klebsiella pneumoniae Reveal Multiple Pathways of Resistance. Antimicrobial Agents and Chemotherapy, 59(1), pp.536–543. https://doi.org/10.1128/aac.04037-14. Karami, M., et al. (2024). In vitro evaluation of two novel Escherichia bacteriophages against multiple drug resistant avian pathogenic Escherichia coli. BMC infectious diseases, (online) 24(1), p.497. https://doi.org/10.1186/s12879-024-09402-0.
+
+About Norgen Biotek Corp.
+
+Norgen Biotek: Advancing science with best-in-class, scientist-backed innovations
+
+Norgen Biotek is a fully integrated biotechnology company that focuses on providing complete workflows for molecular biology sample preparation and analysis. With a diverse portfolio of over 600 products, the company delivers high-performance, user-friendly, and cost-effective solutions.
+
+Scientifically driven, industry trusted
+
+Norgen kits cover a broad range of applications from collection and preservation to isolation and purification. Our expert R&D team continuously develops cutting-edge technologies that set new industry standards for RNA, DNA, protein, and exosomal isolation, ensuring superior yield, purity, and integrity from even the most challenging sample types.
+
+Unparalleled performance
+
+At the heart of Norgen’s success is its patented Silicon Carbide (SiC) Technology. This proprietary resin exhibits uniform binding affinity for all RNA species, regardless of molecular weight or GC content. This ensures the full diversity of small and microRNA are captured while eliminating the need for phenol extraction. This innovative technology sets Norgen kits apart from others, positioning them as leaders in RNA purification.
+
+Comprehensive solutions for any challenge
+
+Norgen is committed to providing high-quality kits capable of processing a wide range of sample types, from ultra-low input samples such as liquid biopsies to highly impure samples like stool or soil. Our sample collection and preservation devices for stool and saliva simplify handling by rendering samples non-infectious by preventing microbial growth and inactivating viruses, while our blood and urine preservation solutions ensure the stability of highly vulnerable cell-free nucleic acids.
+
+To meet varying research demands, we offer multiple isolation methods including, but not limited to high-throughput and automation-ready magnetic bead-based formats. Additionally, our multiple-analyte kits enable the simultaneous purification of RNA, DNA, and proteins, maximizing data extraction from a single sample.
+
+Norgen offers an extensive variety of TaqMan qPCR kits designed for molecular diagnostic use, including lyophilized kits for easy shipping. Library preparation kits for both DNA and RNA samples are also available to support genomic applications. Norgen recently released their EXTRAClean technology, an innovative solution that minimizes background noise while providing high-purity RNA, significantly enhancing NGS performance.
+
+Why choose Norgen?
+
+Scientist-Driven Innovation – Developed by leading experts in molecular biology
+
+Proven Quality & Reliability – ISO 9001 and ISO 13485 certified, indicating a commitment to selling high-quality products
+
+Global Presence – We ship to over 150 countries and have a network of 60+ distributors
+
+Award Winning – Norgen Biotek Corp. was honored with the 2021 Innovative Leaders Award, and recognized as the 2024 Rapid Star Award Winner in the PCR category.
+
+Innovative Products – Hold more than thirty issued and pending patents for products presenting solutions for all research & clinical applications
+
+Driven by a mission to accelerate scientific discoveries, Norgen Biotek actively supports researchers by providing educational resources, technical workshops, and application notes. Their NorBlog serves as a hub for the latest scientific discoveries, protocol optimizations, and industry trends.
+
+Explore Norgen Biotek’s innovative solutions today and take your research to the next level.
+
+Sponsored Content Policy: News-Medical.net publishes articles and related content that may be derived from sources where we have existing commercial relationships, provided such content adds value to the core editorial ethos of News-Medical.Net which is to educate and inform site visitors interested in medical research, science, medical devices and treatments.",news-medical
+https://news-medical.net,Exploring exosomal RNA as a biomarker for prostate cancer detection,https://news-medical.net/whitepaper/20250331/Exploring-exosomal-RNA-as-a-biomarker-for-prostate-cancer-detection.aspx,"Mon, 31 Mar 2025 00:00:00 GMT","Cancer is the second most common cause of death in both men and women globally. In 2020, 1.41 million people were diagnosed with prostate cancer worldwide.1 With over 300,000 deaths caused by prostate cancer in 2022, early identification is critical for lowering mortality.2
+
+Image Credit: Norgen Biotek Corp.
+
+Exosomal RNA has recently received significant attention as a potential biomarker for the early identification of cancers. This includes liver, breast, and prostate cancer.3,4
+
+The prostate is a small, walnut-shaped gland beneath the bladder and in front of the rectum. It produces seminal fluid, which transports sperm.
+
+What causes prostate cancer?
+
+Image Credit: Norgen Biotek Corp.
+
+Prostate cancer is classified into several types, with adenocarcinoma being the most common. Other types include small cell carcinoma, sarcoma, neuroendocrine tumors, and transitional cell carcinoma.
+
+In its early stages, prostate cancer often progresses slowly and remains localized within the prostate.5 This makes early detection more difficult. However, if identified early, the cancer is highly treatable and can often be eradicated.
+
+This article will discuss the symptoms and risk factors of prostate cancer, as well as current screening methods. It will also highlight the significance of exosomal mRNA and present two studies exploring the potential of exosomal mRNAs as a non-invasive biomarker for early prostate cancer screening.
+
+Prostate cancer risk factors
+
+Image Credit: Norgen Biotek Corp.
+
+Because prostate cancer grows slowly, there may be no signs or symptoms in its early stages. However, some symptoms may appear in the later stages of cancer progression.
+
+These can include difficulty urinating, increased urgency and frequency of urination, blood in the urine, blood in the semen, bone pain, decreased force of urine flow, erectile dysfunction, and weight loss.
+
+Like many other cancers, the exact cause of prostate cancer remains unclear. However, several risk factors have been identified. These include age (50 years or older), family history (a history of prostate cancer), and weight (obesity), all of which have been linked to an increased risk of developing the disease.6
+
+Race is also associated with a higher risk of prostate cancer. A 2023 study found that black men have a greater risk of developing prostate cancer compared to non-Hispanic white men. This may be due to genetic factors, dietary differences, or increased levels of stress.7
+
+Screening methods for prostate cancer
+
+The most common approach to diagnosing prostate cancer, according to the Centers for Disease Control and Prevention (CDC), is through biopsy.8 A prostate biopsy is a procedure that removes a small sample of prostate tissue for further investigation.
+
+A needle is inserted into the prostate to collect multiple samples of suspicious tissue. This method of diagnosis is highly invasive, painful, and uncomfortable.
+
+Before a prostate biopsy is performed, various preliminary screening procedures are typically conducted. These include a digital rectal exam (DRE), a blood test for prostate-specific antigen (PSA), a transrectal ultrasound, and magnetic resonance imaging (MRI).9
+
+The PSA blood test is the most commonly used method for prostate cancer screening. This test measures the level of prostate-specific antigen (a protein) in the body. Individuals with prostate cancer tend to have increased PSA levels.
+
+Although PSA blood tests are widely used, they can be unreliable because there are several other reasons why PSA levels may be elevated.
+
+Normal prostate cells also produce PSA, so benign (non-cancerous) conditions such as prostatitis (inflammation of the prostate) and benign prostatic hyperplasia (BPH), or an enlarged prostate, can raise PSA levels in the bloodstream.10 Strenuous exercise, ejaculation, or even a car accident could also increase PSA levels.
+
+The unreliability of PSA blood tests and the invasive nature of biopsies highlight the need for a more dependable, non-invasive method of prostate cancer screening.
+
+Exosomal mRNAs have recently gained attention from researchers as a potential biomarker for prostate cancer detection. Sample collection for exosomal mRNA is significantly less invasive, as exosomes are present in body fluids.
+
+Moreover, the specificity of exosomal mRNAs may allow for more accurate and reliable results compared to PSA blood tests.
+
+Understanding mRNA and exosomes
+
+What is mRNA?
+
+Messenger RNA (mRNA) is a single-stranded molecule involved in protein synthesis. mRNAs are transcribed from a DNA template and carry protein-coding information from the cell’s nucleus to the cytoplasm.11
+
+mRNA research offers vital insights into gene expression, cellular function, and specific mutations associated with diseases such as cancer.
+
+What are exosomes?
+
+Exosomes are extracellular vesicles (EVs) released by various cell types. They are found in physiological fluids such as plasma, urine, and saliva. These vesicles are enclosed by a lipid bilayer and carry a wide range of biomolecules, including nucleic acids and proteins, both inside and on their surface.
+
+Exosomes play essential roles in cell-to-cell communication, cellular maintenance, and tumor progression.12 They transport information from all cells, both healthy and diseased, making them valuable for understanding disease mechanisms and developing diagnostics or therapies.
+
+Biomarkers for cancer
+
+Circulating exosomal mRNA
+
+A 2021 study analyzed circulating exosomal mRNA to investigate its potential as a biomarker for prostate cancer. Exosomes can be found throughout the body and may carry different information depending on their location.
+
+To demonstrate that exosomal mRNAs can produce results as accurate as those from cancerous prostate tissue, the researchers used RNA sequencing to compare tissue-derived mRNA with circulating exosomal mRNA from blood samples.
+
+They found that both mRNA from prostate cancer tissue and circulating exosomal mRNA contained the same information. Samples were collected from 76 prostate cancer patients and 84 individuals with BPH.
+
+After a series of RNA sequencing analyses, the researchers identified six circulating exosomal mRNAs with significantly different expression levels among prostate cancer patients, BPH patients, and a control group.13
+
+These findings showed strong potential for using circulating exosomal mRNA as a biomarker to detect prostate cancer. Blood samples were used in this study because exosomes can be detected in both blood and plasma.
+
+However, this method is not entirely noninvasive. Is there a truly noninvasive way to detect prostate cancer? Yes—a recent 2024 study explored the use of urinary exosomal mRNA for this purpose.
+
+Urinary exosomes mRNA
+
+Jiayin Yu et al. studied the use of urinary exosomal mRNAs as a potential biomarker for the early detection of prostate cancer.
+
+They selected urine because it allows for easy, noninvasive sample collection, making it suitable for large-scale screening and early detection.
+
+Exosomal mRNA was chosen due to its stability in the body. The lipid bilayer of exosomes protects the genetic material inside from degradation by nucleases.
+
+Next-generation sequencing of urinary exosomal RNA
+
+Key mRNA biomarkers identified for prostate cancer screening
+
+The study revealed: “The top ten mRNAs showing the most significant differences associated with prostate cancer were chosen as candidate genes. These genes were RAB5B, WWP1, MCF2L, HIST2H2BF, ZFY, MARK2, PASK, RBM10, NRSN2, and PCGF1.""
+
+Subsequent qPCR and electrophoresis analysis showed that eight of these mRNAs (RAB5B, WWP1, HIST2H2BF, ZFY, MARK2, PASK, RBM10, and NRSN2) outperformed blood PSA as indicators of prostate cancer.
+
+The study concluded that their comprehensive model using urinary exosomal mRNAs outperformed existing PSA screening methods, with a sensitivity of 70–90 % and specificity of 20–40 %.14
+
+Image Credit: Norgen Biotek Corp.
+
+Summary
+
+Prostate cancer remains a leading cause of death among men. Although several screening methods exist, such as digital rectal exams (DRE) and blood PSA tests, they can be invasive and often lack reliability.
+
+This highlights the need for a non-invasive, more accurate, and reliable method for detecting prostate cancer.
+
+Current research on urinary exosomal mRNA shows promising potential for early diagnosis. However, further studies are needed to establish urinary exosomal mRNAs as a reliable diagnostic tool for prostate cancer.
+
+With that in mind, Norgen Biotek is committed to supporting continued research through its urine exosome kits, including the Urine Exosome RNA Isolation Kit and the Urine Exosome Purification and RNA Isolation Kit.
+
+References and further reading
+
+World Health Organization (2025). Cancer. (online) World Health Organization. Available at: https://www.who.int/news-room/fact-sheets/detail/cancer. World Cancer Research Fund International (2020). Prostate cancer statistics | world cancer research fund international. (online) WCRF International. Available at: https://www.wcrf.org/cancer-trends/prostate-cancer-statistics/. Jia, Y., et al. (2017). Exosome: emerging biomarker in breast cancer. Oncotarget, (online) 8(25), pp.41717–41733. https://doi.org/10.18632/oncotarget.16684. Li, Y., et al. (2015). Circular RNA is enriched and stable in exosomes: a promising biomarker for cancer diagnosis. Cell Research, 25(8), pp.981–984. https://doi.org/10.1038/cr.2015.82. Cleveland Clinic (2023). Prostate Cancer: Symptoms, Diagnosis & Treatment. (online) Cleveland Clinic. Available at: https://my.clevelandclinic.org/health/diseases/8634-prostate-cancer. Lee, S. (2020). Risks for prostate cancer. (online) Canadian Cancer Society. Available at: https://cancer.ca/en/cancer-information/cancer-types/prostate/risks. Vickers, A. J., Mahal, B., and Ogunwobi, O. O. (2023, January). Racism does not cause prostate cancer, it. ASCO Publications. CDC (2024). Diagnosing Prostate Cancer. (online) Prostate Cancer. Available at: https://www.cdc.gov/prostate-cancer/diagnosis/index.html. Mayo Clinic (2019). Prostate biopsy - Mayo Clinic. (online). Available at: https://www.mayoclinic.org/tests-procedures/prostate-biopsy/about/pac-20384734. National Cancer Institute (2022). Prostate-Specific Antigen (PSA) Test. (online) National Cancer Institute. Available at: https://www.cancer.gov/types/prostate/psa-fact-sheet. Sen, S. (2024). Messenger RNA (mRNA). (online) Genome.gov. Available at: https://www.genome.gov/genetics-glossary/messenger-rna. Doyle, L. and Wang, M. (2019). Overview of Extracellular Vesicles, Their Origin, Composition, Purpose, and Methods for Exosome Isolation and Analysis. Cells, (online) 8(7), p.727. https://doi.org/10.3390/cells8070727. Ji, J., et al. (2021). Circulating exosomal mRNA profiling identifies novel signatures for the detection of prostate cancer. Molecular Cancer, 20(1). https://doi.org/10.1186/s12943-021-01349-z. Yu, J., et al. (2024). Unveiling potential: urinary exosomal mRNAs as non-invasive biomarkers for early prostate cancer diagnosis. BMC Urology, 24(1). https://doi.org/10.1186/s12894-024-01540-6.
+
+About Norgen Biotek Corp.
+
+Norgen Biotek: Advancing science with best-in-class, scientist-backed innovations
+
+Norgen Biotek is a fully integrated biotechnology company that focuses on providing complete workflows for molecular biology sample preparation and analysis. With a diverse portfolio of over 600 products, the company delivers high-performance, user-friendly, and cost-effective solutions.
+
+Scientifically driven, industry trusted
+
+Norgen kits cover a broad range of applications from collection and preservation to isolation and purification. Our expert R&D team continuously develops cutting-edge technologies that set new industry standards for RNA, DNA, protein, and exosomal isolation, ensuring superior yield, purity, and integrity from even the most challenging sample types.
+
+Unparalleled performance
+
+At the heart of Norgen’s success is its patented Silicon Carbide (SiC) Technology. This proprietary resin exhibits uniform binding affinity for all RNA species, regardless of molecular weight or GC content. This ensures the full diversity of small and microRNA are captured while eliminating the need for phenol extraction. This innovative technology sets Norgen kits apart from others, positioning them as leaders in RNA purification.
+
+Comprehensive solutions for any challenge
+
+Norgen is committed to providing high-quality kits capable of processing a wide range of sample types, from ultra-low input samples such as liquid biopsies to highly impure samples like stool or soil. Our sample collection and preservation devices for stool and saliva simplify handling by rendering samples non-infectious by preventing microbial growth and inactivating viruses, while our blood and urine preservation solutions ensure the stability of highly vulnerable cell-free nucleic acids.
+
+To meet varying research demands, we offer multiple isolation methods including, but not limited to high-throughput and automation-ready magnetic bead-based formats. Additionally, our multiple-analyte kits enable the simultaneous purification of RNA, DNA, and proteins, maximizing data extraction from a single sample.
+
+Norgen offers an extensive variety of TaqMan qPCR kits designed for molecular diagnostic use, including lyophilized kits for easy shipping. Library preparation kits for both DNA and RNA samples are also available to support genomic applications. Norgen recently released their EXTRAClean technology, an innovative solution that minimizes background noise while providing high-purity RNA, significantly enhancing NGS performance.
+
+Why choose Norgen?
+
+Scientist-Driven Innovation – Developed by leading experts in molecular biology
+
+Proven Quality & Reliability – ISO 9001 and ISO 13485 certified, indicating a commitment to selling high-quality products
+
+Global Presence – We ship to over 150 countries and have a network of 60+ distributors
+
+Award Winning – Norgen Biotek Corp. was honored with the 2021 Innovative Leaders Award, and recognized as the 2024 Rapid Star Award Winner in the PCR category.
+
+Innovative Products – Hold more than thirty issued and pending patents for products presenting solutions for all research & clinical applications
+
+Driven by a mission to accelerate scientific discoveries, Norgen Biotek actively supports researchers by providing educational resources, technical workshops, and application notes. Their NorBlog serves as a hub for the latest scientific discoveries, protocol optimizations, and industry trends.
+
+Explore Norgen Biotek’s innovative solutions today and take your research to the next level.
+
+Sponsored Content Policy: News-Medical.net publishes articles and related content that may be derived from sources where we have existing commercial relationships, provided such content adds value to the core editorial ethos of News-Medical.Net which is to educate and inform site visitors interested in medical research, science, medical devices and treatments.",news-medical
+https://news-medical.net,Can natural supplements backfire? Review explains how and why,https://news-medical.net/news/20250331/Can-natural-supplements-backfire-Review-explains-how-and-why.aspx,"Mon, 31 Mar 2025 00:00:00 GMT","A new review uncovers how common natural supplements can both protect and endanger health, depending on dose, duration, and delivery—and points to next-gen technologies as the key to unlocking their full therapeutic power.
+
+Review: The double-edged sword of nutraceuticals: comprehensive review of protective agents and their hidden risks. Image Credit: Light Stock / Shutterstock
+
+In a recent review in the journal Frontiers in Nutrition, researchers collated and summarized more than 120 publications to elucidate the dual therapeutic and toxicological effects of nutraceuticals. The review highlights the proceeds of preclinical and clinical studies focusing on curcumin (CUR), piperine (PPR), resveratrol (RSV), and quercetin (QUE) between 2015 and 2024.
+
+Study findings reveal that while all evaluated nutraceuticals provide medically beneficial protective and therapeutic effects, each comes with its own side effects, particularly at higher dosages, highlighting the need for scientifically sound guidelines aimed at managing interactions and enhancing the benefits of nutraceuticals without subjecting patients to their adverse effects. The review further suggests innovations such as nanoencapsulation and AI-guided delivery systems that could help achieve these goals.
+
+Background
+
+Nutraceuticals are foods or food derivatives that serve not only as sources of essential nutrition but also as pharmacological benefits. They include dietary supplements, herbal medicines, and probiotics. While the term “nutraceutical” (“nutrition” and “pharmaceutical”) is relatively recent, the concept dates back hundreds or even thousands of years.
+
+Nutraceuticals are gaining popularity worldwide due to their organic origins and lower side effects compared to conventional synthetic drugs. However, a growing body of literature suggests that when taken out of context (without a prescription) or when consumed at higher dosages or in specific populations, bioactive nutraceuticals may pose medical challenges. This necessitates a scientifically sound understanding of the pros and cons of nutraceuticals, along with a case-specific, balanced consumption plan to maximize the pharmacological benefits of these supplements with minimal risk.
+
+“The growing interest in nutraceuticals stems from their potential to address chronic diseases, such as cardiovascular disorders, neurodegenerative conditions, and metabolic syndromes, which are often linked to oxidative stress and inflammation.”
+
+The positive benefits of nutraceuticals are well documented. Unfortunately, given their relative novelty, the literature remains relatively scarce on the long-term effects of nutraceuticals, particularly their toxicity upon prolonged use, bioavailability, and interactions with conventional medical interventions. The review also emphasizes the lack of globally harmonized regulatory frameworks governing nutraceutical purity, labeling, and safety claims.
+
+About the Review
+
+The present review aims to collate and summarize existing scientific knowledge on nutraceuticals to elucidate two main topics: the mechanisms determining the therapeutic and toxicological effects of nutraceuticals and recommendations for the safe and effective use of these supplements. The review aims to guide clinicians, policymakers, researchers, and consumers in determining when and how to use nutraceuticals effectively, thereby maximizing their benefits while minimizing potential drawbacks.
+
+The review focuses on four widely used nutraceuticals: Resveratrol (RSV), a polyphenolic compound found in grapes and grape products; Curcumin (CUR), a bioactive obtained from turmeric (Curcuma longa); Piperine (PPR), obtained from black pepper; and Quercetin (QUE), a flavonoid found in several fruits and vegetables.
+
+Publications of interest were obtained from three online scientific repositories (Scopus, PubMed, and Web of Science) using a custom keyword search. Title, abstract, and full-text screening shortlisted ~120 publications for inclusion, ensuring only studies exhibiting clinical relevance, methodological rigor, and mechanistic insights were included.
+
+Resveratrol
+
+Resveratrol may reshape gut bacteria populations, indirectly reducing systemic inflammation—a finding that links dietary habits to chronic disease management.
+
+RSV is gaining increasing scientific interest due to its wide-ranging therapeutic benefits, including cardiovascular, metabolic, neurological, pro-apoptotic, and anti-inflammatory. The bioactive notably reduces oxidative stress, improves lipid metabolism, and reduces blood pressure. It has even been clinically validated to enhance cognitive function and delay Alzheimer’s disease (AD) progression. However, RSV exhibits hormetic effects—protective at low doses but harmful at high doses—with studies demonstrating toxicity at elevated concentrations, including renal impairment and thyroid dysfunction. Chronobiological differences in RSV administration have also been observed, with some evidence suggesting time-of-day may influence lipid peroxidation and drug metabolism.
+
+Curcumin
+
+Curcumin’s effects on thyroid function appear age-dependent, with studies showing altered hormone levels in older adults but minimal impact in younger populations.
+
+CUR is arguably the best-studied antioxidant and anti-inflammatory in this review, routinely used to manage diabetes, arthritis, and cardiovascular diseases (CVDs). It also targets several oncological pathways and exhibits significant neuroprotective benefits. CUR’s interference with CVD drugs (e.g., amlodipine) occurs via modulation of CYP3A4 and P-glycoprotein (P-gp) pathways, underscoring the importance of complete health profile assessments before its use. Emerging evidence also notes potential impacts on thyroid hormone levels and reproductive function in animal models, particularly at high doses or via nanoparticle delivery systems.
+
+Piperine
+
+Piperine’s inhibition of the enzyme UDP-glucuronosyltransferase may prolong drug activity—a benefit for therapies but a risk for toxicity with medications like blood thinners.
+
+PPR is often used as an adjunct and adjuvant, known for its anti-inflammatory, anti-oxidative stress, neuroprotective, and bioavailability-enhancing properties. Preclinical studies report reproductive toxicity in rats at doses exceeding 10 mg/kg, alongside risks of enhancing side effects of drugs like carbamazepine and warfarin. Emerging evidence also links prolonged high-dose PPR to impaired cognitive performance in animal models, highlighting the importance of understanding and educating the target patient before its prolonged consumption. Recent data also indicate tissue-level alterations and potential organ-specific toxicity in rodent models receiving higher doses.
+
+“A hallmark of PPR is its ability to augment the bioavailability of drugs and nutrients. By inhibiting drug-metabolizing enzymes (e.g., cytochrome P450, UDP-glucuronosyltransferase) and enhancing intestinal absorption, PPR significantly inhibits P-glycoprotein (P-gp). It enhances the efficacy of co-administered compounds, such as CUR and RSV, positioning it as a critical adjunct in nutraceutical formulations.”
+
+Quercetin
+
+Quercetin binds to heavy metals like lead and cadmium in lab studies, hinting at its potential as a detoxifying agent alongside its antioxidant properties.
+
+QUE is often obtained naturally, derived from the consumption of onions and apples. Its hallmark effects include free radical neutralization, oxidative stress mitigation, and enhancement of cellular integrity, making it a nutraceutical hailed as a potential treatment for cancer, cardiovascular disease (CVD), and aging. While QUE synergizes with certain chemotherapeutics (e.g., methotrexate) to enhance anti-inflammatory effects, it may also interfere with drugs like cyclosporine. High-dose QUE supplements have been linked to pro-oxidant activity and organ damage in preclinical studies. The aglycone form found in supplements exhibits greater bioavailability but also a higher likelihood of interacting with drug-metabolizing enzymes and transporters.
+
+Summary and Future Directions
+
+This review provides extensive details on the pros and cons of four of the most popular available nutraceuticals, highlighting their therapeutic and pharmacological benefits while cautioning against potential dose- and interaction-dependent side effects.
+
+It further suggests emerging technologies, such as nanoencapsulation, to improve targeted delivery and bioavailability of these nutraceuticals, reducing off-target toxicity and ensuring that these bioactives reach their target organs or tissues, thereby maximizing their benefits and mitigating their costs. Additional innovations discussed include in silico molecular docking to predict drug-target interactions, nutrigenomic tools for personalizing interventions, and the Nutraceutical Interaction Risk Score (NIRS) to stratify patients by potential toxicity.
+
+“…while nutraceuticals represent a valuable tool in promoting health and preventing disease, their full potential can only be realized through rigorous scientific research, personalized dosing strategies, and a comprehensive understanding of both their benefits and potential risks. The investigational integration of nanotechnology and smart materials has emerged as a transformative approach to enhance the efficacy and safety of nutraceuticals.”",news-medical
+https://news-medical.net,Swedish researchers identify genetic variants linked to atherosclerosis,https://news-medical.net/news/20250331/Swedish-researchers-identify-genetic-variants-linked-to-atherosclerosis.aspx,"Mon, 31 Mar 2025 00:00:00 GMT","Swedish researchers have identified genetic variants that increase the risk of atherosclerosis. The aim is for these new findings to enable earlier detection of atherosclerosis and improved treatment of cardiovascular diseases such as heart attack and stroke.
+
+The study, published in the journal Nature Communications, represents the largest gene mapping of atherosclerosis using advanced diagnostic imaging to date. The researchers behind the study are based at universities and university hospitals throughout Sweden.
+
+Atherosclerosis is the disease process that causes plaque to form in the blood vessels supplying the body's organs with blood. These accumulations of plaque grow over time and can form clots that cause a sudden stop in the blood supply.
+
+If this happens in the coronary arteries of the heart, the heart muscle suffers acute oxygen deprivation, causing a heart attack. If it occurs with plaque formed in the carotid arteries, the clot can be carried by the blood to the brain and cause a stroke.
+
+Twenty genetic variants pinpointed
+
+The study is based on data from the SCAPIS population study, the largest in Sweden in the field of heart, vascular, and lung disease, encompassing 30,000 randomly selected Swedes aged 50–64 years who underwent comprehensive health exams. What sets SCAPIS apart is the highly detailed measurements of atherosclerosis using advanced diagnostic imaging, including both computed tomography and ultrasound.
+
+This enabled the researchers to examine several million genetic variants, spread throughout the genome, regarding their impact on the risk of atherosclerosis in the coronary arteries, which can cause heart attacks. Twenty genetic variants were found to have a statistically significant association.
+
+The study also included similar analyses of atherosclerosis of the carotid arteries, which can lead to stroke. When the coronary and carotid results were compared, several differences emerged, suggesting different underlying disease mechanisms.
+
+Input for better understanding
+
+The lead researcher in the study is Anders Gummesson, Associate Professor of Molecular Medicine at the University of Gothenburg and Senior Physician in Clinical Genetics at Sahlgrenska University Hospital:
+
+""The study is an important piece of the puzzle in understanding why atherosclerosis develops, which could ultimately lead to new ways of preventing the disease process. We also hope to develop genetic tests to identify people at high risk of being affected,"" he explains.
+
+Atherosclerosis is common, and even relatively advanced atherosclerosis can be completely asymptomatic. For many of those who suffer a heart attack or stroke, it comes without warning. Cardiovascular disease is the leading cause of death in Sweden and most other countries.
+
+The results provide us with important knowledge, and the entire dataset, containing results from millions of genetic variants, will be available to other researchers around the world to use in their research."" Anders Gummesson, Associate Professor of Molecular Medicine at the University of Gothenburg and Senior Physician in Clinical Genetics at Sahlgrenska University Hospital
+
+SCAPIS (Swedish CArdioPulmonary BioImage Study) is led and conducted by six universities and six university hospitals across Sweden, in close collaboration with the Swedish Heart Lung Foundation, which is the main funder. The project is coordinated at the University of Gothenburg.",news-medical
+https://news-medical.net,Assessing the impact of the particle drift effect on oral drug absorption using flux tools,https://news-medical.net/news/20250331/Assessing-the-impact-of-the-particle-drift-effect-on-oral-drug-absorption-using-flux-tools.aspx,"Mon, 31 Mar 2025 00:00:00 GMT","insights from industry Karl Box Chief Scientific Officer Pion
+
+In this interview, Karl Box discusses how particle drift analysis using flux tools improves oral drug absorption in pharmaceutical research.
+
+Can you tell us about Pion’s Rainbow Dynamic Dissolution Monitor?
+
+The Rainbow Dynamic Dissolution Monitor is Pion's flagship product, a fiber optic UV spectrometer designed to integrate with various dissolution and permeation tools, both from Pion and other manufacturers.
+
+It comprises up to eight fiber optic probes that can be inserted into measurement vessels. This allows us to measure the dissolution, solubilization, and permeation of drugs directly within the vessels. Eliminating the need to remove samples for offline analysis provides real-time insights. The system typically captures data every 30 seconds, offering detailed information about a sample's behavior.
+
+How does the Rainbow Dynamic Dissolution Monitor integrate with Pion’s Dissolution-Absorption tools for assessing drug performance?
+
+The Rainbow Dynamic Dissolution Monitor can seamlessly integrate into several of Pion’s dissolution and absorption tools. For example, in early development, the MicroFLUXTM system uses Rainbow probes to measure drug permeability across a membrane separating donor and acceptor compartments. As we scale up to clinical development, tools like the MiniFLUX, BioFLUXTM, and MacroFLUXTM come into play.
+
+These systems feature a donor chamber separated from an acceptor chamber by a biomimetic membrane. The Rainbow UV probes measure concentration in the donor vessel and the acceptor absorption chamber, assessing the overall Flux performance and allowing for a comprehensive understanding of drug behavior across different stages of development.
+
+Can you explain the concept of particle drift and its impact on drug absorption?
+
+Numerous studies show that when an Active Pharmaceutical Ingredient (API) dose exceeds the intestinal solubility limits, oral absorption can increase more than expected. This suggests that undissolved particles can significantly influence the absorption process in vivo even when solubility is limited.
+
+Particle drift refers to the phenomenon where undissolved nanoparticles in a drug formulation can diffuse into the solution's unstirred water layer that exists close to the membrane surface and dissolve there. This can lead to an increase in drug permeability, enabling enhanced absorption.
+
+Image Credit: areeya_ann/Shutterstock.com
+
+Could you share details about the piroxicam case study demonstrating the particle drifting effect and its findings?
+
+The MicroFLUXTM apparatus was used to study the Flux behavior of untreated piroxicam and nanosubstances of piroxicam. This was a collaboration with Nanoform in Finland, and the work was first presented at the Controlled Release Society annual meeting in 2023.
+
+Experiments were conducted in pH5 acetate buffer at various drug loadings on the donor side. Flux was measured across Pion’s gastrointestinal tract membrane into acceptor sink buffer in the receiver. The donor vessel loadings exceeded the solubility of piroxicam for all experiments.
+
+The results demonstrated a clear impact of particle size on Flux. The piroxicam nanosuspension demonstrated a significant increase in Flux compared to the bulk suspension. Furthermore, we were able to identify the upper limit of Flux improvement, which occurs when the unstirred water layer becomes solubility saturated. We quantified how particle drift contributed to the total in vitro Flux, which has broader implications useful for the development of enabling formulations.
+
+The study highlights how reducing particle size not only improves dissolution rates but can also enhance drug permeability, particularly for compounds where the unstirred water layer permeability limits absorption. This is especially important for compounds that exhibit high membrane permeability and require high doses. Particle size reduction can improve overall drug absorption in these cases.
+
+What are the implications of these findings for biopharmaceutical modeling and in vivo absorption?
+
+The findings have significant implications for both biopharmaceutical modeling and in vivo absorption. The human intestine’s large surface area is crucial in drug absorption. This surface area is primarily due to the circular folds and villi in the intestinal wall.
+
+When scaling in vitro Flux results to in vivo conditions, we need to adjust for the difference in membrane surface area and scale the results to account for the three-dimensional nature of the folds and villi structures. For instance, a two-fold improvement in in vitro Flux could translate to a ten-fold enhancement in in vivo absorption due to the surface area provided by the villi structures.
+
+Related Stories Insights into drug absorption and predictive modeling with Professor Kiyohiko Sugano
+
+In the case of nanoparticles, the particle drift effect allows penetration into the unstirred water layer, which also increases the amount of drug available for absorption. This is a game-changer because properly designed in vitro Flux assays allow scientists to estimate the relative improvement on in vivo absorption from nanosize reduction.
+
+How does Pion’s PredictorTM software help translate in vitro results to in vivo-relevant data?
+
+Pion’s new PredictorTM software program is designed to handle data from Pion’s Rainbow instrument and enables the translation of in vitro results into in vivo-relevant predictions. These include correcting for in vivo absorption barrier properties such as unstirred water layer thickness, scaling the results based on the drug’s permeability and available intestinal surface area, accounting for dose clearance differences between in vitro and in vivo systems, and making necessary adjustments for intestinal transit time. The total mass absorbed in vivo is calculated, giving us the maximum absorbable dose. The oral fraction absorbed is then determined by dividing the total mass absorbed by the administered dose and converting it into a percentage.
+
+Pion PredictorTM software uses the GUT framework to help model drug absorption. How can in vitro Flux be used within this framework?
+
+The Gastrointestinal Unified Theoretical (GUT) framework, as outlined in Kiyohiko Sugano’s book “Biopharmaceutical Modelling and Simulations: Theory, Practice, Method and Applications” published by Wiley in 2012, consists of a system of equations that model key processes such as dissolution, precipitation, and absorption.
+
+This framework requires input parameters, including specific measured physicochemical properties and constants, to make accurate predictions. These parameters calculate dissolution and precipitation rates and determine drug permeation, ultimately leading to the estimation of oral absorption.
+
+While the equations may appear complex, an interesting aspect of this model is that in vitro Flux can serve as a surrogate for many of the dissolution and permeation processes involved. Using Flux results obtained from Pion’s Flux assays, many of the equations governing dissolution and permeation in the GUT framework can be replaced.
+
+This makes it possible to determine the amount of a substance permeating the intestinal wall using only the Flux value, provided it is supported by solubility and dissolution behavior observed in the donor vessel. The accuracy of these predictions depends on ensuring that the experimental assay is designed to closely mimic intestinal conditions.
+
+Another case study was conducted in collaboration with researchers at Ritsumeikan University. How do the Celecox Flux assays' results demonstrate particle drift's impact on oral drug absorption prediction?
+
+Another study collaborated with Shiori Ishida and Kiyo Sugano at Ritsumeikan University in Japan. The primary goal was to examine the impact of particle drift on the in vitro Flux of Celecoxib formulations and use that data to predict in vivo human oral absorption.
+
+The marketed formulation, Celecox, contains a high percentage of nanosized particles, which can influence its pharmacokinetics. Our study, initially presented at the AAPS annual meeting in 2023, explored how these nanosized particles affect drug absorption. The Celecox Flux assay results highlight how incorporating the particle drift effect into predictive models significantly improves the accuracy of oral fraction absorbed estimations.
+
+When using the Predictor software without considering particle drift, the highest fraction absorbed is observed at the lowest administered dose, while the lowest fraction absorbed occurs at the highest dose. This outcome is primarily due to the drug being significantly limited by solubility and unstirred water layer permeability, with predicted oral absorption for the highest dose remaining below 10% over the entire intestinal transit time.
+
+However, when the particle drift effect is accounted for in the model, the proportion of Flux arising from particle drift is scaled based on villi access, leading to a notable improvement in predicting the total oral drug fraction absorbed across all dose levels. This adjustment makes predictions more aligned with published human oral fraction absorbed data.
+
+The comparison of predicted fraction absorbed values shows that ignoring particle drift results in increasingly inaccurate estimations at higher doses. Accounting for the particle drifting effect, more accurately aligns the in vitro predictions with the expected in vivo values. This study demonstrates that Flux data can be used to estimate the absolute in vivo fraction of drug absorbed, determine the contribution of particle drift to the total Flux value, and adjust for its impact when scaling to in vivo conditions.
+
+In conclusion, Pion Flux assays provide valuable support in the development of enabling formulations by identifying particle drift effects, assessing bioavailability improvements due to enhanced surface access, and refining drug absorption predictions in clinical studies.
+
+Watch webinar: Using flux tools to demonstrate the impact of the particle drift effect on oral drug absorption
+
+About Karl Box
+
+Karl Box was appointed as the Chief Scientific Officer (Europe) at Pion (UK) in 2020. He is involved in scientific and chemistry related functions within the company, as well as supporting commercial activities and business development. His expertise is in the field of physicochemical measurements, where he has forged a successful career in the development of new instrumentation and assays for supporting drug discovery and development.
+
+About Pion Inc
+
+When data matters we apply out of the box problem solving abilities to help you reach a confident conclusion on your drug characterization challenges.
+
+Pion supports the development of lifesaving and life-enhancing drugs by providing tools for drug developers, formulations scientists, and pharmaceutical production. For early-stage drug developers, our cutting-edge analytical technologies and services enable in vitro measurements of solubility, permeability, pKa and lipophilicity, providing essential data to improve candidate selection and formulations decisions for both oral and subcutaneous dosage forms. Later in development, high-pressure homogenizers enable particle size reduction and ensure material consistency from bench- to production-scale.",news-medical
