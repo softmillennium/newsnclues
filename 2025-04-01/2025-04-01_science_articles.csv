@@ -1,0 +1,1585 @@
+Input URL,Title,Link,Published,Description,Source
+https://sciencenews.org,A new antifungal drug works in a surprising way,https://www.sciencenews.org/article/new-antifungal-drug-infections,"Tue, 01 Apr 2025 08:00:00 GMT","A newly discovered bacterial weapon against fungi can kill even drug-resistant strains, raising hopes for a new antifungal drug.
+
+Fungal infections have been spreading rapidly and widely in recent years, fueled in part by climate change. Some fungi, including Candida auris, have developed resistance to some highly effective antifungal drugs which have been in use for decades. So scientists have been searching for new drugs to keep fungi in check.
+
+Researchers in China may have found a new type of antifungal called mandimycin, the team reports March 19 in Nature. Mandimycin killed fungal infections in mice more effectively than amphotericin B and several other commonly used antifungal drugs. It even worked against resistant C. auris strains.
+
+Sign up for our newsletter We summarize the week's science breakthroughs every Thursday.
+
+Bacteria are masters at fending off fungi, says Martin Burke, a chemist at the University of Illinois Urbana-Champaign. “There’s been this war raging for 2 billion years,” he says. Bacteria and fungi have been “building weapons to try to compete with each other for nutrients in the environment.” Humans have been spying on both armies to learn how to make antibiotics and antifungal drugs.
+
+In one such mission, Zongqiang Wang of China Pharmaceutical University in Nanjing and colleagues combed more than 300,000 bacterial genomes looking for possible weapons against fungi. One strain of Streptomyces netropsis contained a cluster of genes that encode enzymes for building the compound mandimycin.
+
+The antifungal has a backbone structure similar to some other antifungal drugs but has two sugar molecules tacked onto its tail. Those sugars are important for how the molecule kills fungi, because they change the target that the weapon is aimed at.
+
+Some existing antifungal drugs like amphotericin B clump together to form large spongelike structures on fungi’s cell membranes, Burke and colleagues previously found. This antifungal sponge pulls a molecule called ergosterol from the membrane faster than the fungi can make more. Ergosterol helps maintain fungal membranes’ stability, crucial for protecting a cell’s inner workings. Extracting this membrane component eventually kills the fungus. Though it’s good at killing fungi, amphotericin B has drawbacks. It can also extract cholesterol from human cells, making it toxic to kidneys.
+
+Mandimycin may also be a sponge, Burke and Arun Maji of the University of Kentucky College of Pharmacy in Lexington speculate in a commentary also published March 19 in Nature, but it sops up different membrane components.
+
+Instead of ergosterol, mandimycin is attracted to phospholipids, the major building blocks of membranes, Wang and colleagues discovered. It’s the sugars on the tail that allow mandimycin to target phospholipids, particularly one called phosphatidylinositol, the team found. Removing those sugars caused mandimycin to latch on to ergosterol, though more weakly than existing antifungals.
+
+While intact mandimycin proved to be a potent fungi killer, it was far less toxic to mice’s kidneys and to human kidney cells grown in lab dishes than amphotericin B. Bacteria escaped mandimycin unscathed.
+
+The ability to destroy fungi but not harm human and bacterial cells has Burke puzzled.
+
+“This is the wild part about mandimycin that I don’t understand,” he says. Why doesn’t it kill the bacteria that produce it?
+
+Only fungi have ergosterol in their membranes, so other cells aren’t harmed by drugs that soak it up. But fungi, bacteria and mammals all have phospholipids, which means pulling those out of membranes should be damaging across the board, including to the mandimycin-making bacteria. Wang and colleagues suggest that mandimycin’s attacks might be specific to phospholipids found in fungi, but not in other types of cells.
+
+Sponsor Message
+
+That is just one of the mysteries researchers will need to solve before mandimycin can be tested in people, Burke says. “It’s one of those exciting papers that opens a lot of doors, [and] pretty much behind every one is another question.”",sciencenews
+https://sciencenews.org,Watch live plant cells build their cell walls,https://www.sciencenews.org/article/live-plant-cells-build-walls-grow,"Tue, 01 Apr 2025 14:15:00 GMT","For the first time, high-resolution time-lapse videos of tiny bits of living plants show how they assemble their protective cell walls, researchers report March 21 in Science Advances. The image sequences provide new insights into how this cell structure forms, which could lead to innovations in plant-derived products such as renewable biofuels.
+
+Cell walls are made mostly of cellulose, a chain of sugar molecules. “Cellulose is the most abundant organic [compound] on the planet,” says bioengineer Shishir Chundawat of Rutgers University in Piscataway, N.J. But “we still don’t know how it’s synthesized.”
+
+Scientists want to understand how cellulose is made not only because it’s useful for many human-made materials including paper and cloth, but also so it can be more efficiently broken down into products like biofuels, says Rutgers plant biologist Eric Lam.
+
+Fibers of cellulose (illustrated in brown), which clumped together after short pieces were pumped out by plant cell enzymes (green), overlap to form a mesh over a round cell before morphing into a rigid, typically rectangular, cell wall. Ehsan Faridi/Inmywork Studio/Chundawat, Lee and Lam Labs
+
+Lam, Chundawat and their colleagues took cells from the plant Arabidopsis thaliana and stripped away their walls. Because certain environmental conditions can harm cells, the team used a special microscope that minimized cells’ exposure to light, created a cooling system that kept cells at a balmy 18° Celsius and made a glowing molecular probe that stuck to fresh cellulose without interfering with wall-building. Fourteen wall-less cells were imaged every six minutes for about 24 hours as they regenerated their protective barriers. Some of the process was so speedy that additional cells were imaged at 20-second intervals for one to two hours.
+
+Fourteen cells from the Arabidopsis thaliana plant were imaged every six minutes for about 24 hours as they regenerated their cell walls. The glow shows cellulose, chains of sugar molecules, which is the cell wall’s primary component.
+
+The researchers identified four stages of cell wall development. First, enzymes in the cell’s outer layer pump out short pieces of cellulose that “swim around” on the cell’s surface, Lam says. Next, those fragments start to collide and attach to one another. Then, as the cellulose fibers continue to thicken and elongate, they also link up with perpendicular fibers to form a mesh. Finally, that mesh of cellulose keeps rearranging itself and compacting until it becomes a rigid, stable cell wall.
+
+Details about these steps, particularly the first that shows cellulose isn’t produced as long strings, have remained a mystery since cell walls were first viewed through a microscope more than 300 years ago, says Rutgers biophysicist Sang-Hyuk Lee. The new study is “a big step forward in terms of understanding the fundamentals of plant biology.”",sciencenews
+https://sciencenews.org,Physicists have confirmed a new mismatch between matter and antimatter,https://www.sciencenews.org/article/matter-antimatter-mismatch-baryons,"Tue, 01 Apr 2025 11:00:00 GMT","There’s a newfound mismatch between matter and antimatter. And that could bring physicists one step closer to understanding how everything in the universe came to be.
+
+For the most part, particles and their oppositely charged antiparticles are like perfect mirror images of one another. But some particles disobey this symmetry, a phenomenon known as charge-parity, or CP, violation. Now, researchers at the Large Hadron Collider near Geneva have spotted CP violation in a class of particles called baryons, where it’s never been confirmed before.
+
+Sign up for our newsletter We summarize the week's science breakthroughs every Thursday.
+
+Baryons are particles that contain three smaller particles called quarks. The most famous examples of baryons are protons and neutrons. Previously, scientists had seen CP violation only in mesons, which are particles containing one quark and one antiquark.
+
+For the new study, researchers with the LHCb collaboration studied particles called lambda-b baryons. The scientists looked at a decay of a lambda-b baryon into a proton and three lesser-known particles: a kaon and two pions. The rate of this decay is slightly different than that of its antimatter counterpart, the team found. This difference indicates CP violation, the researchers report in a paper submitted March 21 to arXiv.org and in a March 25 talk at the Rencontres de Moriond meeting in La Thuile, Italy.
+
+Building on previous hints of CP violation in baryons, the study is the first to cross the statistical threshold for a discovery, known as five sigma.
+
+A better understanding of CP violation could help explain how matter came to dominate over antimatter. In the Big Bang, matter and antimatter were made in equal measure. CP violation is thought to have given matter the upper hand. But known processes don’t violate CP enough to account for the matter-antimatter imbalance. The new study doesn’t solve that quandary, but it’s a step in the right direction.",sciencenews
+https://scientificamerican.com,"Scientific American Volume 332, Issue 4",https://scientificamerican.com/issue/sa/2025/04-01/,"Tue, 01 Apr 2025 00:00:00 GMT","For Two Decades Now, The iconic Twin Voyager Spacecraft Have Been Quietly Overurning Everything We Thought We Knew About the Boundary Bethany Our Solar System and Interstellar Space",scientificamerican
+https://scientificamerican.com,"Spellements: Tuesday, April 1, 2025",https://scientificamerican.com/game/spellements-2025-04-01/,"Tue, 01 Apr 2025 00:00:00 GMT","How to Play
+
+Click the timer at the top of the game page to pause and see a clue to the science-related word in this puzzle!
+
+The objective of the game is to find words that can be made with the given letters such that all the words include the letter in the center. You can enter letters by clicking on them or typing them in. Press Enter to submit a word. Letters can be used multiple times in a single word, and words must contain three letters or more for this size layout. Select the Play Together icon in the navigation bar to invite a friend to work together on this puzzle. Pangrams, words which incorporate all the letters available, appear in bold and receive bonus points. One such word is always drawn from a recent Scientific American article—look out for a popup when you find it! You can view hints for words in the puzzle by hitting the life preserver icon in the game display.
+
+The dictionary we use for this game misses a lot of science words, such as apatite and coati. Let us know at games@sciam.com any extra science terms you found, along with your name and place of residence, and we might give you a shout out in our daily newsletter!",scientificamerican
+https://scientificamerican.com,Scientific American Curiosities: Childhood Treasures,https://scientificamerican.com/game/curiosities-childhood-treasures-2025-04-01/,"Tue, 01 Apr 2025 00:00:00 GMT","Guess the missing word or phrase from one of our recent news articles—and learn about the weirdest and most intriguing science out there.
+
+We're testing out different titles for this game—the top alternate choices are “Knowledge Gaps” and “Fill In the Science.” E-mail us at games@sciam.com to let us know what you think!",scientificamerican
+https://livescience.com,Lava bursts through Grindavík's defense barriers as new volcanic eruption begins on Iceland's Reykjanes Peninsula,https://www.livescience.com/planet-earth/volcanos/lava-bursts-through-grindaviks-defense-barriers-as-new-volcanic-eruption-begins-on-icelands-reykjanes-peninsula,"Tue, 01 Apr 2025 14:44:09 GMT","Two fissures have opened up in Iceland near the town of Grindavik.
+
+A volcanic fissure has opened up near the town of Grindavík on Iceland's Reykjanes Peninsula following a significant uptick in earthquake activity. Images show lava breaching the town's defensive barrier, as Icelandic Met Office (IMO) representatives warn the fissure could continue to grow.
+
+The volcanic eruption started along the Sundhnúkur crater row following a swarm of earthquakes at 6:30 a.m. local time (2:30 a.m. ET) this morning (April 1), according to the IMO.
+
+A nearly 4,000-foot-long (1,200 meters) fissure opened up at 9:45 a.m. local time north of the town of Grindavík , and it continues to extend southward toward the town.
+
+IMO officials raised the hazard assessment alert level for both the Sundhnúkur crater row and Grindavík, which has a population of around 3,000 people, to the highest risk level. Southwesterly winds are expected to carry volcanic gas northeastwards and could reach the capital, Reykjavík, 25 miles (40 kilometers) away.
+
+At 11:00 a.m., IMO representatives said that a new eruptive fissure had opened up inside the protective barriers around Grindavík.
+
+Related: Huge steam plume rises from Alaska's Mount Spurr as volcano edges closer to eruption
+
+Both Grindavík and the nearby Blue Lagoon spa — a popular tourist attraction — have been evacuated in anticipation of the eruption, and roads heading in and out of the town have been closed. However, according to local media outlet Visir, several Grindavík residents have refused to leave the town.
+
+Sign up for the Live Science daily newsletter now Get the world’s most fascinating discoveries delivered straight to your inbox. Contact me with news and offers from other Future brands Receive email from us on behalf of our trusted partners or sponsors
+
+This incident marks the 11th eruption on the Reykjanes Peninsula since 2021 and the eighth along the Sundhnúkur crater row since 2023.
+
+Based on current wind direction forecasts, the southwesterly winds are expected to die down towards the end of the day, concentrating the gas pollution in the area around the eruptive fissure. However, the IMO predicts that tomorrow morning, the winds will shift to northwesterly, and later westerly, sending gas and ash towards the southwest and east of the peninsula.",livescience
+https://livescience.com,Watch eerie 'UFOs' and a solar 'cyclone' take shape in stunning new ESA video of the sun,https://www.livescience.com/space/the-sun/watch-eerie-ufos-and-a-solar-cyclone-take-shape-in-stunning-new-esa-video-of-the-sun,"Tue, 01 Apr 2025 17:31:25 GMT","Watch wind whirl from the Sun - YouTube Watch On
+
+A newly released video has revealed a gigantic plume of solar wind towering above the sun in a never-before-seen, ""cyclone-like"" configuration that emerged in the wake of a massive solar explosion. The striking timelapse footage also captured strange lines streaking across the fiery scene like pixelated UFOs — but are actually distant stars.
+
+The video, which was released March 26 by the European Space Agency (ESA), is sped-up footage originally taken over an eight-hour period on Oct. 12, 2022, by ESA's Solar Orbiter. The spacecraft captured the scene by blocking out the main disk of the sun, which enabled the probe's camera to focus on the extremely faint light given off by the flow of superfast charged particles, or solar wind, that streams out of our home star nearly constantly.
+
+This is the first time solar wind has been recorded ""flying out from the sun in a twisting, whirling motion,"" ESA representatives wrote in a statement . ""The solar wind particles spiral outwards as if caught in a cyclone that extends millions of kilometres from the sun.""
+
+The striking video also shows around a dozen perfectly flat, half-dark, half-light lines that creep across the screen like the UFOs and aliens in arcade games such as ""Space Invaders.""
+
+These features are actually stars that are moving across the background as the orbiter circles the sun, which show up thanks to an editing technique used to make the video, ESA representatives wrote.
+
+Related: 10 supercharged solar storms that blew us away in 2024
+
+Solar ‘pseudostreamer’
+
+In a new study of the video, released March 26 in The Astrophysical Journal , researchers described the giant solar corkscrew as a ""large pseudostreamer"" that erupted near the sun's north pole in the wake of a solar flare that launched a cloud of plasma, or coronal mass ejection (CME), into space. The pseudostreamer reached up to 1.5 times as long as the sun is wide and lasted for around three hours.
+
+Sign up for the Live Science daily newsletter now Get the world’s most fascinating discoveries delivered straight to your inbox. Contact me with news and offers from other Future brands Receive email from us on behalf of our trusted partners or sponsors
+
+The ""helix"" structure of the wind jet is likely the result of Alfvénic fluctuations triggered by waves of ions that oscillate in response to magnetic field disturbances that occurred during the flare, the researchers wrote. They noted that the unique shape may also be tied to the streamer's position near one of the sun's polar regions , where magnetic fields are usually much stronger than near the sun's equator.
+
+The sun is currently experiencing the peak in its roughly 11-year cycle of activity, known as solar maximum , which officially began in early 2024 . During this phase, powerful solar flares explode more frequently from the sun and solar wind intensifies. However, this video was captured before solar activity started ramping up, which surprised the scientists.
+
+Until recently, the origin and complex behaviors of solar wind have remained largely elusive. But a new generation of spacecraft is helping to unravel these mysteries.
+
+When the video was recorded, ESA's Solar Orbiter was the only probe capable of capturing solar wind in such great detail. However, ESA's Proba-3 mission, which launched in December 2024 , is also capable of viewing solar wind thanks to its ability to create artificial solar eclipses in space. NASA's Parker Solar Probe, meanwhile, was launched in 2018 and has helped to capture important solar wind data during its recent super-close flybys of our home star .
+
+Solar wind is expected to become more extreme over the next few years as we enter the solar ""battle zone"" — a period after solar maximum when magnetic instabilities on the sun cause large coronal holes to open up on the sun's surface and shoot out extreme solar gusts. These solar events will be much like a dark patch that showered Earth with charged particles last week , triggering significant aurora activity.
+
+Sun quiz: How well do you know our home star?",livescience
+https://livescience.com,Bears: Facts about the furry omnivores that live in many parts of the world,https://www.livescience.com/animals/bears/bears-facts-about-the-furry-omnivores-that-live-in-many-parts-of-the-world,"Tue, 01 Apr 2025 16:54:41 GMT","There are eight species of bear : the American black bear, Asian black bear, brown bear, panda bear, polar bear, spectacled bear, sloth bear and sun bear.
+
+Some of the most famous types of bear are actually subspecies. Grizzly bears, for example, are a subspecies of brown bear found in parts of North America. There are many different subspecies of brown bear found all over the world, from Kodiak bears in Alaska to the Syrian brown bear in the Middle East. These bears can look quite different from each other, with distinct coat colors and body sizes.
+
+The biggest type of bear is the polar bear. On average, polar bears weigh about 1,150 pounds (521 kg) and stand about 9 feet (2.7 meters) tall on their hind legs. The heaviest recorded polar bear was 2,210 pounds (1,002 kg). If you consider subspecies, the Kodiak bear generally matches polar bears' size, but some individual Kodiak bears have grown even more massive. The biggest-ever Kodiak bear was a giant named Clyde at the Dakota Zoo. At his heaviest measured weight, he was a whopping 2,130 pounds (966 kg) — about as heavy as a small car.
+
+The smallest bear species is the sun bear. These tiny bears weigh only 60 to 145 pounds (27 to 66 kg), and are only 4 to 5 feet (1.2 to 1.5 m) tall standing on their hind legs.",livescience
+https://livescience.com,"'We didn't expect to find such a beautiful, thriving ecosystem': Hidden world of life discovered beneath Antarctic iceberg",https://www.livescience.com/planet-earth/antarctica/we-didnt-expect-to-find-such-a-beautiful-thriving-ecosystem-hidden-world-of-life-discovered-beneath-antarctic-iceberg,"Tue, 01 Apr 2025 13:16:43 GMT","A large sponge and a cluster of anenomes are seen among other lifeforms beneath the George VI Ice Shelf in the Bellingshausen Sea.
+
+A gigantic iceberg that broke off of an Antarctic glacier has revealed a thriving never-before-seen ecosystem in the depths beneath.
+
+The iceberg A-84, which is roughly the size of Chicago, calved from Antarctica's George VI Ice Shelf on Jan. 13, 2025.
+
+After receiving news of the iceberg’s movement from satellite imagery , scientists aboard the Schmidt Ocean Institute's research vessel Falkor quickly hurried to the site. Just 12 days later, they arrived to find a never-before-seen ecosystem filled with giant sponges, fish, enormous sea spiders and octopuses exposed to the open air for the first time.
+
+""We seized upon the moment, changed our expedition plan, and went for it so we could look at what was happening in the depths below,"" expedition co-chief scientist Patricia Esquete , a marine biologist at the University of Aveiro in Portugal, said in a statement . ""We didn't expect to find such a beautiful, thriving ecosystem. Based on the size of the animals, the communities we observed have been there for decades, maybe even hundreds of years.""
+
+An octopus rests on the ocean floor beneath the Bellingshausen sea off Antarctica. (Image credit: ROV SuBastian/Schmidt Ocean Institute.)
+
+What lies beneath Antarctica's roughly 500 feet (150 meters) of ice is scarcely known, but scientists have suspected that it is filled with a gigantic network of rivers, lakes and estuaries. Yet it wasn't until very recently that scientists discovered that this hidden underworld harbored life.
+
+Related: Scientists create new map showing ice-free Antarctica in more detail than ever before
+
+Without sunlight or nutrients raining down from above, this life is likely sustained by deep-sea ocean currents that slip beneath the surface of the shelf, although scientists are unsure if this is the only mechanism at play.
+
+Sign up for the Live Science daily newsletter now Get the world’s most fascinating discoveries delivered straight to your inbox. Contact me with news and offers from other Future brands Receive email from us on behalf of our trusted partners or sponsors
+
+A giant phantom jelly swims through the depths beneath the Bellingshausen Sea. (Image credit: ROV SuBastian/Schmidt Ocean Institute.)
+
+To investigate the once-hidden biome, the scientists deployed a remotely operated submarine (named SuBastian), which — due to the thick ice blocking off GPS signals — navigated using sound waves to arrive at the ocean floor.
+
+Once there, the submarine collected biological and geological samples from among the region's coral and sea sponges. Some of these creatures' enormous sizes suggested they'd been growing for centuries. The researchers also deployed other autonomous vehicles to study how meltwater is affecting the region.
+
+""The science team was originally in this remote region to study the seafloor and ecosystem at the interface between ice and sea,"" Jyotika Virmani , executive director of the Schmidt Ocean Institute, said in the statement. ""Being right there when this iceberg calved from the ice shelf presented a rare scientific opportunity. Serendipitous moments are part of the excitement of research at sea — they offer the chance to be the first to witness the untouched beauty of our world.""
+
+Antarctica quiz: Test your knowledge on Earth's frozen continent",livescience
+https://livescience.com,Scientists discover major differences in how humans and AI 'think' — and the implications could be significant,https://www.livescience.com/technology/artificial-intelligence/scientists-discover-major-differences-in-how-humans-and-ai-think-and-the-implications-could-be-significant,"Tue, 01 Apr 2025 11:00:00 GMT","AI models struggle to form analogies when considering complex subjects, like humans can, meaning their use in real-world decision making could be risky.
+
+We know that artificial intelligence (AI) can't think the same way as a person, but new research has revealed how this difference might affect AI's decision-making, leading to real-world ramifications humans might be unprepared for.
+
+The study, published Feb. 2025 in the journal Transactions on Machine Learning Research , examined how well large language models (LLMs) can form analogies.
+
+They found that in both simple letter-string analogies and digital matrix problems — where the task was to complete a matrix by identifying the missing digit — humans performed well but AI performance declined sharply.
+
+While testing the robustness of humans and AI models on story-based analogy problems, the study found the models were susceptible to answer-order effects — differences in responses due to the order of treatments in an experiment — and may have also been more likely to paraphrase.
+
+Altogether, the study concluded that AI models lack “zero-shot” learning abilities, where a learner observes samples from classes that weren't present during training and makes predictions about the class they belong to according to the question.
+
+Related: Punishing AI doesn't stop it from lying and cheating — it just makes it hide better, study shows
+
+Co-author of the study Martha Lewis , assistant professor of neurosymbolic AI at the University of Amsterdam, gave an example of how AI can't perform analogical reasoning as well as humans in letter string problems.
+
+Sign up for the Live Science daily newsletter now Get the world’s most fascinating discoveries delivered straight to your inbox. Contact me with news and offers from other Future brands Receive email from us on behalf of our trusted partners or sponsors
+
+""Letter string analogies have the form of 'if abcd goes to abce, what does ijkl go to?' Most humans will answer 'ijkm', and [AI] tends to give this response too,"" Lewis told Live Science. ""But another problem might be 'if abbcd goes to abcd, what does ijkkl go to? Humans will tend to answer 'ijkl' – the pattern is to remove the repeated element. But GPT-4 tends to get problems [like these] wrong.""
+
+Why it matters that AI can't think like humans
+
+Lewis said that while we can abstract from specific patterns to more general rules, LLMs don't have that capability. ""They're good at identifying and matching patterns, but not at generalizing from those patterns.""
+
+Most AI applications rely to some extent on volume — the more training data is available, the more patterns are identified. But Lewis stressed pattern-matching and abstraction aren't the same thing. ""It's less about what's in the data, and more about how data is used,"" she added.
+
+To give a sense of the implications, AI is increasingly used in the legal sphere for research, case law analysis and sentencing recommendations. But with a lower ability to make analogies, it may fail to recognize how legal precedents apply to slightly different cases when they arise.
+
+Given this lack of robustness might affect real-world outcomes, the study pointed out that this served as evidence that we need to carefully evaluate AI systems not just for accuracy but also for robustness in their cognitive capabilities.",livescience
+https://livescience.com,"Giant, near-perfect cloud ring appears in the middle of the Pacific Ocean — Earth from space",https://www.livescience.com/planet-earth/weather/giant-near-perfect-cloud-ring-appears-in-the-middle-of-the-pacific-ocean-earth-from-space,"Tue, 01 Apr 2025 13:50:29 GMT","A massive, lone cloud ring was spotted in the middle of the Pacific Ocean in 2014. It reached roughly 280 miles across.
+
+QUICK FACTS Where is it? In the middle of the Pacific Ocean What's in the photo? A circular, open-celled cloud above the ocean surface Which satellite took the photo? NASA's Terra satellite When was it taken? Sept. 3, 2014
+
+This striking satellite image reveals a giant, near-perfect cloud circle that formed in the heart of the Pacific Ocean more than a decade ago. While this type of cloud is not uncommon, it is extremely rare to find one isolated and in the middle of nowhere, experts say.
+
+The strange structure, which is approximately 280 miles (450 kilometers) wide, was spotted ""a few thousand kilometers southwest of the Hawaiian Islands"" by the Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA's Terra satellite, according to NASA's Earth Observatory .
+
+The fluffy ring is made up of cumulus clouds that have been sculpted into a Rayleigh-Benard convection cell — a meteorological phenomenon powered by the rising and falling of air that's been warmed or cooled to different temperatures, known as convection.
+
+There are two types of cloud cells: closed cells, which occur when cold air sinks around the cells' border, causing clouds to form at their centers; and open cells, which occur when cold air sinks at the cells' center, triggering clouds to form around their borders, according to the National Oceanic and Atmospheric Administration (NOAA). The cloud ring in the satellite photo was formed by a closed cell.
+
+Cloud cells are normally hexagonal and usually appear alongside other cells of the same type, creating noticeable patterns in the sky. Open-cell clouds often form wispy honeycomb-like lattices, but for some reason, this cell appears to be all on its own.
+
+Related: See all the best images of Earth from space
+
+This 2016 satellite image shows a band of open-celled clouds (top) next to a band of closed-celled clouds (bottom). Open cells have gaps at their center, while closed cells have gaps around their edges. (Image credit: NASA/Terra/MODIS)
+
+The lone cloud ring was likely triggered by a parcel of warm air over a small island or patch of water that was superheated by the sun, according to the Earth Observatory.
+
+Sign up for the Live Science daily newsletter now Get the world’s most fascinating discoveries delivered straight to your inbox. Contact me with news and offers from other Future brands Receive email from us on behalf of our trusted partners or sponsors
+
+""As the warm air became buoyant and rose, cumulus clouds and eventually patches of light rain probably developed. The rain would have cooled the air beneath the clouds, causing a downdraft that sent rain-cooled air outward from the original location of the clouds,"" Earth Observatory representatives wrote. ""When the rain-cooled air encountered warmer air at the edge of the cell, it likely pushed the warm air up, which caused the ring of cumulus clouds to form.""
+
+The cloud cell was located just south of the Intertropical Convergence Zone (ICZ) — a low-pressure belt near the equator where the trade winds trigger frequent thunderstorms and heavy rainfall. This may have also played a role in the cloud's creation, according to the Earth Observatory.
+
+The ocean surface to the east (right) of the cloud ring appears to have a metallic shine. This is the result of a sunglint, where sunlight bounces off the sea and directly back to an observing instrument in space. This can transform large patches of the ocean into swirling silver mirrors .",livescience
+https://livescience.com,The US is squandering the one resource it needs to win the AI race with China — human intelligence,https://www.livescience.com/technology/artificial-intelligence/the-us-is-squandering-the-one-resource-it-needs-to-win-the-ai-race-with-china-human-intelligence-opinion,"Tue, 01 Apr 2025 16:27:02 GMT","The U.S. may lose the AI race to China by exporting its biggest asset — the ability to attract the best and brightest in the world.
+
+The recent release of DeepSeek sent shock waves through markets and acted as a Sputnik moment for the United States. After the news broke that China's artificial intelligence (AI) model achieved comparable or better results than Silicon Valley's best AI models, the U.S. suddenly faced a harsh reality: The country was not assured of being a forerunner in the AI race.
+
+In response, the Trump administration is considering imposing even tighter export controls and banning the use of DeepSeek on government devices, while OpenAI has accused DeepSeek of inappropriately copying ChatGPT. The current policy approach seems to be intended to restrict China's ability to develop AI, but it could backfire.
+
+Akhil Bhardwaj is an Associate Professor of Strategy and Organization at the University of Bath, UK. He studies extreme events, which range from organizational disasters to radical innovation. (Image credit: Akhil Bhardwaj)
+
+The United States and China belong to fundamentally different paradigms of thinking, as is reflected in their formal and informal institutional structures. Generally speaking, the U.S. enshrines and guarantees individual freedom, while China venerates the collective.
+
+These differences seem to disappear when it comes to business — but they point to different orientations.
+
+Each way of thinking seeks dominance in the world. Americans have been trying to ""export"" democracy since the end of World War II, much to the chagrin of the Soviet Union, which tried to do the same with communism by expanding its own sphere of influence. After the fall of communism in the late 20th century, the world was briefly unipolar. There was only one superpower: the United States.
+
+Now, that dominance is no longer taken for granted. China would like to usurp that position and thinks achieving AI dominance is its appropriate approach — so it has been investing heavily in the sector over the past decade.
+
+The Bayan Obo mine in Mongolia is one of the biggest deposits of rare earth metals. (Image credit: Bert van Dijk/Getty Images)
+
+China moved quickly to secure rare earth minerals in Africa and worldwide. Case in point: In 1993, China and the U.S. extracted nearly the same amount of rare earth elements, each producing one-third of the global total. By 2011, China accounted for 97% of the world's production of rare earth elements. The U.S. only recently responded, by trying to secure mineral rights in Ukraine and elsewhere. China has also made moves to attract its U.S.-educated Chinese students back to the country by offering them housing, tax benefits, children's education and a lax regulatory environment while also setting up new AI schools at home.
+
+America's primary response has been to develop a tiered system that imposes restrictions on AI diffusion. This tiered system groups countries into three main categories: ""friends,"" ""neutrals"" and ""rivals."" The first category — which consists of countries like the United Kingdom, Canada and the Netherlands — benefit from the unrestricted export of advanced integrated circuits (ICs) that are critical to AI development. Export of U.S.-made ICs to ""rivals"" like China is heavily restricted.
+
+The U.S. seems to be trying to undermine the basis for its competitive advantage: human capital.
+
+For ""neutrals,"" like India and Singapore, there are conditions. To get access to American ICs, neutrals must align with U.S. interests.
+
+Similar restrictions limit where AI firms can establish data centers, which require a tremendous amount of land, capital investment and energy. In this sense, countries that want to host data centers or want access to American AI technology have to align themselves exclusively with the United States. Similar agreements to develop data centers cannot be made with U.S. rivals, or at least not without U.S. permission.
+
+Such restrictions are meant to constrain Chinese development of AI. But this approach may not be as sensible as it seems. The release of DeepSeek notwithstanding, Silicon Valley has remained at the forefront of AI breakthroughs. DeepSeek is more efficient, and its development is impressive.
+
+But one might say it is evolutionary, not revolutionary. This has been a pattern — Silicon Valley innovates, and Chinese tech entrepreneurs copy and improve . America's competitive edge comes from constant innovation and a supportive institutional structure that fosters fair competition, protects property rights , encourages broad participation and challenges authority. In contrast, the Chinese institutional setup leans toward protecting authority, unfair competition (although recent changes in Chinese law aim to address this problem) and insecure property rights, which, in the long run, is not conducive to radical innovation.
+
+A Stand up for Science rally held in Minnesota to protest against science funding cuts — cuts that could impact the influx of research talent to the U.S. (Image credit: UCG/Getty Images)
+
+At the same time, under the Trump administration, the U.S. seems to be trying to undermine the basis for its competitive advantage: human capital. Silicon Valley continues to attract the best and brightest in the world, in part because of its institutions and the U.S. educational system. These would-be-entrepreneurs come to the U.S. from India, China, South Africa and Russia, among other places. Recent research shows that these immigrants tend to contribute disproportionately to innovation.
+
+Currently, the United States remains an attractive destination, including for Chinese immigrants . But recent moves to restrict their entry, possibly by developing a tiered visa-granting system , amounts to reducing an import of human capital into America and their inadvertent export elsewhere. Indeed, the U.K. experienced a drop in applications and inflow after it tightened visa restrictions in 2024 .
+
+Restrictions on funding for universities also undermine U.S. attractiveness; some universities have curtailed hiring doctoral students , who serve a key role in driving research forward. European universities are attempting to leverage the situation by recruiting American colleagues with offers of a convivial research environment with more stable funding sources.
+
+Herbert Simon, a Nobel laureate and key early contributor to the development of AI, once said , ""any direction you proceed in [is probably wrong], so it is good if other people are exploring in other directions."" In other words, diversity of ideas is needed, and a more diverse pool of competent human capital (e.g., with different educational backgrounds from different countries), as well as funding for the development of ideas, is critical.
+
+Top-down imposition of what type of research is out of bounds can discourage innovative thinking. The Chinese would like to out-innovate Silicon Valley, but they are currently unable to do so because of the stream of raw talent into a hospitable U.S. (and Western) institutional environment.
+
+Diluting the basis of competition seems myopic. Ironically, ""winning"" the artificial intelligence race rests on human intelligence that the U.S. seems to be actively undercutting.",livescience
+https://livescience.com,Black holes can destroy planets — but they can also lead us to thriving alien worlds. Here's how.,https://www.livescience.com/space/black-holes/black-holes-can-destroy-planets-but-they-can-also-lead-us-to-thriving-alien-worlds-heres-how,"Tue, 01 Apr 2025 17:17:29 GMT","One of the most powerful objects in the universe is a radio quasar — a spinning black hole spraying out highly energetic particles. Come too close to one, and you'd get sucked in by its gravitational pull, or burn up from the intense heat surrounding it. But ironically, studying black holes and their jets can give researchers insight into where potentially habitable worlds might be in the universe.
+
+As an astrophysicist , I've spent two decades modeling how black holes spin, how that creates jets, and how they affect the environment of space around them.
+
+What are black holes?
+
+Black holes are massive, astrophysical objects that use gravity to pull surrounding objects into them. Active black holes have a pancake-shaped structure around them called an accretion disk , which contains hot, electrically charged gas.
+
+Related: 'Very rare' black hole energy jet discovered tearing through a spiral galaxy shaped like our own
+
+The plasma that makes up the accretion disk comes from farther out in the galaxy. When two galaxies collide and merge , gas is funneled into the central region of that merger. Some of that gas ends up getting close to the newly merged black hole and forms the accretion disk.
+
+There is one supermassive black hole at the heart of every massive galaxy.
+
+Black holes and their disks can rotate , and when they do, they drag space and time with them — a concept that's mind-boggling and very hard to grasp conceptually. But black holes are important to study because they produce enormous amounts of energy that can influence galaxies.
+
+How energetic a black hole is depends on different factors, such as the mass of the black hole, whether it rotates rapidly, and whether lots of material falls onto it. Mergers fuel the most energetic black holes, but not all black holes are fed by gas from a merger. In spiral galaxies , for example, less gas tends to fall into the center, and the central black hole tends to have less energy.
+
+One of the ways they generate energy is through what scientists call "" jets "" of highly energetic particles . A black hole can pull in magnetic fields and energetic particles surrounding it, and then as the black hole rotates, the magnetic fields twist into a jet that sprays out highly energetic particles.
+
+Magnetic fields twist around the black hole as it rotates to store energy — kind of like when you pull and twist a rubber band. When you release the rubber band, it snaps forward. Similarly, the magnetic fields release their energy by producing these jets.
+
+The accretion disk around a black hole can form a jet of hot, energetic particles surrounded by magnetic field lines. CC BY) (Image credit: NASA, ESA, and A. Feild (STScI)
+
+These jets can speed up or suppress the formation of stars in a galaxy, depending on how the energy is released into the black hole's host galaxy.
+
+Rotating black holes
+
+Some black holes, however, rotate in a different direction than the accretion disk around them. This phenomenon is called counterrotation, and some studies my colleagues and I have conducted suggest that it's a key feature governing the behavior of one of the most powerful kinds of objects in the universe: the radio quasar.
+
+Radio quasars are the subclass of black holes that produce the most powerful energy and jets .
+
+You can imagine the black hole as a rotating sphere, and the accretion disk as a disk with a hole in the center. The black hole sits in that center hole and rotates one way, while the accretion disk rotates the other way.
+
+This counterrotation forces the black hole to spin down and eventually up again in the other direction, called corotation. Imagine a basketball that spins one way, but you keep tapping it to rotate in the other. The tapping will spin the basketball down. If you continue to tap in the opposite direction, it will eventually spin up and rotate in the other direction. The accretion disk does the same thing.
+
+Since the jets tap into the black hole's rotational energy, they are powerful only when the black hole is spinning rapidly. The change from counterrotation to corotation takes at least 100 million years. Many initially counterrotating black holes take billions of years to become rapidly spinning corotating black holes.
+
+So, these black holes would produce powerful jets both early and later in their lifetimes, with an interlude in the middle where the jets are either weak or nonexistent.
+
+When the black hole spins in counterrotation with respect to its accretion disk, that motion produces strong jets that push molecules in the surrounding gas close together, which leads to the formation of stars .
+
+But later, in corotation, the jet tilts. This tilt makes it so that the jet impinges directly on the gas, heating it up and inhibiting star formation. In addition to that, the jet also sprays X-rays across the galaxy. Cosmic X-rays are bad for life because they can harm organic tissue.
+
+For life to thrive, it most likely needs a planet with a habitable ecosystem , and clouds of hot gas saturated with X-rays don't contain such planets. So, astronomers can instead look for galaxies without a tilted jet coming from its black hole. This idea is key to understanding where intelligence could potentially have emerged and matured in the universe.
+
+Black holes as a guide
+
+By early 2022, I had built a black hole model to use as a guide. It could point out environments with the right kind of black holes to produce the greatest number of planets without spraying them with X-rays. Life in such environments could emerge to its full potential.
+
+Alien Life B.Y.A - YouTube Watch On
+
+Where are such conditions present? The answer is low-density environments where galaxies had merged about 11 billion years ago.
+
+These environments had black holes whose powerful jets enhanced the rate of star formation, but they never experienced a bout of tilted jets in corotation. In short, my model suggested that theoretically, the most advanced extraterrestrial civilization would have likely emerged on the cosmic scene far away and billions of years ago .
+
+This edited article is republished from The Conversation under a Creative Commons license. Read the original article .
+
+Black hole quiz: How supermassive is your knowledge of the universe?",livescience
+https://scientificamerican.com,"Scientific American Volume 332, Issue 4",https://scientificamerican.com/issue/sa/2025/04-01/,"Tue, 01 Apr 2025 00:00:00 GMT","For two decades now, the iconic twin Voyager spacecraft have been quietly overturning everything we thought we knew about the boundary between our solar system and interstellar space",scientificamerican
+https://scientificamerican.com,"Spellements: Tuesday, April 1, 2025",https://scientificamerican.com/game/spellements-2025-04-01/,"Tue, 01 Apr 2025 00:00:00 GMT","How to play
+
+Click the timer at the top of the game page to pause and see a clue to the science-related word in this puzzle!
+
+The Objective of the Game is to Finds That Can Be Made with the Given Letters Such That All The Words Include The Letter in the Center. You can enter letters by clicking on them or typing them in. Press Enter to Submit in Word. LETTERS CAN BE USED MULTIPLE TIMES IN A Single Word, and Words Must Contin Three Letters or More for this size layout. Select the play TogeTher Icon in the Navigation Bar to invite a friend to work togeTher on this puzzle. Pangrams, Words Which incorporate all the Letters Availaable, Appear in Bold and Receive Bonus Points. One Such Word is Always Drawn From to Recent Scientific American Article --look Out for a Popup When You Find It! You Can View Hints for Words in the Puzzle by Hitting the Life Preseror Icon in the Game Display.
+
+The Dictionary We use for this Game Masses a Lot of Science Words, Such As Apatite and Coati. Let us know at games@sciam.com Extra Science TermS You Found, Along with Your Name and Place of Residence, and We Might Give You a Shout Out in Our Daily Newsletter!",scientificamerican
+https://scientificamerican.com,Scientific American Curiosities: Childhood Treasures,https://scientificamerican.com/game/curiosities-childhood-treasures-2025-04-01/,"Tue, 01 Apr 2025 00:00:00 GMT","Guess the missing word or phrase from one of our recent news articles—and learn about the weirdest and most intriguing science out there.
+
+We're testing out different titles for this game—the top alternate choices are “Knowledge Gaps” and “Fill In the Science.” E-mail us at games@sciam.com to let us know what you think!",scientificamerican
+https://theconversation.com,Why a presidential term limit got written into the Constitution – the story of the 22nd Amendment,https://theconversation.com/why-a-presidential-term-limit-got-written-into-the-constitution-the-story-of-the-22nd-amendment-253421,"Tue, 01 Apr 2025 16:05:24 GMT","Only one person, Franklin Delano Roosevelt, has ever served more than two terms as president of the United States. This is for two reasons.
+
+First, prior to Roosevelt’s election to a third term in 1940 there was a longstanding American tradition that presidents not serve more than two terms.
+
+This tradition was established by the decisions of early presidents such as George Washington, Thomas Jefferson and James Madison not to seek a third term. This tradition was later adopted by other presidents.
+
+Second, after Roosevelt died in office in 1945 during his fourth term, Congress and the people of the United States decided to turn the long-standing tradition that presidents should not serve more than two terms into a part of constitutional law.
+
+This was done through the passage and ratification of the 22nd Amendment, which became part of the U.S. Constitution in 1951.
+
+Intent is clear
+
+The key provision of the 22nd Amendment reads as follows: “No person shall be elected to the office of the President more than twice, and no person who has held the office of President, or acted as President, for more than two years of a term to which some other person was elected President shall be elected to the office of the President more than once.”
+
+The intent is clear. No one is supposed to serve more than two full terms as president.
+
+The only way someone can serve more than two terms is if they served less than two years in a previous term in which they weren’t elected president.
+
+Here’s an example: If a vice president becomes president during the final year of a term because the president died, that vice president could still run for two terms. But that exception is still meant to bar anyone from serving more than a total of 10 years as president.
+
+It is worth understanding why the two-term tradition was considered so important that it was turned into constitutional law the first time it was violated.
+
+Starting the tradition
+
+Commentators often cite George Washington’s decision not to seek a third term as president as establishing the two-term tradition. Political scientist and term limit scholar Michael Korzi gives a lot more credit to the nation’s third president, Thomas Jefferson.
+
+Jefferson was outspoken in favor of the two-term tradition. As Korzi notes, this was, in part, because “Jefferson saw little distinction between a long-serving executive in an elective position and a hereditary monarch.” In other words, a president without term limits is too much like a king.
+
+Jefferson saw a president who was willing to break the two-term tradition as power hungry, and he hoped that the American people would not elect such a president. This led him to write in his autobiography in 1821 that “should a President consent to be a candidate for a 3d. election, I trust he would be rejected on this demonstration of ambitious views.”
+
+Jefferson also worried that without term limits, presidents would stay in office too long into their old age and after they had lost their ability to govern effectively. This led him to write that without term limits, there was a danger that “the indulgence and attachments of the people will keep a man in the chair after he becomes a dotard.”
+
+Subsequently, presidents tended to abide by the two-term tradition. And in the few cases where presidents decided to seek a third term, their own parties would not give them the nomination.
+
+That remained true until Roosevelt ran for, and won, both a third and a fourth term as president during World War II.
+
+The 22nd Amendment
+
+Roosevelt’s violation of the two-term tradition prompted Congress and the states to turn the tradition into a formal matter of constitutional law.
+
+A major concern motivating the amendment was the same one that motivated Jefferson: to prevent a president from becoming a king. Multiple members of Congress identified the same concern during congressional sessions in the 1940s.
+
+Sen. Chapman Revercomb from West Virginia stated that power given to a president without term limits “would be a definite step in the direction of autocracy, regardless of the name given the office, whether it be president, king, dictator, emperor, or whatever title the office may carry.”
+
+Similarly, Rep. Edward McCowen from Ohio said that the 22nd Amendment would be “a great step toward preventing a dictatorship or some totalitarian form of government from arising.”
+
+And Rep. John Jennings Jr. from Tennessee stated that only by adoption of the 22nd Amendment “can the people be assured that we shall never have a dictator in this land.”
+
+Congress passed the 22nd Amendment on March 21, 1947. It took less than four years for the necessary three-fourths of the states to ratify the amendment, which became law on Feb. 27, 1951.
+
+Tyrants and term limit violations
+
+In the 1980s, political scientist Juan Linz identified that presidential systems are less stable than other forms of democracy, such as parliamentary systems. The difference seems to be that presidential systems concentrate more power in the hands of a single person, the president. This makes it easier to remove the checks and balances that democracies depend on.
+
+As scholars have noted, violation of presidential term limits and other methods of increasing executive power are a common form of democratic backsliding – state-led debilitation or elimination of the political institutions that sustain a democracy.
+
+Law professor Mila Versteeg and her colleagues have shown that in recent years presidents around the globe have used various tactics to try to violate presidential term limits. These tactics include trying to amend their country’s constitution, trying to get the courts to reinterpret the constitution, finding a replacement leader who the former president can control once out of office and attempting to delay elections.
+
+They note that most of the time when a president’s attempt to violate term limits fails it is “because the attempt encountered widespread popular resistance.” They conclude that this finding implies that “broad resistance movements” may be the best means to prevent violation of presidential term limits.",theconversation
+https://theconversation.com,America the secular? What a changing religious landscape means for US politics,https://theconversation.com/america-the-secular-what-a-changing-religious-landscape-means-for-us-politics-249892,"Tue, 01 Apr 2025 12:14:09 GMT","After climbing for decades, the percentage of Americans with no religion has leveled off. For the past few years, the share of adults who identify as atheist, agnostic or “nothing in particular” has stood at about 29%, according to a major study the Pew Research Center released Feb. 26, 2025.
+
+But this hardly means that the “nones,” or their impact on American life, are going away. In fact, their sheer size makes it likely that they will increase in political prominence.
+
+It will presumably come as no surprise that many secular voters lean to the political left. It may, however, be surprising to learn that a fairly large number of nonreligious voters supported President Donald Trump in the 2020 and 2024 elections.
+
+If the above paragraph is a head-scratcher, that is because “nonreligious” and “secular” are often treated as two ways of saying the same thing. But as political scientists who study religion – and the lack thereof – we have found that there is a fundamental difference between the two. While conventional wisdom holds that religious voters are Republicans and nonreligious voters are Democrats, the reality is more complicated.
+
+Nonreligious vs. secular
+
+So, what is the difference between people who are nonreligious vs. those who are secular?
+
+The nonreligious tend to define themselves by what they are not: for example, not belonging to a religion, not attending worship services, not believing in God. In our surveys, many people without a religious affiliation do not cite any particular worldview or philosophy when asked what guides their life.
+
+Secular people, on the other hand, define themselves by what they are: someone who has embraced a humanistic and even scientific worldview. That is, when asked about where they find truth, they turn to sources such as science and philosophy instead of scripture and religious teachings. Often, they identify as atheist, agnostic or humanist.
+
+There are secular people, however, who also embrace some aspects of faith. Religiosity and secularity are not in a zero-sum relationship: more of one does not necessarily mean less of the other. In our research, we found many cases of people who belong to a religious congregation yet have a secular worldview: This describes many Jews, mainline Protestants and even Catholics, for example.
+
+4 groups
+
+To get a better sense of Americans’ views, for over a decade we have worked on developing questions to identify people with a secular outlook, while also asking about religious commitment, such as how often someone attends services. Our findings culminated in the 2021 book “Secular Surge: A New Fault Line in American Politics.”
+
+Based on the results, we can divide the U.S. population into four groups: Religionists, Nonreligionists, Secularists and Religious Secularists.
+
+The Religionists category includes people of all faiths. At 41%, this is the largest group in the United States, but they do not form a majority.
+
+Secularists make up 27% of the population – larger than the percentage of any single religious tradition. Evangelical Christians, for example, are 23% of the U.S. population, according to Pew, and Catholics are 19%.
+
+Another 14% of Americans are what we call Religious Secularists: people who identify with and participate in a religious community, yet have a secular worldview. They might attend worship services but consider their religion more as an expression of their culture than a source of teachings to inform their daily decision-making. Some Religious Secularists may describe themselves as agnostic or even atheist.
+
+Finally, 18% of Americans are Nonreligionists: These are people we described above as not having any religion in their lives, but neither do they have a secular worldview. They are defined by what they are not, not what they are.
+
+Political views
+
+These four groups vary in whether they are politically engaged – and if so, whom they support.
+
+In our book about America’s “secular surge” we used data from a nationwide survey in 2017. In 2021, we conducted a second wave of that survey.
+
+According to data from that survey that we analyzed for this article, Religionists and Secularists are about equally likely to get involved in politics: roughly 30% of both groups reported doing something political in the past 12 months, such as attending a rally, volunteering for a candidate or donating money. Nonreligionists were much less likely: only 17%.
+
+In fact, no matter the form of civic engagement – voting, volunteering – Nonreligionists were consistently the least likely to be involved. Only 30% of Nonreligionists report belonging to any sort of club or organization, while for the rest of the population, it is closer to 50%.
+
+In the same 2021 survey, we asked people to rate various politicians on a 0-100 scale, with a higher number meaning a more positive view.
+
+On average, Religionists rated Trump a 61, the highest of the four groups; Secularists give him the lowest score, at 14. Nonreligionists gave Trump 47 points.
+
+It would be wrong, however, to call the Nonreligionists an ideologically conservative group.
+
+Consider their ratings of Bernie Sanders, who caucuses with the Democratic Party but describes himself as a democratic socialist. For three of the groups, support for Sanders was the mirror opposite of their feelings toward Trump, a Republican. Secularists, for instance, gave the Vermont senator a relatively high score of 66, on average; Religionists’ feelings toward him are much cooler, at 32 points.
+
+By contrast, Nonreligionists gave a nearly identical rating to Trump and Sanders. Given that the two men are at opposite ideological poles, how could Nonreligionists rate them the same? We suspect it is because both figures challenge the status quo.
+
+In 2024, the Trump campaign worked to mobilize “low-propensity voters”: political jargon for people with the low levels of civic engagement often found among Nonreligionists. Not only are they politically disengaged, they are the most likely to combine being young, male, white and without a college degree.
+
+A ‘secular left’?
+
+Secularists, too, are disproportionately young and white. But in other ways they are very different from Nonreligionists. Secularists typically have a college degree and are evenly balanced between women and men. Typically, they are also liberal and highly engaged in politics.
+
+So how will they shape American politics? The answer may depend on whether Secularists cohere into a movement – a secular left to parallel the religious right.
+
+Today, highly religious conservatives are a vocal group within American politics, the core of the Republican Party. A generation ago, however, they were a disparate group of people from different Christian denominations, from Baptists to Pentecostals. Many of the religious groups that now march in common cause once had sharp disagreements.
+
+It remains to be seen whether secular voters will organize in a similar way. Either way, it is safe to say America’s religious composition has changed significantly.
+
+Don’t assume, however, that a turn away from religion necessarily means a sharp turn toward the political left. We’d caution that the story is more complicated. For now, secular voters lean to the left – but nonreligious voters are up for grabs.",theconversation
+https://theconversation.com,"GOP lawmakers eye SNAP cuts, which would scale back benefits that help low-income people buy food at a time of high food prices",https://theconversation.com/gop-lawmakers-eye-snap-cuts-which-would-scale-back-benefits-that-help-low-income-people-buy-food-at-a-time-of-high-food-prices-208556,"Tue, 01 Apr 2025 12:13:48 GMT","Congress may soon consider whether to cut spending on the Supplemental Nutrition Assistance Program, the main way the government helps low-income Americans put food on the table. The Conversation U.S. asked Tracy Roof, a political scientist who has researched the history of government nutrition programs, to explain what’s going on and why the effort to reduce spending on SNAP benefits, which can be used to purchase groceries, could falter.
+
+Why does it look like the federal government may cut SNAP spending?
+
+Conservative critics of SNAP believe that the U.S. spends too much on the program, which cost the federal government US$100 billion in the 2024 fiscal year.
+
+Federal spending on SNAP, however, has been falling since it peaked at $119 billion in 2022, before extra pandemic-related benefits ended.
+
+Some Republican lawmakers are calling for new changes that would cut spending on the program.
+
+Is there a SNAP budget?
+
+No.
+
+Today, SNAP helps nearly 42 million people put food on the table, including 1 in 5 children. Americans can usually qualify for SNAP benefits if their income is under 130% of the federal poverty line. In 2025, that would be $41,795 for a family of four and they have limited savings. Some eligibility guidelines can vary by state.
+
+The rules are complex. Most adults under the age of 60 are subject to work requirements if they are “able-bodied” and not caring for a child or incapacitated adult. If adults between the ages of 18 and 54 don’t log at least 20 hours of work or another approved activity, their benefits can be cut off. Immigrants without authorization to reside in the U.S. aren’t eligible for SNAP.
+
+Despite those restrictions on who can get SNAP benefits, there is no set limit to what the federal government can spend on the program. As more people become eligible due to their low incomes and therefore obtain benefits during economic downturns, this spending automatically increases. When the economy improves, it usually declines.
+
+States administer the program under federal government guidelines. The federal government covers the full cost of benefits low-income people receive through the program, but the states cover roughly half of the administrative costs.
+
+How can the federal government try to cut SNAP spending?
+
+There are two main paths to program cuts.
+
+One is through the farm bill, a legislative package Congress typically renews every four or five years that sets policies for SNAP and programs that support farmers’ incomes. The most recent farm bill expired in 2023. Congress has passed multiple one-year extensions on the measure because lawmakers have been unable to pass a new one.
+
+The latest extension will expire on Sept. 30, 2025.
+
+The other option is through the so-called budget reconciliation process underway in Congress. Right now, the primary Republican plan calls for extending $4.5 trillion in tax cuts passed in the first Trump administration and making up to $2 trillion in spending cuts over the next decade.
+
+The House took the first step in this process by narrowly passing a budget blueprint on Feb. 25. This plan requires the House Agriculture Committee to cut $230 billion in spending over 10 years. While it does not force the committee to cut SNAP specifically, the program accounts for $1 trillion of the $1.3 trillion spent over a decade that the committee oversees – leaving few alternatives.
+
+What kinds of changes might cut costs?
+
+Most Republicans appear to favor changing how benefits are calculated and imposing stricter work requirements.
+
+Today, the value of SNAP benefits that participants in the program can get are calculated based on the “thrifty food plan,” a blueprint for a low-cost, nutritionally adequate diet. A family of four, for example, can get benefits of up to $939 a month if they have no income.
+
+The Biden administration updated that plan in 2021 in a way that increased monthly SNAP benefits by 23%, not counting the short-term pandemic adjustments to the program. Republican lawmakers want to prevent future changes to the thrifty food plan that might again sharply increase benefits.
+
+Another proposal would roll back the 2021 change in the thrifty food plan. This would cut current benefits and save $274 billion over a decade. One hitch is that House Agriculture Committee Chair G.T. Thompson has promised no cuts to monthly SNAP benefits.
+
+Many Republicans would like to stiffen the work requirements by requiring work of recipients who are up to age 65 or are the parents of children who are more than six years old. They also could limit the ability of states to make exceptions in places that don’t have enough jobs.
+
+Other options include limiting states’ flexibility to offer benefits to people with incomes that are a little higher than 130% of the federal poverty level, capping the monthly benefit for larger households to the amount available to a family of six, and shifting more of the program’s costs to the states.
+
+Other proposals would crack down on fraud and benefit overpayments. Those steps would be likely to achieve a tiny fraction of the spending reductions the GOP seeks.
+
+How popular do you think these changes would be?
+
+The food insecurity rate, which reflects the number of people who worry about getting enough to eat or who report skipping meals or buying less nutritious food because of costs, has been high in recent years. Polls show most Americans support increasing SNAP benefits, not cutting them.
+
+Angry constituents have recently turned out to protest potential benefit cuts to programs such as Medicaid and SNAP at town hall meetings held by members of Congress.
+
+Food prices are climbing, and there are growing concerns that a recession could be around the corner. As in earlier downturns, that would probably mean that more people would be eligible for SNAP benefits.
+
+Food banks, already struggling to meet demand and facing federal spending cuts, have warned they will not be able to fill gaps caused by reduced SNAP spending or new limits on benefits.
+
+What are some of the obstacles in the way of huge cuts?
+
+Getting the House and the Senate to agree on a budget bill that curbs SNAP spending will be very tricky, to say the least.
+
+Republicans have a very small majority in the House and they would need almost every vote. There are seven House Republicans from areas where over 20% of all residents get SNAP benefits, making it hard for them to vote for changes that would reduce or restrict the program’s scale.
+
+Other House Republicans, especially those expressing concerns about the national debt, are likely to insist that this spending be cut. It is unclear who will win this tug-of-war.
+
+There’s another complication. If substantial SNAP cuts are made in the current budget process, it could make reaching a compromise on a new farm bill even harder than it’s been in recent years. And while the budget can be passed without any votes from Democrats in Congress, the farm bill will require some bipartisan support.",theconversation
+https://theconversation.com,Planned blackouts are becoming more common − and not having cash on hand could cost you,https://theconversation.com/planned-blackouts-are-becoming-more-common-and-not-having-cash-on-hand-could-cost-you-253319,"Tue, 01 Apr 2025 12:13:28 GMT","Are you prepared for when the power goes out? To prevent massive wildfires in drought-prone, high-wind areas, electrical companies have begun preemptively shutting off electricity. These planned shutdowns are called public safety power shutoffs, abbreviated to PSPS, and they’re increasingly common. So far this year, we’ve seen them in Texas, New Mexico and California.
+
+Unlike regular power failures, which on average last only about two hours while a piece of broken equipment is repaired, a PSPS lasts until weather conditions improve, which could be days. And these shutoffs come at a steep price. In 2010 alone, they cost California over US$13 billion. A 2019 analysis of shutoffs in Placer County, California, found that they harmed 70% of local businesses.
+
+I am a business school professor who studies how people pay for things, including during emergencies. As I point out in my new book “The Power of Cash: Why Using Paper Money is Good for You and Society,” many people have abandoned paper money and switched to electronic payments such as credit cards and mobile apps. This can become a big problem during an emergency, since these systems need electricity to operate. The switch to electronic payments is making the world less resilient in the face of increasing numbers of major natural disasters.
+
+So if a public safety power shutoff strikes and you don’t have any cash, you may be doubly vulnerable. On the other hand, keeping cash can protect you – and not just you and your family, but also local businesses and your community. After all, keeping the economy moving during shutoffs reduces the financial damage they cause.
+
+Why do they keep turning off the power, anyway?
+
+It’s all about risk.
+
+The world has experienced a number of very destructive wildfires recently. In 2025, large parts of Los Angeles burned to the ground, with over 18,000 buildings destroyed or damaged. In 2023, wildfires in Hawaii killed over 100 people. Massive wildfires have also occurred recently in South Korea, Portugal and Australia.
+
+Governments, people whose houses burned and insurance companies are all looking for someone to blame and pay for the damage. Climate change, which is increasing the world’s average temperatures and drying out trees and grass, is setting the conditions. Since Mother Nature cannot be sued, utilities make handy scapegoats with deep pockets. Electrical utilities are sued because their power lines, transformers and other equipment often start blazes.
+
+So to prevent lawsuits as well as fires, power companies are increasingly turning off the power when the conditions are ripe for a catastrophic blaze. There’s no uniform set of standards for when to impose a shutdown, but in general, power companies do it when there are hot, dry and windy conditions. For example, a PSPS is triggered in Hawaii if there’s a drought, wind gusts are over 45 miles per hour and relative humidity is under 45%.
+
+Power shutoffs are a relatively new idea. They were proposed in California in 2008 and first allowed in 2012.
+
+Since then, power companies across the entire western U.S. from Texas to Hawaii have adopted these plans. Shutoff plans also stretch from southern border states such as Arizona to northern border states such as Idaho and Montana.
+
+Shutting off the power is a huge problem, since it causes massive disruption to communities. People depend on power to run medical equipment, work and keep communities safe. Even people with a desperate need for electricity, such as those on medical life support, are not immune to a safety shutoff.
+
+How to prepare for a PSPS
+
+As the world warms, the chance of being caught in a preemptive power shutoff increases. What can you do to minimize the impact?
+
+Having solar panels won’t protect you: Utilities shut off customers with solar panels to block those panels from pushing power onto the grid, since the whole goal is to shut off the grid. The only way for you to still have power is to buy a battery storage system and a transfer switch, which allows you to take your system completely off the grid. But this is very expensive.
+
+Getting a portable generator is only a partial solution for a multiday shutoff, since most last only six to 18 hours on a single tank of gas. Plus, generators run very hot, which creates its own fire risk.
+
+Another way to minimize the impact of both a power shutoff and a wildfire is to create a small disaster relief kit, or “go bag.” Creating one is relatively inexpensive. It should contain key items such as water, your medicines, some shelf-stable food – and importantly, some cash. Even some government websites forget to mention this.
+
+It’s also important to use paper money before a shutoff happens. I have all too frequently seen gas station attendants, supermarket checkout clerks and restaurant servers have no idea how to handle cash.
+
+Recently at my local supermarket, for example, I paid with a $20 bill. The cashier had to ask another employee which kinds of coins to use to make change. If people don’t know how to handle cash during normal times, it ceases to be useful during emergencies.
+
+As the world warms, public safety power shutoffs will occur more frequently. The shutoffs clearly highlight the trade-off between economic and social disruption versus preventing dangerous wildfires. These shutoffs show there are no easy solutions – only hard choices.
+
+There are a few sensible and easy steps to take to reduce the impact of these shutoffs. One is to understand that during one of the very moments you might really need to spend money, modern payment systems fail. Holding and frequently using old-fashioned cash is a simple and low-cost way to protect yourself and your family.",theconversation
+https://theconversation.com,Land reparations are possible − and over 225 US communities are already working to make amends for slavery and colonization,https://theconversation.com/land-reparations-are-possible-and-over-225-us-communities-are-already-working-to-make-amends-for-slavery-and-colonization-246106,"Tue, 01 Apr 2025 12:13:13 GMT","Ever since the United States government’s unfulfilled promise of giving every newly freed Black American “40 acres and a mule” after the Civil War, descendants of the enslaved have repeatedly proposed the idea of redistributing land to redress the nation’s legacies of slavery.
+
+Land-based reparations are also a form of redress for the territorial theft of colonialism.
+
+Around the world, politicians tend to dismiss calls for such initiatives as wishful thinking at best and discrimination at worst. Or else, they are swatted away as too complex to implement, legally and practically.
+
+Yet our research shows a growing number of municipalities and communities across the U.S. are quietly taking up the charge.
+
+We are geographers who since 2021 have been documenting and analyzing over 225 examples of reparative programs underway in U.S. cities, states and regions. Notably, over half of them center land return.
+
+These efforts show how working locally to grapple with the complexity of land-based reparations is a necessary and feasible part of the nation’s healing process.
+
+The Evanston effect
+
+Evanston, Illinois, launched the country’s first publicly funded housing reparations program in 2019.
+
+In its current form, Evanston’s Restorative Housing Program has provided disbursements to more than 200 recipients. All are Black residents of Evanston or direct descendants of residents who experienced housing discrimination between 1919 and 1969. Benefits include down payment assistance and mortgage assistance as well as funds to make home repairs and improvements.
+
+The goal is to redress the harm Evanston caused during these 50-plus years of racial discrimination in public schools, hospitals, buses and segregated residential zoning. During that same period, banks in Evanston, as in other U.S. cities, also refused to give Black residents mortgages, credit or insurance for homes in white neighborhoods.
+
+“I always said you can keep the mule,” program beneficiary Ron Butler told NBC News in 2024. “Give me the 40 acres in Evanston.”
+
+Reparations that focus on land, housing and property are about more than making amends for centuries of racial discrimination. They help to restore people’s self-determination, autonomy and freedom.
+
+Following Evanston’s lead, in 2021 a group of 11 U.S. mayors created Mayors Organized for Reparations and Equity, a coalition committed to developing pilot reparations programs. Members include Los Angeles, Austin and Asheville.
+
+The cities act as sites to generate ideas about how reparation initiatives could be scaled up nationally. Each mayor is advised by committees made up of representatives from local Black-led organizations.
+
+Colonial reparations
+
+In recent years the city of Eureka, in Northern California, has been returning some territory to its Native inhabitants.
+
+Indigenous people often call this process rematriation; it’s part of a broader effort to restore sovereignty and sacred relationships to their ancestral lands.
+
+In 2019, after years of petitioning by members of the Wiyot people, the Eureka City Council returned 200 acres of Tuluwat Island, a 280-acre island in Humboldt Bay where European settlers in 1860 massacred about 200 Wiyot women and children.
+
+“It’s a sovereignty issue, a self-governance issue,” said Wiyot tribal administrator Michelle Vassel in a November 2023 radio interview.
+
+Minneapolis’ sale of city lots to the Red Lake Nation for $1 in 2023 is another example of how city governments can make amends for past Indigenous displacement and removal. Plans to develop the low-cost lots include a cultural center for Red Lake people, an opioid treatment center and potentially housing.
+
+The Red Lake Reservation once included 3.3 million acres. The 1889 Dawes Act forced the Red Lake Band to cede all but 300,000 acres. The federal government later returned some land, but today the reservation is still only a quarter of its original size.
+
+Reparations are critical to racial equity
+
+These initiatives may sound like a drop in the bucket considering the vast harms committed over centuries of slavery and colonization. Yet they prove that governments can craft targeted, achievable and meaningful policies to address colonialism and enslavement.
+
+They also tackle a frequent critique of reparations, which is that slavery and colonialism happened centuries ago. Yet their effects continue to harm Black and Native communities generations later. Today, white households in the U.S. have roughly nine times the wealth of typical Black households.
+
+One explanation for this racial disparity is that Black households earn 20% less than their white counterparts. But a more meaningful driver is what scholars call the “intergenerational transmission chain” – that is, the role that gifts and inheritance play in wealth generation.
+
+That’s why reparations – with both land and money – are so critical to creating racial equity.
+
+Still, reparations programs do raise a host of complex, practical questions. Which kinds of historic racial injustice take priority, and what form should repair take? Who qualifies for the benefits?
+
+Community-based land reparations
+
+Reparations don’t have to come from the government.
+
+In recent years, more than a hundred community-based organizations across the U.S. have introduced their own initiatives to redistribute land and wealth to make amends for past injustices.
+
+Makoce Ikikcupi, in the Minnesota River Valley, is a community reparations program led by Dakota peoples. Since 2009, the group has been collecting funds to buy back portions of the Dakota homeland. One revenue source is voluntary contributions from descendants of Europeans who colonized that land. This fundraising strategy is sometimes called “real rent” or “back rent.”
+
+The group purchased its first 21-acre parcel of land in 2019, where it is building traditional earth lodges, with plans for several self-sustaining Dakota villages.
+
+“We consider our donation…‘back rent,’” reads the testimony of one monthly contributor, Josina Manu, on the group’s webpage. He calls the reclamation of Dakota land a “vital” step “towards creating a just world.”
+
+Fair compensation for eminent domain
+
+Many communities are also working together to repair the legacies of anti-Black racism.
+
+In the 1960s, the city of Athens, Georgia, used eminent domain to build dormitories for the University of Georgia. Paying below market value, it demolished an entire Black neighborhood called Linnentown.
+
+In early 2021, following petitioning from former Linnentown residents who’d lost their homes, the City Council unanimously passed a resolution recognizing their neighborhood’s destruction as “an act of institutionalized white racism and terrorism resulting in intergenerational Black poverty.”
+
+Because Georgia law prohibits government entities from making payments to individuals, a community group stepped in to organize compensation.
+
+The result is Athens Reparations Action, a coalition of churches and community organizations. Formed in 2021, it had raised $120,000 by 2024 to distribute among the 10 families who are Linnentown survivors and descendants.
+
+Backlash
+
+Our research also tracks legal challenges to the reparations initiatives we are studying.
+
+Conservative groups such as Judicial Watch have filed dozens of retaliatory lawsuits against several of them, including Evanston’s Restorative Housing Program. A 2024 class action complaint alleges that the program discriminates based on race, violating the equal protection clause of the U.S. Constitution.
+
+These legal challenges are part of the broader front of conservative-led assaults on voting rights, affirmative action and critical race theory. Like reparations, all are efforts to grapple with the U.S.’s historical mistreatment of Black, Indigenous and other people of color.
+
+Attacking those initiatives is an attempt to preserve what scholar Laura Pulido calls “white innocence.” We expect more of them under a second Trump term already defined by its assault on antidiscrimination policies and programs.
+
+So far, none of Trump’s decrees has targeted reparations specifically. For now, reparations are still legal and constitutional – and possible.",theconversation
+https://theconversation.com,Foreign aid cuts could mean 10 million more HIV infections by 2030 – and almost 3 million extra deaths,https://theconversation.com/foreign-aid-cuts-could-mean-10-million-more-hiv-infections-by-2030-and-almost-3-million-extra-deaths-253017,"Mon, 01 Apr 2030 00:00:00 GMT","In January, the Trump administration ordered a broad pause on all US funding for foreign aid.
+
+Among other issues, this has significant effects on US funding for HIV. The United States has been the world’s biggest donor to international HIV assistance, providing 73% of funding in 2023.
+
+A large part of this is the US President’s Emergency Plan for AIDS Relief (PEPFAR), which oversees programs in low- and middle-income countries to prevent, diagnose and treat the virus. These programs have been significantly disrupted.
+
+What’s more, recent funding cuts for international HIV assistance go beyond the US. Five countries that provide the largest amount of foreign aid for HIV – the US, the United Kingdom, France, Germany and the Netherlands – have announced cuts of between 8% and 70% to international aid in 2025 and 2026.
+
+Together, this may mean a 24% reduction in international HIV spending, in addition to the US foreign aid pause.
+
+We wanted to know how these cuts might affect HIV infections and deaths in the years to come. In a new study, we found the worst-case scenario could see more than 10 million extra infections than what we’d otherwise anticipate in the next five years, and almost 3 million additional deaths.
+
+What is HIV?
+
+HIV (human immunodeficiency virus) is a virus that attacks the body’s immune system. HIV can be transmitted at birth, during unprotected sex or thorough blood-to-blood contact such as shared needles.
+
+If left untreated, HIV can progress to AIDS (acquired immunodeficiency syndrome), a condition in which the immune system is severely damaged, and which can be fatal.
+
+HIV was the world’s deadliest infectious disease in the early 1990s. There’s still no cure for HIV, but modern treatments allow the virus to be suppressed with a daily pill. People with HIV who continue treatment can live without symptoms and don’t risk infecting others.
+
+A sustained global effort towards awareness, prevention, testing and treatment has reduced annual new HIV infections by 39% (from 2.1 million in 2010 to 1.3 million in 2023), and annual deaths by 51% (from 1.3 million to 630,000).
+
+Most of that drop happened in sub-Saharan Africa, where the epidemic was worst. Today, nearly two-thirds of people with HIV live in sub-Saharan Africa, and nearly all live in low- and middle-income countries.
+
+Our study
+
+We wanted to estimate the impact of recent funding cuts from the US, UK, France, Germany and the Netherlands on HIV infections and deaths. To do this, we used our mathematical model for 26 low- and middle-income countries. The model includes data on international HIV spending as well as data on HIV cases and deaths.
+
+These 26 countries represent roughly half of all people living with HIV in low- and middle income countries, and half of international HIV spending. We set up each country model in collaboration with national HIV/AIDS teams, so the data sources reflected the best available local knowledge. We then extrapolated our findings from the 26 countries we modelled to all low- and middle-income countries.
+
+For each country, we first projected the number of new HIV infections and deaths that would occur if HIV spending stayed the same.
+
+Second, we modelled scenarios for anticipated cuts based on a 24% reduction in international HIV funding for each country.
+
+Finally, we modelled scenarios for the possible immediate discontinuation of PEPFAR in addition to other anticipated cuts.
+
+With the 24% cuts and PEPFAR discontinued, we estimated there could be 4.43 million to 10.75 million additional HIV infections between 2025 and 2030, and 770,000 to 2.93 million extra HIV-related deaths. Most of these would be because of cuts to treatment. For children, there could be up to an additional 882,400 infections and 119,000 deaths.
+
+In the more optimistic scenario in which PEPFAR continues but 24% is still cut from international HIV funding, we estimated there could be 70,000 to 1.73 million extra new HIV infections and 5,000 to 61,000 additional deaths between 2025 and 2030. This would still be 50% higher than if current spending were to continue.
+
+The wide range in our estimates reflects low- and middle-income countries committing to far more domestic funding for HIV in the best case, or broader health system dysfunction and a sustained gap in funding for HIV treatment in the worst case.
+
+Some funding for HIV treatment may be saved by taking that money from HIV prevention efforts, but this would have other consequences.
+
+The range also reflects limitations in the available data, and uncertainty within our analysis. But most of our assumptions were cautious, so these results likely underestimate the true impacts of funding cuts to HIV programs globally.
+
+Sending progress backwards
+
+If funding cuts continue, the world could face higher rates of annual new HIV infections by 2030 (up to 3.4 million) than at the peak of the global epidemic in 1995 (3.3 million).
+
+Sub-Saharan Africa will experience by far the greatest effects due to the high proportion of HIV treatment that has relied on international funding.
+
+In other regions, we estimate vulnerable groups such as people who inject drugs, sex workers, men who have sex with men, and trans and gender diverse people may experience increases in new HIV infections that are 1.3 to 6 times greater than the general population.
+
+Will Oliver/EPA
+
+The Asia-Pacific received US$591 million in international funding for HIV in 2023, which is the second highest after sub-Saharan Africa. So this region would likely experience a substantial rise in HIV as a result of anticipated funding cuts.
+
+Notably, more than 10% of new HIV infections among people born in Australia are estimated to have been acquired overseas. More HIV in the region is likely to mean more HIV in Australia.
+
+But concern is greatest for countries that are most acutely affected by HIV and AIDS, many of which will be most affected by international funding cuts.",theconversation
+https://theconversation.com,Canada a 51st state? Here’s how American annexation could actually favour Canada,https://theconversation.com/canada-a-51st-state-heres-how-american-annexation-could-actually-favour-canada-251547,"Tue, 01 Apr 2025 11:35:39 GMT","When United States President Donald Trump first floated the idea of annexing Canada, many observers rolled their eyes. The common assumption was that this proposal, like much of Trump’s bombast, amounted to little more than a fleeting soundbite.
+
+Yet, amid continuing public remarks about Canada becoming the 51st state and suggestions of genuine intent, the idea has become part of a broader conversation about North America’s future.
+
+The idea of the U.S. merging with Canada outright has not been received well in Canada, especially because Trump’s threats have been accompanied by economic warfare aimed at forcing Canada into submission. After all, the U.S. already has 50 states. Canada, with its population of about 40 million and its immense geographic size, would be an outsized “51st” by any comparison.
+
+But any serious analysis of this proposition quickly reveals that annexation would be far more complicated — and far less one-sided — than the label “51st state.”
+
+Our analysis is premised on an assumption that the U.S. remains a democratic system that has not turned into a pseudo-monarchy, in keeping with a Trump social media post in early February proclaiming “long live the King.”
+
+The most important takeaway from our analysis is that a unified country would need to inaugurate a new president and Parliament. The path towards the integration of the countries would have to start with closer economic integration, not the alienation currently in place.
+
+A multi-state reality
+
+As we argue in our newest self-published book Make America Greater? A Scenario of a Friendly Canada-U.S. Merger, Canada would not simply become part of the U.S. as a single state under the provisions of the American Constitution.
+
+Based on population and the distribution of power in U.S. Congress, Canada’s 10 provinces and three northern territories would almost certainly be carved into multiple states, perhaps nine or more.
+
+This is no small detail.
+
+America’s unique electoral arithmetic grants each state two senators, while seats in the House of Representatives depend on population size. With around 40 million new citizens, a unified North America would reshape the balance of power in both the Senate and the House.
+
+Read more: Canada as a 51st state? Republicans would never win another general election
+
+Critically, the new country formed via unification might end up looking far more like Canada than many Americans imagine.
+
+Why? Canadian voters lean more centrist — or even centre-left — than the average American does. Over time, that could tilt congressional priorities in favour of policies reflecting Canada’s taste for universal health care, stricter gun control and robust social welfare.
+
+The longstanding political tug-of-war in the U.S. could see its centre of gravity shift, likely to the chagrin of some more conservative segments of the existing union.
+
+(AP Photo/J. David Ake)
+
+Tariffs, politics and tensions
+
+Officials on both sides of the border are already locked in a dance of retaliatory tariffs.
+
+Each new measure escalates anxieties, threatening to derail one of the world’s largest bilateral trading relationships.
+
+Some might argue that if tariffs are putting negative pressures on the economy and roiling the markets, perhaps deeper integration — or even full-blown unification — could serve as a release valve. But the path towards a friendly merger is best taken step-by-step and starts with stronger economic integration, not alienation.
+
+Read more: Canada's response to Trump's tariffs was strategic, but there is room for improvement
+
+Forging a genuine union goes well beyond removing trade barriers. Canada and the U.S. differ on far more than just economics: from bilingualism laws to gun regulations, from health care to environmental policy, the two countries embody contrasting visions of how society should function.
+
+Canadians would expect to preserve elements of their social contract that many regard as superior to American norms — particularly their single-payer health-care system and comparatively strict firearms restrictions.
+
+A process genuinely aimed at integrating the two countries would take this into account. It would extend the United States-Mexico-Canada trade deal further to strengthen economic integration, elevate the rights of French and Spanish speakers in the U.S. in order to signal compatible cultural values and extend Medicare to show an appreciation of the common denominators of the two societies.
+
+Trump’s current rhetoric, however, does not seem to indicate a genuine desire for a unification.
+
+THE CANADIAN PRESS/Justin Tang
+
+Why a merger could favour Canada
+
+As surprising as it seems, our analysis suggests that a unified North America could lean Canada’s way over time.
+
+Even if the American Electoral College were reimagined — or scrapped — Canadian provinces transformed into states would wield significant power, influencing everything from budget allocations to Supreme Court appointments.
+
+Read more: As Joe Biden becomes president, here's an easy proposal for Electoral College reform
+
+What’s more, cultural convergence has an asymmetrical pull. Younger Americans show a growing appetite for social safety nets, while Canadians remain broadly wedded to their publicly funded health-care model.
+
+Over a few election cycles, these forces could converge into a more expansive welfare regime, something that would astonish traditional conservatives across the current 50 states.
+
+A combined North America would boast one of the largest economies on Earth, including abundant natural resources and technological innovation.
+
+The promise of frictionless trade, a single currency and vast internal markets might delight big business and certain multinational interests. Yet the path would be fraught.
+
+Constitutional arrangements, Indigenous rights, linguistic protections and environmental regulations — all areas in which Canadian norms diverge significantly from American precedents — would have to be reconciled.
+
+Canadians, proud of their universal healthcare, progressive climate policies and lower rates of gun violence, would worry about being subsumed by a more rambunctious, militarized neighbour. Americans, meanwhile, would fear they would be forced to adopt new taxes and policies at odds with their historic emphasis on individual freedoms.
+
+THE CANADIAN PRESS/Justin Tang
+
+A country more closely resembling Canada
+
+Regardless of whether Trump’s annexation talk proves more than just bluster, the notion of a friendly U.S.–Canada merger invites reflection. It reminds us that North America’s two largest nations remain economically interlocked and geographically co-located, though culturally distinct.
+
+With tariffs in place and cross-border tensions mounting, creative solutions are worth examining, even if a merger can — at best — be seen as a long-term vision.
+
+A genuine offer of a merger would require that Canadians to be assured that if such a union did transpire, their voices might echo far more loudly than expected in the halls of Washington, D.C.
+
+And Americans — facing shifting demographics and changing societal values — may discover that the annexation Trump initiated could bring surprises that tilt the new country much closer to its northern neighbour’s ideals than to the status quo below the 49th parallel.",theconversation
+https://theconversation.com,Activists living in exile could strengthen Canada’s democracy — if given the right support,https://theconversation.com/activists-living-in-exile-could-strengthen-canadas-democracy-if-given-the-right-support-251440,"Tue, 01 Apr 2025 15:30:28 GMT","Mounting threats to Canadian sovereignty, particularly — but not exclusively — from United States President Donald Trump, have sparked renewed calls for national resilience.
+
+Trump’s tariffs on Canada and Mexico and inflammatory rhetoric have fuelled a wave of patriotism and nationalism.
+
+However, true independence goes beyond economic concerns. It’s about cultivating, committing to and preserving democratic values, including the protection of fundamental rights and freedoms, and ways of governance that ensure every person is valued, represented and belongs.
+
+Historically, Canada has provided refuge to those who have risked everything to oppose authoritarian regimes, including activists living in exile.
+
+Activists-in-exile are individuals who have been forced to flee their countries due to their work defending human rights, advocating for democratic governance, rooting out corruption, peacebuilding, demanding environmental protection and practising independent journalism, among other endeavours.
+
+These individuals bring with them not only their personal stories and attitudes of resilience, but also their expertise in governance, human rights and social justice. As Canada faces growing challenges and uncertainty, they represent a tremendous potential asset to help Canada defend democracy and promote sustainable peace and development.
+
+A vital force for democracy
+
+Despite their displacement, activists-in-exile continue to play a crucial role in global democratic movements. Unlike traditional diaspora groups focused on cultural preservation, activists-in-exile engage in direct political advocacy and often work to expose foreign interference, counter disinformation and support democratic movements from afar.
+
+Our initiative, Voices in Exile, researches activists-in-exile and amplifies their contributions and advocates for policies that recognize their particular roles in defending democracy and social justice. Their efforts combat corruption, foster peace and protect human rights and well-being.
+
+These individuals have championed women’s rights, campaigned against genocide and fought for free expression and accountable governance. Many continue their advocacy in exile, shaping public discourse and influencing policies both in Canada and abroad.
+
+By welcoming these activists, Canada could strengthen its own institutions — domestically and abroad — and make them more resistant to the forces that undermine democracy, justice and freedom worldwide. Their work is critical in resisting authoritarianism and countering both digital and physical foreign interference.
+
+Overlooking activists-in-exile
+
+Despite their potential, activists-in-exile are often overlooked or met with skepticism in Canada.
+
+Some Canadian politicians, like federal Conservative Leader Pierre Poilievre, have framed their views of patriotism as a matter of national security and economic self-sufficiency, warning against foreign influences. Poilievre recently said immigrants should “leave the war behind” when coming to Canada, implying their past struggles should be forgotten upon arrival.
+
+This is certainly easier said than done, especially in an age where technology can keep people instantly connected across borders. It’s unrealistic and unfair to expect newcomers simply to forget who supported them in their hour of need or the communities that continue to suffer in their absence. They are also unlikely to surrender ongoing interests or their basic values.
+
+Through our work with Voices in Exile, we have learned that many newcomers involuntarily leave behind family, livelihoods and status, only to face significant hurdles re-establishing themselves in Canada. While some activists-in-exile persist and continue to be impactful, they often do so under unnecessary constraints that limit their full potential.
+
+THE CANADIAN PRESS/Justin Tang
+
+If legitimate concerns about professional qualifications and social stability exist, they can be addressed through tailored support systems. While Canada provides resettlement for a limited number of human rights defenders, there is no program to engage with them once they arrive. This needs to change.
+
+At the same time, activists-in-exile should not be treated solely as victims or as potential risks, particularly in light of growing transnational repression. Instead, their specialized knowledge and skills should be recognized as a force to strengthen democracy both in Canada and their countries of origin.
+
+A strategic investment
+
+Recognizing and supporting activists-in-exile would be a strategic investment for Canada, not an act of charity. Many have become educators, researchers and policymakers, shaping debates on governance and security.
+
+Others have founded organizations, launched media platforms and built networks that support democracy movements globally. As our project Voices in Exile shows, many activists-in-exile also contribute to Canada’s economy, and work in law, social and psycho-social services, and the media landscape.
+
+Beyond being a matter of principle, welcoming activists-in-exile is a move that would strengthen Canada’s leadership in the global fight for democracy. Their integration into Canadian society aligns with Canada’s longstanding role in promoting democratic ideals on the world stage.
+
+Yet, despite their vast potential, there is no tailored public policy or dedicated institution to harness this human capital in a way that aligns with Canada’s democratic commitments. The existing guidelines for supporting human rights defenders are insufficient for supporting activists-in-exile.
+
+Canada should support exiled activists by facilitating collaboration among these individuals and Canadian public, academic, community, government and civil society organizations. In addition, Canada should establish a legal framework that allows activists-in-exile to contribute to the development of foreign policy. A dedicated fund should also be created that offers financial support for their activist efforts.
+
+As global authoritarianism continues to rise, the question is not whether we should acknowledge activists-in-exile — it is whether we have the wisdom to lead by example and invest in recognizing and supporting them.",theconversation
+https://theconversation.com,“He’s crazy!” Here’s what we lose when we pathologize politics,https://theconversation.com/hes-crazy-heres-what-we-lose-when-we-pathologize-politics-252263,"Tue, 01 Apr 2025 15:49:31 GMT","There has been a succession of spectacular acts of public violence and terrorism over the last few months, including the murder of the CEO of the insurance company United Healthcare, Brian Thompson, in New York, the suicide of army veteran Matthew Livelsberger in Las Vegas and the car attack in Magdeburg, Germany.
+
+It is tempting to explain these puzzling events as products of mental disorders. The same types of explanations are frequently heard for the unorthodox decisions of United States President Donald Trump. But are these explanations legitimate, or even a good idea?
+
+Trump’s second term in power, which has focused on stoking people’s anger, has given rise to numerous interpretations of this kind. Critics have analyzed Trump’s shocking decrees and statements (for example, “cleaning out” the Gaza Strip) as symptoms of mental illness.
+
+(AP Photo/Jose Luis Magana)
+
+Though they might disagree on its substance, some analysts are taking the Trump administration’s “shock and awe” approach to governance seriously. Others simply claim that the president of the United States is crazy. This characterization is both violent and simplistic.
+
+Thousands of subscribers already receive The Conversation’s Canada Daily newsletter. And you? Subscribe today to our newsletter to better understand today’s major issues.
+
+What is pathologization?
+
+Pathologization refers to the act of explaining actions by presuming or diagnosing an individual pathology. It is a common reflex to explain extreme acts, one that also serves as a catch-all for violent and apparently inexplicable actions.
+
+But what is the social function of pathologizing political violence and violent policies? And how does this affect our understanding of the issues underlying this violence?
+
+As a doctoral student in political philosophy, my research focuses on specific collective traumas and their political dimensions. In a context of increased polarization, I am particularly interested in how trauma and other mental pathologies are used to explain political phenomena such as violence.
+
+Mental health is certainly a political issue. However, on the one hand, using it this way risks depoliticizing actions that are part of a clear political agenda. And on the other, it risks overshadowing the social pathologies that actually emerge from violent policies (such as the collective traumas that result from colonization and war).
+
+(AP Photo/Sergei Grits)
+
+In the case of Donald Trump, pathologizing him is likely to generate confusion about the real motives behind his policies. Indeed, although his incendiary statements are explained as the product of psychological instability, they are, in fact, well thought out. His statements also feed into the collective traumas that fuel political conflicts.
+
+Instrumental pathologization
+
+It’s interesting to compare how pathologization, whether in reference to dementia or trauma, is used to analyze the actions of the powerful vs. the powerless.
+
+(Alcides Antunes via AP)
+
+In the current context, the alleged suicide of Livelsberger in the explosion of a “cybertruck” in front of the Trump Hotel in Las Vegas in January 2025, is telling. As he wrote in his suicide note, the explosion was “not a terrorist attack,” but rather meant as a “wake-up call” for an American public that has become thirsty for “spectacles of violence.”
+
+(Las Vegas Police Department via AP)
+
+However, Livelsberger claimed his suicide was also motivated by the need to “free himself from the burden of the lives” he had taken during his years of service in the military. Several media outlets were quick to note the author’s diagnosis of post-traumatic stress disorder (PTSD), a major issue among American veterans.
+
+So, this spectacular gesture took place at a unique meeting point: it was certainly a political gesture, but one with motivations explicitly linked to psychological suffering.
+
+The violence at the root of the pathology
+
+What is the point of linking the pathologization of the violent political actions of a president to those of an army veteran?
+
+Firstly, because the tendency to pathologize violent acts has long favoured white men: several studies on mass killings, for example, show that violent white men receive more empathetic media treatment than do men of colour.
+
+Secondly, the pathologization of political actions, such as oppositional activism, is a recurring tool of depoliticization through the individualization and stigmatization of collective acts. In the case of Livelsberger, who took individual but spectacular action, the pathologization seems to have rendered the political demands behind the gesture invisible: it became about trauma, case closed.
+
+Ultimately, the over-visibility of individual pathologies such as PTSD, combined with the pathologization of the actions of the powerful — like Trump — become a strategy that masks the collective traumas that are actually the underlying cause of political violence.
+
+While simultaneously explaining Livelsberger’s suicide and the violent policies of the American president as products of mental illness, we overlook the social traumas that are the source of large-scale violence, such as the traumas of wars in the Middle East and those of socio-political events in the U.S. and the rest of the world. These are bound to increase as fascism, already uninhibited, continues to progress.
+
+The need to think about collective trauma
+
+Khaled Diab, a Belgian and Egyptian journalist for the Guardian who specializes in Middle Eastern politics, pointed out in a 2023 article that collective trauma is the cornerstone of the Israeli-Palestinian war. It nurtures a mistrust that poisons the idea of coexistence “by investing violence with a hypnotic redemptive value.”
+
+(AP Photo/Abdel Kareem Hana)
+
+The risks of pathologization are very real, especially in the context of rising fascism in some areas of the world.
+
+Explaining violent actions and policies in terms of individual pathologies can mask their real causes, namely divisive discourses and conflicts. What’s more, reducing violence to a pathology can conceal the other function of these very discourses and conflicts by presenting the use of violence as “redemptive.” This rhetorical tool is used in Trump’s agenda and in other cases of fascism centred on popular anger.
+
+To put it another way, pathologization camouflages the system behind the violence, but also the collective traumas that stir further violence, both here and elsewhere.
+
+Now, more than ever, we must remember that while individual pathologies can be treated — provided that therapies are accessible, an ideal far from being achieved everywhere — overcoming collective traumas requires much more time, resources and resilience. Unfortunately, these traumas can feed the very collective resentment that is at the root of fascism.",theconversation
+https://theconversation.com,‘Adolescence’ on Neflix: A painful wake-up call about unregulated internet use for teens,https://theconversation.com/adolescence-on-neflix-a-painful-wake-up-call-about-unregulated-internet-use-for-teens-253068,"Tue, 01 Apr 2025 13:50:57 GMT","This story contains spoilers about the Netflix series ‘Adolescence.’
+
+In the Netflix series Adolescence, we have no idea why Jamie Miller (Owen Cooper) is arrested at the beginning of the first episode. The tension from seeing a helpless 13-year-old boy escorted to a police station and interrogated holds us to the screen. Every minute of the one-hour episode, shot in a single continuous take, makes us feel like we are in the police station with the Miller family, viewing things through his parents’ disorientation.
+
+As the plot unfolds, we are given clues to explain the inexplicable, but we can’t fully appreciate the show’s magnitude until the very last scene, a dramatic moment where we see the boy’s father (Stephen Graham) cry over his son’s teddy bear while asking it for forgiveness.
+
+From an educational psychology angle, the show is ripe for analysis. One could comment on the premature sexualization of young girls and boys or the obsolete sense, for parents, that they can assume kids are safe when they’re at home in their rooms.
+
+However, as a doctoral student in educational psychology, I am mostly concerned with human learning — both the cognitive development that must accompany successful learners, and how children and youth understand the world through relationships.
+
+The state of Jamie’s cognitive development and of teenagers in general may help us understand his frame of mind — or the “why” that detective Luke Bascombe (Ashley Walters) pursues.
+
+For parents, this show raises serious questions about the crisis in parent-child communication and how the internet is shaping children’s behaviour and minds. I suggest turning to the practice of dialogue as a way for parents to strengthen their communication with their children and learn about each other and the world.
+
+Children’s minds
+
+According to the government of Canada, “any human being below the age of 18” is defined as a child. Children can’t be recruited to join the Armed Forces, sign legal contracts, drive, vote, marry, drink alcohol and so on. As adults, we understand that these prohibitions not only protect them but also us.
+
+Setting aside ethical reasons why children shouldn’t do any of these things, the major reason is due to the developmental state of their minds.
+
+To better understand this, we must consider executive function, also called cognitive control. Executive function refers to the unconscious cognitive processes of abstract thinking, inhibition, impulse control and planning that allow us to consciously control and direct our thoughts to goals, actions and emotions.
+
+Think of executive control as interconnected paths in the brain. In an adolescent’s brain, these paths resemble more of a labyrinth, with difficult and sometimes non-working passages.
+
+Children and adolescents’ cognitive development are in “sensitive periods” in which their brains are more plastic and susceptible to environmental influences. Besides not having full control of their thought processes, research has also shown that abstract and more “neutral” cognitive skills develop earlier than those that involve motivated or emotionally charged actions.
+
+Ability to weigh options still developing
+
+Adolescents might be mature enough to solve complex math problems, but still feel helpless when needing to be polite to someone they believe offended them (not an easy task for adults either). In such a case, one would need to “step back” from the situation, and weigh options to respond.
+
+An adult might think “maybe I misinterpreted what this person said” or “if I offend them back, I risk losing my job/friendship/reputation.” By dwelling on different course of actions, they don’t act impulsively.
+
+This is precisely the ability that adolescents are still developing.
+
+(Netflix)
+
+Virtual selves and threats
+
+When adolescents engage with social media, they can be exposed to a threatening environment where they must assert their virtual selves and deal with bullying and inappropriate content, while lacking full control of their thought processes.
+
+Yet, as American social psychologist Jonathan Haidt has chronicled, our society has allowed adolescents to take part in this at grave risk. With maturing cognitive capabilities, teens are at risk in an online environment that thrives on extreme views and hijacks emotions.
+
+As a victim of cyberbullying, Jamie was probably not equipped with the cognitive abilities to step back from the situation and seek help. Instead, he responds to cruelty he experienced with cruelty he knew.
+
+With unregulated internet use, in terms of both content and unrestricted time spent online, communication with parents atrophies. At its core, Adolescence is a painful wake-up call to the effects of unregulated internet usage in teens, and how the communication abyss that separates Gen X from Gen Z gives way to calamity.
+
+Clueless adults, aware teens
+
+Nowhere in the show is this distance more evident than when police detectives move cluelessly through Jamie’s school trying to understand his motives, while the students seem cynically aware of what really happened.
+
+(Netflix)
+
+In a typical moment reflecting contemporary intergenerational dynamics in which the Gen Zs explain stuff to their analog parents, Bascombe’s son is the one to enlighten him about incel subculture and what certain emojis represent.
+
+It becomes clear that pop-cultural references mean different things to a younger generation. For example, “red pill” was appropriated from The Matrix and is now used for those who “see the truth” and reject feminism.
+
+Generations are comfortable communicating in different ways. Teens, for example, are clever texters. They use images, edit reels and create memes to convey subtle and often complex feelings.
+
+In contrast, teens’ discomfort with face-to-face conversations is explicit in the last episode of Adolescence, when the Miller family drives to a hardware store. The parents play a song from their prom and reminisce. The oldest daughter is with them, but not present, focused on her phone and only sporadically joining the conversation.
+
+Why dialogue matters
+
+Parents and their children may find direction through dialogue. This ancient practice is based on the view of the world as becoming, with infinite internal and external contradictions that must be overcome so that new understandings of reality may emerge.
+
+Dialogue was famously advanced as an educational practice by philosopher of education, Paulo Freire.
+
+Freire believed people must come together to share their meanings of the world, and through this push and pull of ideas, reasons and opinions, conceptualize new forms of understanding. For parents, this means that without trying to understand what teens are saying and, importantly, how they are saying it, we can’t possibly create a better future for all of us.
+
+Open channel needed
+
+Engaging in dialogue involves two things: asking and answering questions. It is not a matter of merely extracting information (although knowing what children are doing is important), but rather of mutually sharing interests and letting it guide discovery.
+
+When parents and children find a channel, communication opens and for as long as the mutual interest is there, they can steadily build meaningful connections that transform how they see the world and their relationships.
+
+With renewed urgency, dialogue that validates the interests and knowledge of both parents and children can offer a way out of the polarization created between them by long hours spent online.",theconversation
+https://theconversation.com,Cannabis retail expansion in Canada came with only a small uptick in the number of consumers,https://theconversation.com/cannabis-retail-expansion-in-canada-came-with-only-a-small-uptick-in-the-number-of-consumers-252008,"Tue, 01 Apr 2025 11:54:20 GMT","Ever since recreational cannabis was legalized across Canada in 2018, researchers have been studying what that decision changed for Canadians.
+
+We’ve learned, for example, that some patients immediately left the medical cannabis system, presumably to use recreational products instead. Conversely, legalization appeared to have no effect on Canadian alcohol sales.
+
+We’ve similarly seen how cannabis retailing has evolved since it became legal.
+
+Retailers suffered from product shortages during legalization’s first six months, but steadily expanded soon after. Canada went from having some 210 stores in April 2019 to 3,500 in April 2023. The ensuing competition pushed prices down 28 per cent during that period.
+
+Meanwhile, provincial governments have tried various regulatory approaches. Some initially restricted the number of stores to avoid tempting non-users. Québec still has 10 times fewer stores per capita than Ontario does as a result. Other provinces have set minimum prices to discourage people from overindulging. For example, Ontario won’t let wholesale prices drop below $2.28 per gram.
+
+These developments in business and government policy prompted my latest research. I wanted to understand what effect retail expansion had on cannabis use. To do this, I analyzed consumer responses on government surveys collected between 2019 to 2023. I then compared these responses to the recreational cannabis consumer price index and the numbers of licensed stores in each province.
+
+Did Canadians consume cannabis more widely, more frequently and at younger ages as it became more accessible and affordable? The answer was mostly no.
+
+More women and older adult consumers
+
+The percentage of men who used cannabis stayed around 28 per cent between 2019 and 2023 — despite retailers’ massive store growth and notable price cuts.
+
+But usage did grow slightly among women — rising from 21 per cent in 2019 to 23 per cent in 2023. My analysis suggests this was related to the increasing affordability of cannabis, not its retail convenience. More women consumed cannabis when prices fell, not when more shops opened.
+
+(Michael J. Armstrong/ Health Canada) , Author provided (no reuse)
+
+A similar contrast appeared between younger and older adults. Cannabis use among Canadians aged 25 and over crept upward from 21 to 23 per cent. That increase again seemed related to falling prices rather than expanding stores. Meanwhile, usage among those aged 16 to 24 varied year-to-year, but remained around 46 per cent.
+
+The average age of first-time use consequently rose from 19.2 in 2019 to 20.8 years old in 2023. This finding also seemed correlated with both falling prices and expanding stores.
+
+Same frequency, more edibles
+
+One thing that didn’t change much was frequency of use. About one-quarter of cannabis consumers used it five or more days per week in both 2019 and 2023.
+
+However, their product preferences shifted. The percentage who smoked dried cannabis decreased while the percentage of consumers who consumed edibles increased. Some consumers used both types of products, or used other products entirely — such as vapes. Both changes seemed related to prices rather than the number of retail stores. Consumers seemingly traded-up from basic dried cannabis to processed edibles as prices fell.
+
+Michael J. Armstrong/ Health Canada , Author provided (no reuse)
+
+So overall, Canada’s substantial retail developments came with only modest usage growth.
+
+The apparent relationships between usage and price might partly be coincidental. Product selection and quality also improved, so they likely contributed too. But falling prices do seem to be a plausible explanation for the increased cannabis consumption that was seen.
+
+The lack of relationship between stores and usage might seem surprising. After all, Canada experienced a 16-fold explosion in stores between 2019 and 2023. But this finding correlates with what my previous research found; it showed that between 2018 and 2020, there was a similar non-relationship between retail expansion of cannabis stores and usage.
+
+Read more: Cannabis store openings in Canada only slightly affected the number of users
+
+So, perhaps the main effect of retail stores was to draw existing users away from illegal dealers, rather than to tempt new ones.
+
+I suspect retailers probably influenced usage somewhat in their local neighbourhoods. For example, someone who walked by a new store daily on their way to work might have decided to try cannabis. But this effect would have been too small to appear in province-level measurements.
+
+Price restriction
+
+The findings from my study suggests some tentative lessons for regulators.
+
+If opening more stores has minimal impact on usage, there’s little need to limit their numbers. Provinces don’t need to ration store licenses, and municipalities (like Markham and Oakville in Ontario) don’t need to ban them.
+
+But since price declines tempt more consumers, it’s important for policymakers to prevent prices from getting too low.
+
+Other countries who are considering legalizing cannabis may want to consider these points, too.
+
+For example, medical cannabis use is surging in Australia, much like it was in Canada a decade ago. And Australia’s Green Party is campaigning for recreational legalization in the upcoming federal election. If that election produces a coalition government, legalization might be on its agenda. They could look at our policies and hopefully improve on them.
+
+Meanwhile in Germany, the previous government legalized recreational use, but not sales. So, Germans must grow their own plants or join a club that does. Commercial products are sold only through the country’s medical cannabis system. Unsurprisingly, medical use is soaring there. Based on what my research suggests, Germany will likely see similar usage growth, whether it allows stores or not. But allowing stores would mean consumers could buy products from licensed sources instead of illicit dealers.
+
+Canada’s cannabis legalization was controversial at the time. But some Canadians say it has become a memorable part of Justin Trudeau’s complicated legacy. Now that he’s no longer prime minister, that’s something he and his biographers can contemplate.",theconversation
+https://theconversation.com,From barriers to belonging: How supporting inclusivity enhances the well-being of people with disabilities,https://theconversation.com/from-barriers-to-belonging-how-supporting-inclusivity-enhances-the-well-being-of-people-with-disabilities-249339,"Tue, 01 Apr 2025 14:38:22 GMT","What does it mean for a city to be accommodating to all its citizens?
+
+This requires understanding how individuals feel included and valued in the places they live, and responding to their needs by emphasizing genuine inclusivity. For people with mobility challenges, it means feeling no different from others. This applies both to navigating urban spaces and engaging in social interactions.
+
+Despite efforts to improve accessibility in Canada, many urban spaces still fall short, leaving wheelchair users facing subtle but persistent barriers. We wanted to understand the different challenges and barriers people with disabilities face when using mobility aids.
+
+To do this, we interviewed 12 experienced physiotherapists in Iran to identify gaps in how mobility aid serve the needs of those who use them, and offer recommendations based on their extensive interactions with users.
+
+Given the universal needs of mobility aid users — emotional well-being, social integration and functional independence — and the common challenges they face accessing health-care systems around the world, our findings can are relevant for many people around the world, including in Canada.
+
+THE CANADIAN PRESS/Eduardo Lima
+
+Inclusive design
+
+To create truly inclusive cities, it is vital for policymakers and experts to go beyond minimum standards and critically examine how our urban spaces continue to exclude people with disabilities.
+
+Marketing professors Vanessa Patrick and Candice Hollenbeck have developed the DARE framework — design, appraisal, response and experience — and propose three levels of inclusive design aimed to make spaces more inclusive for people with disabilities.
+
+Level 1 ensures accessibility through industry regulations, meeting minimum standards. Level 2 fosters engagement and equity, rooted in social justice principles, by validating user experiences and emphasizing empathy. Level 3 aims to minimize mismatches between users and design, promoting human flourishing through seamless interaction among individuals, the design and their environment.
+
+Our study outlines how people perceive the inclusivity of mobility aids based on the cost, how they are built and how effective they are in different environments.
+
+We also considered perceptions of trustworthiness, support and contextual factors, including the social interpretations and representations of these devices. We highlight gaps in users’ needs and provide recommendations to address them. Through this analysis, we identified four key themes that offer valuable insights for enhancing inclusivity.
+
+Financial burden
+
+For some, mobility aids can be an added financial burden. Financial constraints may limit access to mobility aids, often forcing users to seek alternatives or delay rehabilitation, potentially worsening their conditions. For example, individuals might resort to second-hand mobility aids which may not be fitted correctly for them.
+
+Globally, only five to 35 per cent of the 80 million people who need a wheelchair have access to one depending on where they live, with high costs being a primary barrier.
+
+The high cost of advanced electric wheelchairs further restrict access. This marks a gap at the first level of inclusivity in the DARE framework, where market-driven prices fall short of meeting mobility aid users’ needs.
+
+Initiatives like the European Union’s Rehabilitation Policy Action Framework have called for increased governmental financial support for mobility aid users. This framework offers 48 options across six domains to translate political goals into action, such as reallocating health-care funds to expand rehabilitation and improve inclusivity.
+
+Mismatches between users and mobility aids
+
+In using mobility aids, a user will typically evaluate two aspects: the design features of the aids themselves and how well they function in their environment.
+
+If the mobility aid is slightly mismatched with their requirements, the user may find alternative solutions, such as adding padding to a wheelchair to relieve pressure. However, severe mismatches can lead to negative outcomes and result in unmet mobility needs. Furthermore, inadequate anthropometric and ergonomic adjustments can lead to discomfort.
+
+Similarly, environmental mismatches, such as barriers that disrupt navigation, can reinforce negative stereotypes and condescending attitudes. These barriers can hinder a person’s mobility and ultimately deter them from going out and engaging in social activities.
+
+New developments and technologies can not only address and mitigate certain mismatches but also positively impact users’ psychological and social needs. However, integrating new technologies requires careful consideration, as assistive devices can also attract social stigma.
+
+Therefore, it is important to identify which technological or esthetic features of mobility aids evoke positive emotions and minimize stigma.
+
+Mobility aid users, like everyone, deserve equal consideration in design and planning. Programs like Europe’s Design for All (DfA) and Singapore’s Barrier-Free Accessibility (BFA) promote barrier-free design for all abilities and socioeconomic backgrounds.
+
+THE CANADIAN PRESS/Jeff McIntosh
+
+Improving trust
+
+Trustworthiness is a critical factor in the use of mobility aids, particularly in unfamiliar settings where users may feel uncertain.
+
+To address this, users seek continuous reassurance about the reliability of their aids, often depending on the support of physiotherapists to navigate mismatches between their needs and their surroundings. Such professional support enhances confidence and mental well-being. Physiotherapists, as trusted experts, can remarkably shape users’ perceptions and acceptance of mobility aids.
+
+Ensuring trustworthy designs is also crucial, as perceived fragility can undermine user trust. Validating experiences, building trust across environments — including trust in physiotherapists and mobility aid products — is essential to alleviating doubts about how effective they might be.
+
+Sociocultural influences
+
+Sociocultural context and the causes of a disability play a significant role in shaping perceptions of mobility aids.
+
+Regardless of users’ personal experiences, others tend to view mobility aids through the lens of prevailing societal attitudes toward disability. For some, mobility aids may reinforce stereotypes about disabilities. This highlights the critical role of esthetics in shaping public perceptions and social interactions.
+
+For example, incorporating esthetic refinements into the design can help counter negative perceptions. By addressing negative representations and promoting designs that reflect dignity and inclusivity, interventions can align with inclusively goals and enhance positive social engagement.
+
+Raising public awareness is key to challenging stereotypes and building empathy. To create an inclusive society, design and planning should consider both the physical and social barriers to accessibility. Achieving this requires a multi-disciplinary effort, and the active participation of people who use mobility aids.
+
+This article was co-authored by Morteza Farhoudi, an inclusive designer specializing in public transportation studies.",theconversation
+https://theconversation.com,What if the future of Canada passed through Europe?,https://theconversation.com/et-si-lavenir-du-canada-passait-par-leurope-253282,"Tue, 01 Apr 2025 14:56:32 GMT","Canada is now stuck between two giants with divergent interests: the United States and China. It undergoes the counterpouss of trade and geopolitical tensions which oppose these two powers.
+
+On the one hand, an unpredictable and less reliable American neighbor, on the other, a little conciliatory China, which regularly imposes economic sanctions on strategic agricultural products such as soy or pork.
+
+This context exposes the geopolitical vulnerability of Canada, too dependent on its traditional partners.
+
+We are respectively political scientist and economist, specialized in international political economy. Our interest in economic multilateralism, geoeconomics and transatlantic relations pushed us to reflect on the concrete possibilities of tightening the links between Canada and the European Union.
+
+The influence of the United States vacillates
+
+Donald Trump’s second term has accentuated the decline in moral leadership in the United States. By multiplying the withdrawals of multilateral agreements, by displaying proximity to authoritarian regimes and by rekindling the unfounded accusations of electoral fraud, the administration has weakened the position of the United States as a democratic model and a trusted actor on the international scene.
+
+(AP photo/Jacquelyn Martin)
+
+Transatlantic tensions have intensified under the effect of the repeated threats of Donald Trump to remove the United States from NATO, calling into question the security base of the Alliance. Added to this is the impasse of trade negotiations between Washington and Brussels, illustrating the growing differences on international trade rules and the protection of strategic industries.
+
+China is not a credible alternative
+
+Although in full economic ascent, the Chinese authorities do not embody a credible alternative to American withdrawal: their coercive diplomacy, their lack of transparency, their internal tensions, in particular financial (their real estate sector is in great difficulty), limit their attractiveness as a world leader.
+
+Since the arrest in 2018 in Vancouver of Meng Wanzhou, financial director of Huawei, at the request of the United States, Sino-Canadian relations have deteriorated considerably. In retaliation, China arrested two Canadian citizens, Michael Kovrig and Michael Spaval, arousing a lively diplomatic crisis. Since then, distrust has been deeply rooted, fueled by persistent tensions around cybersecurity, foreign interference and commercial restrictions, but also by the recent execution in China of four Canadian citizens, condamized for drug trafficking.
+
+EU: Economic and strategic complementarity
+
+In this global context, the European Union is increasingly confronted with the need to build strategic autonomy, both military and economic, to guarantee its sovereignty and long -term stability.
+
+Read More: The rapprochement between the E-U and Russia has consequences for the security of Ukraine and Europe
+
+To become a stabilizing center, the European Union must meet three conditions: having sufficient economic power, showing a political will to act collectively, and be perceived as a legitimate and credible actor by other democracies. In this perspective, Canada appears as a natural and reliable partner.
+
+On the commercial level, the basics of a reinforced partnership are already there.
+
+The European Union is the second partner of Canada after the United States. In 2023, exchanges of goods and services combined between Canada and the EU reached a value of $ 157.3 billion Canadian dollars. The overall economic and commercial agreement (AECG), in force provisional since 2017, has abolished 98 % of customs duties between the two partners, promoting sustained growth in trade.
+
+Already thousands of subscribers to the conversation newsletter. And you ? Subscribe today to our newsletter to better understand the major contemporary issues.
+
+But further integration would offer full access to the European single market, harmonization of standards, and synergies in key sectors: green technologies, artificial, pharmaceutical or cybersecurity. Canada could also access major European programs such as Horizon Europe, a research fund of 95.5 billion euros (almost $ 148 billion can).
+
+(Saul Loeb, photo pool via AP)
+
+In addition, Canada holds (natural resources for the European energy transition): lithium, cobalt, nickel. Reinforced collaboration would ensure a secure and sustainable supply while promoting strategic industries on both sides of the Atlantic.
+
+Defense and security: to a transatlantic pillar
+
+On the geopolitical level, the European Union begins an important turn.
+
+It develops a common defense policy, supported by a budget of 800 billion euros (1237 G $ can) and reinforced by the Draghi report, which calls for reinforced strategic autonomy, including by consolidating an industrial and technological defense base.
+
+Germany, breaking with its tradition of budgetary rigor, invests massively in its military capacities. Europe no longer only wants to defend itself alongside the United States, but also emancipate itself from an unpredictable America.
+
+(AP photo/manual Balce Ceneta)
+
+Canada, a faithful ally of NATO and a supporter of an order based on law, could play a role in the coalitions of volunteers (a plan to support Ukraine taken following the London summit in March 2025) within the EU, without waiting for the unanimity of the 27. Its participation would strengthen the consistency and efficiency of European action on the international scene.
+
+Towards membership?
+
+The idea of ​​Canada's membership in the European Union is ambitious, but it is not without logic.
+
+Canada meets the criteria of Copenhagen (rule of law, democracy, market economy) and shares the fundamental values ​​of the Union. The main obstacles would rather be of technical or political order: geographic distance, the need for Canada to align its laws and regulations on all European standards (the acquis community), as well as the adaptation of its system of management of the offer in agriculture to the rules of the European domestic market.
+
+However, this perspective should not be addressed in a binary manner. It is not necessary to aim for immediate formal membership. A structuring strategic partnership, inspired by Norwegian or Swiss models, but adapted to Canadian realities, could offer a more flexible path.
+
+Such cooperation could include reinforced access to European markets, participation in common research, defense or energy transition projects, and increased coordination in multilateral institutions.
+
+The objective would not only be economic, but also political and symbolic: to affirm a common commitment to democracy, international cooperation and respect for the global legal order.
+
+A strategic turning point for Canada
+
+In a recomposition world, Canada can no longer count solely on its North American anchoring. It must diversify its partnerships and strengthen its strategic autonomy. The transatlantic link, if it is redesigned in a modern and flexible perspective, can offer this alternative.
+
+A rapprochement with Europe could also contribute to revitalizing democratic debate in Canada, strengthening national cohesion around a common project and its ability to deal with future crises, whether economic, security or climatic.
+
+The time has come to open this debate, not as a fantasy, but as a strategic prospective exercise. The future of Canada may well take shape on the other side of the Atlantic.",theconversation
+https://theconversation.com,University of Ottawa on The Conversation,https://theconversation.com/institutions/luniversite-dottawa-university-of-ottawa-1165,"Tue, 01 Apr 2025 15:49:31 GMT","L'Université d'Ottawa /The University of Ottawa—Un carrefour d'idées et de culture/A crossroads of cultures and ideas
+
+Un carrefour d’idées et de cultures L’Université d’Ottawa compte plus de 50 000 étudiants, professeurs et employés administratifs qui vivent, travaillent et étudient en français et en anglais. Notre campus est un véritable carrefour des cultures et des idées, où les esprits audacieux se rassemblent pour relancer le débat et faire naître des idées transformatrices. Nous sommes l’une des 10 meilleures universités de recherche du Canada; nos professeurs et chercheurs explorent de nouvelles façons de relever les défis d’aujourd’hui. Classée parmi les 200 meilleures universités du monde, l’Université d’Ottawa attire les plus brillants penseurs et est ouverte à divers points de vue provenant de partout dans le monde.
+
+The University of Ottawa is home to over 50,000 students, faculty and staff, who live, work and study in both French and English. Our campus is diverse with more than 300 undergraduate programs and 150 graduate degrees in 10 faculties. The university has an extensive co-op program boasting a 95 per cent placement rate. Our campus is a crossroads of cultures and ideas, where bold minds come together to inspire game-changing ideas. We are one of Canada’s top 10 research universities—our professors and researchers explore new approaches to today’s challenges. Ranked among the top 150 universities in the world, we attract exceptional thinkers and welcome diverse perspectives from across the globe.",theconversation
+https://theconversation.com,‘Signalgate’ was damaging to the Trump administration. It could be deadly for Yemeni civilians,https://theconversation.com/signalgate-was-damaging-to-the-trump-administration-it-could-be-deadly-for-yemeni-civilians-253524,"Tue, 01 Apr 2025 02:15:03 GMT","The “Signalgate” story has received wall-to-wall coverage since Jeffrey Goldberg, the editor of The Atlantic, published explosive details about a Signal group chat where senior US officials discussed impending airstrikes against the Houthis in Yemen.
+
+Perhaps unsurprisingly, the coverage has focused on details of most concern to Western audiences, including the depth of the security breach, the classification status of the material that was shared, and the implications of sending war plans through a non-secure platform.
+
+But what are the implications of this for Yemen? In short, it helps the Houthis and hurts the civilians living under their control.
+
+Providing the Houthis with intelligence
+
+Yemeni civilians are caught in an impossible position. They have suffered from years of ruthless violence in a civil war that began with the Houthi capture of the capital, Sana'a, in 2014. The conflict grew even more violent when a Saudi-led (and Western-backed) military coalition entered the fray to back the Yemeni government the following year, imposing a crippling blockade that lasted until 2021.
+
+The war has caused a humanitarian disaster, with malnutrition rates among the highest in the world. The Houthis have consolidated their control over much of Yemen’s population through the weaponisation of food distribution and brutal repression of dissent.
+
+Yahya Arhab/EPA
+
+In early 2024, the Houthis then began attacking ships in the Red Sea, bringing retaliatory strikes by the United States, United Kingdom, and Israel. Each of these have caused further civilian casualties and harm.
+
+The Houthis (and their Iranian and Russian supporters) will draw comfort from the Signal chat group’s apparent confirmation the US strikes on March 15 were not a sign of the Trump administration’s intent to dislodge them from power:
+
+Vice President JD Vance (14 March, 08:16am ET): The strongest reason to do this is, as POTUS said, to send a message. Defence Secretary Pete Hegseth (14 March, 08:27am ET): This [is] not about the Houthis. I see it as two things: 1) Restoring Freedom of Navigation, a core national interest; and 2) Reestablish deterrence, which Biden cratered.
+
+The Houthis can withstand intermittent airstrikes – they have withstood airstrikes for over two decades.
+
+But a more substantial intervention — one that combines a coalition of local forces with guaranteed air support from Saudi Arabia or the United Arab Emirates (with US support) — would pose a far greater threat to the Houthis.
+
+Yahya Arhab/EPA
+
+With this apparently not being considered, the Houthis may now feel emboldened to press-gang more people into military service before a fresh assault on the strategically important oil fields in Marib. This is the last major city in northern Yemen still under government control.
+
+The Houthis have tried to take Marib before, but were prevented by Yemeni troops supported by Saudi air cover. Controlling the oil fields in Marib is vital to the group’s ability to sustain itself economically.
+
+Putting Yemeni civilians at risk
+
+While the Trump administration claims the chat did not compromise sources and methods, Goldberg noted a US-based intelligence officer was named. The Atlantic removed their name for security reasons.
+
+The publication’s decision to remove this detail is a stark reminder of whose security matters — and whose doesn’t. The transcript reads:
+
+National Security Advisor Mike Waltz (15 March, 13:48pm ET): VP. Building collapsed. Had multiple positive ID… Waltz (15 March, 14.00pm ET): Typing too fast. The first target – their top missile guy – we had positive ID of him walking into his girlfriend’s building and it’s now collapsed.
+
+Putting aside the fact this was a residential building — it should not be an aside, but this is how most news coverage has been treating it — this detail is important to the Houthis.
+
+This is because Waltz confirms “multiple” sources had positively identified a target, which the Houthis may use to justify further crackdowns, forced disappearances and even executions of those they accuse of being spies.
+
+Yahya Arhab/EPA
+
+The Trump administration was clearly reckless in divulging this detail. But it’s striking The Atlantic did not consider the danger posed to Yemeni civilians by publishing it. Experts on the Houthis – and their methods of subjugation – could have quickly highlighted this point if they were consulted.
+
+From a Yemeni perspective, a named source may have even been preferable to the hazy, but authoritative, confirmation of US operational methods and sources. The lack of specificity in the transcript plays to the Houthis’ dragnet approach to extinguishing independent voices by forcibly disappearing people on fake allegations of espionage.
+
+These are typically aid workers, academics, minorities, journalists and members of civil society who are not vocally aligned with the group.
+
+These abductions have been occurring for years, but ramped up in the middle of 2024. Dozens of members of civil society and aid organisations (and potentially many more) were kidnapped last year. Some are confirmed to have died in detention; many others have not been heard from since.
+
+There are reports that abductions are already escalating in response to the latest US strikes.
+
+The ongoing abductions have had a chilling effect on the willingness of local and international aid providers to speak out against the Houthis. This has helped the Houthis consolidate their control over the flow of humanitarian assistance (particularly food), which they divert based on political, rather than needs-based, calculations as a means of coercing compliance.
+
+Yemeni civilians are seldom, if ever, a consideration in the geopolitical machinations that concern their country. The reflexive prioritisation of Western security interests exposed in the group chat – and the publication of these details – condemns them to further insecurity.",theconversation
+https://theconversation.com,Marine Le Pen verdict ‘represents an effort to make democracy better’ in France – interview,https://theconversation.com/marine-le-pen-verdict-represents-an-effort-to-make-democracy-better-in-france-interview-253551,"Tue, 01 Apr 2025 13:52:22 GMT","Marine Le Pen, the figurehead of France’s far-right National Rally (RN) party and a three-time presidential candidate, has been found guilty of misappropriating public funds and sentenced to four years’ imprisonment and five years of ineligibility for public office, with immediate effect. Despite her decision to appeal, the March 31 ruling in a Paris court will probably eliminate her from the 2027 presidential race. Political scientist Luc Rouban analyses this major political development in an interview with The Conversation France.
+
+The Conversation: Marine Le Pen’s sentence of immediate ineligibility came as a surprise and a shock. Some legal experts had imagined that a heavy sentence would fall but doubted that the judge, under pressure, would take the logic of ineligibility to its conclusion – despite the fact that it is enshrined in the law.
+
+Luc Rouban: Yes, it’s a surprise and I don’t think the RN was expecting this decision. For the rule of law, it’s a form of revenge on a certain style of political life that, for decades, operated on the basis of arrangements, on the basis of the inner circle. That’s what we were used to during the Jacques Chirac and François Mitterrand periods, when there were dangerous links between politicians and certain members of the business class. It also brings to mind – of course – the more recent Nicolas Sarkozy affair. Today we are witnessing a historic turnaround. Marine Le Pen was no doubt expecting a suspended sentence, a slightly symbolic sentence. But this sentence is not symbolic at all. She is no longer part of the old style of political life.
+
+Is this ruling a good thing for democracy, with a judge who applies the law without trembling? Or is it a problem, as RN president Jordan Bardella, right-wing members of parliament Eric Ciotti and Laurent Wauquiez, and left-wing political leader Jean-Luc Mélenchon have said – and as Elon Musk, Viktor Orban, Geert Wilders, Matteo Salvini and the Kremlin have also said?
+
+Luc Rouban: This ruling represents an effort to make democracy better. Reaffirming the rule of law is absolutely essential and legitimate. The French democratic system is very fragile, much more so than in other European countries. Public confidence in politicians and the justice system is very low and needs to be restored. One way of doing this is to ensure that the law is applied to public figures who embezzle millions of euros, not just to supermarket cashiers who are fired and prosecuted for stealing a chocolate bar. The conviction of Marine Le Pen is undeniable progress for our democracy: it’s a sign that the relationship with politics is changing, that politics has become a professional activity like any other, subject to regulations and laws.
+
+Of course, there will be attacks on the judiciary, we will have the Trumpist argument of “government by judges”. But it’s important to remember that judges simply apply the law. We must also remember that the figures, including Marine Le Pen, who are criticising ineligibility penalties, had applauded the Sapin 2 law, which passed unanimously in 2016 following the Cahuzac affair (editor’s note: ex-budget minister Jérôme Cahuzac was ruled guilty of tax fraud in a Paris court).
+
+What does the future hold for Marine Le Pen and the RN? Is Jordan Bardella capable of replacing her?
+
+Luc Rouban: Barring the uncertain scenario of a favourable ruling on appeal before the presidential election, Marine Le Pen is likely to hand over her position as RN candidate to Bardella. But is Bardella capable of replacing her? That’s the question.
+
+Internally, he hasn’t really managed to establish himself within the party, particularly in terms of renewing the leadership and structuring the movement. As soon as Marine Le Pen was absent – which was the case after the death of her father (editor’s note: Jean-Marie Le Pen, the founder of the National Front) – the party seemed to collapse.
+
+What’s more, Bardella is Marine Le Pen’s heir apparent. The party’s “normalisation” could involve a form of “de-lepenalisation”. The Le Pen family has totally structured the party, which is very vertical, very organised around itself and its immediate entourage. This oligarchic model and this verticality are obviously going to be called into question. Will Bardella suffer as a result? Other RN leaders, such as Sébastien Chenu or Jean-Philippe Tanguy, who have established themselves in the media, may try to overtake him in the presidential race. However, this would require a break with Marine Le Pen in a party where dissidents are quickly excluded. The likelihood of such a challenge therefore remains low.
+
+What about Marion Maréchal? Could she take over?
+
+Luc Rouban: I don’t believe so because Maréchal (editor’s note: Marine Le Pen’s niece, who was elected to the European Parliament in 2024 on the ticket of the far-right Reconquest party, to which she no longer belongs) plays the Trump card and makes the RN feel uncomfortable. The RN electorate is too attached to France’s sovereignty, and has evolved toward a form of labour rights that is far removed from hard-line liberalism. The Reconquest electorate is more middle-class, older, better educated and wealthier than that of the RN.
+
+Will the RN benefit from this verdict or lose voters?
+
+Luc Rouban: It is possible that some abstentionist voters whose backgrounds are similar to those of RN voters will express their dissatisfaction with Marine Le Pen’s conviction by choosing to vote for the future candidate of the RN.
+
+But among the right-wing, upper middle classes who voted RN in the 2024 legislative elections, the vote could shift back to Les Républicains (editor’s note: the historic French right-wing party).
+
+Furthermore, for whoever becomes the future candidate of the RN, there will be a problem of support. To win a presidential election, you need to have support in the business world. But dragging around a party whose main leaders have been convicted of criminal offences is not a good look. Fundamentally, the RN was already isolated from the social elites. It could be even more so tomorrow.
+
+How might public opinion react to this major event, which deprives millions of voters of their candidate? Should we expect large-scale responses, possibly violent ones?
+
+Luc Rouban: As far as society in general is concerned, there may be hostile reactions for a while, isolated incidents, but I don’t think there will be mass movements like in the 1930s. The lack of enthusiasm for political life is obvious: who is going to take physical risks and engage in violent action to defend a political party and its representative? Not many people, I think.
+
+David Bornstein conducted this interview.",theconversation
+https://theconversation.com,3D-printed grafts: shaping the future of bone and tissue regeneration,https://theconversation.com/3d-printed-grafts-shaping-the-future-of-bone-and-tissue-regeneration-247019,"Tue, 01 Apr 2025 14:01:11 GMT","Over the past decade, 3D printing has gone from being a futuristic idea to a revolutionary tool. In medicine, its ability to produce custom-made, complex structures is changing the way doctors treat injuries and diseases – especially when it comes to rebuilding bones and other body tissues.
+
+Additive manufacturing (as 3D printing is technically known) creates objects based on a digital model, building them layer by layer. In medicine, this technology is being used to make inert objects like implants and prosthetics, but it can also create living tissues that help the body repair itself.
+
+This exciting new development, known as bioprinting, uses tiny structures (called scaffolds) embedded with the patient’s own cells to guide the growth of new tissue. This makes the printed structure more compatible with the body, and reduces the risk of rejection. It also helps the new tissue to heal faster and work more effectively.
+
+In the future, this technology might even be used to print full organs for transplant, helping solve the worldwide shortage of donor organs.
+
+Europe’s pioneering efforts
+
+Healing large or complex bone defects is one of the toughest challenges in surgery. Whether caused by accidents, cancer surgery or birth conditions, these defects often do not heal well with traditional bone grafts. One big problem is that the body struggles to grow new blood vessels inside the graft, which is essential for proper healing.
+
+Researchers in Europe are currently at the forefront of developing innovative, groundbreaking new technology to tackle this problem, with initiatives spread across the continent.
+
+Researchers at the Institute for Bioengineering of Catalonia (IBEC) have created 3D-printed scaffolds using polylactic acid and calcium phosphate that support bone growth and blood vessel formation. These have shown strong results in lab and animal tests, where scaffolds have encouraged stem cells to grow and release growth factors, successfully attracteing blood vessels into the healing area.
+
+At the University of Bergen, the Tissue Engineering Group is working on two major projects that use a patient’s own stem cells to print bone replacements. These personalised constructs are designed to fit perfectly, reduce the chances of rejection, and improve the patient’s recovery.
+
+The EU-funded Smart Bone Regeneration (SBR) project is developing smart implants for rapid bone restoration with medical-grade polymers. The design also incorporates sensors to monitor implant performance, providing real-time data on bone growth and potential complications. In vivo studies in large animal models are currently underway to validate this approach.
+
+The Centre for Translational Bone, Joint and Soft Tissue Research, in Dresden, is working on 3D-printed materials that support bone healing, with patients’ own materials that help bone cells grow. They also combine bone cement with soft gels filled with living cells to create strong, custom implants. Their goal is to make bone implants that work well in the body, bringing these 3D-printed treatments closer to real use in hospitals, or even in outer space.
+
+Another exciting example is from the company BellaSeno, who work in partnership with the Julius Wolff Institute at the Charité hospital in Berlin. They are creating 3D-printed bone scaffolds that can support and guide new bone growth. Their custom-made system uses a high-speed, precise printing process that meets international medical manufacturing standards (ISO 13485). These implants are currently being evaluated for clinical use, offering hope for patients with large bone defects.
+
+Such collaborations between academic institutions and private companies are essential. They help speed up the process of turning research discoveries into real-life treatments available in hospitals. These partnerships also ensure that safety, quality, and effectiveness remain a priority in every stage of development.
+
+Read more: AI is transforming the search for new materials that can help create the technologies of the future
+
+Overcoming challenges
+
+The use of 3D printing in medicine is quickly moving from research labs to real clinical use. The European cases mentioned above show how this technology is already helping patients heal better and faster. They are also paving the way for a new era of personalised and regenerative medicine.
+
+However, there are still some hurdles to clear. Printed implants need to stay strong and safe over time, so long-term studies and patient trials are essential. These help researchers understand how the materials perform in the body over the years. New medical tools must also meet strict safety rules, which takes time, but helps protect patients and build trust.
+
+Progress will depend on close teamwork between scientists, doctors, engineers, and regulators. As research and trials move forward, 3D printing is likely to become a routine part of surgery. Personalised, cell-based implants could soon be a standard option for repairing bone and tissue, bringing us closer to a future where treatments are safer, faster, and made just for you.",theconversation
+https://theconversation.com,How do coconuts get their water?,https://theconversation.com/how-do-coconuts-get-their-water-252673,"Tue, 01 Apr 2025 13:26:30 GMT","Coconut trees are iconic plants found across the world’s tropical regions. They’re called “nature’s supermarket” or the “tree of life” in several cultures because every part of the coconut tree is used. Its leaves can be used to thatch homes, its heart can be eaten and its roots have medicinal uses.
+
+The refreshing liquid found within a young green coconut is a highly prized component of the coconut palm. Coconuts are unique in the world of fruits because they have a large internal cavity filled with water. Other fruits typically store water within individual cells or pulp.
+
+I’m a food scientist who has carried out research on the properties of coconuts.
+
+All coconut palms produce water, though some, like tall varieties, will produce more than others, like dwarf varieties. The water is sourced from the trees’ immature, green coconuts. As the coconut matures, the developing white flesh absorbs the water, resulting in less liquid in a fully ripe brown coconut.
+
+So, how is this water reservoir created, and what factors influence it?
+
+A coconut’s structure
+
+To better understand how coconut water is formed, it is essential to grasp its anatomical structure. The coconut fruit is classified as a drupe, meaning it has three layers: the exocarp (the smooth, green outer layer seen in unripe coconuts), the mesocarp (a fibrous husk beneath the exocarp), and the endocarp (the hard, woody inner shell that protects the white flesh inside).
+
+Kerina yin/Shutterstock
+
+Within the endocarp, there are two components: the flesh (endosperm, a soft, jelly-like material in immature coconut that hardens as it matures) and the clear coconut water that fills the cavity. This water is a nutritive fluid nourishing the developing seed and is formed naturally during the development of the coconut fruit.
+
+The water is a filtered sap that’s drawn up from the roots and transported through the tree’s vascular system (its water and nutrient transport system), specifically the xylem tissue.
+
+The coconut tree’s extensive root system, ranging from 1 to 5 metres deep, absorbs groundwater – with dissolved nutrients – from the surrounding soil. The absorbed water is then transported upwards through the trunk and branches and finally to the fruit.
+
+The fruit retains this water, stored in the cavity of the coconut. The accumulated water, with its rich nutrients, provides food to the developing endosperm (white flesh).
+
+Therefore, coconut water is neither rainwater nor seawater stored inside, but carefully filtered and nutrient-rich clear liquid formed by the tree itself.
+
+What is coconut water made of?
+
+About 95% of coconut water is simply water, making it an excellent hydrating fluid.
+
+The rest of the water is made up of various components, which are useful for us too.
+
+Minerals (like sodium, potassium, magnesium and calcium) nourish human nerves and muscles; proteins (amino acids and enzymes) can help in metabolism in both the tree and humans; sugars (fructose and glucose) are responsible for the light sweetness and there are trace amounts of vitamins (vitamin C and B vitamins).
+
+Read more: Is coconut water good for you? We asked five experts
+
+Coconut water levels
+
+Many factors can influence the amount and quality of water in a coconut.
+
+The age of the coconut is a critical determining factor. Immature, green coconuts (six to eight months) are usually full of water: between 300 millilitres and 1 litre. Mature coconuts (12 months and older) have low water levels as the liquid is partially absorbed by the endosperm.
+
+High rainfall encourages greater accumulation of water, while drought conditions reduce the amount of water that can be transported to the fruit.
+
+Healthy soils packed with minerals lead to high-quality and nutrient-rich coconut water. Poor or salty soils, lacking in minerals that can travel up the coconut tree to the fruit, will lead to low quality water.
+
+Finally, unhealthy or diseased trees produce smaller-sized coconuts with little water.
+
+Protecting coconuts
+
+Coconut trees and coconut water are important to tropical economies across south-east Asia, the Pacific, and the Caribbean Sea territories, as well as the coastlines of central America and Africa.
+
+Conserving the trees and their environment is therefore essential.
+
+Sustainable farming practices, like soil management – including soil testing and organic composting – should be implemented to maintain the proper nutrient profile, which results in high-quality coconut water.
+
+Read more: The end of coconut water? The world's trendiest nut is under threat of species collapse
+
+Additionally, protecting freshwater aquifers from saltwater intrusion along coastlines where coconuts grow is crucial for preserving the quality of this refreshing fluid. Drip irrigation and mulching can help maintain soil moisture for the required coconut water production.
+
+Pest and disease management techniques (like intercropping coconuts with bananas or legumes), as well as integrated pest management, can contribute to healthy trees that produce large coconuts with ample water.",theconversation
+https://theconversation.com,South Africans flush toilets with drinkable water: study in Cape Town looked at using seawater instead,https://theconversation.com/south-africans-flush-toilets-with-drinkable-water-study-in-cape-town-looked-at-using-seawater-instead-251174,"Tue, 01 Apr 2025 13:26:07 GMT","As the planet gets hotter and freshwater sources dry up, cities and towns will not be able to continue the global norm of using millions of litres of clean, drinkable water to flush toilets. South Africa’s Water Research Commission recently commissioned a study into using seawater to flush toilets in Cape Town. Water engineering lecturer Teboho Mofokeng researches water management and reuse in South Africa and she co-authored the study. She spoke to The Conversation Africa about Capetonians’ willingness to pay up to 10% more on their water bills to use seawater to flush their toilets, as long as it doesn’t smell or stain their toilets.
+
+What are the problems with how toilets are flushed in Cape Town?
+
+The first problem is that the city uses clean, treated drinking water for toilet flushing. Generally, 20%-30% of the city’s drinkable water supply to households is used to flush toilets.
+
+The water used for bathing, cooking, laundry, cleaning and flushing toilets goes down the drain. It is treated at wastewater plants to remove harmful germs before being pumped back into rivers.
+
+Read more: With engagement and education, reusing wastewater can become the norm
+
+The second problem is that in some Cape Town communities (as well as the coastal cities of Durban and Gqeberha in South Africa), wastewater is discharged into the sea with little treatment to remove harmful germs. Although the government permits a certain amount of discharge, this pollutes the ocean.
+
+The third problem is that as demand for housing grows, so does the need for water and sanitation. When more and more wastewater is discharged into the sea, it is a lost opportunity to keep the water within the urban water management system, and use it again.
+
+What are the alternatives?
+
+South Africa’s water supply network is ageing, has not been well maintained and is due for replacement or repairs. When new housing developments are connected to the water supply network, there is an opportunity to come up with alternatives to using drinking water to flush toilets. One option is seawater.
+
+Another could be recycled water. Toilet water could be treated to remove harmful bacteria and reused for flushing. This would need a closed water system for flushing toilets. It would eliminate the current loss of drinking water flushed down toilets and then discharged into the sea.
+
+How do people feel about using seawater instead?
+
+Studies have shown that most households would prefer to flush with recycled water than clean, drinkable water. However, our study is the first to investigate how people feel about flushing with seawater.
+
+We asked 239 people if they’d be willing to flush with seawater or recycled water or continue to flush with drinking water but pay more to do so. We also asked how they felt about toilet wastewater being discharged into the sea.
+
+Our survey had mixed findings. Overall, 90% of people were willing to move away from using drinking water for toilet flushing, but only if the new water source did not stain the toilet bowl, was clear and had no smell.
+
+Read more: How to provide reliable water in a warming world – these cities are testing small-scale treatment systems and wastewater recycling
+
+We found that 58% of the people we surveyed preferred using seawater to recycled water for toilet flushing. However, there were differences in preference according to income, gender and household size. About 45% of the people we interviewed earned more than R12,800 (US$697) per month. They preferred to use drinking water to flush toilets. But females with a higher education qualification were more likely to pay extra for both seawater and recycled water options. Homes where more than three people lived were more likely to pay for recycled water than seawater.
+
+On average, 10%%-15% of Capetonians’ municipal bills goes to paying for water. We looked at the preferences of households that pay R350 to R900 per month for water and found they were willing to pay 5%-10% more to use clean and clear alternative water. They were also willing to use water with a slight odour if they got a discount of up to 60% on their monthly water bills.
+
+Treating wastewater before discharging it into the sea would cost money. We found that people were not willing to foot this bill. They were in favour of the city treating wastewater only if it reduced their water bill by up to 7%.
+
+What are the drawbacks of switching to seawater to flush toilets?
+
+Firstly, it would need a duplicate network to be set up. This would be one network of water pipes for the drinking water supply and another for the toilet flushing water supply. This would mean that both new and ageing water systems would be set up or replaced by systems with a duplicate pipe network.
+
+Usually water supply networks use concrete, steel or plastic pipes. But because seawater corrodes, plastic pipes will be needed for the seawater flushing pipe network. Plastic manufacturing and the raw materials needed have a significant impact on the environment. On the other hand, steel or concrete pipes would need to be replaced more frequently than plastic pipes.
+
+Secondly, storage facilities like reservoirs would need to be built to store the seawater and a new system set up to treat seawater before it is piped to homes.
+
+Read more: A new strategy for drought-stressed cities: graywater recycling
+
+Thirdly, the chemicals and electricity required to clean the water, the supply of water to consumers and eventually the disposal of the wastewater would add to the costs. Since South Africa’s energy is still electricity made by burning coal, using up more energy in a duplicate water system would increase global warming significantly. So, a renewable energy system would need to be set up.
+
+Despite these drawbacks, a duplicate system has worked well in Hong Kong. Using less freshwater also benefits the environment more.
+
+What are the solutions?
+
+Climate change will result in a drier south-western Africa. Unpredictable rainfall and frequent droughts will mean less freshwater available for people to drink. Therefore, it is crucial that coastal cities like Cape Town, whose populations are growing, start investing now in water supplies from unconventional sources.
+
+People have to become more aware that not all household activities need to use drinking water. Increasing public awareness and education about the benefits of using alternative water can help people to accept that they won’t be able to flush their toilets with clean, drinkable water for much longer.",theconversation
+https://theconversation.com,Zimbabwe’s economy crashed – so how do citizens still cling to myths of urban and economic success?,https://theconversation.com/zimbabwes-economy-crashed-so-how-do-citizens-still-cling-to-myths-of-urban-and-economic-success-247114,"Tue, 01 Apr 2025 13:25:46 GMT","It is common for nations to have myths, or narratives, that form the basis of their nationalism, or their ideas of themselves as a political community. Such popular narratives are often rooted in a romanticised or idealised view of the past. This is certainly the case in Zimbabwe, where national myths about its urban modernity and economic exceptionalism have stood the test of time in contrast with the reality.
+
+The idea of urban modernity has its roots in colonial times. At the time of independence in 1980, following a liberation war from 1965 to 1979, Zimbabwe’s economy was looking strong. Urban residents, especially, could think of themselves as modern: they had middle- and working-class lifestyles, social protection, social mobility opportunities and fixed working hours. Urban modernity meant order, steady employment, education.
+
+Zimbabwe’s economy was exceptional in sub-Saharan Africa: diversified and robust.
+
+However, rapid socio-economic changes followed in the 1990s and 2000s. Zimbabwe was hit by a series of economic, financial and political crises. This led to the collapse of urban middle- and working-class modernity and the rise of visible informal economic activities in the urban space. By 2004, over 80% of people had informal livelihoods in Zimbabwe.
+
+My PhD thesis (2021) examined Harare’s shift to informality and the impact of this on people’s everyday experiences of citizenship. The respondents in interviews carried out between 2016 and 2018 included vendors, cross-border traders, manufacturers, residents’ associations, informal sector organisations, local authorities and urban planners.
+
+These interviews also form the basis of my recent research paper. My analysis sought to examine how people deal with the fact that current circumstances don’t support their myths of urban nationalism.
+
+During a crisis, people rethink old ideas and adjust them to fit their new situation. As they do this, their notions of urban modernity and economic exceptionalism change. At the same time, they remember a past when their country was economically successful. This memory shapes how they think about the country’s future - and it also makes them question the government, which hasn’t lived up to those past ideals.
+
+So, what do the myths of urban modernity and economic exceptionalism mean in Zimbabwe today? Some people cling to the early postcolonial notions nurtured by the government. Others reluctantly accept economic informality while seeking to upgrade the idea of the informal sector. But there are others who challenge altogether the view that street vending is not modern and formal enough.
+
+The prevalent informality was seen as a temporary phenomenon which would end soon. Then the country would return to having a modern urban lifestyle and strong economy.
+
+Grappling with informality
+
+To many of the respondents in 2016-2018, “working” and “having a job” meant being employed and having regular wages, job security and social protection.
+
+At the same time, people also reluctantly accepted economic informality and some of the changes it made to their lives, while seeking to upgrade the idea of the informal sector. Some informal sector associations, for example, attempted to teach their members to see their activities as businesses and themselves as business people, as I reported in another paper.
+
+Read more: How informal sector organisations in Zimbabwe shape notions of citizenship
+
+Some respondents drew a line between economic activities that were acceptable in the city centre and those that were not. These were similar to the early postcolonial notions enforced by the government. They suggested, for example, that street vending had no place in the city centre. It should only occur in limited designated spaces, and in residential areas.
+
+Some street vendors, though, defied the notion of street vending not being modern and formal enough. They dressed smartly to emphasise that street vending could also be done in a “modern” way and be a part of the mainstream economy.
+
+The history of the urban modernity myth
+
+At the beginning of colonial rule in the late 19th and early 20th centuries, the colonisers planned for the cities to remain “white”. Unless Africans lived in their employers’ facilities, they were required to live in dedicated areas.
+
+At the same time, the colonial administration introduced and enforced the concept of “order” in Salisbury, now Harare, the capital. It punished poor, marginalised and homeless people. The same with economic and social activities it deemed undesirable.
+
+Today, over 32% of Zimbabweans live in urban areas.
+
+The establishment in the 1930s of the African middle class was an important part of the urban modernity project. Those who sought to belong to it largely used education as their primary social mobility tool.
+
+Read more: Education in Zimbabwe has lost its value: study asks young people how they feel about that
+
+After independence in 1980, the cities were deracialised. Everyone was free to enter and use the urban space. But the new government still held tight control and dictated who had the right to the city.
+
+Numerous operations were conducted from the 1980s to clear the street of “undesirable” people and activities. For example, informal settlements were removed. Many women were arrested on the pretext of clearing the city of prostitution. The most notorious clean-up operation was the 2005 Operation Murambatsvina. It effectively punished all those considered “unproductive” and not deserving to be in the city.
+
+Read more: Dogs in the city: on the scent of Zimbabwe's urban history
+
+Those high and, frankly, brutal standards of urban modernity have a long history in Zimbabwe and became a part of its urban nationalism.
+
+Economic exceptionalism
+
+Colonial and early postcolonial Zimbabwe had an exceptional and diversified economy with strong mining, agricultural, and industrial sectors. Zimbabwe’s manufacturing sector contributed 25% to GDP by 1974.
+
+Despite the economic decline, it is still a common narrative that Zimbabwe’s industrial sector was second only to South Africa’s in sub-Saharan Africa and that Zimbabwe was “the breadbasket” of Africa.
+
+Jekesai Njikizana/AFP via Getty Images
+
+However, manufacturing in colonial Zimbabwe benefited a small number of white industrialists. Black Zimbabweans did not have the opportunities. They could not own profitable manufacturing businesses or access finance.
+
+After independence, the government made considerable efforts to deracialise the economy and public services.
+
+The present
+
+The early postcolonial ideas about urban modernity and economic exceptionalism were severely undermined in Zimbabwe. But people try to give new meanings to these ideas in the changed social and economic circumstances. There is ongoing reluctance to accept that informality altered Zimbabwe for good. And many of my respondents wanted to find ways that the myths of modernity and economic exceptionalism could keep their meaning in the changed circumstances.
+
+Continuity and change in the myths of urban nationalism also raise the questions of legitimacy. In this case, it is about legitimacy of informal economic practices and legitimacy of the government that did not uphold the myths.
+
+Ideas can be very powerful in explaining people’s understanding of the political community they belong to. And when such ideals cannot be upheld, people will find new meanings in their material reality that let them hold on to old ideas or reinterpret them.",theconversation
+https://undark.org,Why Did the CDC Bury Its Latest Measles Forecast?,https://undark.org/2025/04/01/cdc-cancel-measles-forecast/,"Tue, 01 Apr 2025 00:00:00 GMT","Leaders at the Centers for Disease Control and Prevention ordered staff last week not to release their experts’ assessment that found the risk of catching measles is high in areas near outbreaks where vaccination rates are lagging, according to internal records reviewed by ProPublica.
+
+In an aborted plan to roll out the news, the agency would have emphasized the importance of vaccinating people against the highly contagious and potentially deadly disease that has spread to 19 states, the records show.
+
+This story was originally published by This story was originally published by ProPublica . Sign up for ProPublica’s The Big Story newsletter to receive stories like this one in your inbox.
+
+A CDC spokesperson told ProPublica in a written statement that the agency decided against releasing the assessment “because it does not say anything that the public doesn’t already know.” She added that the CDC continues to recommend vaccines as “the best way to protect against measles.”
+
+But what the nation’s top public health agency said next shows a shift in its long-standing messaging about vaccines, a sign that it may be falling in line under Health and Human Services Secretary Robert F. Kennedy Jr., a longtime critic of vaccines:
+
+“The decision to vaccinate is a personal one,” the statement said, echoing a line from a column Kennedy wrote for the Fox News website. “People should consult with their health care provider to understand their options to get a vaccine and should be informed about the potential risks and benefits associated with vaccines.”
+
+The agency decided against releasing the assessment “because it does not say anything that the public doesn’t already know,” a CDC spokesperson wrote.
+
+ProPublica shared the new CDC statement about personal choice and risk with Jennifer Nuzzo, director of the Pandemic Center at Brown University School of Public Health. To her, the shift in messaging, and the squelching of this routine announcement, is alarming.
+
+“I’m a bit stunned by that language,” Nuzzo said. “No vaccine is without risk, but that makes it sound like it’s a very active coin toss of a decision. We’ve already had more cases of measles in 2025 than we had in 2024, and it’s spread to multiple states. It is not a coin toss at this point.”
+
+For many years, the CDC hasn’t minced words on vaccines. It promoted them with confidence. One campaign was called “Get My Flu Shot.” The agency’s website told medical providers they play a critical role in helping parents choose vaccines for their children: “Instead of saying ‘What do you want to do about shots?,’ say ‘Your child needs three shots today.’”
+
+Nuzzo wishes the CDC’s forecasters would put out more details of their data and evidence on the spread of measles, not less. “The growing scale and severity of this measles outbreak and the urgent need for more data to guide the response underscores why we need a fully staffed and functional CDC and more resources for state and local health departments,” she said.
+
+Kennedy’s agency oversees the CDC and last Thursday announced it was poised to eliminate 2,400 jobs there.
+
+When asked what role, if any, Kennedy played in the decision to not release the risk assessment, HHS’ communications director said the aborted announcement “was part of an ongoing process to improve communication processes — nothing more, nothing less.” The CDC, he reiterated, continues to recommend vaccination “as the best way to protect against measles.”
+
+“Secretary Kennedy believes that the decision to vaccinate is a personal one and that people should consult with their health care provider to understand their options to get a vaccine,” Andrew G. Nixon said. “It is important that the American people have radical transparency and be informed to make personal health care decisions.”
+
+Responding to questions about criticism of the decision among some CDC staff, Nixon wrote, “Some individuals at the CDC seem more interested in protecting their own status or agenda rather than aligning with this Administration and the true mission of public health.”
+
+The CDC’s risk assessment was carried out by its Center for Forecasting and Outbreak Analytics, which relied, in part, on new disease data from the outbreak in Texas. The CDC created the center to address a major shortcoming laid bare during the Covid-19 pandemic. It functions like a National Weather Service for infectious diseases, harnessing data and expertise to predict the course of outbreaks like a meteorologist warns of storms.
+
+Other risk assessments by the center have been posted by the CDC even though their conclusions might seem obvious.
+
+“It is important that the American people have radical transparency and be informed to make personal healthcare decisions.”
+
+In late February, for example, forecasters analyzing the spread of H5N1 bird flu said people who come “in contact with potentially infected animals or contaminated surfaces or fluids” faced a moderate to high risk of contracting the disease. The risk to the general U.S. population, they said, was low.
+
+In the case of the measles assessment, modelers at the center determined the risk of the disease for the general public in the U.S. is low, but they found the risk is high in communities with low vaccination rates that are near outbreaks or share close social ties to those areas with outbreaks. The CDC had moderate confidence in the assessment, according to an internal Q&A that explained the findings. The agency, it said, lacks detailed data about the onset of the illness for all patients in West Texas and is still learning about the vaccination rates in affected communities as well as travel and social contact among those infected. (The H5N1 assessment was also made with moderate confidence.)
+
+The internal plan to roll out the news of the forecast called for the expert physician who’s leading the CDC’s response to measles to be the chief spokesperson answering questions. “It is important to note that at local levels, vaccine coverage rates may vary considerably, and pockets of unvaccinated people can exist even in areas with high vaccination coverage overall,” the plan said. “The best way to protect against measles is to get the measles, mumps, and rubella (MMR) vaccine.”
+
+Last week, though, as the number of confirmed cases rose to 483, more than 30 agency staff were told in an email that after a discussion in the CDC director’s office, “leadership does not want to pursue putting this on the website.”
+
+The cancellation was “not normal at all,” said a CDC staff member who spoke anonymously for fear of reprisal with layoffs looming. “I’ve never seen a rollout plan that was canceled at that far along in the process.”
+
+Anxiety among CDC staff has been building over whether the agency will bend its public health messages to match those of Kennedy, a lawyer who founded an anti-vaccine group and referred clients to a law firm suing a vaccine manufacturer.
+
+The cancellation was “not normal at all,” said a CDC staff member who spoke anonymously. “I’ve never seen a rollout plan that was canceled at that far along in the process.”
+
+During Kennedy’s first week on the job, HHS halted the CDC campaign that encouraged people to get flu shots during a ferocious flu season. On the night that the Trump administration began firing probationary employees across the federal government, some key CDC flu webpages were taken down. Remnants of some of the campaign webpages were restored after NPR reported this.
+
+But some at the agency felt like the new leadership had sent a message loud and clear: When next to nobody was paying attention, long-standing public health messages could be silenced.
+
+On the day in February that the world learned that an unvaccinated child had died of measles in Texas, the first such death in the U.S. since 2015, the HHS secretary downplayed the seriousness of the outbreak. “We have measles outbreaks every year,” he said at a cabinet meeting with President Donald Trump.
+
+Get Our Newsletter Sent Weekly Email * Δ
+
+In an interview on Fox News last month, Kennedy championed doctors in Texas who he said were treating measles with a steroid, an antibiotic and cod liver oil, a supplement that is high in vitamin A. “They’re seeing what they describe as almost miraculous and instantaneous recovery from that,” Kennedy said.
+
+As parents near the outbreak in Texas stocked up on vitamin A supplements, doctors there raced to assure parents that only vaccination, not the vitamin, can prevent measles.
+
+Still, the CDC added an entry on Vitamin A to its measles website for clinicians.
+
+Last Wednesday, CNN reported that several hospitalized children in Lubbock, Texas, had abnormal liver function, a likely sign of toxicity from too much vitamin A.
+
+Texas health officials also said that the Trump administration’s decision to rescind $11 billion in pandemic-related grants across the country will hinder their ability to respond to the growing outbreak, according to The Texas Tribune.
+
+Some at the CDC felt like the new leadership had sent a message loud and clear: When next to nobody was paying attention, long-standing public health messages could be silenced.
+
+Measles is among the most contagious diseases and can be dangerous. About 20 percent of unvaccinated people who get measles wind up in the hospital. And nearly 1 to 3 of every 1,000 children with measles will die from respiratory and neurologic complications. The virus can linger in the air for two hours after an infected person has left an area, and patients can spread measles before they even know they have it.
+
+Last week Amtrak said it was notifying customers that they may have been exposed to the disease in March when a passenger with measles rode one of its trains from New York City to Washington, D.C.
+
+Patricia Callahan is a Pulitzer Prize-winning investigative reporter exploring how federal policies affect the health of vulnerable people.",undark
