@@ -66,8 +66,8 @@
             <h2 id="summaries_heading" class="heading">Daily News</h2>
         
             <div class="flex justify-center space-x-4 mb-4">
-                <button id="prevPage" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">← Previous</button>
-                <button id="nextPage" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Next →</button>
+                <button id="previousPage" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">← Previous 14 days</button>
+                <button id="nextPage" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Next 14 days →</button>
             </div>
         
             <div id="daily_summaries_pages">
@@ -113,8 +113,8 @@
                         pager.appendChild(div);
                     });
             
-                    document.getElementById("prevPage").disabled = currentPage === 0;
-                    document.getElementById("nextPage").disabled = end >= allAvailableLinks.length;
+                    document.getElementById("nextPage").disabled = currentPage === 0;
+                    document.getElementById("previousPage").disabled = end >= allAvailableLinks.length;
                 }
             
                 function initializePager() {
@@ -138,14 +138,14 @@
                     }
                 }
             
-                document.getElementById("prevPage").addEventListener("click", function () {
+                document.getElementById("nextPage").addEventListener("click", function () {
                     if (currentPage > 0) {
                         currentPage--;
                         updatePager();
                     }
                 });
             
-                document.getElementById("nextPage").addEventListener("click", function () {
+                document.getElementById("previousPage").addEventListener("click", function () {
                     if ((currentPage + 1) * pageSize < allAvailableLinks.length) {
                         currentPage++;
                         updatePager();
