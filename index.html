@@ -28,7 +28,7 @@
                 gap: 10px; /* Space between columns */
                 justify-content: center;
                 text-align: center;
-                margin-top: 20px;
+                margin: 20px;
             }
             #pager div {
                 background-color: #1a6198;
@@ -64,18 +64,24 @@
 
         <div id="navigation" class="section text-center">
             <h2 id="summaries_heading" class="heading">Daily News</h2>
-            <div id="daily_summaries_pages" >
-                <ul id="pager" class="w-full flex justify-center"></ul>
+        
+            <div class="flex justify-center space-x-4 mb-4">
+                <button id="prevPage" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">← Previous</button>
+                <button id="nextPage" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Next →</button>
+            </div>
+        
+            <div id="daily_summaries_pages">
+                <ul id="pager" class="grid grid-cols-7 gap-2 justify-center text-center"></ul>
             </div>
         </div>
-
+        
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function () {
                 const today = new Date();
-                let daysChecked = 0;
-                let daysAvailable = 0;
-                let availableLinks = [];
-                let days = 14; //two weeks
+                let allAvailableLinks = [];
+                let totalDaysToCheck = 90;
+                let pageSize = 14;
+                let currentPage = 0;
             
                 function checkFileExists(dateString, callback) {
                     let filePath = `${dateString}/${dateString}.html`;
@@ -89,37 +95,66 @@
                 }
             
                 function updatePager() {
-                    if (daysAvailable > 0) {
-                        // Sort links by date (most recent first)
-                        availableLinks.sort((a, b) => new Date(b.dateString) - new Date(a.dateString));
+                    const pager = document.getElementById("pager");
+                    pager.innerHTML = "";
             
-                        let pager = document.getElementById("pager");
-                        pager.innerHTML = availableLinks.map((link) => {
-                            return `<div><a href="${link.filePath}">${link.dateString}</a></div>`;
-                        }).join("");
-                    } else {
-                        document.getElementById("no-news").style.display = "block";
+                    let start = currentPage * pageSize;
+                    let end = start + pageSize;
+                    let pageLinks = allAvailableLinks.slice(start, end);
+            
+                    pageLinks.forEach(link => {
+                        let div = document.createElement("div");
+                        div.className = "bg-blue-700 text-white px-2 py-1 rounded font-bold text-sm";
+                        let anchor = document.createElement("a");
+                        anchor.href = link.filePath;
+                        anchor.textContent = link.dateString;
+                        anchor.className = "hover:underline";
+                        div.appendChild(anchor);
+                        pager.appendChild(div);
+                    });
+            
+                    document.getElementById("prevPage").disabled = currentPage === 0;
+                    document.getElementById("nextPage").disabled = end >= allAvailableLinks.length;
+                }
+            
+                function initializePager() {
+                    let daysChecked = 0;
+            
+                    for (let i = 0; i < totalDaysToCheck; i++) {
+                        let date = new Date();
+                        date.setDate(today.getDate() - i);
+                        let dateString = date.toISOString().split('T')[0];
+            
+                        checkFileExists(dateString, function (exists, dateString, filePath) {
+                            daysChecked++;
+                            if (exists) {
+                                allAvailableLinks.push({ dateString, filePath });
+                            }
+                            if (daysChecked === totalDaysToCheck) {
+                                allAvailableLinks.sort((a, b) => new Date(b.dateString) - new Date(a.dateString));
+                                updatePager();
+                            }
+                        });
                     }
                 }
             
-                for (let i = 0; i < days; i++) {
-                    let date = new Date();
-                    date.setDate(today.getDate() - i);
-                    let dateString = date.toISOString().split('T')[0];
+                document.getElementById("prevPage").addEventListener("click", function () {
+                    if (currentPage > 0) {
+                        currentPage--;
+                        updatePager();
+                    }
+                });
             
-                    checkFileExists(dateString, function(exists, dateString, filePath) {
-                        daysChecked++;
-                        if (exists) {
-                            availableLinks.push({ dateString, filePath });
-                            daysAvailable++;
-                        }
-                        if (daysChecked === days) {
-                            updatePager();
-                        }
-                    });
-                }
+                document.getElementById("nextPage").addEventListener("click", function () {
+                    if ((currentPage + 1) * pageSize < allAvailableLinks.length) {
+                        currentPage++;
+                        updatePager();
+                    }
+                });
+            
+                initializePager();
             });
-        </script>
+            </script>
         
 
         <footer class="text-center text-sm text-gray-500 mt-12">
