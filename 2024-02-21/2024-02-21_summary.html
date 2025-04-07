@@ -1,0 +1,300 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <title id="title">News'n'Clues - Trending Topics, Headlines</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .menu { color: #444444; }
+            .copyright { margin: 0 auto; }
+            p { font-family: serif; }
+            body {  background-color: #2c2c2c; font-family: Arial, sans-serif; font-size: 20px; color: #f4f4f4;  }
+            a { text-decoration: none; color: #f4f4f4; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
+            .hidden {
+                display: none;
+            }            
+        </style>
+    </head>
+    <body class='p-2'>
+        <br/>
+        <div class="section">
+            <input type="hidden" id="sentiment_score" value="62">
+            <div id="sentiment" class="heading">Business Sentiment</div>
+            <div>
+                <img src="data:image/png;base64,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" alt="Sentiment Bar">
+            </div>
+            <div style="margin-left: 20px; font-weight: bold;">Sentiment Legend:</div>
+            <br/>
+            <div style="display: flex; align-items: center; font-family: Arial, sans-serif;">
+                <div style="display: flex; margin-left: 20px;  margin-right: 20px; align-items: center;">
+                    <div style="background-color: red; width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Negative < 44</div>
+                </div>
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                    <div style="background-color: rgb(255, 255, 0); width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Mixed 46-54</div>
+                </div>
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                    <div style="background-color: rgb(12, 244, 8); width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Positive > 56</div>
+                </div>
+            </div>
+        </div>        
+        <div class='section heading'>Trending Topics:</div>
+
+        <div id='trending_topics' class='p-1 text-1.5xl'>
+        <ul>
+        
+        </ul>
+        </div>
+        <br/><a target='_blank' href='https://trends.google.com/trending?geo=US'>Trending Google Searches</a>
+        <br/><a target='_blank' href='https://www.bing.com/news/search?q=Top+stories'>Trending Bing News</a>
+        <br/>
+        
+
+
+            <div id='cat_world' class='section text-center heading'>
+            WORLD
+            </div>
+            <br/>
+            
+
+            <div id='cat_national' class='section text-center heading'>
+            NATIONAL
+            </div>
+            <br/>
+            
+
+            <div id='cat_business' class='section text-center heading'>
+            BUSINESS
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.usnews.com/news/business/articles/2024-02-21/biden-to-create-cybersecurity-standards-for-nations-ports-as-concerns-grow-over-vulnerabilities'>Biden Is Boosting Cybersecurity at US Ports, Where Online Attacks Can Be More Ravaging Than Storms</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> U.S. News & World Report&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-21 15:11:15
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Biden Is Boosting Cybersecurity at US Ports, Where Online Attacks Can Be More Ravaging Than Storms
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.modbee.com/news/business/biz-columns-blogs/biz-beat/article285429907.html'>Modesto Bee hires new business beat reporter focused on local news</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Modesto Bee&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-21 15:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Modesto Bee hires new business beat reporter focused on local news
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.usnews.com/news/business/articles/2024-02-21/germany-says-europes-largest-economy-is-in-troubled-waters-and-cuts-its-growth-forecast'>Germany Says Europe's Largest Economy Is in 'Troubled Waters' and Cuts Its Growth Forecast</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> U.S. News & World Report&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-21 14:58:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Germany Says Europe's Largest Economy Is in 'Troubled Waters' and Cuts Its Growth Forecast
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.usnews.com/news/business/articles/2024-02-21/eu-agrees-on-new-sanctions-against-russia-days-before-the-second-anniversary-of-the-war-in-ukraine'>EU Agrees on New Sanctions Against Russia Days Before the Second Anniversary of the War in Ukraine</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> U.S. News & World Report&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-21 14:42:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    EU Agrees on New Sanctions Against Russia Days Before the Second Anniversary of the War in Ukraine
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://news.yahoo.com/google-fails-protect-business-secrets-142259961.html'>Google fails to protect business secrets in German antitrust case</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Yahoo News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-21 14:22:59
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Google fails to protect business secrets in German antitrust case
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.hollywoodreporter.com/business/business-news/jeff-zucker-interview-redbird-cnn-1235830878/'>Jeff Zucker Interview: Post-CNN, Media Deals and a Billion-Dollar Bet</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Hollywood Reporter&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-21 13:05:40
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Jeff Zucker Interview: Post-CNN, Media Deals and a Billion-Dollar Bet
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.djc.com/news/re/12162244.html'>Amazon backs affordable Totem Lake senior housing project, with start near</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Seattle Daily Journal of Commerce&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-21 08:00:32
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Amazon backs affordable Totem Lake senior housing project, with start near
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.usnews.com/news/business/articles/2024-02-20/japans-trade-deficit-dwindles-as-exports-continue-to-grow'>Japan's Exports Surged Nearly 12% in January in 2nd Straight Month of Gains</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> U.S. News & World Report&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-21 07:52:30
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Japan's Exports Surged Nearly 12% in January in 2nd Straight Month of Gains
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_cryptocurrency' class='section text-center heading'>
+            CRYPTOCURRENCY
+            </div>
+            <br/>
+            
+
+            <div id='cat_science' class='section text-center heading'>
+            SCIENCE
+            </div>
+            <br/>
+            
+
+            <div id='cat_technology' class='section text-center heading'>
+            TECHNOLOGY
+            </div>
+            <br/>
+            
+
+            <div id='cat_health' class='section text-center heading'>
+            HEALTH
+            </div>
+            <br/>
+            
+
+            <div id='cat_soccer' class='section text-center heading'>
+            SOCCER
+            </div>
+            <br/>
+            
+
+            <div id='cat_tennis' class='section text-center heading'>
+            TENNIS
+            </div>
+            <br/>
+            
+
+            <div id='cat_formula_1' class='section text-center heading'>
+            FORMULA_1
+            </div>
+            <br/>
+            
+
+            <div id='cat_entertainment' class='section text-center heading'>
+            ENTERTAINMENT
+            </div>
+            <br/>
+            
+
+            <div id='cat_other' class='section text-center heading'>
+            OTHER
+            </div>
+            <br/>
+            
+
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
+    </body>
+</html>
