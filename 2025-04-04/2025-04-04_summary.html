@@ -31,30 +31,53 @@
     </head>
     <body class='p-2'>
         <br/>
-        <div class='text-3xl font-extrabold text-gray-300 leading-tight'>Trending Topics:</div>
+        <div class="section">
+            <input type="hidden" id="sentiment_score" value="35">
+            <div id="sentiment" class="heading">Business Sentiment</div>
+            <div>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcwAAAB4CAYAAAB/98JRAAALkUlEQVR4nO3dfZBV5X3A8e/lbYGFVd5VIKK8KFoVTVxibQ3SamPHEG070RRfmrZWM45pZiLWMbH+UptkTDPJJGk6GmtqpjYkmTplnLHaREE00XAFCWAUURSQ9zeBXWDZZff0j3vvern7wtnl3oVlv5+ZO/c5z3me55wzs7/57XPeLkiSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEnqGzLHewd0ckuyjAf+ErgWmAyMAeqBDcBzwCOZWt5JOdZc4Iku7sKyTC0f62IfSWpjwPHeAZ28kiz3AP8IVJesGpn/zAC+mGT5JvCVTC3JUYa8oOw7KUkp9TveO6CTU5LlX4CHaJssSw0A7lux6aInUwzb5YS5Ze8ZH42IJCKWdrWvJBUzYarskiyXA3d3pc9F41dc/9Rjn3o6Ijq7TOAMU9Jx4ylZVcL9pRXv7JjKwjWz2Vk/mpFDd3P19F9w9ui1R7SZNXXxn772/iWPA7eW9k+ynAJMrNQOS9LRmDBVVkmWGmB2cd2WvWcwf+mNtCT9AdhWN46fLbuBL8z6HtVV9a3thg/ex7iabbdExK8i4tGSodvMLp9aNYfl719S/oOQpHZ4SlblVgXcCzzy3q6zdu9rqGH5xotbkyXwDPDRxuZB1Rv3jH+htPPwXAJ9oJ1Ts20S5s76MWXdcUnqjDNMlVWmlh3AtyOiBvjrktXLgE9HRBPAA1laSvvvaxgOMB64EFhRtKqdhDm6UPzbiHjsmHdekjphwlSlFGaa04Cp+e8fFZJlkuUC4IriDnUNw4uT4Ol0kjD3N1ZzsGlIYfHNcu+8JJXyxQXqMUmWKuAMYA7wFWB08fqnX7+WpRta3zFwYUSsKur7AXBqYXl73ThWbr6A8057kxFDd38wZODBKmAzsAh4LFPLkooejKQ+xxmmelKW3KnWtivWzSxOlpuB1YWFJMtEipIlwNjh2/jjc7YVFkfkv6fkP7clWX4M3JGppaFcOy+pb/OmH/WkM0srDh0enCxYeR3PvHFNcfWDhVO3ed15/vLWDbvPfCXJMqgbfSWpDROmekSSZQRwSmn9oP6NmYsnLGfa2DWFqu9HxMMlzbr1woKPjFw/49X1l66MiMHd6S9JxbyGqR6RZLkYeK2zNkvWzfzlxz+z5Op2+j4BzC2u27bvNBa9PYv1uyfR3NKPj4zcwFXnPMe4mq1H9k368YMX71y6a/+oyyOisQyHIqmPcoapnrIJmPH1//vy+Id+eS9PrZpD4+GqIxrMnLTkqmce/+QP2+n7NPDwul1nra1rGM7qrdN59OXbeGvbuTQ0DaapeRBrd0zhR7/5HB8cGHlEx0ymhYvGr/gY8J1KHZikvsGEqR6RqWV7ppYVTc0DxzU0DWb5+5fwPyuva9Nu1tQXbvvag/f9W0nf+ZlaPv/jJbf+5tsLv8TPXruB5pbWFyGsAK4DRjQerhr2ynsf/0HpmJNGrQO4PSKmlfeoJPUl3iWrnraJ3M96vb166/RB2+vGvj52+PbxhZWDBzYwaeT6z0fEWxHx3ZK+TwN1wDn5zxLgxuJTrfm7Y+8s7jR88D6A/sAt5B5nkaQu8xqmjqsky3zgxuK6Z9+4hiXrZu4BJkTE/i6Ody4lLzLY31jNt56bB/DriPiDY9tjSX2VM0yVVZJlNnA1cFb+Mwm4MVPLwg66tHk9XkvSD3LPXX4iybIO+Ctyv1RS+CzM1PK5DsYbXVpxoHFooTi+dJ0kpWXCVLnVAv9QUncVdJgwLy2t2Huw9emTKcAuYF5Jkz9JsgzM1NJEW21mkFv2nl4oDi1dJ0lpedOPyu350orG5kH3fOehL+6KiCN+9ivJchO598y2am4ZwLrdre83OAwsJ5c0i52+aM2VOyLiP0rGGw18oXT7q7edWyju7MJxSNIRTJgqq0wtr1LyvOWg/o39bq79z5GTx7zzd0mWwUmWsUmWeUCbXxj57cYZxY+bbMjU0gg8Xtpu1tQXTrly2qK/+NY37p6YZBmSZPkk8BK5l7a32rV/VHHC7PQ5UEnqjKdkVQl3JUnmpUwmaf2HbFT1Lm669IkbgBs66rSvoYaFa64sLB4CFufL/7z/0LCbq6vqxxZWZjIJV0xZPOyKKYs3dDReS9KPp1bNIflwNxZ073AkyRmmKiBTy8uZTHJHV/ocaBzKf706lwON1YWqxyOiLj/enuqq+jlNzYPau2bZriTJsGDF9Wz48PTuGkyYko6BCVMVkanl0flLP3tPUQLs0Prdk3jkV7ezvW5coWojcH/JeEv+/eW/mbWjfuzho4239+Cp/GTpXFZtbn0F7WFyPzLd3KWDkKQiPoepivrag1++c8aE3/7rtLFrOK1mK0MGHqC5ZQB1h4axYfeZvL7l93h359nFXXYCs4t/C7PYV7/6wGXTx725aPppb1RNOHUT1VX1ZID6Q8PYXj+GN7eex++2nE9T88BClxbg5oj4SUUPVNJJz4SpiouIT5G7wWfMUZouJpfc3j/KeBcA84HzjzLeeuCOiHg27b5KUkdMmOoRETGU3AsIriX3arxR5G7s2ULu7tafRsRzXRivH/BnwJ8DM4Fx5P6etwK/A54Efh4RB8p2EJIkSZIkSZIkSeoJXsPUCSEiki609e9WUo/zOUydENImQZOlpOPFhClJUgomTJ0wjjZ7dHYp6XgyYUqSlIIJUyeUjmaRzi4lHW8mTEmSUjBh6oRTOpt0dinpRGDClCRJ6s268jIDSao0Z5iSJEmSJEmSJEmSJElSL1P259sSSMjkRy58+pUst1eXpo397NeH+rUASdGndDltnf3sV+5+J+I+tVf3zrtrmTx5coYy8S5ZSZJSMGFKkpSCCVOSpBRMmJIkpWDClCQpBROmJEkpmDAlSUrBhClJUgomTEmSUjBhSpKUgglTkqQUTJiSJKVgwpQkKQUTpiRJKZgwJUlKwYQpSVIKJkxJklIwYUqSlIIJU5KkFEyYkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiSp2zKVGjgiLgG+CVwGHAaeB74UEe9VaptSbxYRzwOz21m1KSImFLUzttRnRcRlwK/J5a8xEbGzZH2q+OhOHFXkTT8RMRlYDPwRMBSoAa4HXoyIUyqxTekkcNHRGhhb6ssi4nzg53Qw2UsbH92NowHlOYw27geGAduA3wdGAC8BE4C/B/6pQtuVeqWImAiMyi+eExFrOmhqbKnPiYgRwJ3AfcCQTpqmjY9uxVHZZ5gRkQE+nV/8aUS8GxHLgGfzddeXe5vSSeDi/Hcj8G57DYwt9WEP5j9DgHXtNUgbH8cSR5U4JTsRODVffruo/q3893kR0b8C25V6sxn57yZgWUQ0RMTbEXFXURtjS33dD4Gvd7AubXx0O44qkTDHFZX3tlMexIc7KymnMMOsBi4EqoApwPci4hv5dcaW+qrNwNyIuB1IOmiTNj66HUeVuIY5uKh8uKjcXFTu7By01BftJ3c95SVgHrnYeQL4BDAvIh7G2FIfFREdzSqLpY2PbsdRJRJmQ1G5eFpbvK2DFdiu1GtFxE3t1N0LvEIujmYDrxetNrakI6XNPd3OUZU4JbujqFzTTrkR2FOB7Uonm41F5eEYW1Jn0sZHt+OoEglzA1CfL08rqp+a/34jIpqRdDRnF5XXYmxJnUkbH92Oo7Kfko2Iloj4X+AzwGcj4vvkLqBek2+yoNzblHqziKgBVgKjgSeBu8ndeFC4brMFWGhsSR1LGx/HEkcVedMP8ABQR+5upLXAMnJvU9gMfLdC25R6pYjYB/w3uTtkbwG2kzsdeznQAtwVEYVrKsaW1LG08dGtOKrUq/FWA38I/AI4kN+xBcAVEbGnEtuUerl5wG1Altzt7fuBF4GrI+LJQiNjS+pY2vgwjiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJUu/x/z7kdUIPDiN4AAAAAElFTkSuQmCC" alt="Sentiment Bar">
+            </div>
+            <div style="margin-left: 20px; font-weight: bold;">Sentiment Legend:</div>
+            <br/>
+            <div style="display: flex; align-items: center; font-family: Arial, sans-serif;">
+                <div style="display: flex; margin-left: 20px;  margin-right: 20px; align-items: center;">
+                    <div style="background-color: red; width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Negative < 44</div>
+                </div>
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                    <div style="background-color: rgb(255, 255, 0); width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Mixed 46-54</div>
+                </div>
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                    <div style="background-color: rgb(12, 244, 8); width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Positive > 56</div>
+                </div>
+            </div>
+        </div>        
+        <div class='section heading'>Trending Topics:</div>
 
         <div id='trending_topics' class='p-1 text-1.5xl'>
         <ul>
-        <li><a target='_blank' href='https://news.google.com/search?q=rubio%20warns%20russia%20u.s.%20ukraine%20war%20is%20running 2025-04-04&tbm=nws&source=lnms'>rubio warns russia u.s. ukraine war is running (23)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=zelensky%20hometown%20ukraine 2025-04-04&tbm=nws&source=lnms'>zelensky hometown ukraine (14)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=us%20russia%20ukraine%20rubio 2025-04-04&tbm=nws&source=lnms'>us russia ukraine rubio (14)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=yoon%20suk%20yeol%20south%20korea%E2%80%99s 2025-04-04&tbm=nws&source=lnms'>yoon suk yeol south korea’s (11)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=india%20modi%20bangladesh%20yunus 2025-04-04&tbm=nws&source=lnms'>india modi bangladesh yunus (11)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=china%20us 2025-04-04&tbm=nws&source=lnms'>china us (9)</a></li>
+        <li><a target='_blank' href='https://news.google.com/search?q=rubio%20warns%20russia%20u.s.%20ukraine%20war%20is%20running 2025-04-04&tbm=nws&source=lnms'>rubio warns russia u.s. ukraine war is running (21)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=yoon%20suk%20yeol%20south%20korea%E2%80%99s 2025-04-04&tbm=nws&source=lnms'>yoon suk yeol south korea’s (8)</a></li>
 <li><a target='_blank' href='https://news.google.com/search?q=ukraine%20kyiv%20us%20europe 2025-04-04&tbm=nws&source=lnms'>ukraine kyiv us europe (7)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=gaza%20city 2025-04-04&tbm=nws&source=lnms'>gaza city (5)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=europe%20u.s. 2025-04-04&tbm=nws&source=lnms'>europe u.s. (5)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=china%20us 2025-04-04&tbm=nws&source=lnms'>china us (6)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=putin%20zelensky 2025-04-04&tbm=nws&source=lnms'>putin zelensky (6)</a></li>
 <li><a target='_blank' href='https://news.google.com/search?q=garbage%20strike%20uk%20second%20largest%20city%20leaves 2025-04-04&tbm=nws&source=lnms'>garbage strike uk second largest city leaves (5)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=putin%20u.s. 2025-04-04&tbm=nws&source=lnms'>putin u.s. (5)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=thailand%20myanmar 2025-04-04&tbm=nws&source=lnms'>thailand myanmar (5)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=russell%20brand%20u.k. 2025-04-04&tbm=nws&source=lnms'>russell brand u.k. (4)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=europe%20u.s. 2025-04-04&tbm=nws&source=lnms'>europe u.s. (4)</a></li>
 <li><a target='_blank' href='https://news.google.com/search?q=south%20korea%20yoon%20impeachment%20over 2025-04-04&tbm=nws&source=lnms'>south korea yoon impeachment over (4)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=u.s.%20strikes%20yemen 2025-04-04&tbm=nws&source=lnms'>u.s. strikes yemen (4)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=chimamanda%20ngozi%20adichie%20trump%20gaza 2025-04-04&tbm=nws&source=lnms'>chimamanda ngozi adichie trump gaza (4)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=israel%20gaza 2025-04-04&tbm=nws&source=lnms'>israel gaza (4)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=will%20trump 2025-04-04&tbm=nws&source=lnms'>will trump (3)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=mass%20grave%20vienna 2025-04-04&tbm=nws&source=lnms'>mass grave vienna (3)</a></li>
 <li><a target='_blank' href='https://news.google.com/search?q=dublin%20molly%20malone 2025-04-04&tbm=nws&source=lnms'>dublin molly malone (3)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=seoul%20yoon%20is%20removed 2025-04-04&tbm=nws&source=lnms'>seoul yoon is removed (3)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=u.s.%20strikes%20yemen 2025-04-04&tbm=nws&source=lnms'>u.s. strikes yemen (3)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=vance%20europe 2025-04-04&tbm=nws&source=lnms'>vance europe (3)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=greece%20easter 2025-04-04&tbm=nws&source=lnms'>greece easter (3)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=trump%20weighs 2025-04-04&tbm=nws&source=lnms'>trump weighs (2)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=gaza%20city 2025-04-04&tbm=nws&source=lnms'>gaza city (2)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=vance%20musk 2025-04-04&tbm=nws&source=lnms'>vance musk (2)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=us%20el%20salvador 2025-04-04&tbm=nws&source=lnms'>us el salvador (2)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=youtuber 2025-04-04&tbm=nws&source=lnms'>youtuber (1)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=will%20trump 2025-04-04&tbm=nws&source=lnms'>will trump (1)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=india 2025-04-04&tbm=nws&source=lnms'>india (1)</a></li>
 
         </ul>
         </div>
@@ -9476,6 +9499,26 @@ Contact
                     <br/>
                     
                     <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://fortune.com/crypto/2025/04/04/codex-seed-round-dragonfly-coinbase-circle-15-8-million/'>Exclusive: Codex raises $16 million to build a blockchain just for stablecoins</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Fortune&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-04-04 14:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    
+
+© 2025 Fortune Media IP Limited. All Rights Reserved. Use of this site constitutes acceptance of our Terms of Use and Privacy Policy | CA Notice at Collection and Privacy Notice | Do Not Sell/Share My Personal Information
+FORTUNE is a trademark of Fortune Media IP Limited, registered in the U.S. and other countries. FORTUNE may receive compensation for some links to products and services on this website. Offers may be subject to change without notice.
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
                         <a target='_blank' href='https://www.usatoday.com/story/money/investing/2025/04/04/major-cryptocurrencies-tariff-uncertainty/82727683007/'>3 major cryptocurrencies that could be affected by tariff uncertainty</a>
                     </div>
                     <div id='article_attribution'  style='mb-1'>
@@ -15594,6 +15637,31 @@ León was included by Fifa in the tournament draw in December despite the pendin
                     <br/>
                     
                     <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.goal.com/en-us/lists/ryan-reynolds-rob-mcelhenney-tipped-sell-wrexham-sooner-rather-than-later-questions-ready-premier-league-promotion-push/blt20204817e5f0173a'>Ryan Reynolds & Rob McElhenney tipped to sell Wrexham 'sooner rather than later' as prediction questions are asked of whether Red Dragons are ready for Premier League promotion push</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Goal.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-04-04 13:48:58
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    
+
+Ryan Reynolds and Rob McElhenney may look to "sell sooner rather than later", it is being claimed, with questions asked of Wrexham's long-term plan.
+
+Article continues below
+
+Article continues below
+
+Article continues below
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
                         <a target='_blank' href='https://www.foxsports.com/articles/soccer/mexican-soccer-club-leon-gets-court-date-for-legal-fight-against-fifa-over-club-world-cup-entry'>Mexican soccer club León gets court date for legal fight against FIFA over Club World Cup entry</a>
                     </div>
                     <div id='article_attribution'  style='mb-1'>
@@ -15690,6 +15758,56 @@ The fixture has been utterly dominated by the USWNT. In their 41 meetings to dat
 Five draws have been played out, while Brazil have won just three times.
 
 There are a handful of places to watch the games live. These include: TNT Sports, TruTV, Telemundo, Universo, Max (formerly HBO Max), and Peacock for livestreaming in North America.
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.goal.com/en-us/lists/harry-winks-axed-leicester-furious-confrontation-ruud-van-nistelrooy-100-mile-commute-amid-birth-newborn-daughter/blt282e5f8273f3d4fd'>Huge drama at Leicester as Harry Winks AXED after furious 'confrontation' with Ruud van Nistelrooy over 100-mile commute amid birth of newborn daughter</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Goal.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-04-04 10:03:46
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    
+
+Harry Winks has been 'axed' from Ruud van Nistelrooy's Leicester City squad after a 'heated row' about refusing to compromise on his 100-mile commute.
+
+Article continues below
+
+Article continues below
+
+Article continues below
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.goal.com/en-us/lists/cristiano-ronaldo-rival-real-madrid-takeover-cr7-join-forces-saudi-royal-family-buy-la-liga-club/blt9fad6ab8015cba07'>Cristiano Ronaldo to rival Real Madrid? Shock takeover talk surfaces that could see CR7 join forces with Saudi royal family & buy La Liga club</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Goal.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-04-04 09:36:07
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    
+
+Cristiano Ronaldo will always be a Real Madrid legend, but shock takeover talk has suggested that he could become a La Liga rival to Los Blancos.
+
+Article continues below
+
+Article continues below
+
+Article continues below
                     <br/>
                     <span id='menu'>
 <a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
@@ -15899,6 +16017,31 @@ Elsewhere, the Matildas have secured a morale-boosting 1-0 win over South Korea 
 The De Bruyne tributes continue to pour in, including to my inbox. “Hello Will. KDB – what a player!” writes Krishna Moorthy. “It is not a coincidence that he is leaving at the same time that the fortunes of City are waning … Pep will follow in my opinion, as City without KDB will be like Barça without Messi for Pep.”
 
 Asked about De Bruyne's legacy, Guardiola has ranked him among the best players to grace the Best League In The World™. “In the Premier League he is one of the greatest midfielders in this country and top of the club,” he said. “Great, if not the greatest. Always have respect for the players who play many roles and are incredible players to play 20 or 30 years in this club.”
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.goal.com/en-gb/lists/real-madrid-goalkeeping-crisis-andriy-lunin-thibaut-courtois-injury-champions-league-arsenal/bltde87177bd66c5dcf'>Real Madrid facing goalkeeping crisis as Andriy Lunin joins Thibaut Courtois on injury list ahead of Champions League tie with Arsenal</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Goal.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-04-04 07:06:30
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    
+
+Real Madrid are staring at a grave goalkeeping crisis as Andriy Lunin joined Thibaut Courtois on their growing injury list.
+
+Article continues below
+
+Article continues below
+
+Article continues below
                     <br/>
                     <span id='menu'>
 <a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
