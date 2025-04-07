@@ -1,0 +1,419 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <title id="title">News'n'Clues - Trending Topics, Headlines</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .menu { color: #444444; }
+            .copyright { margin: 0 auto; }
+            p { font-family: serif; }
+            body {  background-color: #2c2c2c; font-family: Arial, sans-serif; font-size: 20px; color: #f4f4f4;  }
+            a { text-decoration: none; color: #f4f4f4; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
+            .hidden {
+                display: none;
+            }            
+        </style>
+    </head>
+    <body class='p-2'>
+        <br/>
+        <div class="section">
+            <input type="hidden" id="sentiment_score" value="36">
+            <div id="sentiment" class="heading">Business Sentiment</div>
+            <div>
+                <img src="data:image/png;base64,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" alt="Sentiment Bar">
+            </div>
+            <div style="margin-left: 20px; font-weight: bold;">Sentiment Legend:</div>
+            <br/>
+            <div style="display: flex; align-items: center; font-family: Arial, sans-serif;">
+                <div style="display: flex; margin-left: 20px;  margin-right: 20px; align-items: center;">
+                    <div style="background-color: red; width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Negative < 44</div>
+                </div>
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                    <div style="background-color: rgb(255, 255, 0); width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Mixed 46-54</div>
+                </div>
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                    <div style="background-color: rgb(12, 244, 8); width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Positive > 56</div>
+                </div>
+            </div>
+        </div>        
+        <div class='section heading'>Trending Topics:</div>
+
+        <div id='trending_topics' class='p-1 text-1.5xl'>
+        <ul>
+        
+        </ul>
+        </div>
+        <br/><a target='_blank' href='https://trends.google.com/trending?geo=US'>Trending Google Searches</a>
+        <br/><a target='_blank' href='https://www.bing.com/news/search?q=Top+stories'>Trending Bing News</a>
+        <br/>
+        
+
+
+            <div id='cat_world' class='section text-center heading'>
+            WORLD
+            </div>
+            <br/>
+            
+
+            <div id='cat_national' class='section text-center heading'>
+            NATIONAL
+            </div>
+            <br/>
+            
+
+            <div id='cat_business' class='section text-center heading'>
+            BUSINESS
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.billboard.com/business/business-news/merlin-reactional-wmg-noble-steed-uta-stem-music-executive-job-news-1235602744/'>Executive Turntable: Merlin Swarms Data and Member Teams With New Hires; Moves at Reactional, Noble Steed & Pophouse</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Billboard&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-09 16:07:06
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Executive Turntable: Merlin Swarms Data and Member Teams With New Hires; Moves at Reactional, Noble Steed & Pophouse
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://qz.com/tesla-stock-ozempic-chanel-palantir-healthcare-layoffs-1851242459'>Tesla stock sinks, Ozempic scares food CEOs: Business news roundup</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Quartz&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-09 15:17:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Tesla stock sinks, Ozempic scares food CEOs: Business news roundup
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://financialpost.com/news/live-news-top-business-stories-february-9-2024'>Live news: Bank of Canada rate cut likely in June after strong jobs report, RBC says</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Financial Post&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-09 15:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Live news: Bank of Canada rate cut likely in June after strong jobs report, RBC says
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://libn.com/2024/02/09/long-island-business-news-announces-2024-diversity-in-business-awards/'>Long Island Business News announces 2024 Diversity in Business Awards</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Long Island Business News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-09 14:21:20
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Long Island Business News announces 2024 Diversity in Business Awards
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.foxbusiness.com/technology/cheap-chinese-evs-pose-security-risk-americans-keep-them-out-economist-warns'>Cheap Chinese EVs pose a 'security risk' to Americans: 'Keep them out,' economist warns</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Fox Business&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-09 14:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Cheap Chinese EVs pose a 'security risk' to Americans: 'Keep them out,' economist warns
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://godanriver.com/news/local/business/employment/brian-bradner-dewberry-danville/article_bc49ee7c-c74a-11ee-b6f6-fb9ffcd30af8.html'>Brian Bradner promoted to senior vice president at Dewberry in Danville</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> GoDanRiver.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-09 12:57:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Brian Bradner promoted to senior vice president at Dewberry in Danville
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.bbc.com/news/business-68250836'>Nationwide's Dominic West advert reported by Santander to watchdog</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> BBC.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-09 12:44:02
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Nationwide's Dominic West advert reported by Santander to watchdog
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://golfbusinessnews.com/news/growing-the-game/golf-foundation-activations-prove-a-hit-during-childrens-mental-health-week/'>Golf Foundation activations prove a hit during Childrens Mental Health Week</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Golf Business News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-09 12:03:56
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Golf Foundation activations prove a hit during Childrens Mental Health Week
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://golfbusinessnews.com/news/environment-and-sustainainability/england-golf-partners-with-zellar-to-accelerate-sustainability-across-member-clubs/'>England Golf partners with Zellar to accelerate sustainability across member clubs</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Golf Business News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-09 09:23:56
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    England Golf partners with Zellar to accelerate sustainability across member clubs
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.hollywoodreporter.com/business/business-news/showmax-relaunch-africa-streaming-comcast-1235785397/'>How Showmax Plans to “Change the Game for Streaming in Africa,” Turbo-Charged by NBCU</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Hollywood Reporter&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-09 08:25:52
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    How Showmax Plans to “Change the Game for Streaming in Africa,” Turbo-Charged by NBCU
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.djc.com/news/re/12162025.html'>Edge completes 66 International District units, now open to renters</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Seattle Daily Journal of Commerce&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-09 08:00:46
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Edge completes 66 International District units, now open to renters
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.wsj.com/tech/ai/sam-altman-seeks-trillions-of-dollars-to-reshape-business-of-chips-and-ai-89ab3db0'>Sam Altman Seeks Trillions of Dollars to Reshape Business of Chips and AI</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Wall Street Journal&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-09 02:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Sam Altman Seeks Trillions of Dollars to Reshape Business of Chips and AI
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.foxbusiness.com/retail/masked-california-thief-nabbed-being-caught-video-snatching-dozens-iphones-apple-store'>Masked California thief nabbed after being caught on video snatching dozens of iPhones from Apple Store</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Fox Business&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-09 02:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Masked California thief nabbed after being caught on video snatching dozens of iPhones from Apple Store
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.billboard.com/business/business-news/sm-entertainment-earnings-revenue-down-aespa-nct-127-albums-1235603494/'>SM Entertainment Revenue Falls Despite Album Sales Surge From NCT 127, aespa Releases</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Billboard&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-09 00:34:56
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    SM Entertainment Revenue Falls Despite Album Sales Surge From NCT 127, aespa Releases
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.nola.com/news/business/blue-cross-elevance-deal-faces-opposition/article_3a2d5424-c6d7-11ee-beb5-f7b1cb2a12e0.html'>Blue Cross deal faces opposition as regulators look into voting process for policyholders</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> NOLA.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-02-09 00:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Blue Cross deal faces opposition as regulators look into voting process for policyholders
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_cryptocurrency' class='section text-center heading'>
+            CRYPTOCURRENCY
+            </div>
+            <br/>
+            
+
+            <div id='cat_science' class='section text-center heading'>
+            SCIENCE
+            </div>
+            <br/>
+            
+
+            <div id='cat_technology' class='section text-center heading'>
+            TECHNOLOGY
+            </div>
+            <br/>
+            
+
+            <div id='cat_health' class='section text-center heading'>
+            HEALTH
+            </div>
+            <br/>
+            
+
+            <div id='cat_soccer' class='section text-center heading'>
+            SOCCER
+            </div>
+            <br/>
+            
+
+            <div id='cat_tennis' class='section text-center heading'>
+            TENNIS
+            </div>
+            <br/>
+            
+
+            <div id='cat_formula_1' class='section text-center heading'>
+            FORMULA_1
+            </div>
+            <br/>
+            
+
+            <div id='cat_entertainment' class='section text-center heading'>
+            ENTERTAINMENT
+            </div>
+            <br/>
+            
+
+            <div id='cat_other' class='section text-center heading'>
+            OTHER
+            </div>
+            <br/>
+            
+
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
+    </body>
+</html>
