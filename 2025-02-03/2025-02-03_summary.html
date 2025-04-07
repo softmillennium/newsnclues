@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <title id="title">News'n'Clues - Trending Topics, Headlines</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .menu { color: #444444; }
+            .copyright { margin: 0 auto; }
+            p { font-family: serif; }
+            body {  background-color: #2c2c2c; font-family: Arial, sans-serif; font-size: 20px; color: #f4f4f4;  }
+            a { text-decoration: none; color: #f4f4f4; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
+            .hidden {
+                display: none;
+            }            
+        </style>
+    </head>
+    <body class='p-2'>
+        <br/>
+        <div class="section">
+            <input type="hidden" id="sentiment_score" value="53">
+            <div id="sentiment" class="heading">Business Sentiment</div>
+            <div>
+                <img src="data:image/png;base64,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" alt="Sentiment Bar">
+            </div>
+            <div style="margin-left: 20px; font-weight: bold;">Sentiment Legend:</div>
+            <br/>
+            <div style="display: flex; align-items: center; font-family: Arial, sans-serif;">
+                <div style="display: flex; margin-left: 20px;  margin-right: 20px; align-items: center;">
+                    <div style="background-color: red; width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Negative < 44</div>
+                </div>
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                    <div style="background-color: rgb(255, 255, 0); width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Mixed 46-54</div>
+                </div>
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                    <div style="background-color: rgb(12, 244, 8); width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Positive > 56</div>
+                </div>
+            </div>
+        </div>        
+        <div class='section heading'>Trending Topics:</div>
+
+        <div id='trending_topics' class='p-1 text-1.5xl'>
+        <ul>
+        <li><a target='_blank' href='https://news.google.com/search?q=world%20news%20donald%20trump%20us%20china 2025-02-03&tbm=nws&source=lnms'>world news donald trump us china (18)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=trump%20ukraine%20russia 2025-02-03&tbm=nws&source=lnms'>trump ukraine russia (7)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=mexico%20china%20canada 2025-02-03&tbm=nws&source=lnms'>mexico china canada (6)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=canada%20mexico%20china%20europe 2025-02-03&tbm=nws&source=lnms'>canada mexico china europe (6)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=panama%20us%20rubio 2025-02-03&tbm=nws&source=lnms'>panama us rubio (5)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=himalayas%20us%20nepal 2025-02-03&tbm=nws&source=lnms'>himalayas us nepal (5)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=iran%20donald%20trump%27s%20gaza 2025-02-03&tbm=nws&source=lnms'>iran donald trump's gaza (5)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=donald%20trump%20mexico 2025-02-03&tbm=nws&source=lnms'>donald trump mexico (4)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=donald%20trump%27s%20us 2025-02-03&tbm=nws&source=lnms'>donald trump's us (4)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=temu%20shein 2025-02-03&tbm=nws&source=lnms'>temu shein (3)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=the%20potomac%20river%20dc 2025-02-03&tbm=nws&source=lnms'>the potomac river dc (3)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=upscale%20residential%20area%20moscow 2025-02-03&tbm=nws&source=lnms'>upscale residential area moscow (3)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=greece%20santorini 2025-02-03&tbm=nws&source=lnms'>greece santorini (3)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=washington 2025-02-03&tbm=nws&source=lnms'>washington (2)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=prince%20harry%20uk 2025-02-03&tbm=nws&source=lnms'>prince harry uk (2)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=france 2025-02-03&tbm=nws&source=lnms'>france (1)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=eastern%20congo%20are%20crowded 2025-02-03&tbm=nws&source=lnms'>eastern congo are crowded (1)</a></li>
+
+        </ul>
+        </div>
+        <br/><a target='_blank' href='https://trends.google.com/trending?geo=US'>Trending Google Searches</a>
+        <br/><a target='_blank' href='https://www.bing.com/news/search?q=Top+stories'>Trending Bing News</a>
+        <br/>
+        
+
+
+            <div id='cat_world' class='section text-center heading'>
+            WORLD
+            </div>
+            <br/>
+            
+
+            <div id='cat_national' class='section text-center heading'>
+            NATIONAL
+            </div>
+            <br/>
+            
+
+            <div id='cat_business' class='section text-center heading'>
+            BUSINESS
+            </div>
+            <br/>
+            
+
+            <div id='cat_cryptocurrency' class='section text-center heading'>
+            CRYPTOCURRENCY
+            </div>
+            <br/>
+            
+
+            <div id='cat_science' class='section text-center heading'>
+            SCIENCE
+            </div>
+            <br/>
+            
+
+            <div id='cat_technology' class='section text-center heading'>
+            TECHNOLOGY
+            </div>
+            <br/>
+            
+
+            <div id='cat_health' class='section text-center heading'>
+            HEALTH
+            </div>
+            <br/>
+            
+
+            <div id='cat_soccer' class='section text-center heading'>
+            SOCCER
+            </div>
+            <br/>
+            
+
+            <div id='cat_tennis' class='section text-center heading'>
+            TENNIS
+            </div>
+            <br/>
+            
+
+            <div id='cat_formula 1' class='section text-center heading'>
+            FORMULA 1
+            </div>
+            <br/>
+            
+
+            <div id='cat_entertainment' class='section text-center heading'>
+            ENTERTAINMENT
+            </div>
+            <br/>
+            
+
+            <div id='cat_other' class='section text-center heading'>
+            OTHER
+            </div>
+            <br/>
+            
+
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
+    </body>
+</html>
