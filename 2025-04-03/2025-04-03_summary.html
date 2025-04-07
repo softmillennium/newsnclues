@@ -31,30 +31,53 @@
     </head>
     <body class='p-2'>
         <br/>
-        <div class='text-3xl font-extrabold text-gray-300 leading-tight'>Trending Topics:</div>
+        <div class="section">
+            <input type="hidden" id="sentiment_score" value="40">
+            <div id="sentiment" class="heading">Business Sentiment</div>
+            <div>
+                <img src="data:image/png;base64,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" alt="Sentiment Bar">
+            </div>
+            <div style="margin-left: 20px; font-weight: bold;">Sentiment Legend:</div>
+            <br/>
+            <div style="display: flex; align-items: center; font-family: Arial, sans-serif;">
+                <div style="display: flex; margin-left: 20px;  margin-right: 20px; align-items: center;">
+                    <div style="background-color: red; width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Negative < 44</div>
+                </div>
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                    <div style="background-color: rgb(255, 255, 0); width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Mixed 46-54</div>
+                </div>
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                    <div style="background-color: rgb(12, 244, 8); width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Positive > 56</div>
+                </div>
+            </div>
+        </div>        
+        <div class='section heading'>Trending Topics:</div>
 
         <div id='trending_topics' class='p-1 text-1.5xl'>
         <ul>
-        <li><a target='_blank' href='https://news.google.com/search?q=israel%20gaza%20war 2025-04-03&tbm=nws&source=lnms'>israel gaza war (17)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=iran%20us 2025-04-03&tbm=nws&source=lnms'>iran us (15)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=hungary%20netanyahu 2025-04-03&tbm=nws&source=lnms'>hungary netanyahu (14)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=netanyahu%20hungary%20europe 2025-04-03&tbm=nws&source=lnms'>netanyahu hungary europe (7)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=zimbabwe%20south%20africa%E2%80%99s 2025-04-03&tbm=nws&source=lnms'>zimbabwe south africa’s (6)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=putin%20washington 2025-04-03&tbm=nws&source=lnms'>putin washington (6)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=u.s.%20yemen 2025-04-03&tbm=nws&source=lnms'>u.s. yemen (6)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=israel%20syria 2025-04-03&tbm=nws&source=lnms'>israel syria (4)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=us%20ukraine 2025-04-03&tbm=nws&source=lnms'>us ukraine (4)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=russia%20washington 2025-04-03&tbm=nws&source=lnms'>russia washington (4)</a></li>
+        <li><a target='_blank' href='https://news.google.com/search?q=us%20ukraine 2025-04-03&tbm=nws&source=lnms'>us ukraine (14)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=putin%20washington 2025-04-03&tbm=nws&source=lnms'>putin washington (5)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=netanyahu%20hungary 2025-04-03&tbm=nws&source=lnms'>netanyahu hungary (5)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=netanyahu%20israel%20gaza 2025-04-03&tbm=nws&source=lnms'>netanyahu israel gaza (5)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=iran%20france 2025-04-03&tbm=nws&source=lnms'>iran france (4)</a></li>
 <li><a target='_blank' href='https://news.google.com/search?q=macron%20france%20us 2025-04-03&tbm=nws&source=lnms'>macron france us (4)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=the%20country%20was%20fake%20bolivia 2025-04-03&tbm=nws&source=lnms'>the country was fake bolivia (3)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=canada%20freedom%20convoy%20found%20guilty%20of%20mischief 2025-04-03&tbm=nws&source=lnms'>canada freedom convoy found guilty of mischief (3)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=myanmar%20declares%20temporary%20truce 2025-04-03&tbm=nws&source=lnms'>myanmar declares temporary truce (3)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=betty%20webb%20bletchley%20park 2025-04-03&tbm=nws&source=lnms'>betty webb bletchley park (3)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=turkiye%20greece 2025-04-03&tbm=nws&source=lnms'>turkiye greece (3)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=iran%20france 2025-04-03&tbm=nws&source=lnms'>iran france (3)</a></li>
 <li><a target='_blank' href='https://news.google.com/search?q=zelensky%20moscow 2025-04-03&tbm=nws&source=lnms'>zelensky moscow (3)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=u.s.%20greenland 2025-04-03&tbm=nws&source=lnms'>u.s. greenland (3)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=trump%20us 2025-04-03&tbm=nws&source=lnms'>trump us (3)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=us%20china 2025-04-03&tbm=nws&source=lnms'>us china (2)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=us%20rubio 2025-04-03&tbm=nws&source=lnms'>us rubio (2)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=us%20michael%20bloomberg 2025-04-03&tbm=nws&source=lnms'>us michael bloomberg (2)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=russia 2025-04-03&tbm=nws&source=lnms'>russia (2)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=netanyahu%20budapest 2025-04-03&tbm=nws&source=lnms'>netanyahu budapest (2)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=trump%20us 2025-04-03&tbm=nws&source=lnms'>trump us (2)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=norway 2025-04-03&tbm=nws&source=lnms'>norway (1)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=putin%20us 2025-04-03&tbm=nws&source=lnms'>putin us (1)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=nancy%20mace 2025-04-03&tbm=nws&source=lnms'>nancy mace (1)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=italy 2025-04-03&tbm=nws&source=lnms'>italy (1)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=vienna 2025-04-03&tbm=nws&source=lnms'>vienna (1)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=greenland 2025-04-03&tbm=nws&source=lnms'>greenland (1)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=david%20schwimmer 2025-04-03&tbm=nws&source=lnms'>david schwimmer (1)</a></li>
 
         </ul>
         </div>
@@ -1720,6 +1743,27 @@ The Irish prime minister Martin says he is “concerned about trends within Hung
 Commissioner McGrath speaks in a similar vein, adding that “the concerns that we have in the Commission about rule of law related issues [in Hungary] are well documented.
 
 “Unfortunately, this is another retrograde step from the Hungarian authorities. Let's see what happens over the period ahead,” he says.
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.cnn.com/2025/04/03/world/video/world-leaders-react-trump-tariffs-digvid'>Here's how Trump's tariffs are being received by major US trade partners</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> CNN&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-04-03 06:02:26
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    
+
+Reaction is coming in from countries all over the world after President Donald Trump unveiled expansive new tariffs on all imports in a major escalation of his trade war.
+
+© 2025 Cable News Network. A Warner Bros. Discovery Company. All Rights Reserved.  CNN Sans ™ & © 2016 Cable News Network.
                     <br/>
                     <span id='menu'>
 <a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
@@ -11813,6 +11857,26 @@ Magazine: Financial nihilism in crypto is over — It's time to dream big again
                     <br/>
                     
                     <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://fortune.com/crypto/2025/04/03/bank-new-york-blackrock-crypto-bitcoin-custody-blockchain-launch/'>BNY launches new blockchain accounting tool with BlackRock as first client</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Fortune&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-04-03 13:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    
+
+© 2025 Fortune Media IP Limited. All Rights Reserved. Use of this site constitutes acceptance of our Terms of Use and Privacy Policy | CA Notice at Collection and Privacy Notice | Do Not Sell/Share My Personal Information
+FORTUNE is a trademark of Fortune Media IP Limited, registered in the U.S. and other countries. FORTUNE may receive compensation for some links to products and services on this website. Offers may be subject to change without notice.
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
                         <a target='_blank' href='https://www.forbes.com/sites/digital-assets/2025/04/03/flood-the-market-major-fed-flip-predicted-to-blow-up-the-bitcoin-price/'>‘Flood The Market'—‘Major' Fed Flip Predicted To Blow Up The Bitcoin Price</a>
                     </div>
                     <div id='article_attribution'  style='mb-1'>
@@ -20026,6 +20090,31 @@ The two nations would then play as Serbia and Montenegro on the international st
                     <br/>
                     
                     <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.goal.com/en/lists/nottingham-forest-vangelis-marinakis-face-trial-involvement-criminal-organisations-inciting-sports-violence/bltecebf35425a5c415'>Nottingham Forest owner Vangelis Marinakis to face trial for alleged involvement with criminal organisations and inciting sports violence</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Goal.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-04-03 16:00:40
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    
+
+Nottingham Forest and Olympiacos owner Vangelis Marinakis is reportedly set to face trial in Greece for his alleged ties with criminal organisations.
+
+Article continues below
+
+Article continues below
+
+Article continues below
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
                         <a target='_blank' href='https://football-italia.net/bastoni-millimetre-offside-make-the-difference/'>Bastoni: ‘Millimetre offside makes the difference' and frustrated with Club World Cup</a>
                     </div>
                     <div id='article_attribution'  style='mb-1'>
@@ -20152,6 +20241,31 @@ However, Marseille want a figure closer to €30-35 million.
 However, Inter are confident that their positive rapport with Marseille can make the negotiations go along smoothly.
 
 Particularly if they offer a player going the other way, or inch closer to Marseille's valuation with add-ons.
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.goal.com/en/lists/buy-wrexham-ryan-reynolds-rob-mcelhenney-his-drivers-cristiano-ronaldo-project-portuguese-goat-tipped-acquire-club-retired/blte4528b62d42bccdd'>Buy Wrexham & make Ryan Reynolds & Rob McElhenney ‘his drivers'! Bold Cristiano Ronaldo project mooted as Portuguese GOAT is tipped to acquire club when retired</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Goal.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-04-03 11:32:04
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    
+
+Cristiano Ronaldo is being tipped to become an owner, with it suggested he could buy Wrexham and make Ryan Reynolds and Rob McElhenney “his drivers”.
+
+Article continues below
+
+Article continues below
+
+Article continues below
                     <br/>
                     <span id='menu'>
 <a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
@@ -20390,6 +20504,31 @@ Only on two occasions did they fail to win the trophy. The first was in 1966, wh
                     <br/>
                     
                     <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.goal.com/en/lists/caoimhin-kelleher-leeds-liverpool-goalkeeper-chelsea-djordje-petrovic-possible-illan-meslier-replacement-championship-title-candidates-premier-league/blt0f4d2813efbc50ee'>Caoimhin Kelleher on the move? Leeds eye Liverpool goalkeeper and Chelsea's Djordje Petrovic as possible Illan Meslier replacement as Championship title candidates plan for Premier League return</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Goal.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-04-03 09:51:39
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    
+
+Leeds are considering bids for Liverpool's Caoimhin Kelleher and Djordje Petrovic of Chelsea as the Championship side search for a new goalkeeper.
+
+Article continues below
+
+Article continues below
+
+Article continues below
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
                         <a target='_blank' href='https://www.africanews.com/2025/04/03/fifa-president-visits-california-stadium-to-host-new-club-world-cup/'>FIFA president visits California stadium to host new Club World Cup</a>
                     </div>
                     <div id='article_attribution'  style='mb-1'>
@@ -20432,6 +20571,31 @@ As a token of appreciation, FIFA donated two tickets per first responder for Clu
  
 
 
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.goal.com/en/lists/harry-kane-new-shooting-boots-skechers-special-edition-bayern-munich-england-striker-cant-stop-scoring/blt4b33e21a6bafd619'>Harry Kane has new shooting boots! Skechers deliver special edition footwear for Bayern Munich & England striker that ‘can't stop scoring'</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Goal.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-04-03 09:05:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    
+
+Harry Kane has new shooting boots, with Skechers delivering special edition footwear for the Bayern Munich and England star who “can't stop scoring”.
+
+Article continues below
+
+Article continues below
+
+Article continues below
                     <br/>
                     <span id='menu'>
 <a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
@@ -26974,6 +27138,29 @@ Rather disappointing, isn't it? Despite all the technology in the world, it woul
 More on 2ov
 
 Sections on 2ov
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://apnews.com/video/a-ufo-themed-showcase-of-rare-and-futuristic-watches-to-be-auctioned-a98606ef5cde4e80932733abc1e68c3e'>A UFO themed showcase of rare and futuristic watches to be auctioned</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> AP News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-04-03 03:11:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    
+
+Copyright 2025 The Associated Press. All Rights Reserved.
+
+In Geneva, an immersive exhibition resembling a sci-fi film set is drawing collectors into a world of rare and futuristic watches. Sotheby's is hosting a themed auction called ‘Area_51', showcasing 51 timepieces in a setting inspired by UFOs and alien research labs. (AP video and production by Mustakim Hasnath)
+
+Copyright 2025 The Associated Press. All Rights Reserved.
                     <br/>
                     <span id='menu'>
 <a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
