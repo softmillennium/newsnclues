@@ -31,30 +31,53 @@
     </head>
     <body class='p-2'>
         <br/>
-        <div class='text-3xl font-extrabold text-gray-300 leading-tight'>Trending Topics:</div>
+        <div class="section">
+            <input type="hidden" id="sentiment_score" value="41">
+            <div id="sentiment" class="heading">Business Sentiment</div>
+            <div>
+                <img src="data:image/png;base64,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" alt="Sentiment Bar">
+            </div>
+            <div style="margin-left: 20px; font-weight: bold;">Sentiment Legend:</div>
+            <br/>
+            <div style="display: flex; align-items: center; font-family: Arial, sans-serif;">
+                <div style="display: flex; margin-left: 20px;  margin-right: 20px; align-items: center;">
+                    <div style="background-color: red; width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Negative < 44</div>
+                </div>
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                    <div style="background-color: rgb(255, 255, 0); width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Mixed 46-54</div>
+                </div>
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                    <div style="background-color: rgb(12, 244, 8); width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Positive > 56</div>
+                </div>
+            </div>
+        </div>        
+        <div class='section heading'>Trending Topics:</div>
 
         <div id='trending_topics' class='p-1 text-1.5xl'>
         <ul>
-        <li><a target='_blank' href='https://news.google.com/search?q=strike%20kills%20ukraine 2025-04-05&tbm=nws&source=lnms'>strike kills ukraine (10)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=hands%20off%E2%80%99%20us 2025-04-05&tbm=nws&source=lnms'>hands off’ us (10)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=russia%20ukraine%20telegraph 2025-04-05&tbm=nws&source=lnms'>russia ukraine telegraph (10)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=gaza%20israel 2025-04-05&tbm=nws&source=lnms'>gaza israel (7)</a></li>
+        <li><a target='_blank' href='https://news.google.com/search?q=russia%20ukraine 2025-04-05&tbm=nws&source=lnms'>russia ukraine (10)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=strike%20kills%20ukraine 2025-04-05&tbm=nws&source=lnms'>strike kills ukraine (7)</a></li>
 <li><a target='_blank' href='https://news.google.com/search?q=ilona%20maher%20new%20zealand%20ruby%20tui 2025-04-05&tbm=nws&source=lnms'>ilona maher new zealand ruby tui (6)</a></li>
 <li><a target='_blank' href='https://news.google.com/search?q=russia%20western%20europe%20uk 2025-04-05&tbm=nws&source=lnms'>russia western europe uk (5)</a></li>
 <li><a target='_blank' href='https://news.google.com/search?q=hands%20off%27%20us%20europe 2025-04-05&tbm=nws&source=lnms'>hands off' us europe (4)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=u.k.%20arrest 2025-04-05&tbm=nws&source=lnms'>u.k. arrest (3)</a></li>
 <li><a target='_blank' href='https://news.google.com/search?q=netanyahu%20washington 2025-04-05&tbm=nws&source=lnms'>netanyahu washington (3)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=the%20hague%20duterte%20pursues 2025-04-05&tbm=nws&source=lnms'>the hague duterte pursues (3)</a></li>
 <li><a target='_blank' href='https://news.google.com/search?q=canada%20auto%20city 2025-04-05&tbm=nws&source=lnms'>canada auto city (3)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=vinicius%20valencia 2025-04-05&tbm=nws&source=lnms'>vinicius valencia (3)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=south%20korea%E2%80%99s%20yoon 2025-04-05&tbm=nws&source=lnms'>south korea’s yoon (3)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=india%20sri%20lanka 2025-04-05&tbm=nws&source=lnms'>india sri lanka (3)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=the%20hague%20duterte%20pursues 2025-04-05&tbm=nws&source=lnms'>the hague duterte pursues (3)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=gaza 2025-04-05&tbm=nws&source=lnms'>gaza (3)</a></li>
 <li><a target='_blank' href='https://news.google.com/search?q=hawaii%20america 2025-04-05&tbm=nws&source=lnms'>hawaii america (3)</a></li>
 <li><a target='_blank' href='https://news.google.com/search?q=ukraine%20zelenskyy 2025-04-05&tbm=nws&source=lnms'>ukraine zelenskyy (3)</a></li>
-<li><a target='_blank' href='https://news.google.com/search?q=iran%20us 2025-04-05&tbm=nws&source=lnms'>iran us (2)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=russia%20telegraph 2025-04-05&tbm=nws&source=lnms'>russia telegraph (2)</a></li>
 <li><a target='_blank' href='https://news.google.com/search?q=zelensky%20us 2025-04-05&tbm=nws&source=lnms'>zelensky us (2)</a></li>
 <li><a target='_blank' href='https://news.google.com/search?q=ukraine%20rubio 2025-04-05&tbm=nws&source=lnms'>ukraine rubio (2)</a></li>
 <li><a target='_blank' href='https://news.google.com/search?q=us%20yemen 2025-04-05&tbm=nws&source=lnms'>us yemen (2)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=lebanon%20amid%20fears%20over%20a%20shaky%20cease-fire 2025-04-05&tbm=nws&source=lnms'>lebanon amid fears over a shaky cease-fire (1)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=syria 2025-04-05&tbm=nws&source=lnms'>syria (1)</a></li>
 <li><a target='_blank' href='https://news.google.com/search?q=vienna 2025-04-05&tbm=nws&source=lnms'>vienna (1)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=hungary 2025-04-05&tbm=nws&source=lnms'>hungary (1)</a></li>
 
         </ul>
         </div>
@@ -1982,6 +2005,27 @@ How ready is China's military? Dramatic downfall of two defense ministers raises
 
             “I don't think anyone in the system now is irreplaceable,” he said. “This is what a political strong man does. He's ruthless… he's continuously purging his own ranks to keep his generals on their toes.”
     
+
+© 2025 Cable News Network. A Warner Bros. Discovery Company. All Rights Reserved.  CNN Sans ™ & © 2016 Cable News Network.
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.cnn.com/2025/04/04/politics/video/dr-peter-marks-fda-vaccine-robert-kennedy-jr-ebof-digvid'>‘He'll have to confront his maker for those lies': FDA's vaccine chief who resigned slams RFK Jr.</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> CNN&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-04-05 00:37:55
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    
+
+CNN's Erin Burnett talks with Dr. Peter Marks, the former head of vaccines for the FDA, who says he was pushed out for not agreeing to spread misinformation about vaccines. 
 
 © 2025 Cable News Network. A Warner Bros. Discovery Company. All Rights Reserved.  CNN Sans ™ & © 2016 Cable News Network.
                     <br/>
@@ -9795,6 +9839,31 @@ Gambling Problem? Call 1-800-GAMBLER (1-800-426-2537). Hope is here. GamblingHel
                     <br/>
                     
                     <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.goal.com/en-us/lists/erling-haaland-sends-message-kevin-de-bruyne-man-city-star-confirms-plans-to-leave-end-of-season/blt0f7e4d10a05ffb61'>Erling Haaland sends four-word message to Kevin De Bruyne after Man City star confirms plans to leave at end of season</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Goal.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-04-05 14:35:08
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    
+
+Erling Haaland has sent a touching four-word message to Kevin De Bruyne following the news of the Belgian's impending Manchester City exit.
+
+Article continues below
+
+Article continues below
+
+Article continues below
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
                         <a target='_blank' href='https://www.bavarianfootballworks.com/2025/4/5/24401728/official-bayern-munich-confirms-thomas-mullers-exit-legend-to-short-term-contract-club-world-cup'>Official: Bayern Munich confirms Thomas Müller's exit, inks legend to short-term contract for Club World Cup</a>
                     </div>
                     <div id='article_attribution'  style='mb-1'>
@@ -9856,6 +9925,31 @@ Check your inbox for a welcome email.
 Oops. Something went wrong. Please enter a valid email and try again.
 
 Gambling Problem? Call 1-800-GAMBLER (1-800-426-2537). Hope is here. GamblingHelpLineMA.org or call (800) 327-5050 for 24/7 support (MA). Visit www.mdgamblinghelp.org (MD). Call 877-8HOPE-NY or text HOPENY (467369) (NY). 21+ (18+ D.C.) and present in select states (for KS, in affiliation with Kansas Star Casino). Call 1-888-789-7777 or visit ccpg.org/chat (CT) or visit FanDuel.com/RG.
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.goal.com/en-us/lists/lamine-yamal-robert-lewandowski-raphinha-barcelona-highest-earners-liverpool-man-city/blt725efa361e3c36bc'>Lamine Yamal set to join Robert Lewandowski and Raphinha as one of Barcelona's highest earners as Liverpool and Man City continue to monitor wonderkid</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Goal.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-04-05 12:20:52
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    
+
+Barcelona are reportedly preparing a lucrative new contract for Lamine Yamal, which would place him among the highest-paid players at the club.
+
+Article continues below
+
+Article continues below
+
+Article continues below
                     <br/>
                     <span id='menu'>
 <a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
@@ -9932,6 +10026,56 @@ The content on this site is for entertainment purposes only and CBS Sports makes
 
 
 Images by Getty Images and Imagn
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.goal.com/en/lists/video-ryan-reynolds-wrexham-hollywood-star-burton-phil-parkinson-promotion-push/bltb5d5df6ea31ee9e2'>VIDEO: Ryan Reynolds back at Wrexham! Hollywood star jets in for clash with relegation-threatend Burton as Phil Parkinson's side aim to continue promotion push</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Goal.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-04-05 11:31:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    
+
+Ryan Reynolds has jetted into Wales for Wrexham's League One fixture against Burton as Phil Parkinson's side aim to continue their promotion push.
+
+Article continues below
+
+Article continues below
+
+Article continues below
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.goal.com/en-us/lists/chelsea-fine-potential-european-ban-foverspending-uefa-selling-women-team-200m/blt1ec59fd1000469b1'>Chelsea facing fine and potential European ban for overspending after UEFA refuse to allow £200m sale of women's team as income</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Goal.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-04-05 10:29:21
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    
+
+Chelsea are at risk of being banned from Europe after UEFA denied their request to use the sale of their women's team to cut financial losses.
+
+Article continues below
+
+Article continues below
+
+Article continues below
                     <br/>
                     <span id='menu'>
 <a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula 1'>FORMULA 1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
