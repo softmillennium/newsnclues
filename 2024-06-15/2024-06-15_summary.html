@@ -1,0 +1,1382 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <title id="title">News'n'Clues - Trending Topics, Headlines</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .menu { color: #444444; }
+            .copyright { margin: 0 auto; }
+            p { font-family: serif; }
+            body {  background-color: #2c2c2c; font-family: Arial, sans-serif; font-size: 20px; color: #f4f4f4;  }
+            a { text-decoration: none; color: #f4f4f4; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
+            .hidden {
+                display: none;
+            }            
+        </style>
+    </head>
+    <body class='p-2'>
+        <br/>
+        <div class="section">
+            <input type="hidden" id="sentiment_score" value="50">
+            <div id="sentiment" class="heading">Business Sentiment</div>
+            <div>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcwAAAB4CAYAAAB/98JRAAALTklEQVR4nO3de4xc1X3A8e+s8T7YtY0NfjCxeZnYYEjM28FuXXBCm+YPWlLSJiWERi1NKkrzR4LSNK34pY9UIlWqtGoUJSUkKgptWhQLhRTxcsBJwHEMNQ8/QuzYxh5sbDB+rL1e7+70j3lw9+7O+u5kRuv1fj/SaM8999xz7/zx02/PufeeAUmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEkTQ26sL0A6FRWK3ALcP8rD1uVzXHWCft8PfBRYCswBeoFdwGPAvfkcL9ZxuZIyOG2sL0A6Rb2rkZ0VikwFHgA+kNrVAUwDFgF/XihyD/D5fI5iI88vCVrG+gKkU9SoE+a+1/JXRkQxIn6WrC8UaQMeZWiyTJsEfO6lny4Z7chWUgYmTKk5GjnC/CywJGvjS69Z84f3PfCR/44Ib7lIDeSUrNRghSLTgHkN6ms28Ll0/donV7Bh7dVMbutlyfseY/6lLw3af817n7h5++aFXwH+ohHXIcmEKTXDkNHl0w/dyKbnr6inrw8B7cmKV15YzPOrlwNwrKeDVd/7IDPzBabOeLPaZvrM15k979U7I+LxiHionhNLGswpWanxhiTM/ftm1tvXh9IVm5+/PLn51wMDLTM2/9/lX0q3O3fhZoAv1ntiSYM5wpQab0jCfGvfWZXin0TEvVk6KRRpAa5O1hWLLezZObey+R8R8Q/ltg8DdyXbzpn3KsAlEbE0In4ymi8gaShHmFLjDUqYR7s7OXa0o7K5cRT9XEDptZGqI4e66O+r/p/7zcSuLemDZ8zeUyneOIpzSqrBEabUeJcmN452d3HZsh9x/qKNTJ3+5vf/9G7agAKwitJiA2tq9HNRuuJod1el2A88m9i1J922ta2H1vYeenval9bzJSQNZsKUGqhQZB5wRrJuxqw9XPO+aj6bXv57Yflze6HIt4FP5nP0pLo7M91/b09bpfhaRFTb53McLxTpBVqT7Ts6u+ntaX93fd9GUpJTslJj1fP+5W27d5z7TKE4ONkBXemGfW9Pxw4ZUQLH0hWtbT0A0yLijDquS1KCCVNqrLoWLJhzzvbLNqy9+oWISL5C0pluVxyohuyBYbrpS1dMOq2/UpxVz3VJeptTslJjDUmYb+yZw7pV11HYfh4D/S3MOWcHS254nDNn7x7U7uKr1i18cc17VkfEsojopbTUXS3p6dsTmTbK9pJSHGFKjfUw8LXCtvO3HDk0hW2bLuZ737idbZsvorennb7jrezcciEPffPjHNw/Y9CBudwACxavvwr453JVb7rzXEt1TfUho0lgcrqiv6+ac9vS+ySNjglTaqB8jgfyOf7s+9++7dn7v/xpHv2vP2Cgv5q01gO/C0w/3tvW9eIz7/m39PFnn7cN4BMRsQA4lN4/adJwebJqSFLsPdY+XDtJdXBKVmqOhyklvIXlzxrgw+WpVgDKT8fekTyoc8pBKE3Ffgx4Lt3p5Lbq4YOmawtF2hlmhNnTfXqlOOSBIEmjY8KUmiAiHqD0+5UjGTKCPG3y8UrxOmBlen9HZ3elmB5Nzkm37T3WzrGe6roHwz0kJGkUTJhSgxSKLAL+iNIvlVQ+T+ZzfLzGIWelK3qOVEeE76C0KtAAiVsnnVMP0jKpn4H+SVNSh16Q7uvNPbOTm3szfQlJNXkPU2qcKZTWc/0wsAw4B/itQnHoVGnZr6Ur9r12dqV4ej5HN/Bycn9LSz+z3rELhr4mMmQ1n92vVn9h7EBE7M/2FSTVYsKUGud54I1U3dk/W3X93oi4L1lZKHIWw/xW5bZN1dXw9pX//m+6zUWXPwcwNyJay31NBm5Nt9u+eWGl+ELmbyCpJhOm1CD5HL3At9L1V173w2lXXb/q5nv+6TPzCkU6CkXeD6wGzk62O/DGmcmEWXng5z5K07JV71y8nsVLfzy5tb1nRXkpvm8BC5Jt9u+dxZ63R5j+UonUAN7DlBrr7492d93a0Xm4OmWayxW5YvlTXVcsf2pHrYMGBlp46qEbKRar/8OuBMjn2FR+mrZ6HzSXK7LkhsdYcsNjQ0afFWufWJHc9AekpQZwhCk1UD7HWx2dh2/sO956/MStS4rFHD9ceRO7d5xbqfo5g5+Q/dTrO+euz9rfhrVXs21zdaT6sr+FKTWGCVNqsHyONSv//Y+v27931oirDAAcPnAGj3znFn7xYnVFvT5KPzJdXQQ2n+PQrLk7l2/dsGjbSH0Viy2s/8kyfvSDDySrPz/6byBpOLmxvgDpVPWFL9x97fkXb1x1/sUb2mbN3UVH52HIwdHDXex/fSZbNy5i68uX0He8+hDtAHBrRHxnuP4iYkr+vF8+u+Cy9YvmnLOD06ccojjQQvfBKezaegEbn7sy/SrJVyPijuH6kjR6JkypiSLiXZQWMLjkBE23A5+MiEdO0N9U4F7g5hGa9QNfBj4bEcUR2kkaBROm1GQR0QJ8EPg9YAkwm1Ls7ab0nuWDwHcj4sgo+rweuI3Su5x5SlO5u4DHgW9EhK+SSJIkSZIkSZKk8cp7mNIYG82DORFhzEpjxPcwpTGWNQmaLKWxZcKUJCkDE6Z0EjjR6NHRpTT2TJiSJGVgwpROErVGkY4upZODCVOSpAxMmNJJJD2adHQpnTxMmJIkSRqf/JUR6eTjCFOSJEmSJEmSJEmSJEkaZxr+jlcRiuTKPVc+Lant4eqytPE4j5tAxw0AxcQnvZ21zuM8rtHHnYzXNFzdL7ZuYf78+TkaxKdkJUnKwIQpSVIGJkxJkjIwYUqSlIEJU5KkDEyYkiRlYMKUJCkDE6YkSRmYMCVJysCEKUlSBiZMSZIyMGFKkpSBCVOSpAxMmJIkZWDClCQpAxOmJEkZmDAlScrAhClJUgYmTEmSMjBhSpIkSZIkSZIkSZIkSZIkSZIkSZIkSZKkuuWa1XFEXAHcA1wL9AFPAJ+OiF8265zSeBYRTwArhtm1KyLmJtoZW5qwIuJa4MeU8tfMiNiX2p8pPuqJo6as9BMR84GngPcCpwNTgZuApyNiWjPOKZ0CFp+ogbGliSwiLgG+S43BXtb4qDeOTmvM1xjib4AuYA+wFJgOrAbmAp8C/rZJ55XGpYiYB5xZ3lwYET+v0dTY0oQTEdOBO4C/AjpGaJo1PuqKo4aPMCMiB/xOefM/I2JrRKwDHinX3dToc0qngMvLf3uBrcM1MLY0gf1d+dMBbBuuQdb4+FXiqBlTsvOAM8rlVxL1m8t/F0XEpCacVxrPLiv/PQ6si4ieiHglIu5MtDG2NNF9HfhijX1Z46PuOGpGwpydKB8YptzK2xcrqaQywuwE3g20ARcC/xIR/1jeZ2xpoioAt0TEJ4BijTZZ46PuOGrGPcz2RLkvUe5PlEeag5Ymom5K91NWA3dRip37gd8A7oqIr2FsaYKKiFqjyqSs8VF3HDUjYfYkyslhbfJcR5twXmncioiPDlP3l8AzlOJoBfBSYrexJQ2WNffUnaOaMSW7N1GeOky5F3irCeeVTjU7E+UpGFvSSLLGR91x1IyEuQM4XC4vSNS/s/x3Q0T0I+lELkiUt2BsSSPJGh91x1HDp2QjYiAifgD8PvCRiPhXSjdQf7vcZGWjzymNZxExFXgBOAt4EPgMpQcPKvdtXgOeNLak2rLGx68SR01Z6Qe4GzhE6WmkLcA6SqspFICvNOmc0rgUEQeB/6H0hOzHgNcpTccuAwaAOyOick/F2JJqyxofdcVRs5bG2wT8OvAocKR8YSuB5RHxVjPOKY1zdwG3Az+l9Hh7N/A08JsR8WClkbEl1ZY1PowjSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZI0fvw/DYYulN+5zVYAAAAASUVORK5CYII=" alt="Sentiment Bar">
+            </div>
+            <div style="margin-left: 20px; font-weight: bold;">Sentiment Legend:</div>
+            <br/>
+            <div style="display: flex; align-items: center; font-family: Arial, sans-serif;">
+                <div style="display: flex; margin-left: 20px;  margin-right: 20px; align-items: center;">
+                    <div style="background-color: red; width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Negative < 44</div>
+                </div>
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                    <div style="background-color: rgb(255, 255, 0); width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Mixed 46-54</div>
+                </div>
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                    <div style="background-color: rgb(12, 244, 8); width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Positive > 56</div>
+                </div>
+            </div>
+        </div>        
+        <div class='section heading'>Trending Topics:</div>
+
+        <div id='trending_topics' class='p-1 text-1.5xl'>
+        <ul>
+        <li><a target='_blank' href='https://news.google.com/search?q=ukraine%20putin%20west%20olympics 2024-06-15&tbm=nws&source=lnms'>ukraine putin west olympics (14)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=sullivan%20russia 2024-06-15&tbm=nws&source=lnms'>sullivan russia (6)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=meloni%20putins%20ukraine 2024-06-15&tbm=nws&source=lnms'>meloni putins ukraine (5)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=ukraine%20russia%20sweden 2024-06-15&tbm=nws&source=lnms'>ukraine russia sweden (5)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=kate%20middleton%20trooping%20the%20colour%20parade 2024-06-15&tbm=nws&source=lnms'>kate middleton trooping the colour parade (5)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=francis%20biden 2024-06-15&tbm=nws&source=lnms'>francis biden (3)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=yemen 2024-06-15&tbm=nws&source=lnms'>yemen (1)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=a%20roller%20coaster%20ride%27 2024-06-15&tbm=nws&source=lnms'>a roller coaster ride' (1)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=cyber 2024-06-15&tbm=nws&source=lnms'>cyber (1)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=russia%20ukraine 2024-06-15&tbm=nws&source=lnms'>russia ukraine (1)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=monet 2024-06-15&tbm=nws&source=lnms'>monet (1)</a></li>
+
+        </ul>
+        </div>
+        <br/><a target='_blank' href='https://trends.google.com/trending?geo=US'>Trending Google Searches</a>
+        <br/><a target='_blank' href='https://www.bing.com/news/search?q=Top+stories'>Trending Bing News</a>
+        <br/>
+        
+
+
+            <div id='cat_world' class='section text-center heading'>
+            WORLD
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://indianexpress.com/article/world/white-houses-jake-sullivan-ukraine-russia-peace-proposal-absurd-9395068/'>White House’s Sullivan says Russia’s latest peace proposal is an ‘absurd vision’</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Indian Express&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 18:12:16
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    White House’s Sullivan says Russia’s latest peace proposal is an ‘absurd vision’
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://news.sky.com/story/ukraine-war-latest-moscow-russia-putin-nuclear-kharkiv-frontline-sky-news-live-blog-12541713'>Ukraine war latest: Putin makes 'absurd attempt to seduce West'; leaders call for Olympics truce</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Sky News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 18:01:42
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Ukraine war latest: Putin makes 'absurd attempt to seduce West'; leaders call for Olympics truce
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.business-standard.com/world-news/meloni-describes-putins-ceasefire-offer-for-ukraine-as-propaganda-124061500691_1.html'>Meloni describes Putins ceasefire offer for Ukraine as propaganda</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Business Standard&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 17:18:56
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Meloni describes Putins ceasefire offer for Ukraine as propaganda
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.telegraph.co.uk/world-news/2024/06/15/ukraine-russia-war-latest-live-updates/'>Ukraine-Russia war live: Sweden scrambles fighter jets to intercept Russian bomber over Nato border</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Telegraph&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 16:28:35
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Ukraine-Russia war live: Sweden scrambles fighter jets to intercept Russian bomber over Nato border
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.business-standard.com/world-news/ship-evacuated-ablaze-after-attack-by-yemens-houthis-says-ukmto-124061500588_1.html'>Ship evacuated, ablaze after attack by Yemen's Houthis, says UKMTO</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Business Standard&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 14:42:39
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Ship evacuated, ablaze after attack by Yemen's Houthis, says UKMTO
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.business-standard.com/world-news/kate-middleton-makes-first-public-appearance-since-cancer-diagnosis-124061500467_1.html'>Kate Middleton makes first public appearance since cancer diagnosis</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Business Standard&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 14:09:47
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Kate Middleton makes first public appearance since cancer diagnosis
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.hindustantimes.com/world-news/volodymyr-zelenskyy-eyes-history-at-swiss-hosted-ukraine-peace-meet-russia-absent-101718458300950.html'>Volodymyr Zelenskyy eyes ‘history' at Swiss-hosted Ukraine peace meet, Russia absent</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Hindustan Times&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 13:58:38
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Volodymyr Zelenskyy eyes ‘history' at Swiss-hosted Ukraine peace meet, Russia absent
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.business-standard.com/world-news/french-protesters-standing-up-to-far-right-ahead-of-snap-elections-124061500490_1.html'>French protesters standing up to far right ahead of snap elections</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Business Standard&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 13:25:04
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    French protesters standing up to far right ahead of snap elections
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.ndtv.com/world-news/like-a-roller-coaster-ride-southwest-airlines-flight-makes-hair-raising-drop-to-400-feet-from-ocean-5896958'>'Like A Roller Coaster Ride': Southwest Airlines Flight Makes Hair-Raising Drop To 400 Feet From Ocean</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> NDTV&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 13:01:44
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    'Like A Roller Coaster Ride': Southwest Airlines Flight Makes Hair-Raising Drop To 400 Feet From Ocean
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.nbcnews.com/news/world/kate-middleton-attends-king-charles-birthday-parade-cancer-update-rcna157234'>Kate Middleton makes public return at King Charles’ birthday parade after cancer update</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> NBC News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 12:53:22
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Kate Middleton makes public return at King Charles’ birthday parade after cancer update
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.cbsnews.com/news/pope-francis-g7-biden-nato-leaders-ai/'>Pope Francis is first pope to address G7 summit, meets with Biden, world leaders</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> CBS News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 12:40:19
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Pope Francis is first pope to address G7 summit, meets with Biden, world leaders
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.business-standard.com/world-news/cyber-attack-hits-pakistani-un-mission-email-youtube-channel-breached-124061500451_1.html'>Cyber attack hits Pakistani UN Mission; email, YouTube channel breached</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Business Standard&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 12:26:44
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Cyber attack hits Pakistani UN Mission; email, YouTube channel breached
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.bbc.com/news/articles/c6pp6qv6jjyo'>Monet among paintings removed from Swiss museum over Nazi looting fears</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> BBC.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 09:51:49
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Monet among paintings removed from Swiss museum over Nazi looting fears
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://nypost.com/2024/06/15/world-news/kate-middleton-attends-trooping-the-colour-in-first-appearance-since-cancer-announcement/'>Kate Middleton appears on balcony alongside royal family during Trooping the Colour parade in first appearance since ...</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> New York Post&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 09:17:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Kate Middleton appears on balcony alongside royal family during Trooping the Colour parade in first appearance since ...
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.hindustantimes.com/world-news/despite-improved-who-regulations-world-remains-ill-prepared-for-the-next-pandemic-101718440575735.html'>Despite improved WHO regulations, world remains ill-prepared for the next pandemic</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Hindustan Times&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 08:57:33
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Despite improved WHO regulations, world remains ill-prepared for the next pandemic
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_national' class='section text-center heading'>
+            NATIONAL
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.kxan.com/news/national-news/ap-much-of-u-s-braces-for-extreme-weather-from-southern-heat-wave-to-possible-snow-in-the-rockies/'>Much of U.S. braces for extreme weather, from southern heat wave to possible snow in the Rockies</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> KXAN.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 15:18:12
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Much of U.S. braces for extreme weather, from southern heat wave to possible snow in the Rockies
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.nbcnews.com/politics/national-security/global-leader-isis-mumin-targeted-possibly-killed-us-airstrike-rcna157300'>Global leader of ISIS targeted and possibly killed in U.S. airstrike</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> NBC News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 12:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Global leader of ISIS targeted and possibly killed in U.S. airstrike
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.thenationalnews.com/sport/2024/06/15/us-open-ludvig-aberg-grinds-to-one-stroke-lead-as-tiger-woods-misses-cut/'>US Open: Ludvig Aberg grinds to one-stroke lead as Tiger Woods misses cut</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The National&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 07:27:28
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    US Open: Ludvig Aberg grinds to one-stroke lead as Tiger Woods misses cut
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_business' class='section text-center heading'>
+            BUSINESS
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.cbc.ca/news/business/flair-ceo-stephen-jones-retiring-1.7234229'>Want more low-cost flight options in Canada? Flair's retiring CEO says the rules need to change</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> CBC News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 13:50:04
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Want more low-cost flight options in Canada? Flair's retiring CEO says the rules need to change
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.bbc.com/news/articles/c722kzgp90lo'>Alan Bates learnt of birthday honours knighthood as Post Office boss was grilled</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> BBC.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 13:09:23
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Alan Bates learnt of birthday honours knighthood as Post Office boss was grilled
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://finance.yahoo.com/news/trillion-dollar-company-join-nvidia-082500638.html'>Is This Trillion-Dollar Company About to Join Nvidia in the Stock-Split Club?</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Yahoo Finance&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 08:25:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Is This Trillion-Dollar Company About to Join Nvidia in the Stock-Split Club?
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_cryptocurrency' class='section text-center heading'>
+            CRYPTOCURRENCY
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://btctimes.com/michael-saylor-covers-21-principles-for-investing-in-bitcoin-at-btc-prague/'>Michael Saylor Covers 21 Principles for Investing in Bitcoin at BTC Prague</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> BTC Times&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 14:35:57
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Michael Saylor Covers 21 Principles for Investing in Bitcoin at BTC Prague
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://news.bitcoin.com/innovative-block-size-upgrade-takes-spotlight-at-bitcoin-cash-bliss-conference/'>Innovative Block Size Upgrade Takes Spotlight at Bitcoin Cash Bliss Conference</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Bitcoin.com News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 12:15:37
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Innovative Block Size Upgrade Takes Spotlight at Bitcoin Cash Bliss Conference – Featured Bitcoin News
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://coinpedia.org/news/why-bitcoin-price-crashed-to-65k-what-next/'>Crypto Market Analysis: Bitcoin Price CRASHES to $65k! What Next?</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Coinpedia Fintech News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 12:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Crypto Market Analysis: Bitcoin Price CRASHES to $65k! What Next?
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://finbold.com/r-kiyosaki-shares-why-he-became-frustrated-when-pushing-bitcoin-adoption/'>R. Kiyosaki shares why he became 'frustrated' when pushing Bitcoin adoption</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Finbold - Finance in Bold&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 11:22:04
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    R. Kiyosaki shares why he became 'frustrated' when pushing Bitcoin adoption
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.forbes.com/sites/digital-assets/2024/06/15/stealth-erosion-imf-issues-striking-us-dollar-collapse-warning-as-the-fed-primes-bitcoin-ethereum-and-xrp-for-a-crypto-price-boom/'>'Stealth Erosion'—IMF Issues 'Striking' U.S. Dollar Collapse Warning As The Fed Primes Bitcoin, Ethereum And XRP ...</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Forbes&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 11:15:49
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    'Stealth Erosion'—IMF Issues 'Striking' U.S. Dollar Collapse Warning As The Fed Primes Bitcoin, Ethereum And XRP ...
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://finbold.com/1t-volume-trading-firm-buys-the-dip-20m-of-two-cryptocurrencies/'>$1T-volume trading firm buys the dip; $20M of two cryptocurrencies</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Finbold - Finance in Bold&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 11:08:07
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    $1T-volume trading firm buys the dip; $20M of two cryptocurrencies
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.nbcnews.com/politics/2024-election/donald-trump-flips-crypto-scam-building-crypto-army-rcna157171'>Donald Trump flips on crypto: From 'scam' to building a 'crypto army'</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> NBC News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 11:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Donald Trump flips on crypto: From 'scam' to building a 'crypto army'
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.investing.com/news/cryptocurrency-news/rich-dad-poor-dad-reveals-important-nuance-about-bitcoin-btc-3485915'>'Rich Dad Poor Dad' Reveals Important Nuance About Bitcoin (BTC) By U.Today</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Investing.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 10:04:20
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    'Rich Dad Poor Dad' Reveals Important Nuance About Bitcoin (BTC) By U.Today
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.fool.com/investing/2024/06/15/1-top-cryptocurrency-to-buy-before-it-soars-anothe/'>1 Top Cryptocurrency to Buy Before It Soars Another $1 Trillion in Market Cap, According to Value Investor Bill Miller IV</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Motley Fool&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 09:30:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    1 Top Cryptocurrency to Buy Before It Soars Another $1 Trillion in Market Cap, According to Value Investor Bill Miller IV
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://news.bitcoin.com/56-of-fortune-500-firms-pursue-crypto-and-blockchain-projects-says-coinbase/'>56% of Fortune 500 Firms Pursue Crypto and Blockchain Projects, Says Coinbase</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Bitcoin.com News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 07:36:36
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    56% of Fortune 500 Firms Pursue Crypto and Blockchain Projects, Says Coinbase – Featured Bitcoin News
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_science' class='section text-center heading'>
+            SCIENCE
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.sciencenews.org/article/rare-visual-disorder-microplastic-arteries'>Readers react to a rare visual disorder, microplastics in arteries and more</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Science News Magazine&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 12:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Readers react to a rare visual disorder, microplastics in arteries and more
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.eurekalert.org/news-releases/1048279'>Unlocking the grape's secret scent: key gene modulates terpene aroma</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> EurekAlert&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 09:40:05
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Unlocking the grape's secret scent: key gene modulates terpene aroma
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_technology' class='section text-center heading'>
+            TECHNOLOGY
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.news9live.com/technology/tech-news/yahoo-revamps-its-news-app-ai-features-now-focus-on-enhancing-customisation-2578597'>Yahoo revamps its news app, AI features now focus on enhancing customisation</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> News9 LIVE&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 13:32:38
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Yahoo revamps its news app, AI features now focus on enhancing customisation
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://timesofindia.indiatimes.com/technology/tech-news/netflix-is-dropping-support-for-samsung-sony-and-other-tvs-heres-how-to-keep-watching/articleshow/111020428.cms'>Netflix is dropping support for Samsung, Sony and other TVs, here’s how to keep watching</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Times of India&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 10:54:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Netflix is dropping support for Samsung, Sony and other TVs, here’s how to keep watching
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://news.abplive.com/technology/microsoft-windows-wifi-takeover-cyberattack-threat-cve-2024-30078-new-vulnerability-details-hack-1695831'>Bad News For Windows Users! A New Wi-Fi Threat Is On The Horizon & You Won't Even Know Its Coming — Details</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> ABP Live&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 10:19:02
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Bad News For Windows Users! A New Wi-Fi Threat Is On The Horizon & You Won't Even Know Its Coming — Details
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://globalnews.ca/news/10566897/ontario-surgery-technology-hamilton/'>Ontario technology teaching surgeries worldwide including war-torn Ukraine</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Global News Toronto&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 10:15:40
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Ontario technology teaching surgeries worldwide including war-torn Ukraine
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.courant.com/2024/06/15/ai-startup-perplexity-wants-to-upend-search-business-news-outlet-forbes-says-its-ripping-them-off/'>AI startup Perplexity wants to upend search business. News outlet Forbes says it's ripping them off</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Hartford Courant&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 10:03:44
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    AI startup Perplexity wants to upend search business. News outlet Forbes says it's ripping them off
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://news.abplive.com/technology/google-googol-name-controversy-do-you-know-how-google-was-named-typo-error-became-the-identity-of-the-tech-giant-1695828'>Do You Know How Google Was Named? A Typo Became The Identity Of The Tech Giant</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> ABP Live&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 09:22:10
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Do You Know How Google Was Named? A Typo Became The Identity Of The Tech Giant
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://timesofindia.indiatimes.com/technology/tech-news/mobile-users-to-pay-for-phone-numbers-trai-makes-this-big-clarification/articleshow/111017535.cms'>Mobile users to pay for phone numbers? Trai makes this big clarification</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Times of India&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 08:49:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Mobile users to pay for phone numbers? Trai makes this big clarification
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.thehindu.com/sci-tech/technology/nhs-england-london-declares-regional-incident-after-cyber-attack-hits-blood-testing-lab/article68292580.ece'>NHS England London declares regional incident after cyber attack hits blood testing lab</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Hindu&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 08:41:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    NHS England London declares regional incident after cyber attack hits blood testing lab
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_health' class='section text-center heading'>
+            HEALTH
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://holtvilletribune.com/2024/06/15/feeding-the-needy-is-part-of-providing-community-healthcare/'>Feeding the Needy is Part of Providing Community Healthcare » Holtville Tribune</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Holtville Tribune&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 08:56:52
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Feeding the Needy is Part of Providing Community Healthcare » Holtville Tribune
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_soccer' class='section text-center heading'>
+            SOCCER
+            </div>
+            <br/>
+            
+
+            <div id='cat_tennis' class='section text-center heading'>
+            TENNIS
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.essentiallysports.com/atp-wta-tennis-news-paris-olympics-as-coco-gauff-danielle-collins-and-others-gear-up-russian-counterparts-face-dire-situation-in-absurd-withdrawal-spree/'>Paris Olympics: As Coco Gauff, Danielle Collins, and Others Gear Up, Russian Counterparts Face Dire Situation in ...</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> EssentiallySports&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 18:15:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Paris Olympics: As Coco Gauff, Danielle Collins, and Others Gear Up, Russian Counterparts Face Dire Situation in ...
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://tennistonic.com/tennis-news/724503/weird-andreescu-caught-taking-out-the-grass-from-her-shoes-with-the-hotel-key/'>WEIRD. Andreescu caught taking out the grass from her shoes with the hotel key</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Tennis Tonic&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 16:33:28
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    WEIRD. Andreescu caught taking out the grass from her shoes with the hotel key
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://tennistonic.com/tennis-news/724482/jannik-sinner-will-play-singles-and-doubles-with-musetti-at-the-olympics/'>Jannik Sinner will play singles and doubles with Musetti at the Olympics</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Tennis Tonic&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 16:32:56
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Jannik Sinner will play singles and doubles with Musetti at the Olympics
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://tennistonic.com/tennis-news/724525/video-novak-djokovic-shows-off-his-progress-after-the-knee-operation/'>VIDEO. Novak Djokovic shows off his progress after the knee operation</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Tennis Tonic&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 16:32:55
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    VIDEO. Novak Djokovic shows off his progress after the knee operation
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://essexnewsdaily.com/sports/sports-westorange/west-orange-resident-luis-crespo-leads-montclair-kimberley-academy-tennis-team-to-banner-season'>West Orange resident Luis Crespo leads Montclair Kimberley Academy tennis team to banner season</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Essex News Daily&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 16:29:47
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    West Orange resident Luis Crespo leads Montclair Kimberley Academy tennis team to banner season
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.express.co.uk/sport/tennis/1911671/Roger-Federer-son-tennis-Wimbledon'>Roger Federer's son 'getting serious' about tennis and makes Wimbledon request</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Express&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 16:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Roger Federer's son 'getting serious' about tennis and makes Wimbledon request
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.dailycitizen.news/sports/local_sports/pro-pickleballer-tennis-skills-translate-to-athletic-outlet-in-pro-pickleball-for-dalton-grad/article_14d428e2-24e2-11ef-9026-5bdea05fca28.html'>Pro pickleballer: Tennis skills translate to athletic outlet in pro pickleball for Dalton grad</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Daily Citizen&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 15:24:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Pro pickleballer: Tennis skills translate to athletic outlet in pro pickleball for Dalton grad
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://wearecollegetennis.com/2024/06/15/pro-wild-cards-to-ita-national-summer-championships/'>USTA to Extend Pro Wild Cards to ITA National Summer Championships Singles Finalists</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Intercollegiate Tennis Association&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 15:00:56
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    USTA to Extend Pro Wild Cards to ITA National Summer Championships Singles Finalists
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://homenewshere.com/wilmington_town_crier/sports/article_9e05a260-28e5-11ef-bcbf-878af4a93ee1.html'>Girls tennis gets it done: Tripathi's win propels Wilmington into state semifinals</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Woburn Daily Times&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 15:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Girls tennis gets it done: Tripathi's win propels Wilmington into state semifinals
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://homenewshere.com/tewksbury_town_crier/sports/article_44b2c1f8-28e9-11ef-a5ea-d3f437ca1f7e.html'>Redmen nearly upset Hanover in postseason opener: Girls tennis edged out of tourney</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Woburn Daily Times&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 15:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Redmen nearly upset Hanover in postseason opener: Girls tennis edged out of tourney
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.tennis.com/news/videos/match-point-alex-de-minaur-defeats-ugo-humbert-s-hertogenbosch-sf'>MATCH POINT: Alex de Minaur defeats Ugo Humbert; 's-Hertogenbosch SF</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Tennis Magazine&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 13:51:48
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    MATCH POINT: Alex de Minaur defeats Ugo Humbert; 's-Hertogenbosch SF
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.syracuse.com/highschoolsports/2024/06/we-pick-you-vote-who-is-the-mvp-of-section-iii-boys-tennis-poll.html'>We pick, you vote: Who is the MVP of Section III boys tennis? (poll)</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> syracuse.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 13:30:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    We pick, you vote: Who is the MVP of Section III boys tennis? (poll)
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.bbc.com/sport/tennis/articles/cv22z6mr377o'>Stuttgart Open: Jack Draper beats Brandon Nakashima & faces Matteo Berrettini in the final</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> BBC.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 13:05:42
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Stuttgart Open: Jack Draper beats Brandon Nakashima & faces Matteo Berrettini in the final
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://lobandsmash.com/posts/daniil-medvedev-almost-rewrites-tennis-resume-with-hilarious-blunder-01j0dvcfvk8j'>Daniil Medvedev almost rewrites his tennis resume with a hilarious blunder</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Lob and Smash&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 13:00:05
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Daniil Medvedev almost rewrites his tennis resume with a hilarious blunder
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.tennis.com/news/articles/sebastian-korda-sinks-reigning-den-bosch-champ-tallon-griekspoor-for-first-grass-final'>Sebastian Korda sinks reigning Den Bosch champ Tallon Griekspoor for first grass final</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Tennis Magazine&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 12:33:12
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Sebastian Korda sinks reigning Den Bosch champ Tallon Griekspoor for first grass final
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://nypost.com/2024/06/15/us-news/nyc-tennis-regulars-slam-coaches-of-rich-and-famous-hogging-public-courts/'>Tax-paying tennis regulars slam NYC coaches of rich and famous who hog public courts</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> New York Post&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 12:30:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Tax-paying tennis regulars slam NYC coaches of rich and famous who hog public courts
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.bbc.com/sport/tennis/articles/cmjjpy4714jo'>Nottingham Open: Emma Raducanu to face Katie Boulter in semi-finals</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> BBC.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 11:39:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Nottingham Open: Emma Raducanu to face Katie Boulter in semi-finals
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.essentiallysports.com/atp-tennis-news-carlos-alcarazs-nike-deal-spanish-phenom-usurps-roger-federer-and-rafael-nadal-to-emerge-as-tennis-biggest-name/'>Carlos Alcaraz's Nike Deal: Spanish Phenom Usurps Roger Federer and Rafael Nadal to Emerge as Tennis' Biggest ...</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> EssentiallySports&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 11:37:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Carlos Alcaraz's Nike Deal: Spanish Phenom Usurps Roger Federer and Rafael Nadal to Emerge as Tennis' Biggest ...
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.tennisworldusa.org/tennis/news/Tennis_Interviews/145553/matteo-berrettini-reveals-why-his-tennis-is-so-dominant-on-grasscourts/'>Matteo Berrettini reveals why his tennis is so dominant on grass-courts</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Tennis World USA&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 11:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Matteo Berrettini reveals why his tennis is so dominant on grass-courts
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.express.co.uk/sport/tennis/1911559/Rafael-Nadal-uncle-Alexander-Zverev-assessment'>Rafael Nadal's uncle calls out Alexander Zverev anger with brutal assessment of German</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Express&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 09:54:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Rafael Nadal's uncle calls out Alexander Zverev anger with brutal assessment of German
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.essentiallysports.com/atp-tennis-news-why-did-jack-draper-fall-out-of-love-with-tennis-re-visiting-the-dark-place-that-forced-him-to-consider-retirement/'>Why Did Jack Draper Fall Out of Love With Tennis? Re-Visiting the 'Dark Place' That Forced Him to Consider Retirement</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> EssentiallySports&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 09:31:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Why Did Jack Draper Fall Out of Love With Tennis? Re-Visiting the 'Dark Place' That Forced Him to Consider Retirement
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.ksat.com/video/sports/2024/06/15/mcfarlin-tennis-center-celebrates-50th-anniversary-with-proclamation-from-mayor-ron-nirenberg/'>McFarlin Tennis Center celebrates 50th Anniversary with proclamation from Mayor Ron Nirenberg</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> KSAT San Antonio&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 08:39:38
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    McFarlin Tennis Center celebrates 50th Anniversary with proclamation from Mayor Ron Nirenberg
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_formula_1' class='section text-center heading'>
+            FORMULA_1
+            </div>
+            <br/>
+            
+
+            <div id='cat_entertainment' class='section text-center heading'>
+            ENTERTAINMENT
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://985thecat.iheart.com/content/2024-06-15-photos-kate-middleton-makes-first-public-appearance-since-cancer-diagnosis/'>PHOTOS: Kate Middleton Makes First Public Appearance Since Cancer Diagnosis</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> iHeart&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 15:14:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    PHOTOS: Kate Middleton Makes First Public Appearance Since Cancer Diagnosis | 98.5 The Cat
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.wionews.com/entertainment/heartbroken-badshah-apologises-to-fans-as-dallas-concert-stops-midway-732072'>`Heartbroken` Badshah apologises to fans as Dallas concert stops midway</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> WION&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 14:13:44
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    `Heartbroken` Badshah apologises to fans as Dallas concert stops midway
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/swara-bhasker-condemns-assault-on-kangana-ranaut-mahesh-bhatt-discusses-relationship-with-parveen-babi-deets-about-sonakshi-sinha-and-zaheer-iqbals-wedding-top-5-entertainment-news-of-the-day/articleshow/111022301.cms'>Swara Bhasker condemns assault on Kangana Ranaut, Mahesh Bhatt discusses relationship with Parveen Babi,</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> TOI Etimes&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 13:30:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Swara Bhasker condemns assault on Kangana Ranaut, Mahesh Bhatt discusses relationship with Parveen Babi,
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.onmanorama.com/entertainment/entertainment-news/2024/06/15/celebrities-make-beeline-for-roboverse-vr-expo-interact-with-humanoids.html'>Celebrities make a beeline for 'RoboVerse VR Expo', interact with humanoids</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Onmanorama&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 12:24:09
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Celebrities make a beeline for 'RoboVerse VR Expo', interact with humanoids | Entertainment News | English Manorama
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.wionews.com/entertainment/contemporary-chinese-cinema-under-the-spotlight-at-shanghai-festival-732016'>Contemporary Chinese cinema under the spotlight at Shanghai festival</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> WION&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 10:24:16
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Contemporary Chinese cinema under the spotlight at Shanghai festival
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.wionews.com/entertainment/kate-middleton-spotted-for-first-time-in-public-since-cancer-diagnosis-732005'>Kate Middleton makes first public appearance since cancer diagnosis</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> WION&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 10:08:45
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Kate Middleton makes first public appearance since cancer diagnosis
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.foxnews.com/entertainment/kate-middleton-king-charles-attend-trooping-colour-amid-cancer-battles'>Kate Middleton, King Charles attend Trooping the Colour amid cancer battles</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Fox News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-15 08:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Kate Middleton, King Charles attend Trooping the Colour amid cancer battles
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_other' class='section text-center heading'>
+            OTHER
+            </div>
+            <br/>
+            
+
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
+    </body>
+</html>
