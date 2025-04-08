@@ -1,0 +1,1238 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <title id="title">News'n'Clues - Trending Topics, Headlines</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .menu { color: #444444; }
+            .copyright { margin: 0 auto; }
+            p { font-family: serif; }
+            body {  background-color: #2c2c2c; font-family: Arial, sans-serif; font-size: 20px; color: #f4f4f4;  }
+            a { text-decoration: none; color: #f4f4f4; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
+            .hidden {
+                display: none;
+            }            
+        </style>
+    </head>
+    <body class='p-2'>
+        <br/>
+        <div class="section">
+            <input type="hidden" id="sentiment_score" value="66">
+            <div id="sentiment" class="heading">Business Sentiment</div>
+            <div>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcwAAAB4CAYAAAB/98JRAAAI7UlEQVR4nO3da4xcZRnA8f/swu72TosVUBqsy0VA7hFtiUCqgBCNIqZKQA1RvGRFI1JjSJQnkKio8UYmmkqMMXiBgGBUrBAqUAGjFrEiFnvjWrk0ZWl3u9vt7o4fZmY9O53dPTOds9vt/H/JZN55z3uec+bDs8++58y8A5IkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZKaQ26qT0BSc8gXaAXeD1wCnAEcQfFv0HPAA8APunL8fariSROxYErKXL7AmcBK4JRxhhWA7wLXdOUYnsx4UhotU30Ckg5s+QLnA/czfnGD4j/wn+/765m/mMx4UlrOMCVlJl/gWOAfQEct+3X/9KO379my+IMRMWpm2Oh4Ui0OmuoTkHRAW0lFcRt86bX03H0Rg8+/npb53cy+YBVtnZtG7TRz6UMfeHXL4u8Dn8k4npSal2QlZSJfYAlwTrJveOccun9yBXuefgOFwYMZenkhO25bznDv7FH7tnVuJtc20BURy7KKJ9XKgikpK5dXdux6eCmFvhnll48D5xYG2mcObDjmzuEd8/r3PLuI3f96M7seeRu5tt0AKzKMJ9XEe5iSMpEv8BRwVLJv+02fZWj7AoCtwEkRsb28LSLmABuAwxK7DAGHRERPo+Pt6/tT83GGKanh8gXmUlHcCrvby8UN4FvJ4gYQETuBu4FngYeBW4HvAHMaHW9f35+akzNMSQ2XL3AW8Kdk3+DW1/HKjz5B+3Hr6XjL39a0dW48AZhFcXa4muJCA49ORjypHhZMSQ2XL7Cc4oxuxMDGoxneNZOOk9eNtdswxYUGVlQuNNDoeFI9/FqJpCzsddmzrXMz5MatWy3A1bv/efLxsO6ijONJNfMepqQs7H2fcPziNqL9pHUX3vjbd98bEcm/T42OJ9XMGaakLLSOtWH3+uMLvfctyw29soCDFr7MrPPvoW3x5lFjZp5z/zv7Hzv1Z8ClGcWTauZ/XJKy0Futc8+Wxey4dXluaNtCGGpl8IXDefWWyxh88fBR41pm99DWufFDEfGpjOJJNbNgSsrCzmqdux5ZQuKzhncCJzDc2t7357dG5diDj3oa4LqI6MggnlQzL8lKysK2ap2DL4zM/FYDl0REASBf4A4gkmNb5u0AOBy4IIN4v67lzUjgDFNSNp6o2js0civy2+XiVvJK5dBc20C5eXYG8aSaWTAlNVxXjmeB7sr+ljkjK9I9VrFpZuXYxBqxixodb+8zliZmwZSUlfsrOxI/uzVQsenEyrFD2+eXm+WfHml0PKkmFkxJWfl5ZceMpQ/TMrsH4IiKTVdWjh3YsrjcLK8R2+h4Uk0smJKy8hvgqWRHy6weDrnix7R1brwqX6AjX+CofIGbgVEr8QxtW8ieZ0bWWi9PIxsdT6qJBVNSJrpy9AOfruxvXbCdeZff8nGgj2IB/NjoETl67jkPCiNfF1mdRTypVhZMSZnpyrGq997zrq1ln94/nsvAhmPLL/8NrMkqnlQLf61EUua+/quLvzn7Xauuyc3oG3NMYaCdnj9cQP+jp490Ae+JiN9lHU9Kw4IpaVJcf+MXr+s47bFoe9N6Whdsp2VGH8P9HQxtO5SBjcfQv/YMhneN+jbIVyLihsmKJ03Egilp0kTEhyn+RuWCcYbtBK6OiJsnO540HgumpEkVEYcCVwDvA46mWOy6gSeB3wMrI6LqUniTEU+SJEmSJEmSJE0572FK2m9U/OLIRGP9+6VJ5cIFkvYbaYugxVJTwYIpSVIKFkxJ+5WJZo/OLjVVLJiSJKVgwZS03xlrFunsUlPJgilJUgoWTEn7pcrZpLNLTTULpiRJkjTd1bKYgZQlZ5iSJEmSJEmSJEmSJEnSNNPw7zUVoECuFLn8aKl4Xa0vzRj3c78m2m8YKCQela/T9rmf+zV6v/3xnKr1bdy8ic7OzhwN4qdkJUlKwYIpSVIKFkxJklKwYEqSlIIFU5KkFCyYkiSlYMGUJCkFC6YkSSlYMCVJSsGCKUlSChZMSZJSsGBKkpSCBVOSpBQsmJIkpWDBlCQpBQumJEkpWDAlSUrBgilJUgoWTEmSUrBgSpIkSZIkSZIkSZIkSZIkSZIkSZIkSZKkuuWyChwRpwPfAJYAg8B9wBciYktWx5Sms4i4D1hWZdPzEXFkYpy5paYVEUuAhyjWr4URsa1ie6r8qCePMlnpJyI6gQeAdwAzgbnAxcCDETEvi2NKB4BTJhpgbqmZRcSJwG2MMdlLmx/15tFBjXkbe/kyMBt4EVgKzAfWAEcCnwOuz+i40rQUEYuAQ0svj4uI/4wx1NxS04mI+UAXcC0wY5yhafOjrjxq+AwzInLAe0svfxkRmyNiLbCq1Hdxo48pHQBOKz0PAJurDTC31MRuKD1mAE9VG5A2P/Ylj7K4JLsIOKTU3pDof7L0fEJEtGZwXGk6O7X0vAdYGxH9EbEhIq5KjDG31OxWAl8dY1va/Kg7j7IomIcl2q9Wabfx/5OVVFSeYc4CTgbagaOB70fE10rbzC01q63AZRHxSaAwxpi0+VF3HmVxD7Mj0R5MtIcS7fGuQUvNqJfi/ZQ1wAqKuXMLcA6wIiJ+iLmlJhURY80qk9LmR915lEXB7E+0k9Pa5LH6MjiuNG1FxOVV+r4EPEIxj5YBjyc2m1vSaGlrT901KotLsi8n2nOrtAeA7gyOKx1onku052BuSeNJmx9151EWBfMZoKfUPjbRf0zp+YmIGELSRN6YaG/C3JLGkzY/6s6jhl+SjYjhiLgbWA5cGhE3UbyBemFpyF2NPqY0nUXEXGAd8BrgDuAaih88KN+3+S+w2tySxpY2P/YljzJZ6Qe4DthJ8dNIm4C1FFdT2Ap8L6NjStNSROwAbqf4CdmPAC9RvBx7FjAMXBUR5Xsq5pY0trT5UVceZbU03nrg7cA9wK7Sid0FnB0R3VkcU5rmVgBXAn+h+PH2XuBB4PyIuKM8yNySxpY2P8wjSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZI0ffwPNH2jTZ2zOZgAAAAASUVORK5CYII=" alt="Sentiment Bar">
+            </div>
+            <div style="margin-left: 20px; font-weight: bold;">Sentiment Legend:</div>
+            <br/>
+            <div style="display: flex; align-items: center; font-family: Arial, sans-serif;">
+                <div style="display: flex; margin-left: 20px;  margin-right: 20px; align-items: center;">
+                    <div style="background-color: red; width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Negative < 44</div>
+                </div>
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                    <div style="background-color: rgb(255, 255, 0); width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Mixed 46-54</div>
+                </div>
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                    <div style="background-color: rgb(12, 244, 8); width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Positive > 56</div>
+                </div>
+            </div>
+        </div>        
+        <div class='section heading'>Trending Topics:</div>
+
+        <div id='trending_topics' class='p-1 text-1.5xl'>
+        <ul>
+        <li><a target='_blank' href='https://news.google.com/search?q=pakistan%20india%20world%20cup%20new%20york 2024-06-09&tbm=nws&source=lnms'>pakistan india world cup new york (10)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=gaza%20israel 2024-06-09&tbm=nws&source=lnms'>gaza israel (4)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=south%20korea%20north%20korea 2024-06-09&tbm=nws&source=lnms'>south korea north korea (4)</a></li>
+
+        </ul>
+        </div>
+        <br/><a target='_blank' href='https://trends.google.com/trending?geo=US'>Trending Google Searches</a>
+        <br/><a target='_blank' href='https://www.bing.com/news/search?q=Top+stories'>Trending Bing News</a>
+        <br/>
+        
+
+
+            <div id='cat_world' class='section text-center heading'>
+            WORLD
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.latimes.com/world-nation/story/2024-06-09/south-korea-restarts-anti-north-korea-loudspeaker-broadcasts-in-retaliation-for-trash-balloons'>South Korea restarts loudspeaker broadcasts in response to trash balloons</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Los Angeles Times&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 16:22:34
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    South Korea restarts loudspeaker broadcasts in response to trash balloons
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.usnews.com/news/sports/articles/2024-06-09/pakistan-bowls-1st-against-rival-india-in-grudge-match-on-mystery-pitch-at-t20-world-cup-in-new-york'>Pakistan Bowls 1st Against Rival India in Grudge Match on Mystery Pitch at T20 World Cup in New York</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> U.S. News & World Report&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 15:23:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Pakistan Bowls 1st Against Rival India in Grudge Match on Mystery Pitch at T20 World Cup in New York
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.usnews.com/news/world/articles/2024-06-09/hamas-armed-wing-says-3-hostages-were-killed-in-israeli-operation-in-gaza'>Hamas Armed Wing Says 3 Hostages Were Killed in Israeli Operation in Gaza</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> U.S. News & World Report&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 15:19:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Hamas Armed Wing Says 3 Hostages Were Killed in Israeli Operation in Gaza
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.bbc.com/news/articles/cw44ve90dppo'>Gaza health ministry says Israel hostage rescue killed 274 people</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> BBC.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 12:00:09
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Gaza health ministry says Israel hostage rescue killed 274 people
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.reuters.com/world/asia-pacific/psychological-warfare-k-pop-south-korea-blast-loudspeakers-north-korea-2024-06-09/'>Psychological warfare and K-pop: South Korea to blast loudspeakers at North Korea</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Reuters&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 08:39:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Psychological warfare and K-pop: South Korea to blast loudspeakers at North Korea
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_national' class='section text-center heading'>
+            NATIONAL
+            </div>
+            <br/>
+            
+
+            <div id='cat_business' class='section text-center heading'>
+            BUSINESS
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.chieftain.com/story/business/2024/06/09/ark-valley-conduit-gets-90-million-boost-and-more-pueblo-business-news/73959601007/'>Let's Talk Business: Ark Valley Conduit gets $90 million boost and more Pueblo news</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Pueblo Chieftain&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 17:02:16
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Let's Talk Business: Ark Valley Conduit gets $90 million boost and more Pueblo news
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.bloomberg.com/news/videos/2024-06-09/novo-nordisk-boss-on-ozempic-and-eating-disorder-criticism-social-media-pressure'>Novo Nordisk Boss on Ozempic and Eating Disorder Criticism, Social Media Pressure</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Bloomberg&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 12:03:48
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Novo Nordisk Boss on Ozempic and Eating Disorder Criticism, Social Media Pressure
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://patch.com/connecticut/across-ct/new-pepe-s-pizzeria-opening-gordon-ramsay-visits-ct-business-news'>New Pepes Pizzeria Opening + Gordon Ramsay Visits: CT Business News</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Patch&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 12:03:38
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    New Pepes Pizzeria Opening + Gordon Ramsay Visits: CT Business News
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_cryptocurrency' class='section text-center heading'>
+            CRYPTOCURRENCY
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://cointelegraph.com/news/bnb-ton-fil-inj-can-go-higher-bitcoin-price-69k'>BNB, TON, FIL, and INJ can go much higher if Bitcoin price flips $69K</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Cointelegraph&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 16:06:17
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    BNB, TON, FIL, and INJ can go much higher if Bitcoin price flips $69K
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://fortune.com/crypto/2024/06/09/cryptocurrency-bnb-token-rally-binance-changpeng-zhao-cz-prison-sentence/'>BNB token surge makes Binance's Changpeng Zhao even richer in prison</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Fortune&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 15:17:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    BNB token surge makes Binance's Changpeng Zhao even richer in prison
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://news.bitcoin.com/bitcoin-premium-in-south-korea-increases-reflecting-strong-local-demand/'>Bitcoin Premium in South Korea Increases, Reflecting Strong Local Demand</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Bitcoin.com News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 13:22:31
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Bitcoin Premium in South Korea Increases, Reflecting Strong Local Demand – Markets and Prices Bitcoin News
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://news.bitcoin.com/latam-insights-mexican-billionaire-ricardo-salinas-recommends-purchasing-bitcoin-cardano-partners-argentine-province/'>Latam Insights: Mexican Billionaire Ricardo Salinas Recommends Purchasing Bitcoin, Cardano Partners Argentine ...</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Bitcoin.com News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 12:20:58
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Latam Insights: Mexican Billionaire Ricardo Salinas Recommends Purchasing Bitcoin, Cardano Partners Argentine ...
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://finance.yahoo.com/news/1-top-cryptocurrency-buy-soars-121400264.html'>1 Top Cryptocurrency to Buy Before It Soars 150%, According to a Popular Analyst</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Yahoo Finance&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 12:14:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    1 Top Cryptocurrency to Buy Before It Soars 150%, According to a Popular Analyst
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://news.bitcoin.com/hoskinson-laments-the-disconnect-between-public-perception-of-cardano-and-its-fundamentals/'>Hoskinson Laments the Disconnect Between Public Perception of Cardano and Its Fundamentals</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Bitcoin.com News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 08:33:04
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Hoskinson Laments the Disconnect Between Public Perception of Cardano and Its Fundamentals – News Bytes Bitcoin ...
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://cointelegraph.com/news/ethereum-vitalik-buterin-uniswap-hayden-adams-wintermute-evgeny-gaevoy'>Ethereum leaders are stuck in a 'massive contradiction' — Wintermute CEO</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Cointelegraph&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 08:12:01
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Ethereum leaders are stuck in a 'massive contradiction' — Wintermute CEO
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_science' class='section text-center heading'>
+            SCIENCE
+            </div>
+            <br/>
+            
+
+            <div id='cat_technology' class='section text-center heading'>
+            TECHNOLOGY
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://timesofindia.indiatimes.com/technology/tech-news/this-patent-application-has-brought-rumours-of-apple-working-on-apple-glass-back/articleshow/110842880.cms'>This patent application has brought rumours of Apple working on Apple Glass back</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Times of India&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 12:17:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    This patent application has brought rumours of Apple working on Apple Glass back
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_health' class='section text-center heading'>
+            HEALTH
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.shawlocal.com/illinois-valley/2024/06/09/citizens-for-healthcare-in-ottawa-file-department-of-justice-complaint-against-osf/'>Citizens for Healthcare in Ottawa file Department of Justice complaint against OSF</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Shaw Local News Network&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 18:10:17
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Citizens for Healthcare in Ottawa file Department of Justice complaint against OSF
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://simplywall.st/stocks/us/healthcare/nyse-amn/amn-healthcare-services/news/amn-healthcare-services-nyseamn-takes-on-some-risk-with-its'>AMN Healthcare Services (NYSE:AMN) Takes On Some Risk With Its Use Of Debt</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Simply Wall St&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 15:22:30
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    AMN Healthcare Services (NYSE:AMN) Takes On Some Risk With Its Use Of Debt
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://medcitynews.com/2024/06/healthcares-smokejumpers-filling-critical-clinical-gaps-with-independent-contractor-physicians/'>Healthcare’s Smokejumpers: Filling Critical Clinical Gaps with Independent Contractor Physicians</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> MedCity News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 13:49:59
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Healthcare’s Smokejumpers: Filling Critical Clinical Gaps with Independent Contractor Physicians
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://southdakotasearchlight.com/2024/06/09/why-south-dakota-health-care-is-the-nations-second-most-expensive/'>Why South Dakota health care is the nation's second most expensive • South Dakota Searchlight</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> South Dakota Searchlight&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 12:28:01
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Why South Dakota health care is the nation's second most expensive • South Dakota Searchlight
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://finance.yahoo.com/news/functional-medicine-toronto-surprising-insights-110900494.html'>Functional Medicine From Toronto's Surprising Insights On Their Approach to Healthcare</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Yahoo Finance&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 11:09:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Functional Medicine From Toronto's Surprising Insights On Their Approach to Healthcare
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.clarksvilleonline.com/2024/06/09/austin-peay-state-universitys-master-of-healthcare-administration-program-receives-cahme-accreditation/'>Austin Peay State University’s Master of Healthcare Administration program receives CAHME accreditation</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Clarksville Online&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 11:00:12
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Austin Peay State University’s Master of Healthcare Administration program receives CAHME accreditation
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_soccer' class='section text-center heading'>
+            SOCCER
+            </div>
+            <br/>
+            
+
+            <div id='cat_tennis' class='section text-center heading'>
+            TENNIS
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.independent.co.uk/sport/tennis/french-open-alcaraz-zverev-live-score-stream-b2558780.html'>Carlos Alcaraz vs Alexander Zverev LIVE: French Open final result and reaction from five-set thriller</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Independent&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 18:38:46
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Carlos Alcaraz vs Alexander Zverev LIVE: French Open final result and reaction from five-set thriller
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.skysports.com/tennis/news/32455/13150213/carlos-alcaraz-spaniard-beats-alexander-zverev-to-claim-maiden-french-open-title-at-roland-garros'>Carlos Alcaraz: Spaniard beats Alexander Zverev to claim maiden French Open title at Roland Garros</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Sky Sports&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 18:22:30
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Carlos Alcaraz: Spaniard beats Alexander Zverev to claim maiden French Open title at Roland Garros
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.tennismajors.com/roland-garros-news/carlos-alcaraz-wins-maiden-roland-garros-title-in-enthralling-epic-against-zverev-766896.html'>Carlos Alcaraz wins maiden Roland-Garros title in enthralling epic against Zverev</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Tennis Majors&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 17:55:19
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Carlos Alcaraz wins maiden Roland-Garros title in enthralling epic against Zverev
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.marca.com/en/tennis/roland-garros-/2024/06/09/6665e838268e3e3b788b45bc.html'>Carlos Alcaraz comes from behind in epic final against Zverev to be crowned the new king of Roland Garros</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Marca English&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 17:49:24
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Carlos Alcaraz comes from behind in epic final against Zverev to be crowned the new king of Roland Garros
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://olympics.com/en/news/french-open-2024-carlos-alcaraz-halts-alexander-zverev-five-sets-wins-third-major-title'>Tennis: Carlos Alcaraz wins French Open for third career major title, beating Alexander Zverev in final</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Olympics&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 17:39:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Tennis: Carlos Alcaraz wins French Open for third career major title, beating Alexander Zverev in final
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.tennis.com/news/articles/carlos-alcaraz-battles-to-third-grand-slam-title-of-career-at-roland-garros-makes-history'>Carlos Alcaraz battles to third Grand Slam title of career at Roland Garros, makes history</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Tennis Magazine&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 17:36:01
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Carlos Alcaraz battles to third Grand Slam title of career at Roland Garros, makes history
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.bbc.com/sport/tennis/articles/c5119n6gl81o'>French Open 2024 results: Carlos Alcaraz beats Alexander Zverev in Roland Garros final</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> BBC.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 17:35:23
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    French Open 2024 results: Carlos Alcaraz beats Alexander Zverev in Roland Garros final
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.atptour.com/en/news/alcaraz-roland-garros-2024-three-surface-history'>Carlos Alcaraz rewrites Grand Slam record books with Roland Garros triumph</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> ATP Tour&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 17:35:03
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Carlos Alcaraz rewrites Grand Slam record books with Roland Garros triumph
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.express.co.uk/sport/tennis/1908975/French-Open-LIVE-Novak-Djokovic-John-McEnroe-Carlos-Alcaraz-Alexander-Zverev'>French Open LIVE: Novak Djokovic told to retire as John McEnroe sparks backlash</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Express&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 17:34:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    French Open LIVE: Novak Djokovic told to retire as John McEnroe sparks backlash
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.nbcsports.com/tennis/news/carlos-alcaraz-alexander-zverev-french-open-mens-final'>Carlos Alcaraz outlasts Alexander Zverev for first French Open title</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> NBC Sports&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 17:32:39
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Carlos Alcaraz outlasts Alexander Zverev for first French Open title
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.express.co.uk/sport/tennis/1909113/Carlos-Alcaraz-Alexander-Zverev-French-Open-Roland-Garros'>Carlos Alcaraz wins French Open as he comes from behind to beat Alexander Zverev in epic</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Express&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 17:31:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Carlos Alcaraz wins French Open as he comes from behind to beat Alexander Zverev in epic
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.essentiallysports.com/atp-tennis-news-alexander-zverev-robbed-against-carlos-alcaraz-as-tennis-fans-condemn-brute-injustice-at-french-open/'>Alexander Zverev 'Robbed' Against Carlos Alcaraz as Tennis Fans Condemn Brute Injustice at French Open</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> EssentiallySports&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 17:29:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Alexander Zverev 'Robbed' Against Carlos Alcaraz as Tennis Fans Condemn Brute Injustice at French Open
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://olympics.com/en/news/heilbronn-neckarcup-2024-tennis-india-sumit-nagal-singles-winner-result-scores'>Sumit Nagal wins sixth career ATP Challenger event title at Heilbronn Neckarcup 2024 tennis</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Olympics&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 17:13:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Sumit Nagal wins sixth career ATP Challenger event title at Heilbronn Neckarcup 2024 tennis
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.atptour.com/en/news/alcaraz-zverev-roland-garros-2024-final'>Carlos Alcaraz wins fourth set against Alexander Zverev in Roland Garros final</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> ATP Tour&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 17:12:46
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Carlos Alcaraz wins fourth set against Alexander Zverev in Roland Garros final
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.skysports.com/tennis/news/32455/13150289/coco-gauff-claims-first-grand-slam-doubles-triumph-at-french-open'>Coco Gauff claims first Grand Slam doubles triumph at French Open</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Sky Sports&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 16:52:30
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Coco Gauff claims first Grand Slam doubles triumph at French Open
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.foxsports.com.au/tennis/french-open/french-open-2024-mens-final-live-carlos-alcaraz-vs-alexander-zverev-start-time-updates-score-latest-news/news-story/0e29ffd7a51e5879ec231721d0f8b882'>Carlos Alcaraz creates history as he joins the greats of tennis with a gripping victory in Paris — French Open men’s final LIVE</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Fox Sports&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 16:02:14
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Carlos Alcaraz creates history as he joins the greats of tennis with a gripping victory in Paris — French Open men’s final LIVE
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.essentiallysports.com/atp-tennis-news-tennis-news-nervous-roger-federer-receives-honorary-doctorate-for-million-philanthropy-work/'>Nervous Roger Federer Receives Honorary Doctorate for $100 Million Philanthropy Work</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> EssentiallySports&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 14:53:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Nervous Roger Federer Receives Honorary Doctorate for $100 Million Philanthropy Work
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://timesofindia.indiatimes.com/sports/tennis/french-open/no-miracle-solutions-to-sparse-french-open-crowds-amelie-mauresmo/articleshow/110846896.cms'>'No miracle solutions' to sparse French Open crowds: Amelie Mauresmo</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Times of India&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 14:14:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    'No miracle solutions' to sparse French Open crowds: Amelie Mauresmo
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.outlookindia.com/sports/tennis/french-open-2024-director-amelie-mauresmo-explains-the-strategy-to-fill-empty-seats-in-stadium-at-roland-garros'>French Open: Director Amelie Mauresmo Explains The Strategy To Fill Empty Seats In Stadium</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Outlook India&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 13:48:34
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    French Open: Director Amelie Mauresmo Explains The Strategy To Fill Empty Seats In Stadium
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://apnews.com/article/french-open-women-doubles-coco-gauff-81b2f6eb3e17b4471c032ee178e78b81'>Coco Gauff is a Grand Slam champion in singles and doubles, exceeding her own expectations</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Associated Press&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 13:40:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Coco Gauff is a Grand Slam champion in singles and doubles, exceeding her own expectations
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.bbc.com/sport/tennis/articles/cy00jz8yr01o'>French Open 2024 results: Coco Gauff and Katerina Siniakova win women's doubles title</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> BBC.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 13:19:43
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    French Open 2024 results: Coco Gauff and Katerina Siniakova win women's doubles title
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://tennistonic.com/tennis-news/721743/french-open-amelie-mauresmo-explains-why-women-are-not-playing-in-the-night-session/'>French Open Amelie Mauresmo explains why women are not playing in the night session</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Tennis Tonic&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 13:13:33
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    French Open Amelie Mauresmo explains why women are not playing in the night session
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://srnnews.com/tennis-double-disappointment-for-paolini-as-gauff-and-siniakova-clinch-french-open-title/'>Tennis-Double disappointment for Paolini as Gauff and Siniakova clinch French Open title</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> SRN News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 12:49:26
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Tennis-Double disappointment for Paolini as Gauff and Siniakova clinch French Open title
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://apnews.com/article/french-open-2024-mauresmo-3b4f24844276a62710a82ccdab49707d'>French Open director Amélie Mauresmo says she has some ideas to help avoid so many empty seats</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Associated Press&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 12:33:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    French Open director Amélie Mauresmo says she has some ideas to help avoid so many empty seats
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.masslive.com/westernmass/2024/06/boston-tennis-legend-hasnt-forgotten-his-childhood-courts-in-springfield.html'>Boston tennis legend hasn’t forgotten his childhood courts in Springfield</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> MassLive.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 12:29:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Boston tennis legend hasn’t forgotten his childhood courts in Springfield
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.wiaawi.org/News/News-Article/brookfield-central-brookfield-academy-earn-boys-team-tennis-titles'>Brookfield Central & Brookfield Academy Earn Boys Team Tennis Titles</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Wisconsin Interscholastic Athletic Association&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 11:57:19
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Brookfield Central & Brookfield Academy Earn Boys Team Tennis Titles
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.nbcsports.com/tennis/news/coco-gauff-french-open-doubles-katerina-siniakova'>Coco Gauff wins first Grand Slam doubles title with Katerina Siniakova at French Open</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> NBC Sports&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 11:48:45
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Coco Gauff wins first Grand Slam doubles title with Katerina Siniakova at French Open
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.wtatennis.com/news/4035455/-last-minute-pair-gauff-and-siniakova-win-french-open-doubles-title'>'Last-minute' pair Gauff and Siniakova win French Open doubles title</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> WTA Tennis&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 11:41:49
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    'Last-minute' pair Gauff and Siniakova win French Open doubles title
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.sportingnews.com/us/tennis/news/alexander-zverev-domestic-violence-allegations-explained/195628d6011f8776c481a9ef'>Alexander Zverev allegations, explained: Tennis star reaches 'out-of-court settlement' in domestic violence trial</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Sporting News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 11:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Alexander Zverev allegations, explained: Tennis star reaches 'out-of-court settlement' in domestic violence trial
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://tennistonic.com/tennis-news/721738/why-emma-raducanu-has-plausibly-split-with-boyfriend-carlo-agostinelli/'>Why Emma Raducanu has plausibly split with boyfriend Carlo Agostinelli</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Tennis Tonic&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 10:55:40
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Why Emma Raducanu has plausibly split with boyfriend Carlo Agostinelli
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.haaretz.com/israel-news/2024-06-09/ty-article/.premium/israeli-paralympic-tennis-player-wins-first-grand-slam-title-in-roland-garros/0000018f-fc4b-d5ad-ad8f-fc4bd55e0000'>Israeli Paralympic Tennis Player Wins First Grand Slam Title in Roland Garros</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Haaretz&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 10:28:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Israeli Paralympic Tennis Player Wins First Grand Slam Title in Roland Garros - Israel News
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.indiatvnews.com/web-stories/sports/most-grand-slam-titles-by-active-tennis-players-iga-swiatek-jumps-to-4th-place-2024-06-09-936012'>Most Grand Slam titles by active tennis players; Iga Swiatek jumps to 4th place</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> India TV News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 10:01:29
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Most Grand Slam titles by active tennis players; Iga Swiatek jumps to 4th place
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.tennismajors.com/wta-tour-news/we-didnt-know-how-she-was-going-to-react-maciej-ryszczuk-built-iga-swiateks-body-to-support-her-mind-766878.html'>« We didn't know how she was going to react,» Maciej Ryszczuk built Iga Swiatek's body to support her mind</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Tennis Majors&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 09:06:15
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    « We didn't know how she was going to react,» Maciej Ryszczuk built Iga Swiatek's body to support her mind
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.standard.co.uk/showbiz/emma-raducanu-tennis-wimbledon-carlow-agostinelli-b1163122.html'>Emma Raducanu 'breaks up with boyfriend' Carlo Agostinelli ahead of Wimbledon</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Evening Standard&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 08:52:51
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Emma Raducanu 'breaks up with boyfriend' Carlo Agostinelli ahead of Wimbledon
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.tennis365.com/news/who-are-alexander-zverevs-parents-former-pros-alexander-zverev-sr-irina-zvereva-coached-sons'>Who are Alexander Zverev's parents? Former pros Alexander Zverev Sr. and Irina Zvereva coached their tennis playing ...</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Tennis365&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 08:00:08
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Who are Alexander Zverev's parents? Former pros Alexander Zverev Sr. and Irina Zvereva coached their tennis playing ...
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_formula_1' class='section text-center heading'>
+            FORMULA_1
+            </div>
+            <br/>
+            
+
+            <div id='cat_entertainment' class='section text-center heading'>
+            ENTERTAINMENT
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://pagesix.com/2024/06/09/entertainment/meghan-mccain-says-jennifer-lopez-was-deeply-unpleasant-on-the-view/'>Meghan McCain says Jennifer Lopez was 'deeply unpleasant' on 'The View': 'She was not nice'</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Page Six&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 14:50:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Meghan McCain says Jennifer Lopez was 'deeply unpleasant' on 'The View': 'She was not nice'
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.onmanorama.com/entertainment/entertainment-news/2024/06/09/rajnikanth-shah-rukh-khan-among-celebrities-attend-modi-swearing-in-ceremony.html'>Rajnikanth, Shah Rukh Khan among celebrities who attend swearing-in ceremony</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Onmanorama&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 14:08:55
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Rajnikanth, Shah Rukh Khan among celebrities who attend swearing-in ceremony | Entertainment News
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.wionews.com/entertainment/shah-rukh-khan-akshay-kumar-at-narendra-modis-oath-ceremony-730241'>Shah Rukh Khan, Akshay Kumar at Narendra Modi`s oath taking ceremony</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> WION&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 13:30:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Shah Rukh Khan, Akshay Kumar at Narendra Modi`s oath taking ceremony
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://pagesix.com/2024/06/09/entertainment/below-deck-alum-captain-lee-rosbach-reveals-why-his-friendship-with-carl-radke-ended/'>'Below Deck' alum Captain Lee Rosbach reveals why his friendship with Carl Radke ended: 'It bothers me'</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Page Six&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 13:23:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    'Below Deck' alum Captain Lee Rosbach reveals why his friendship with Carl Radke ended: 'It bothers me'
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.onmanorama.com/entertainment/entertainment-news/2024/06/09/bougainvillea-first-look-amal-neerad-fahadh-faasil-kunchacko-boban-mollywood.html'>Blood-red hues and high drama: Amal Neerad's 'Bougainvillea' first look revealed</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Onmanorama&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 09:42:58
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Blood-red hues and high drama: Amal Neerad's 'Bougainvillea' first look revealed | Onmanorama
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.wionews.com/entertainment/bollywood/news-silent-support-hrithik-roshan-backs-kangana-ranaut-in-slap-incident-730125'>Silent support?! Hrithik Roshan backs Kangana Ranaut in slap incident</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> WION&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-06-09 08:49:19
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Silent support?! Hrithik Roshan backs Kangana Ranaut in slap incident
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_other' class='section text-center heading'>
+            OTHER
+            </div>
+            <br/>
+            
+
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
+    </body>
+</html>
