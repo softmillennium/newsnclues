@@ -1,0 +1,1871 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <title id="title">News'n'Clues - Trending Topics, Headlines</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .menu { color: #444444; }
+            .copyright { margin: 0 auto; }
+            p { font-family: serif; }
+            body {  background-color: #2c2c2c; font-family: Arial, sans-serif; font-size: 20px; color: #f4f4f4;  }
+            a { text-decoration: none; color: #f4f4f4; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
+            .hidden {
+                display: none;
+            }            
+        </style>
+    </head>
+    <body class='p-2'>
+        <br/>
+        <div class="section">
+            <input type="hidden" id="sentiment_score" value="33">
+            <div id="sentiment" class="heading">Business Sentiment</div>
+            <div>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcwAAAB4CAYAAAB/98JRAAAIyklEQVR4nO3df4wcZRnA8e+25fr7oLRQyo9QKNSgUlpQEYnA1diAKSL/CEhBY1LQEIKJFgk/5AkEVEw0ijFUoiERAxqJJEaoCF1K/RHQApVKarm2ULmWloKl7dX22rvxj92t2+3tdW5v5q7LfT/JZmfeed9ndpM+efq+MzsHkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkoaHwlB/ADWvpMgJwBeA+cAM4BhgJ7ABeBpYXGijfajiSVKWLJhqSFLkZuBbwPg+uu0D7gNuL7SRDGY8ScraiKH+AGo+SZHvAd+l7+IGMAq4deXmsx4bzHiSlAdnmOqXpMj5wJ/6O+53ay594sVN58yPiANmhlnHk6S8jBrqD6Cmc0dtQ/u7p7N0/Vy27prC0WPfZd6Mpzh10toD+lx08rLPvLjp7IeAL+YcT5Jy4ZKsUkuKtAJzq9s27TieR1Zdyaad09jbcwSbO6fyq39eQWfXhAPGThy9nakTNl8bEQvziidJebJgqj9GA7cAi9dvO+Xd7XtaeemtOfQkIyvHnwTO6epuGf/mjhOerR08sWUnwJ0RUcgpniTlxiVZpVZo423g+xHRCny55vAK4LKI2AtwZ5Ge2vHb90wEOAGYBazMOl7j30ySDs2CqUZUZoYzgdPL7z+vFLekyJnABdUDdnRNZOuuKZXdaRxY4LKOJ0mZcylLmUiKjAaOBz4L3A5MqT7++9fm8/eNH6nszoqIVwYzniQNlDNMZeUFSkujBx/oOLe6uG0EVg9BPEkaEAumsnJybcOefWOSJ9svLqzcPLu6+e7KUusgx5OkAfEuWQ1YUmQScGRte8vIrsKcaS8xc/KaStP9EfHAYMeTpCx4DVMDlhSZA7zYV5/nO87948cXPD9vKOJJUhYsmBqwpMixwLR7l9/29sgR3R1nTHmVi0/7Ay0j9xzQb0n7xQ9esnDJdYMdT5Ky4JKsBqzQxpZCGyv39hwxdfe+Mbz01tn8dvXnDup30fRnF95z960/Gex4kpQFC6ay1AHMBsav3nrGpC2dx3ZUHxwzajfTj3zjqxFx0xDFk6SGuSSr3CRFHgGurG5b0n4Jz3ecuw04MSI6hzKeJPWHPytRakmRucA84JTyazpwZaGNpXWGHPQ4u55kBMBRwIVJkd1ZxgOeSPlVJKnfLJjqj48B36xp+zTULXAfrW14b8/+X4ucBozLOJ4k5cZrmOqPZ2oburpbbv7Bd772TkQc8Ge6kiILKD0Xdr/unlG8vm3/8wj25RBPknJjwVRqhTb+Rs3vI1tGdo24ZtYvjp5xdPt1SZExSZFjkyKLgJ/Vjn9582y6ukdXdjdkHW/g31CS6nNJVv11Y0JheYFk/3+2Jo99hwVnPnwFcEW9Qdv3tLJ0fVtldw+wLKd4kpQLZ5jql0IbfymQfKU/Y3btHccvX7maXXvHV5oeiogdecSTpLxYMNVvhTYefGTVVTdXFay63tg2ncUrrmdL59RK05vAHXnGk6Q8+DtMNeyeu267YfZxL/945uQ1HDfhLcYesYvunlHs6JrAhvdOZtWWD7PuP6dWD9kKzK33tyuzjidJWbJgakAi4lJKN+Qcc4iuy4BrIuLfgxlPkrJiwdSARcQ44EvAfEqPsptM6UacTcBy4NGIeHqo4kmSJEmSJEmSJKmpeA1TuYuIpB99/Tcp6bDk7zCVu7RF0GIp6XBmwZQkKQULpgbFoWaPzi4lHe4smJIkpWDB1KCpN4t0dimpGVgwJUlKwYKpQVU7m3R2KalZWDAlSZIOV/15mIEkHQ6cYUqSJEmSJEmSJEmSJElNJvPfwCWQUChHrrxG1Oz31pamj+McN4zG9QBJ1at2P22b4xyX9bjD8TP11ta+bi0zZswokBHvkpUkKQULpiRJKVgwJUlKwYIpSVIKFkxJklKwYEqSlIIFU5KkFCyYkiSlYMGUJCkFC6YkSSlYMCVJSsGCKUlSChZMSZJSsGBKkpSCBVOSpBQsmJIkpWDBlCQpBQumJEkpWDAlSUrBgilJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkhpWyCtwRJwN3AecB+wDngG+HhHr8zqn1Mwi4hlgbi+HOiLixKp+5paGrYg4D/gzpfp1TERsrTmeKj8ayaNcnvQTETOAZcCngHFAK3A58FxEHJnHOaX3gbMO1cHc0nAWER8Cfk2dyV7a/Gg0j0Zl8zUOcgcwAdgMfAKYBCwHTgRuAu7K6bxSU4qIk4DJ5d0PRMSaOl3NLQ07ETEJuAG4FRjbR9e0+dFQHmU+w4yIAnBZeffRiFgXESuAJeW2y7M+p/Q+MKf83gWs662DuaVh7O7yayzwem8d0ubHQPIojyXZk4CjytuvVbX/q/z+wYgYmcN5pWY2u/y+F1gREbsj4rWIuLGqj7ml4e6nwL11jqXNj4bzKI+CObVq+71etlv4/4eVVFKZYY4HZgGjgdOAH0XEt8vHzC0NVxuBqyPieiCp0ydtfjScR3lcwxxTtb2varu7aruvNWhpOOqkdD1lObCIUu48DFwILIqIBzC3NExFRL1ZZbW0+dFwHuVRMHdXbVdPa6vP9d8czis1rYhY0EvbLcBfKeXRXGBV1WFzSzpQ2trTcI3KY0n27art1l62u4BtOZxXer95s2p7IuaW1Je0+dFwHuVRMDcAO8vbM6vaTy+/vxoR3Ug6lFOrttdibkl9SZsfDedR5kuyEdETEU8Anweuioj7KV1AvaTc5fGszyk1s4hoBf4BTAEeA75B6caDynWbTcBSc0uqL21+DCSPcnnSD3AnsIPS3UhrgRWUnqawEfhhTueUmlJEbAd+Q+kO2WuBLZSWY88HeoAbI6JyTcXckupLmx8N5VFej8ZbDXwSeArYVf5gjwMXRMS2PM4pNblFwELgBUq3t3cCzwHzIuKxSidzS6ovbX6YR5IkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkqXn8D/C1mi5TWKW4AAAAAElFTkSuQmCC" alt="Sentiment Bar">
+            </div>
+            <div style="margin-left: 20px; font-weight: bold;">Sentiment Legend:</div>
+            <br/>
+            <div style="display: flex; align-items: center; font-family: Arial, sans-serif;">
+                <div style="display: flex; margin-left: 20px;  margin-right: 20px; align-items: center;">
+                    <div style="background-color: red; width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Negative < 44</div>
+                </div>
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                    <div style="background-color: rgb(255, 255, 0); width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Mixed 46-54</div>
+                </div>
+                <div style="display: flex; align-items: center; margin-right: 20px;">
+                    <div style="background-color: rgb(12, 244, 8); width: 15px; height: 15px; display: inline-block; margin-right: 5px;"></div>
+                    <div style="size: 0.75rem;">Positive > 56</div>
+                </div>
+            </div>
+        </div>        
+        <div class='section heading'>Trending Topics:</div>
+
+        <div id='trending_topics' class='p-1 text-1.5xl'>
+        <ul>
+        <li><a target='_blank' href='https://news.google.com/search?q=donald%20trump%20thomas%20matthew%20crooks 2024-07-15&tbm=nws&source=lnms'>donald trump thomas matthew crooks (7)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=romania%20deadly%20hiker%20attack 2024-07-15&tbm=nws&source=lnms'>romania deadly hiker attack (3)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=china%20xi%20jinping 2024-07-15&tbm=nws&source=lnms'>china xi jinping (3)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=linkedin%20donald%20trump 2024-07-15&tbm=nws&source=lnms'>linkedin donald trump (2)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=candace%20owens 2024-07-15&tbm=nws&source=lnms'>candace owens (1)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=kenya 2024-07-15&tbm=nws&source=lnms'>kenya (1)</a></li>
+<li><a target='_blank' href='https://news.google.com/search?q=assad 2024-07-15&tbm=nws&source=lnms'>assad (1)</a></li>
+
+        </ul>
+        </div>
+        <br/><a target='_blank' href='https://trends.google.com/trending?geo=US'>Trending Google Searches</a>
+        <br/><a target='_blank' href='https://www.bing.com/news/search?q=Top+stories'>Trending Bing News</a>
+        <br/>
+        
+
+
+            <div id='cat_world' class='section text-center heading'>
+            WORLD
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.sookenewsmirror.com/news/winners-announced-at-parksvilles-world-renowned-sand-sculpting-competition-7441682'>Winners announced at Parksville’s world-renowned sand sculpting competition</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Sooke News Mirror&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 18:07:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Winners announced at Parksville’s world-renowned sand sculpting competition
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.ndtv.com/world-news/romania-approves-culling-of-nearly-500-bears-after-deadly-hiker-attack-6112844'>Romania Approves Culling Of Nearly 500 Bears After Deadly Hiker Attack</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> NDTV&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 16:20:19
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Romania Approves Culling Of Nearly 500 Bears After Deadly Hiker Attack
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.mirror.co.uk/news/world-news/tourist-dies-after-being-bitten-33248631'>Tourist dies after being bitten by one of world's deadliest spiders hiding in restaurant chair</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Mirror&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 15:37:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Tourist dies after being bitten by one of world's deadliest spiders hiding in restaurant chair
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.hindustantimes.com/world-news/us-news/candace-owens-shares-honest-opinion-on-trumps-female-secret-service-agents-let-men-protect-men-101721044821151.html'>Candace Owens shares honest opinion on Trump's female Secret Service agents: ‘Let men protect men’</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Hindustan Times&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 13:35:17
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Candace Owens shares honest opinion on Trump's female Secret Service agents: ‘Let men protect men’
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://indianexpress.com/article/world/suspected-serial-killer-arrested-bodies-discovered-kenya-quarry-9454766/'>Suspected serial killer arrested after bodies discovered in Kenya quarry</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Indian Express&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 13:22:24
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Suspected serial killer arrested after bodies discovered in Kenya quarry
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.usnews.com/news/world/articles/2024-07-15/trump-biden-seek-calm-as-republicans-gather-after-shooting'>Trump Forges Ahead in White House Bid After Assassination Attempt</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> U.S. News & World Report&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 11:45:45
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Trump Forges Ahead in White House Bid After Assassination Attempt
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.hindustantimes.com/world-news/trump-attack-a-reminder-to-denounce-khalistan-supporters-indo-canadian-mp-101721042134791.html'>Trump attack a reminder to denounce Khalistan supporters: Indo-Canadian MP</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Hindustan Times&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 11:15:34
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Trump attack a reminder to denounce Khalistan supporters: Indo-Canadian MP
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.axios.com/2024/07/14/trump-assassination-attempt-world-leaders-us-democracy'>Global allies and rivals react to the assassination attempt against Donald Trump</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Axios&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 10:57:35
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Global allies and rivals react to the assassination attempt against Donald Trump
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.business-standard.com/world-news/so-frightening-photographer-recounts-trump-s-near-miss-with-bullet-124071500630_1.html'>'So frightening': Photographer recounts Trump's near miss with bullet</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Business Standard&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 10:51:45
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    'So frightening': Photographer recounts Trump's near miss with bullet
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.telegraph.co.uk/world-news/2024/07/14/matthew-crooks-shooting-assasination-attempt-suspect/'>Thomas Matthew Crooks: The registered Republican and gun lover who shot Trump</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Telegraph&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 09:09:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Thomas Matthew Crooks: The registered Republican and gun lover who shot Trump
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.ndtv.com/world-news/thomas-matthew-crooks-donald-trump-rally-shooter-wanted-to-join-schools-shooting-club-he-was-rejected-6108539'>Trump Attacker Rejected By School Shooting Club For Being "Terrible Shot"</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> NDTV&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 08:19:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Trump Attacker Rejected By School Shooting Club For Being "Terrible Shot"
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.hindustantimes.com/world-news/donald-trump-assassination-attempt-minute-by-minute-timeline-of-shooting-by-thomas-matthew-crooks-101721025949790.html'>Donald Trump assassination attempt: Minute-by-minute timeline of shooting by Thomas Matthew Crooks</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Hindustan Times&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 08:14:56
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Donald Trump assassination attempt: Minute-by-minute timeline of shooting by Thomas Matthew Crooks
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.hindustantimes.com/world-news/syrians-vote-for-their-next-parliament-which-may-consider-allowing-assad-to-extend-his-rule-101721023477605.html'>Syrians vote for their next parliament, which may consider allowing Assad to extend his rule</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Hindustan Times&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 08:07:33
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Syrians vote for their next parliament, which may consider allowing Assad to extend his rule
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.hindustantimes.com/world-news/linkedin-co-founders-aide-says-donald-trump-staged-rally-attack-apologises-101721027014094.html'>LinkedIn co-founder's aide suggests Donald Trump ‘staged’ rally attack; apologises</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Hindustan Times&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 08:02:43
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    LinkedIn co-founder's aide suggests Donald Trump ‘staged’ rally attack; apologises
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.bbc.com/news/articles/cl4y6mexgz8o'>China: Xi Jinping tackles slow growth as economy 'hits the brakes'</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> BBC.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 07:40:41
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    China: Xi Jinping tackles slow growth as economy 'hits the brakes'
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_national' class='section text-center heading'>
+            NATIONAL
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.usatoday.com/story/news/politics/elections/2024/07/15/republican-national-convention-2024-trump-live-updates/74406238007/'>RNC 2024 live updates: Rubio, Burgum have been told they won't be Trump's VP pick</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> USA TODAY&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 18:20:01
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    RNC 2024 live updates: Rubio, Burgum have been told they won't be Trump's VP pick
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.nbcnews.com/news/us-news/live-blog/trump-assassination-attempt-live-updates-republican-convention-rcna161238'>Trump assassination attempt live updates: Judge dismisses classified documents case as RNC begins</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> NBC News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 18:15:01
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Trump assassination attempt live updates: Judge dismisses classified documents case as RNC begins
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.usnews.com/news/national-news/articles/2024-07-15/bidens-age-doesnt-bother-wisconsin-democratic-candidates-activists'>Wisconsin Democratic Activists Still Back Biden Despite Age Concerns</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> U.S. News & World Report&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 17:14:24
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Wisconsin Democratic Activists Still Back Biden Despite Age Concerns
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.aljazeera.com/news/liveblog/2024/7/15/donald-trump-rally-shooting-live-republicans-gear-up-for-trump-nomination'>Trump assassination attempt live: VP pick announcement expected at RNC</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Al Jazeera English&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 16:52:22
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Trump assassination attempt live: VP pick announcement expected at RNC
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.usnews.com/news/national-news/articles/2024-07-15/ambassador-linda-thomas-greenfield-on-enlisting-social-media-companies-to-fight-drug-sales'>Q&A: U.S. Ambassador on Enlisting Social Media Companies to Fight Drug Sales</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> U.S. News & World Report&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 15:23:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Q&A: U.S. Ambassador on Enlisting Social Media Companies to Fight Drug Sales
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.wsav.com/news/national-news/ap-us-journalist-masha-gessen-is-convicted-in-absentia-in-russia-for-criticizing-the-military/'>US journalist Masha Gessen is convicted in absentia in Russia for criticizing the military</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> WSAV-TV&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 14:06:04
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    US journalist Masha Gessen is convicted in absentia in Russia for criticizing the military
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.foxnews.com/us/father-daughter-die-utah-canyonlands-national-park-running-out-water-hike-100-degree-heat'>Father, daughter die at Utah’s Canyonlands National Park after running out of water on hike in 100-degree heat</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Fox News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 11:51:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Father, daughter die at Utah’s Canyonlands National Park after running out of water on hike in 100-degree heat
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://fox59.com/news/national-world/ap-us-news/ap-the-latest-trump-calls-for-unity-after-apparent-assassination-attempt/'>The Latest: King Charles writes to Trump, who was in ‘great spirits’ Sunday</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> FOX 59 Indianapolis&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 09:00:30
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    The Latest: King Charles writes to Trump, who was in ‘great spirits’ Sunday
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://apnews.com/article/biden-trump-shooting-election-2024-704592d02c3421a767112f0bf6d25eb9'>In prime-time address, Biden asks Americans to reject political violence and ‘cool it down’</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Associated Press&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 08:18:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    In prime-time address, Biden asks Americans to reject political violence and ‘cool it down’
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.theguardian.com/us-news/article/2024/jul/15/trump-milwaukee-republican-national-convention'>Trump touches down in Milwaukee as Republican national convention begins</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Guardian US&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 08:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Trump touches down in Milwaukee as Republican national convention begins
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.abc.net.au/news/2024-07-15/donald-trump-rally-shooting-ongoing-reactions/104096972'>Trump says he's 'supposed to be dead' in latest interview after assassination attempt — as it happened</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> ABC News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 07:37:20
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Trump says he's 'supposed to be dead' in latest interview after assassination attempt — as it happened
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_business' class='section text-center heading'>
+            BUSINESS
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.reuters.com/business/finance/goldman-sachs-profit-jumps-robust-debt-underwriting-fixed-income-trading-2024-07-15/'>Goldman Sachs profit tops estimates on robust debt underwriting, fixed-income trading</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Reuters&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 16:20:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Goldman Sachs profit tops estimates on robust debt underwriting, fixed-income trading
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.screendaily.com/news/calculus-capital-takes-on-great-point-medias-film-and-tv-business/5195477.article'>Calculus Capital takes on Great Point Media’s film and TV business</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Screen International&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 15:08:30
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Calculus Capital takes on Great Point Media’s film and TV business
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.foodbusinessnews.net/articles/26413-conagra-sustains-loss-amid-slump-in-refrigerated-and-frozen-foods'>Conagra sustains loss amid slump in refrigerated and frozen foods</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Food Business News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 12:15:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Conagra sustains loss amid slump in refrigerated and frozen foods
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.theguardian.com/us-news/article/2024/jul/15/shares-trump-media-group-assassination-attempt-shooting-bitcoin-election'>Shares in Trump’s media group leap by a third after assassination attempt</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Guardian US&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 11:02:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Shares in Trump’s media group leap by a third after assassination attempt
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.northjersey.com/story/news/business/2024/07/15/businesses-new-to-north-jersey-communities/74289015007/'>These new businesses just opened in North Jersey for pets, kids and more</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> NorthJersey.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 08:31:16
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    These new businesses just opened in North Jersey for pets, kids and more
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.bbc.com/news/articles/cl4y6mexgz8o'>China: Xi Jinping tackles slow growth as economy 'hits the brakes'</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> BBC.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 07:40:41
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    China: Xi Jinping tackles slow growth as economy 'hits the brakes'
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_cryptocurrency' class='section text-center heading'>
+            CRYPTOCURRENCY
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.cnbc.com/2024/07/15/crypto-stocks-like-coinbase-and-microstrategy-soar-as-bitcoin-rallies.html'>Crypto stocks like Coinbase and Microstrategy soar, mirroring rally in bitcoin</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> CNBC&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 17:33:13
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Crypto stocks like Coinbase and Microstrategy soar, mirroring rally in bitcoin
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.washingtonpost.com/politics/2024/07/14/trump-cryptocurrency-donors/'>Wealthy industry donors fuel Trump’s conversion on cryptocurrency</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Washington Post&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 17:00:09
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Wealthy industry donors fuel Trump’s conversion on cryptocurrency
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.newsbtc.com/crypto/jpmorgan-bitcoin-bull-market/'>JPMorgan Says Crypto Liquidations Will End And Bitcoin Bull Market Will Begin, Here’s When</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> NewsBTC&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 16:42:26
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    JPMorgan Says Crypto Liquidations Will End And Bitcoin Bull Market Will Begin, Here’s When
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://cointelegraph.com/news/btc-price-63k-black-rock-ceo-calls-bitcoin-legitimate'>BTC price demands $63K flip as BlackRock CEO calls Bitcoin 'legitimate'</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Cointelegraph&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 16:30:36
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    BTC price demands $63K flip as BlackRock CEO calls Bitcoin 'legitimate'
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.cnbc.com/2024/07/15/blackrocks-larry-fink-says-hes-a-major-believer-in-bitcoin.html'>BlackRock's Larry Fink says he's a 'major believer' in bitcoin, is worried about government deficits</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> CNBC&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 15:32:49
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    BlackRock's Larry Fink says he's a 'major believer' in bitcoin, is worried about government deficits
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://coinpedia.org/news/bitcoin-price-set-to-skyrocket-key-events-and-indicators-signal-breakout/'>Bitcoin Price Prediction: Technicals, Events Signal Bull Run Ahead!</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Coinpedia Fintech News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 15:09:33
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Bitcoin Price Prediction: Technicals, Events Signal Bull Run Ahead!
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.investors.com/news/bitcoin-price-trump-rally/'>Bitcoin Price Bolts Above $62,000 As Trump Reelection Odds Jump After Rally Shooting</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Investor's Business Daily&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 13:35:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Bitcoin Price Bolts Above $62,000 As Trump Reelection Odds Jump After Rally Shooting
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.fxstreet.com/cryptocurrencies/news/crypto-today-bitcoin-ethereum-and-xrp-what-to-expect-as-sec-executive-says-howey-test-applies-to-cryptos-202407151334'>What to expect from Bitcoin, Ethereum and XRP when SEC treats cryptos as securities</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> FXStreet&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 13:34:54
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    What to expect from Bitcoin, Ethereum and XRP when SEC treats cryptos as securities
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://cryptoslate.com/digital-assets-see-record-17-8-billion-ytd-inflows-as-bitcoin-and-ethereum-lead-the-charge/'>Digital assets see record $17.8 billion YTD inflows as Bitcoin and Ethereum lead the charge</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> CryptoSlate&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 13:06:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Digital assets see record $17.8 billion YTD inflows as Bitcoin and Ethereum lead the charge
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://news.bitcoin.com/ethereum-technical-analysis-eths-bullish-momentum-continues-amid-uptrend/'>Ethereum Technical Analysis: ETH’s Bullish Momentum Continues Amid Uptrend</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Bitcoin.com News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 12:50:01
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Ethereum Technical Analysis: ETH’s Bullish Momentum Continues Amid Uptrend
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://news.bitcoin.com/bitcoin-technical-analysis-btc-pushes-through-resistance-bullish-momentum-builds/'>Bitcoin Technical Analysis: BTC Pushes Through Resistance, Bullish Momentum Builds</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Bitcoin.com News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 12:14:56
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Bitcoin Technical Analysis: BTC Pushes Through Resistance, Bullish Momentum Builds
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.cnbc.com/2024/07/15/bitcoin-jumps-as-markets-see-increased-odds-of-trump-victory.html'>Bitcoin jumps as markets see increased odds of election victory for pro-crypto Trump</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> CNBC&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 11:37:11
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Bitcoin jumps as markets see increased odds of election victory for pro-crypto Trump
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.motherjones.com/politics/2024/07/texas-bitcoin-mines-data-centers-power-grid-demand/'>Texas Leaders Worry Bitcoin Mines and Big Data Will Crash the Power Grid</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Mother Jones&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 11:06:05
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Texas Leaders Worry Bitcoin Mines and Big Data Will Crash the Power Grid
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.reuters.com/technology/cybersecurity/north-korean-hackers-sent-stolen-crypto-wallet-used-by-asian-payment-firm-2024-07-15/'>Exclusive: North Korean hackers sent stolen crypto to wallet used by Asian payment firm</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Reuters&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 10:33:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Exclusive: North Korean hackers sent stolen crypto to wallet used by Asian payment firm
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://decrypt.co/239771/bitcoin-170-million-short-traders-liquidation'>Bitcoin Weekend Surge Forced $170 Million Worth of Shorts Into Liquidation</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Decrypt&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 10:05:41
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Bitcoin Weekend Surge Forced $170 Million Worth of Shorts Into Liquidation
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://news.bitcoin.com/trump-to-address-bitcoin-2024-conference-despite-assassination-attempt/'>Trump to Address Bitcoin 2024 Conference Despite Assassination Attempt</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Bitcoin.com News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 09:55:13
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Trump to Address Bitcoin 2024 Conference Despite Assassination Attempt
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.theblock.co/post/305218/bitcoin-trump-attack'>Bitcoin breaks above $63,000 after Trump survives assassination attempt</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The Block&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 09:15:44
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Bitcoin breaks above $63,000 after Trump survives assassination attempt
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://crypto.news/lazarus-group-allegedly-moves-stolen-funds-from-308m-dmm-bitcoin-hack/'>Lazarus Group allegedly moves stolen funds from $308m DMM Bitcoin hack</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> crypto.news&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 08:44:09
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Lazarus Group allegedly moves stolen funds from $308m DMM Bitcoin hack
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://coinpedia.org/price-analysis/bitcoin-bulls-back-in-action-pivotal-range-reclaimed-yet-70000-may-not-be-easy-to-achieve/'>Bitcoin Bulls Back in Action, Pivotal Range Reclaimed: Yet $70,000 May Not be Easy to Achieve</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Coinpedia Fintech News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 08:34:07
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Bitcoin Bulls Back in Action, Pivotal Range Reclaimed: Yet $70,000 May Not be Easy to Achieve
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://coingape.com/trending/the-biggest-bitcoin-controversy-kevin-days-mt-gox-nightmare-of-16-billion/'>The Biggest Bitcoin Controversy: Kevin Day’s Mt. Gox Nightmare of $16 Billion</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> CoinGape&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 08:26:11
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    The Biggest Bitcoin Controversy: Kevin Day’s Mt. Gox Nightmare of $16 Billion
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://coinpedia.org/price-analysis/bitcoin-ethereum-and-xrp-price-prediction-fresh-bull-rally-on-the-horizon/'>Bitcoin, Ethereum, And XRP Price Prediction: Fresh Bull Rally On The Horizon?</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Coinpedia Fintech News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 07:31:40
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Bitcoin, Ethereum, And XRP Price Prediction: Fresh Bull Rally On The Horizon?
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_science' class='section text-center heading'>
+            SCIENCE
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.discovermagazine.com/the-sciences/storytelling-strategies-make-communication-about-science-more-compelling'>Storytelling Strategies Make Communication About Science More Compelling</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> DISCOVER Magazine&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 16:04:40
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Storytelling Strategies Make Communication About Science More Compelling
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.usnews.com/news/news/articles/2024-07-15/scientists-have-confirmed-a-cave-on-the-moon-that-could-be-used-to-shelter-future-explorers'>Scientists Have Confirmed a Cave on the Moon That Could Be Used to Shelter Future Explorers</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> U.S. News & World Report&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 15:05:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Scientists Have Confirmed a Cave on the Moon That Could Be Used to Shelter Future Explorers
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.usnews.com/news/news/articles/2024-07-15/worlds-rarest-whale-may-have-washed-up-on-new-zealand-beach-possibly-shedding-clues-on-species'>World’s Rarest Whale May Have Washed up on New Zealand Beach, Possibly Shedding Clues on Species</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> U.S. News & World Report&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 09:50:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    World’s Rarest Whale May Have Washed up on New Zealand Beach, Possibly Shedding Clues on Species
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_technology' class='section text-center heading'>
+            TECHNOLOGY
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.foxnews.com/us/breaking-into-trump-shooters-cellphone-complicated-modern-technology-expert'>Breaking into Trump shooter’s cellphone complicated by modern technology: expert</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Fox News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 17:29:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Breaking into Trump shooter’s cellphone complicated by modern technology: expert
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.cornerstone.edu/director-of-nursing-emmons-promoted-to-dean-of-the-school-of-health-science-technology/'>Director of Nursing Emmons Promoted to Dean of the School of Health, Science & Technology</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Cornerstone University&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 15:09:34
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Director of Nursing Emmons Promoted to Dean of the School of Health, Science & Technology
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.cbsnews.com/news/trump-media-djt-stock-up-shooting-odds-of-election-win/'>Trump Media stock price surges after assassination attempt seen as boosting Donald Trump's reelection odds</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> CBS News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 14:55:53
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Trump Media stock price surges after assassination attempt seen as boosting Donald Trump's reelection odds
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.tampabeacon.com/news/in-u-turn-tampa-renews-contract-for-gunshot-detection-technology/article_9036a2a2-42b1-11ef-a78c-3b100574f44e.html'>In U-turn, Tampa renews contract for gunshot detection technology</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Tampa Beacon&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 13:53:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    In U-turn, Tampa renews contract for gunshot detection technology
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.analyticsinsight.net/tech-news/top-tech-news-chatgpts-openai-to-develop-advanced-ai-model-for-deep-research'>Top Tech News: ChatGPT’s OpenAI to Develop Advanced AI Model for Deep Research</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Analytics Insight&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 07:35:24
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Top Tech News: ChatGPT’s OpenAI to Develop Advanced AI Model for Deep Research
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_health' class='section text-center heading'>
+            HEALTH
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://inside.princeton.edu/community-news/2024/princeton%E2%80%99s-university-health-services-earns-%E2%80%9Clgbtq-healthcare-equality-leader%E2%80%9D'>Princeton’s University Health Services earns “LGBTQ+ Healthcare Equality Leader” designation</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Inside Princeton&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 18:27:13
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Princeton’s University Health Services earns “LGBTQ+ Healthcare Equality Leader” designation
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.nbcboston.com/news/local/steward-healthcare-deadline-bids-bankruptcy/3427430/'>Chaos continues for Steward Health Care as deadline for bids arrives</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> NBC Boston&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 18:14:17
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Chaos continues for Steward Health Care as deadline for bids arrives
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.investors.com/news/trump-election-odds-health-care-stocks-unh-hca-cnc-unitedhealth-earnings/'>Rising Trump Election Odds Divide Health Care; HCA Falls, UNH Rises With Earnings Due</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Investor's Business Daily&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 17:50:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Rising Trump Election Odds Divide Health Care; HCA Falls, UNH Rises With Earnings Due
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.wishtv.com/news/local-news/uindy-grad-uses-research-to-bring-awareness-about-language-barriers-in-healthcare/'>UIndy grad uses research to bring awareness about language barriers in healthcare</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> WISH TV Indianapolis, IN&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 17:33:30
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    UIndy grad uses research to bring awareness about language barriers in healthcare
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.oakridger.com/story/news/healthcare/2024/07/15/methodist-medical-center-of-oak-ridge-welcomes-med-students-from-lmu/74409488007/'>Methodist Medical Center of Oak Ridge welcomes 19 med students for clinical rotations</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Oakridger&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 17:11:45
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Methodist Medical Center of Oak Ridge welcomes 19 med students for clinical rotations
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.houstonpublicmedia.org/articles/news/health-science/healthcare/2024/07/15/493483/houston-hospitals-overcrowded-after-beryl-causing-delays-in-discharges-and-treatment/'>Houston hospitals overcrowded after Beryl, causing delays in discharges and treatment</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Houston Public Media&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 17:10:50
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Houston hospitals overcrowded after Beryl, causing delays in discharges and treatment
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.wtnh.com/news/health/manchester-community-college-students-train-at-hartford-healthcares-cesi/'>Manchester Community College students train at Hartford HealthCare’s CESI</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> WTNH.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 17:05:53
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Manchester Community College students train at Hartford HealthCare’s CESI
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.healthcareitnews.com/news/remote-patient-monitoring-reduces-blood-pressure-patients-new-york-state'>Remote patient monitoring reduces blood pressure for patients in New York State</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Healthcare IT News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 15:49:44
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Remote patient monitoring reduces blood pressure for patients in New York State
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.healthcaredive.com/news/private-equity-investment-healthcare-providers-pitchbook/720960/'>Private equity-backed providers represent less than 4% of US market: PitchBook</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Healthcare Dive&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 15:35:30
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Private equity-backed providers represent less than 4% of US market: PitchBook
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.healthcaredive.com/news/lurie-childrens-hospital-chicago-cyberattack-lawsuits/721341/'>Chicago children’s hospital faces class action suits after cyberattack</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Healthcare Dive&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 15:35:06
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Chicago children’s hospital faces class action suits after cyberattack
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.marcumllp.com/insights/addressing-mental-healthcare-challenges-and-opportunities-in-the-healthcare-industry'>Addressing Mental Healthcare Challenges and Opportunities in the Healthcare Industry</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Marcum LLP&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 15:33:51
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Addressing Mental Healthcare Challenges and Opportunities in the Healthcare Industry
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://medcitynews.com/2024/07/building-safer-healthcare-environments-through-human-factors-and-ergonomics/'>Building Safer Healthcare Environments through Human Factors and Ergonomics</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> MedCity News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 15:18:55
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Building Safer Healthcare Environments through Human Factors and Ergonomics
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.healthcareitnews.com/news/sen-warner-urges-hhs-end-voluntary-cybersecurity-requirements'>Senator Warner urges HHS to end voluntary cybersecurity requirements</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Healthcare IT News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 14:55:12
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Senator Warner urges HHS to end voluntary cybersecurity requirements
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.morningstar.com/news/accesswire/888732msn/jazz-pharmaceuticals-hosts-discussion-of-healthcare-inequities-in-the-us-to-honor-juneteenth'>Jazz Pharmaceuticals Hosts Discussion of Healthcare Inequities in the U.S. To Honor Juneteenth</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Morningstar&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 14:15:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Jazz Pharmaceuticals Hosts Discussion of Healthcare Inequities in the U.S. To Honor Juneteenth
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://starlocalmedia.com/mckinneycouriergazette/news/individual-relaxed-practical-daniel-rizzo-brings-healthcare-to-mckinney/article_f2d09af4-3f8b-11ef-b693-63f57fd2d91a.html'>'Individual, relaxed, practical': Daniel Rizzo brings healthcare to McKinney</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Star Local Media&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 13:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    'Individual, relaxed, practical': Daniel Rizzo brings healthcare to McKinney
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://starlocalmedia.com/celinarecord/news/helping-others-dr-nguyen-provides-quality-healthcare-at-methodist-family-health-center-in-celina/article_42f0e232-3d39-11ef-b2f9-dbd6cf51a621.html'>Helping others: Dr. Nguyen provides quality healthcare at Methodist Family Health Center in Celina</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Star Local Media&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 13:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Helping others: Dr. Nguyen provides quality healthcare at Methodist Family Health Center in Celina
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.forbes.com/sites/saibala/2024/07/15/hallucinations-and-constant-learning-healthcare-ai-is-just-getting-started/'>Hallucinations And Constant Learning: Healthcare AI is Just Getting Started</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Forbes&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 12:30:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Hallucinations And Constant Learning: Healthcare AI is Just Getting Started
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.wvnews.com/jacksonnews/jackson-general-ceo-stephanie-mccoy-retires-reflects-on-a-career-dedicated-to-healthcare/article_5e43d728-42a3-11ef-8738-9b842e0397d2.html'>Jackson General CEO Stephanie McCoy retires, reflects on a career dedicated to healthcare</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> WV News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 12:11:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Jackson General CEO Stephanie McCoy retires, reflects on a career dedicated to healthcare
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.houstonpublicmedia.org/articles/news/health-science/healthcare/2024/07/15/493419/study-black-women-experience-severe-pregnancy-complications-at-twice-the-rate-of-white-women-in-texas/'>Study: Black women experience severe pregnancy complications at twice the rate of white women in Texas</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Houston Public Media&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 12:00:25
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Study: Black women experience severe pregnancy complications at twice the rate of white women in Texas
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.midwestern.edu/news-stories/high-school-students-explore-healthcare-fields-downers-grove-campus'>High School Students Explore Healthcare Fields on Downers Grove Campus</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Midwestern University News and Events&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 12:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    High School Students Explore Healthcare Fields on Downers Grove Campus
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://health.economictimes.indiatimes.com/news/industry/telemedicine-education-and-training-equipping-healthcare-professionals-for-remote-practice/111757219'>Telemedicine education and training: Equipping healthcare professionals for remote practice</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> ETHealthWorld&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 11:48:58
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Telemedicine education and training: Equipping healthcare professionals for remote practice
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.news-medical.net/news/20240715/California-health-care-pioneer-goes-national-girds-for-partisan-skirmishes.aspx'>California health care pioneer goes national, girds for partisan skirmishes</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> News-Medical.Net&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 11:21:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    California health care pioneer goes national, girds for partisan skirmishes
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://finance.yahoo.com/news/1-97-billion-mri-contrast-103500589.html'>$1.97 Billion MRI Contrast Media Market Outlook, 2029: Bayer, Bracco, GE Healthcare, and Guerbet Dominate the Global Landscape</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Yahoo Finance&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 10:35:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    $1.97 Billion MRI Contrast Media Market Outlook, 2029: Bayer, Bracco, GE Healthcare, and Guerbet Dominate the Global Landscape
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.healthcarefinancenews.com/video/next-generation-imaging-improves-patient-experience-being-faster-and-more-efficient'>Next-generation imaging improves patient experience by being faster and more efficient</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Healthcare Finance News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 10:11:05
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Next-generation imaging improves patient experience by being faster and more efficient
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.delawareonline.com/story/news/education/2024/07/15/2-5-million-heads-to-school-based-mental-health-care-in-delaware/74379163007/'>$2.5 million heads to school-based mental health care in Delaware: Education roundup</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> The News Journal&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 09:16:18
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    $2.5 million heads to school-based mental health care in Delaware: Education roundup
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.foxnews.com/media/petition-urges-duke-university-ditch-unscientific-unethical-racial-agenda-health-care-system'>Petition urges Duke University to ditch ‘unscientific, unethical racial agenda’ in health care system</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Fox News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 09:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Petition urges Duke University to ditch ‘unscientific, unethical racial agenda’ in health care system
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.northcarolinahealthnews.org/2024/07/15/country-doctor-museum/'>N.C.’s Country Doctor Museum: Preserving the legacy of rural health care</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> North Carolina Health News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 08:31:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    N.C.’s Country Doctor Museum: Preserving the legacy of rural health care
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_soccer' class='section text-center heading'>
+            SOCCER
+            </div>
+            <br/>
+            
+
+            <div id='cat_tennis' class='section text-center heading'>
+            TENNIS
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://au.sports.yahoo.com/novak-djokovics-brutal-announcement-as-tennis-world-calls-out-awful-scenes-in-wimbledon-final-203020326.html'>'Never seen that': Novak Djokovic called out over 'awful' move after Wimbledon final</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Yahoo Sport Australia&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 18:07:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    'Never seen that': Novak Djokovic called out over 'awful' move after Wimbledon final
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.express.co.uk/sport/tennis/1923158/Wimbledon-LIVE-Novak-Djokovic-Carlos-Alcaraz-Jasmine-Paolini'>Wimbledon LIVE: Alcaraz responds to Emma Raducanu rumours as Djokovic concerns raised</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Express&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 16:09:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Wimbledon LIVE: Alcaraz responds to Emma Raducanu rumours as Djokovic concerns raised
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://abcnews.go.com/Politics/trump-assassination-attempt-impact-rnc-security-plan-officials/story?id=111935286'>After Trump assassination attempt, guns will still be allowed near RNC, but tennis balls will not</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> ABC News&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 15:36:29
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    After Trump assassination attempt, guns will still be allowed near RNC, but tennis balls will not
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.bbc.com/sport/tennis/articles/cd1x25d2d29o'>Davis Cup: Great Britain name Jack Draper, Cameron Norrie & Dan Evans in team</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> BBC.com&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 12:32:27
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Davis Cup: Great Britain name Jack Draper, Cameron Norrie & Dan Evans in team
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.express.co.uk/sport/tennis/1923380/emma-raducanu-princess-kate-charlotte-wimbledon'>Emma Raducanu speaks out on meeting Princess Kate and Charlotte at Wimbledon</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Express&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 12:15:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Emma Raducanu speaks out on meeting Princess Kate and Charlotte at Wimbledon | Tennis | Sport
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.sbnation.com/tennis/2024/7/15/24198516/tennis-united-states-mens-grand-slam-drought-andy-roddick-2003'>The Grand Slam drought for U.S. men’s tennis keeps getting longer</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> SB Nation&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 12:00:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    The Grand Slam drought for U.S. men’s tennis keeps getting longer
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.express.co.uk/sport/tennis/1923311/novak-djokovic-classy-message-princess-kate-wimbledon'>Novak Djokovic sends classy message to Princess Kate after Wimbledon meet-up</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Express&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 10:32:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Novak Djokovic sends classy message to Princess Kate after Wimbledon meet-up
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.express.co.uk/sport/tennis/1923234/carlos-alcaraz-Wimbledon-Kate-Middleton-Euro-2024'>Carlos Alcaraz has Wimbledon trophy taken away after football chat with Kate Middleton</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Express&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 09:06:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Carlos Alcaraz has Wimbledon trophy taken away after football chat with Kate Middleton
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_formula_1' class='section text-center heading'>
+            FORMULA_1
+            </div>
+            <br/>
+            
+
+            <div id='cat_entertainment' class='section text-center heading'>
+            ENTERTAINMENT
+            </div>
+            <br/>
+            
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://hometownnewsnow.com/entertainment-news/c86a65b0fc8a18c92fbdffd3ecc53585'>"This is the season fans have been waiting for": Netflix goes behind the scenes with 'Stranger Things' season 5</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Hometown News Now&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 15:38:13
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    "This is the season fans have been waiting for": Netflix goes behind the scenes with 'Stranger Things' season 5
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://hometownnewsnow.com/entertainment-news/029bb50de79072e98462e7699c3b23cf'>Kate Middleton receives standing ovation at Wimbledon amid cancer treatment</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> Hometown News Now&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 13:25:36
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Kate Middleton receives standing ovation at Wimbledon amid cancer treatment
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.wyff4.com/article/james-b-sikking-obit/61596940'>James B. Sikking, ‘Hill Street Blues’ and ‘Doogie Howser, M.D.’ star, dead at 90</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> WYFF4 Greenville&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 13:05:00
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    James B. Sikking, ‘Hill Street Blues’ and ‘Doogie Howser, M.D.’ star, dead at 90
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+                    <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                        <a target='_blank' href='https://www.gosugamers.net/entertainment/news/72157-genshin-impact-5-0-mualani-kachina-kinich-to-debut-alongside-natlan'>Entertainment News : Genshin Impact 5.0: Mualani, Kachina, Kinich to debut alongside Natlan</a>
+                    </div>
+                    <div id='article_attribution'  style='mb-1'>
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> GosuGamers&nbsp;&nbsp;&nbsp;
+                        <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2024-07-15 11:37:30
+                        <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                    </div>
+                    <p class='hidden' class='text-gray-500'>
+                    Entertainment News : Genshin Impact 5.0: Mualani, Kachina, Kinich to debut alongside Natlan
+                    <br/>
+                    <span id='menu'>
+<a class='menu' href ='#cat_world'>WORLD</a> <a class='menu' href ='#cat_national'>NATIONAL</a> <a class='menu' href ='#cat_business'>BUSINESS</a> <a class='menu' href ='#cat_cryptocurrency'>CRYPTOCURRENCY</a> <a class='menu' href ='#cat_science'>SCIENCE</a> <a class='menu' href ='#cat_technology'>TECHNOLOGY</a> <a class='menu' href ='#cat_health'>HEALTH</a> <a class='menu' href ='#cat_soccer'>SOCCER</a> <a class='menu' href ='#cat_tennis'>TENNIS</a> <a class='menu' href ='#cat_formula_1'>FORMULA_1</a> <a class='menu' href ='#cat_entertainment'>ENTERTAINMENT</a> <a class='menu' href ='#cat_other'>OTHER</a> 
+</span>
+                    </p>
+                    <br/>
+                    
+
+            <div id='cat_other' class='section text-center heading'>
+            OTHER
+            </div>
+            <br/>
+            
+
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
+    </body>
+</html>
