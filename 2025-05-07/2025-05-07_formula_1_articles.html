@@ -1,0 +1,103 @@
+
+<html>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <title id="title">News'n'Clues - FORMULA_1 Article Summaries - 2025-05-07</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .menu { color: #444444; }
+            .copyright { margin: 0 auto; }
+            p { font-family: serif; }
+            body {  background-color: #2c2c2c; font-family: Arial, sans-serif; font-size: 20px; color: #f4f4f4;  }
+            a { text-decoration: none; color: #f4f4f4; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
+            .hidden {
+                display: none;
+            }            
+            
+        </style>
+    </head>
+    <body>
+        <div id="banner" class="w-full">
+            <img src="../images/banner.jpg" alt="News Banner">
+        </div>
+
+        <div id="title" class="w-full flex items-center" style="background-color: #fc4535;">
+          <a href="../index.html"><img src="../images/logo.jpg" alt="News Logo" class="h-auto"></a>
+          <div class="flex-grow text-center">
+              <div id="title_heading" class="text-4xl font-bold mb-4" style="color:#1a6198;">Article Summaries</div>
+          </div>
+        </div>
+        <div id='category_heading' class="section text-center heading">
+            FORMULA_1
+        </div>
+        <div id="articles">
+            
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.formula1.com/en/latest/article/alpine-confirm-colapinto-to-replace-doohan-for-next-five-rounds-as-team-opt.4lH96VnGHyC45S3yjeJOMK'>Alpine confirm Colapinto to replace Doohan for next five rounds as team opt to 'rotate' seat</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.formula1.com', 'title': 'Formula 1'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-05-07 07:10:59
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>Lawson reflects on 'tough' race in Miami after Lap 1 contact as Hadjar rues 'frustrating' result PALMER: Why isn't it clicking yet for Lewis Hamilton and Ferrari this year? Alpine share more information over Oakes' departure as team boss after ‘personal decision' Having previously served as a reserve driver for the Enstone-based team, it was announced last summer that Doohan was set to be promoted to the main race squad for 2025. After starting his first full-time campaign this year, Doohan has struggled to match team mate Gasly, and his troubles continued last time out in Miami, where he retired from the race following a Lap 1 collision with Racing Bulls' Liam Lawson. Now Alpine have announced that Doohan's seat will be filled by Colapinto for the next five rounds, with the Argentinian having been signed to the outfit as one of their roster of reserve drivers following his impressive nine-race run as a substitute for Williams in 2024. “BWT Alpine Formula One Team therefore announces that Franco Colapinto will be paired with Pierre Gasly from the Emilia-Romagna Grand Prix, ahead of a new evaluation before the British Grand Prix in July. ANALYSIS: Why Alpine chose to promote Colapinto and bench Doohan – concluding a dramatic 12 hours after Oakes' resignation Doohan has shown flashes of pace but has also had a series of incidents in his seven-race run with Alpine, including his opening lap collision with Lawson in Miami as well as a heavy practice crash in Suzuka, when he failed to close his Drag Reduction System before turning into Turn 1. Colapinto, meanwhile, returns to the grid following his eye-catching showing in the second half of 2024, where he bagged points for Williams in Azerbaijan and Austin after replacing Logan Sargeant. However, his Williams stint also included heavy crashes in Sao Paulo and Las Vegas. 2025 Miami Grand Prix: Doohan out of the race after Lap 1 clash with Lawson READ MORE: 5 Winners and 5 Losers from Miami – Who excelled in the Sunshine State? “We continue to support Jack at the team, as he has acted in a very professional manner in his role as a race driver so far this season. POWER RANKINGS: Who shone brightest for our judges during an eventful Sprint weekend at the Miami GP? Don't miss your chance to experience the picturesque Imola circuit... 5 Winners and 5 Losers from Miami – Who excelled in the Sunshine State? PALMER: Why isn't it clicking yet for Lewis Hamilton and Ferrari this year? Tsunoda concedes he ‘made life much more difficult' with five-second penalty in Miami after battling for final point</p>
+                <br/>
+                
+
+        </div>
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
+
+        <footer class="text-center text-sm text-gray-500 mt-12">
+            <div class="inline-block align-middle">
+                <a href="https://www.youtube.com/@news_n_clues" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 text-red-600 hover:text-red-700 font-semibold transition duration-300 ease-in-out">
+                    Watch Daily <span class="italic">News'n'Clues</span> Podcast on
+                    <img src="../images/yt.png" width="16" height="16">
+                </a>
+            </div>
+            <div>
+                <a href="mailto:newsnclues@gmail.com?subject=News'n'Clues Aggregator Inquiry">SoftMillennium
+                    <script>document.write(new Date().getFullYear());</script>
+                </a>
+                <!--
+            <b>Copyright &copy; <script>document.write(new Date().getFullYear());</script> - <a href='mailto:newsnclues@gmail.com?subject=News Aggregator Inquiry'>News And Clues</a></b>
+            -->
+            </div>
+        </footer>
+    </body>
+</html>
+            
