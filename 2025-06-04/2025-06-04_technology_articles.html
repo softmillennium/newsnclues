@@ -1,0 +1,375 @@
+
+<html>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <title id="title">News'n'Clues - TECHNOLOGY Article Summaries - 2025-06-04</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .menu { color: #444444; }
+            .copyright { margin: 0 auto; }
+            p { font-family: serif; }
+            body {  background-color: #2c2c2c; font-family: Arial, sans-serif; font-size: 20px; color: #f4f4f4;  }
+            a { text-decoration: none; color: #f4f4f4; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
+            .hidden {
+                display: none;
+            }            
+            
+        </style>
+    </head>
+    <body>
+        <div id="banner" class="w-full">
+            <img src="../images/banner.jpg" alt="News Banner">
+        </div>
+
+        <div id="title" class="w-full flex items-center" style="background-color: #fc4535;">
+          <a href="../index.html"><img src="../images/logo.jpg" alt="News Logo" class="h-auto"></a>
+          <div class="flex-grow text-center">
+              <div id="title_heading" class="text-4xl font-bold mb-4" style="color:#1a6198;">Article Summaries</div>
+          </div>
+        </div>
+        <div id='category_heading' class="section text-center heading">
+            TECHNOLOGY
+        </div>
+        <div id="articles">
+            
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://news.ycombinator.com/item?id=44183799'>A proposal to restrict sites from accessing a users' local network</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://news.ycombinator.com', 'title': 'Hacker News'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-06-04 18:17:21
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>You'll have to come up with a really strong defense for why this shouldn't happen in order to convince most users. I would suggest placing your computer back into the box, and returning it to its place of purchase.> You could tell me it's going to shut down the internet for 6 months and I still wouldn't care.Can you provide an itemized list of the severe security impacts that require such drastic action, that for some reason hasn't been a concern despite existing for 35 years, or are you purposely being obtuse? On the plus side, Google might be hiring for a consumer advocate. > You could tell me it's going to shut down the internet for 6 months and I still wouldn't care.Can you provide an itemized list of the severe security impacts that require such drastic action, that for some reason hasn't been a concern despite existing for 35 years, or are you purposely being obtuse? On the plus side, Google might be hiring for a consumer advocate. Can you provide an itemized list of the severe security impacts that require such drastic action, that for some reason hasn't been a concern despite existing for 35 years, or are you purposely being obtuse? On the plus side, Google might be hiring for a consumer advocate. Sure - a destination is "local" if your machine has a route to that IP which isn't via a gateway.If your network is large enough that it consists of multiple routed network segments, and you don't have any ACLs between those segments, then yeah, you won't be fully protected by this browser feature. But you aren't protected right now either, so nothing's getting worse, it's just not getting better for your specific use case. If your network is large enough that it consists of multiple routed network segments, and you don't have any ACLs between those segments, then yeah, you won't be fully protected by this browser feature. But you aren't protected right now either, so nothing's getting worse, it's just not getting better for your specific use case. Somehow this hasn't been a 'massive security risk' for the last 35 years but suddenly is in 2025?Honestly a much bigger problem is sites like Yelp making nearly every link on their mobile site a phony redirect to the App Store. That shit is infuriating and a much bigger real world problem. Honestly a much bigger problem is sites like Yelp making nearly every link on their mobile site a phony redirect to the App Store. That shit is infuriating and a much bigger real world problem. It's a big company, our corporate network is very very large.A better definition of "local IP" would be whether the IP is in the same subnet as the client, i.e. look up the client's own IP and subnet mask and determine if a packet to a given IP would need to be routed through the default gateway. It would be really annoying if this use case was made into an unreasonable hassle or killed entirely. One particular example I can think of is UPS's label printer API that prints shipping labels off their website.Eventually someone will 'helpfully' point out that workarounds wouldn't be necessary if everyone just used Google owned and operated services instead. *Cue Charlie Brown arm-waving and some mumbling about 'security'.I'm really getting tired of this. Eventually someone will 'helpfully' point out that workarounds wouldn't be necessary if everyone just used Google owned and operated services instead. *Cue Charlie Brown arm-waving and some mumbling about 'security'.I'm really getting tired of this. Cue Charlie Brown arm-waving and some mumbling about 'security'.I'm really getting tired of this. Random web sites have no business poking around my internal network. I often see sites like Paypal trying to probe 127.0.0.1. I guess once this is added maybe the proposed device opt in mechanism could be used for applications to cooperatively support access without a permission prompt? It would be nice to know when a site is probing the local network. But by the same token, here is Google once again putting barriers on self sufficiency and using them to promote their PaaS goals.They'll gladly narc on your self hosted application doing what it's supposed to do, but what about the 23 separate calls to Google CDN, ads, fonts, ect that every website has your browser make?I tend to believe the this particular functionality is no longer of any use to Google, which is why they want to deprecate it to raise the barrier of entry for others. I'd be interested in hearing what the folks at Ladybird think of this proposal. Browers[sic] can't feasibly stop web pages from talking to private (local) IP addresses (2019)https://utcc.utoronto.ca/~cks/space/blog/web/BrowsersAndLoca...</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://gizmodo.com/the-voices-behind-dan-da-dan-look-back-on-the-anime-of-2024-and-whats-next-2000609560'>The Voices Behind 'Dan Da Dan' Look Back on the Anime of 2024, and Ahead to What's Next</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://gizmodo.com', 'title': 'Gizmodo'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-06-04 18:15:32
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>Ahead of the new season, Science Saru and GKids are collaborating again to release Dan Da Dan: Evil Eye, a theatrical cut featuring the first three episodes of the second season. This release will also include a special behind-the-scenes interview with co-directors Fuga Yamashiro and Abel Gongora. After a special Los Angeles screening of Dan Da Dan: Evil Eye, io9 held a virtual interview with the English voice cast: Abby Trott (who voices Momo Ayase), A.J. During our conversation, the three cast members reflected on their favorite moments from the previous season and shared their excitement about the scenes they are eager for fans to experience in the upcoming compilation preview film, which will be released June 6, as well as the anime's new season premiering in July. This interview has been edited for brevity. Isaiah Colbert, io9: You've voiced plenty of standout characters in anime, but Dan Da Dan's Momo Ayase is one of my personal favorites. With her being a co-lead in a shonen series—a genre that traditionally puts male protagonists in the spotlight—what about Momo makes her special to you,  and how do you think she stands out even more in the shonen landscape this season? I've been having so much fun with her. And it's interesting that this anime, although maybe if you had to put a label on it, a shonen has a lot of elements from different genres incorporated into it. And I think that helps Momo stand out. We do see a romance element, whereas in a lot of typical shonen, the protagonist will typically not be aware of romantic advances or intentions from a female protagonist. We can only look forward to seeing how that is going to grow and develop over the course of however many seasons the show goes on. Those are things about Momo that I love. She makes everyone else around her want to step up to the plate and do their best, too. She makes everyone want to do their best. io9: In your last interview with io9, you mentioned being a fan of the Dan Da Dan manga and having read it before auditioning. Were there any specific scenes from the manga that you were particularly excited to bring to life in season two ? Science Saru, like always, took it and made it so much better; they added so much more content. So I was really excited to see what that would look like, and they knocked it out of the park—Evil Eye's ball thing that he uses is really cool. Beckles: He has to dodge and punch, or whatever else, which he doesn't really know how to do. You get to see that bit of awkwardness, too, that he clearly doesn't know what he's doing versus Evil Eye, who seems so experienced in comparison. It's interesting, and they did a great job of showing that. io9: First off, congrats on your anime voice acting award for Solo Leveling, Aleks. You've really kept your finger on the pulse of fan engagement—not just by pushing your vocal limits as Sung Jinwoo but also by embracing the memes and sharing behind-the-scenes moments on TikTok. In Dan Da Dan season one, you threw “Deez Nuts” into the mix, making it an unexpectedly perfect fit for the series' chaotic energy. Can you walk me through how that creative choice came about with the team at Bang Zoom? And are there any other localization line reads you're especially excited to bring to life in season two? Aleks Le: First of all, thank you so much for the congratulations. And as for that particular line, I made a video about that where I said that the line was actually adapted by our English dub director, Alex Von David, who is wonderfully talented. He had pitched the idea of for this joke. He was like, “Maybe we should put deez nuts in there.” We were discussing it back and forth because it was just two words, but there was so much history behind the meme itself that we wanted to get it just right for the show. What ended up happening was that we performed it once initially, and Alex was like, “That's good. I think we should put the emphasis on deez, like deez nuts.” And I was like, “But I want to do it like the original.” So he was like, “Oh, the original, deez nuts?” and I'm like, “You've seen the video?” And he's like, “I've heard it thrown around, but I don't remember the video.” So I was like, “Okay,” [so] I pulled up the video, and our poor engineer had to just sit there as I showed him the deez nuts and then we were going back and forth on it. He was very insistent on one way and I was like, “I want to do it exactly like the video.” We did it so many times, and then we finally found one that we were both really happy with. So that was how deez nuts ended up in the show. Alex is a driving force of this adaptation. In terms of improv, it's always the most unnoticeable, subtle moments of comedy, I feel, are where my strong suits come in. There's a lot of Jiji reads where I really want to make it sound as noncommittal as possible, as in it doesn't sound like somebody who's doing a performance. One of my favorite improvs that didn't make it was in episode 11 when Jiji first introduces himself. It wouldn't really make sense for the moment.” In the future, though, I hope we can throw it back in there somewhere. io9: Alongside their seiyuus, you've all brought Okarun, Momo, and Jiji to life beautifully, capturing the essence of the anime's low-taper fade occult nerd, outspoken gyaru, and resident himbo. As season two approaches, what aspects of their dynamics are you most excited to explore, and how has your approach to voicing them evolved, especially while recording separately, and the energy each of you is bringing into the booth? Trott: For Momo, this season kicks off with a lot of action. The first three episodes (that hopefully you'll go see in theaters, everyone) is a lot of yelling and a lot of [being] in the action. Just those little moments, I'm looking forward to the development of relationships. He's very mature for his age in terms of how he views relationships and communication and Jiji throws all that out of the window. I'm interested to see how he handles it. It'll be fun to play like him handling those moments where he's trying to be a certain way, trying to be like kosher, and Jiji doesn't care. And how he's gonna handle coming out of his shell more. But in the meantime, I think where we're at, it's very much Okarun knowing who Jiji is, but they haven't spent a lot of time together. Okarun's never had that before—a friend who's not picking on him—and I think that'll be really cool to see Okarun embrace and learn not to see Jiji as a threat to his new feelings he has towards Momo. Le: I think we all know each other pretty well, and our performance styles. We have a good image in our heads of how one person would do a specific read or [how] one person would interpret the scene this way and, ultimately, the nuances of those performances in the final surprise us. But, for the most part, we have a really good idea of what the other person's gonna do. I feel that closeness and understanding has given us the ability to performing these scenes basically in the dark, yet still having them mesh really well with each other. I feel like we all understand each other's sense of humor or acting choices pretty well, for the most part. Check out when to expect the latest Marvel, Star Wars, and Star Trek releases, what's next for the DC Universe on film and TV, and everything you need to know about the future of Doctor Who. Get the best tech, science, and culture news in your inbox daily. News from the future, delivered to your present. The love letter 'GQuuuuuuX' is writing to the past of 'Gundam' just got a little more complicated in its latest episode. Abel Gongora dives into what's to come in the anime's next installment—as well as what it was like tag-teaming with its OG director to surpass the high bar set by season one. GKids will bring a new 4K remastering of Shinji Higuchi and Hideaki Anno's take on the King of all Kaiju to theaters from August 14. Science Saru's theatrical preview prepares 'Dan Da Dan' for a genre-bending comeback before season 2 haunts your anime watchlist this July. In the next few years, anime made by Toei may be touched up by AI in some capacity. We may earn a commission when you buy through links on our sites.</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://gizmodo.com/sonos-move-2-drops-to-such-a-ridiculously-low-price-it-almost-feels-like-amazon-made-a-big-pricing-error-2000611257'>Sonos Move 2 Drops to Such a Ridiculously Low Price, It Almost Feels Like Amazon Made a Big Pricing Error</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://gizmodo.com', 'title': 'Gizmodo'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-06-04 18:04:50
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>This article is part of Gizmodo Deals, produced separately from the editorial team. We may earn a commission when you buy through links on the site. But a few years ago, Sonos tossed convention aside and created a Bluetooth (and Wi-Fi) portable speaker that you can carry with you wherever you go whether to the beach, a backyard barbecue, or the pool. Today, this tough speaker is hitting its all-time best price on Amazon, and it's an amazing deal to prepare your summer holidays. Usually, the Sonos Move 2 retails for $449 which is on par with other premium portable speakers. But with a 25% discount on Amazon, you can bring it home today for just $336. That's a $113 discount and the lowest price this speaker has ever been which makes it an elite deal for a speaker of this caliber. What sets the Sonos Move 2 truly unique is its exceptional audio quality: Sonos has reimagined the acoustic design for this new model. Instead of a single tweeter, the Move 2 features two which unveils a genuine stereo soundstage providing crisp vocals and detailed instruments. The bass is deep and dynamic and it is powered by a precision-tuned woofer that brings music to life with the emotional energy of a live performance. You don't have to futz with settings or worry about where to put it as the speaker does it all for you. Due to efficiency gains across the board, you can now have a maximum of 24 hours of uninterrupted playback from a single charge which is double the last generation. When the time comes to recharge, simply place the Move 2 on its included wireless charging base, now featuring a detachable power cord and shrinker adapter. Its IP56 rating guarantees that the speaker is spill-proof, splash-proof, rain-proof, dirt-proof, and dust-proof. Get the best tech, science, and culture news in your inbox daily. We may earn a commission when you buy through links on our sites.</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://news.ycombinator.com/item?id=44183651'>Connecticut legislature overhauls towing laws to reduce 'predatory towing'</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://news.ycombinator.com', 'title': 'Hacker News'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-06-04 18:02:37
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>While these are nice developments, arguably, it's worse than bank robbery; in much of the country (Kansas City in particular), if you're without a car, you're screwed. No doctor appointments, no school, no grocery shopping, no social life, no job. Treat it as such. If you take someone's car without permission, you should face a significant fraction of a decade in prison, per vehicle. Whenever any motor-vehicle is found abandoned upon any public highway… and said vehicle is not of a value exceeding one hundred dollars… said officer may cause such motor-vehicle to be removed> Section 2. If such motor-vehicle is not reclaimed within fifteen days after such removal, said officer shall sell the same at public auction…[1] https://books.google.com/books?id=gktNAQAAMAAJ&hl=en If such motor-vehicle is not reclaimed within fifteen days after such removal, said officer shall sell the same at public auction…[1] https://books.google.com/books?id=gktNAQAAMAAJ&hl=en New law updates it to 30 days, except for vehicles worth under $1500 which is still 15 days, which may be an interesting opportunity to see how towers do time value of money decisions on so many $1499 cars. Who pays for all that parking? Customer service?</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.tomshardware.com/speakers/the-ultimate-5-1-surround-sound-steelseries-arena-9-gaming-speaker-system-gets-a-big-usd130-discount'>The ultimate 5.1 surround sound SteelSeries Arena 9 gaming speaker system gets a big $130 discount</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.tomshardware.com', 'title': "Tom's Hardware"}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-06-04 17:56:45
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>When you purchase through links on our site, we may earn an affiliate commission. Having great visuals from a good monitor is certainly important, but in my opinion, the sound should be a bigger consideration. Sound effects from the environment, directional sound profiles, and musical game scores can transport you to other worlds and really capture the imagination. Headsets are very good at isolating you and providing a superb experience with faux surround sound, but if you want the absolute best-in-class experience, true surround sound is the pinnacle to reach. Enter the SteelSeries Arena 9 5.1 surround sound speaker system at $549. It's worth keeping your eye on the upcoming sales too, as the Arena 9 has been on sale for lower prices during key events. The Arena 9 gets our recommendation for the best 5.1 speaker system for a PC, thanks to its excellent sound quality and immersive surround sound experience. The Arena 9 comes with five satellite speakers, a center channel speaker that sits under your monitor, two left and right front channels, and two left and right wireless rear channel speakers, as well as a 6.5-inch down-firing subwoofer. SteelSeries Arena 9 5.1 Surround Sound Gaming Speakers: now $549 at Amazon (was $679)The SteelSeries Arena 9 is a 5.1-channel speaker system comprising five speakers and a subwoofer. What helps this speaker stand out above the competition is the illuminated 4-zone RGB lighting (PC Only), intuitive controls, and multiple connectivity options, including USB-C, Toslink optical, and Bluetooth 4.2. The rear satellite speakers are wireless, making for an easier setup experience than trying to run speaker cables under carpeting and flooring. There's also a handy control pod, which features an informative OLED display and touch-sensitive buttons for controlling all aspects of the speakers. Get Tom's Hardware's best news and in-depth reviews, straight to your inbox. Stewart Bendle is a deals and coupon writer at Tom's Hardware. Tom's Hardware is part of Future US Inc, an international media group and leading digital publisher.</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://techcrunch.com/2025/06/04/amd-takes-aim-at-nvidias-ai-hardware-dominance-with-brium-acquisition/'>AMD takes aim at Nvidia's AI hardware dominance with Brium acquisition</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://techcrunch.com', 'title': 'TechCrunch'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-06-04 17:54:12
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>AMD's latest acquisition could help reduce Nvidia's market dominance when it comes to AI hardware. Semiconductor giant AMD on Wednesday announced it acquired AI software optimization startup Brium. Brium is a startup that appears to be in stealth mode. In a press release, AMD said its acquisition of Brium will help its commitment to “building a high-performance, open AI software ecosystem that empowers developers and drives innovation.” While AMD is saying that this acquisition helps create a more open AI ecosystem, which isn't wrong, it seems clear that it's also meant to help AMD overcome one of its biggest roadblocks: a large percentage of AI software is being designed for Nvidia hardware and chips. “Solutions such as AMD's Instinct GPUs offer strong performance characteristics, but it remains a challenge to harness that performance in practice as workloads are typically tuned extensively with Nvidia GPUs in mind. At Brium, we intend to enable efficient [model] inference across a range of hardware architectures.” The company previously acquired Silo AI (in July 2024), Nod.AI (October 2023), and Mipsology (August 2023). Klarna CEO says company will use humans to offer VIP customer service RevenueCat and Paddle team up to help app developers profit from web payments Venmo introduces new debit card benefits and payment options as rival Cash App struggles</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://news.ycombinator.com/item?id=44182941'>Preventing Flash of Incomplete Markdown when streaming AI responses</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://news.ycombinator.com', 'title': 'Hacker News'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-06-04 17:07:06
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>
+
+
+reply
+
+
+
+EDIT: One library I found is https://github.com/thetarnav/streaming-markdown which seems to combine incremental parsing with optimistic rendering, which works good enough in practice, I guess.
+
+
+reply
+
+
+
+However, the second thing (not mentioned in the post) is that we are not rendering the markdown to HTML on the server, so []() markdown is sent to the client as []() markdown, not converted into <a href=...>. So even if a []() type link exists in a code block, that text will still be sent to the client as []() text, only sent in a single chunk and perhaps with the link URL replaced. The client has its own library to render the markdown to HTML in React.Also, the answers are typically short so even if OpenAI outputs some malformed markdown links, worst case is that we end up buffering more than we need to and the user experiences a pause after which the entire response is visible at once (the last step is to flush any buffered text to the client).
+
+Also, the answers are typically short so even if OpenAI outputs some malformed markdown links, worst case is that we end up buffering more than we need to and the user experiences a pause after which the entire response is visible at once (the last step is to flush any buffered text to the client).
+
+
+reply
+
+
+
+(This comment when subjected to this processing could look like: "Could this result in edge cases with ")
+
+
+reply
+
+
+
+There are some easy wins that could improve this further: line endings within links are generally not valid markdown, so if the code ever sees \n then just flush buffered text to the client and reset the state to TEXT.
+
+
+reply
+
+
+
+it formats its own stuff with markdown, so if i ask it for markdown but dont explicitly specify a downloadable file, it will produce valid markdown up to where it conflicts with its own markdown, and then it gets choppy and chunked.its an issue of my prompting is what im sure some customer service rep would be told to tell me :p because theres money to be made in courses for prompting skills perhaps, idk. (cynical view).sure is enjoyable to struggle together with the AI to format its responses correctly :'D
+
+its an issue of my prompting is what im sure some customer service rep would be told to tell me :p because theres money to be made in courses for prompting skills perhaps, idk. (cynical view).sure is enjoyable to struggle together with the AI to format its responses correctly :'D
+
+sure is enjoyable to struggle together with the AI to format its responses correctly :'D
+
+
+reply
+
+
+
+
+reply
+
+</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.tomshardware.com/video-games/nintendo/nintendo-switch-2-gets-disassembled-nvidia-chip-gets-its-close-up'>Nintendo Switch 2 gets disassembled — Nvidia chip gets its close-up</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.tomshardware.com', 'title': "Tom's Hardware"}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-06-04 16:52:37
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>When you purchase through links on our site, we may earn an affiliate commission. The Nintendo Switch 2 is only just launching, and someone has already torn it down. YouTube channel ProModding has opened up the new handheld console, showcasing the new Nvidia chip, as well as taking a microscope to examine all the circuits. Recently, Nintendo of America updated its End User License Agreement to note that you can't "bypass, modify, decrypt, defeat, tamper with, or otherwise circumvent any of the functions or protections of the Nintendo Account Services, including through the use of any hardware," and that if you do, Nintendo may "render... the applicable Nintendo device permanently unusable in whole or in part." So if you open it to make a change, you may be risking the possibility of your system working at all.Nintendo will likely have a more specific repair manual for its technicians. But until the launch tomorrow, June 5, we can watch modders on YouTube do their thing. Follow Tom's Hardware on Google News to get our up-to-date news, analysis, and reviews in your feeds. Make sure to click the Follow button. Get Tom's Hardware's best news and in-depth reviews, straight to your inbox. Andrew E. Freedman is a senior editor at Tom's Hardware focusing on laptops, desktops and gaming. He also keeps up with the latest news. A lover of all things gaming and tech, his previous work has shown up in Tom's Guide, Laptop Mag, Kotaku, PCMag and Complex, among others. Follow him on Threads @FreedmanAE and BlueSky @andrewfreedman.net. You can send him tips on Signal: andrewfreedman.01 Tom's Hardware is part of Future US Inc, an international media group and leading digital publisher. © Future US, Inc. Full 7th Floor, 130 West 42nd Street, New York,</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://news.ycombinator.com/item?id=44182698'>When memory was measured in kilobytes: The art of efficient vision</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://news.ycombinator.com', 'title': 'Hacker News'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-06-04 16:47:17
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>
+
+
+reply
+
+
+
+Yes, it may not make sense to use classical algorithms to try to recognize a cat in a photo.But there are often virtual or synthetic images which are produced by other means or sensors for which classical algorithms are  applicable and efficient.
+
+But there are often virtual or synthetic images which are produced by other means or sensors for which classical algorithms are  applicable and efficient.
+
+
+reply
+
+
+
+
+reply
+
+
+
+
+reply
+
+
+
+High error rates and significant manual rescanning can be acceptable in some applications, as long as there's no better alternative.
+
+
+reply
+
+
+
+
+reply
+
+
+
+
+reply
+
+</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.tomshardware.com/tech-industry/semiconductors/globalfoundries-announces-usd16-billion-u-s-chip-production-spend-striking-spending-boom-follows-demand-from-domestic-customers'>GlobalFoundries announces $16 billion U.S. chip production spend — striking spending boom follows demand from domestic customers</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.tomshardware.com', 'title': "Tom's Hardware"}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-06-04 16:36:32
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>When you purchase through links on our site, we may earn an affiliate commission. GlobalFoundries specified that $13 billion of the funds will go towards expanding the company's existing New York and Vermont fabs, with the remaining $3 billion dedicated to researching advanced packaging and other new technologies. Compare this to Intel's annual construction budget of $14 billion in 2024 and years prior. New CEO Tim Breen, appointed to the position in February of this year, makes no claims about when the new funds will be spent. Breen prefers to "stay flexible" in the face of endorsements from high-profile clients, including Apple, Qualcomm, and General Motors. "Supply security matters," said Breen in an interview, claiming that GlobalFoundries' clients are looking for more local production and to "reduce dependence on suppliers that have their manufacturing concentrated in one location". GlobalFoundries' reliance on legacy process nodes is still a profitable existence thanks to the "AI boom" seen in enterprise spending. Breen claims this most recent announcement is "a strategic response to the explosive growth in artificial intelligence" seen in recent years. GlobalFoundries' website marketing seems largely reliant on the low power consumption of its legacy chips, a key concern for enterprise clients as data center power draw grows beyond 100 MW. Get Tom's Hardware's best news and in-depth reviews, straight to your inbox. How this $16 billion commitment manifests is yet to be seen. Thanks to GlobalFoundries' entrenchment in the U.S. and its commitment to plant expansions rather than new construction, it is thankfully highly unlikely that the company will pull a Foxconn and completely abandon its commitments. Dallin Grimm is a contributing writer for Tom's Hardware. He has been building and breaking computers since 2017, serving as the resident youngster at Tom's. From APUs to RGB, Dallin has a handle on all the latest tech news. Tom's Hardware is part of Future US Inc, an international media group and leading digital publisher. © Future US, Inc. Full 7th Floor, 130 West 42nd Street, New York,</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://techcrunch.com/2025/06/04/data-breach-at-newspaper-giant-lee-enterprises-affects-40000-people/'>Data breach at newspaper giant Lee Enterprises affects 40,000 people</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://techcrunch.com', 'title': 'TechCrunch'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-06-04 15:55:04
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>Lee Enterprises, the newspaper publishing giant that was hit by a ransomware attack in February, causing widespread disruption to dozens of U.S. media outlets, has confirmed the cyberattack resulted in the theft of employees' personal data. The company confirmed in a letter filed with Maine's attorney general that the personal information of 39,779 people was stolen in the cyberattack, including Social Security numbers. Lee is one of the largest newspaper publishers in the U.S., and provides publishing technology and web services to more than 70 publications. The ransomware attack paralyzed newspaper printing, disrupted operations at media outlets across the country for weeks, and affected payments to freelancers and contractors. With the countdown to TC Sessions: AI underway, it's your chance to flex your AI knowledge—and score 2 tickets for the price of 1. Answer a few quick AI trivia questions to start your challenge. Subscribe for the industry's biggest tech news Every weekday and Sunday, you can get the best of TechCrunch's coverage. Every Monday, gets you up to speed on the latest advances in aerospace. Startups are the core of TechCrunch, so get our best coverage delivered weekly. By submitting your email, you agree to our Terms and Privacy Notice.</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.tomshardware.com/peripherals/cables-connectors/this-setup-uses-true-wireless-power-for-pc-monitor-peripherals-rf-generator-supplies-up-to-100w-of-wireless-power'>This setup uses ‘true wireless power' for PC monitor, peripherals — RF generator supplies up to 100W of wireless power</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.tomshardware.com', 'title': "Tom's Hardware"}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-06-04 15:16:51
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>This wireless desk can power almost your entire PC, no cables or batteries needed. When you purchase through links on our site, we may earn an affiliate commission. YouTube creator DIY Perks has partnered with startup Etherdyne Technologies to create a true wireless power system on a four-foot by two-foot desk, allowing him to run a complete workstation with its associated accessories without any cables. These wireless chargers generate an alternating electromagnetic field with a frequency between 110 and 205 kHz, which is enough to produce around 15 watts of power. But because its frequency is so low, your device must be so close to the wireless charger that it will only work efficiently if the coils are perfectly aligned with each other. You also don't have to align the coils perfectly to achieve wireless power transmission — as long as it's within the range of the ‘power dome', your devices will reliably get enough power, depending on the power coil you use. He also built the stereo speakers, a heated mug, and the wireless microphone from 3D printed and spare parts — all of which are powered wirelessly. This allowed him to ditch the monitor's power cord entirely, and he then used a wireless HDMI receiver to connect it to a Framework that's built directly into the desk. Unfortunately, it's not yet commercially available, although you can request an Evaluation Kit from the Etherdyne website if you're interested in experimenting with it. Some users might also have some health concerns about the amount of radio frequency the wireless tech is pushing out, but the company claims that its Eval Kit has already received FCC and CE certification, so it likely complies with safety regulations. But if you want to try the wireless power tech for yourself without going through all the trouble of building your own desk, you can purchase the AirBrite Universal Wireless Lighting System, which uses the same technology to deliver lighting solutions to miniature builds. It's also planning to launch a Kickstarter for a sit/stand desk that implements the technology similar to how Perks does it. Get Tom's Hardware's best news and in-depth reviews, straight to your inbox. These are promising applications for such an innovative technology, and it could even be the next step towards true wireless power. Etherdyne also isn't the first company to experiment with this, with researchers able to harvest low amounts of energy from radio and Wi-Fi. Jowi Morales is a tech enthusiast with years of experience working in the industry. He's been writing with several tech publications since 2021, where he's been interested in tech hardware and consumer electronics. Tom's Hardware is part of Future US Inc, an international media group and leading digital publisher. © Future US, Inc. Full 7th Floor, 130 West 42nd Street, New York,</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://gizmodo.com/the-switch-2-is-beautifully-balanced-compared-to-the-og-switch-and-steam-deck-oled-2000610042'>Nintendo Switch 2 Size Comparison vs. Original Switch vs. Steam Deck</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://gizmodo.com', 'title': 'Gizmodo'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-06-04 14:35:14
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>In two days, Nintendo's highly anticipated Switch 2 comes out, and the universe as we know it will never be the same again. The Switch 2 release won't merely be a tidal wave coming for the PS5 and Xbox Series S / X—it's gonna be a tsunami with Mario Kart World riding on top. Gizmodo had a chance to get even closer and more personal with the Switch 2 last week. If you're used to the portability of the Switch / Switch OLED, you may be surprised to unbox the Switch 2 and see that it's noticeably larger, which also shouldn't be shocking at all, considering the display has jumped up from 6.2 inches and 7 inches, respectively, to 7.9 inches. The Switch 2 is still not going to fit into 99.9% of pants (unless you're rocking deep-pocket JNCOs again), but at the very least it'll take up less space in a backpack or tote bag compared to larger handhelds. Whereas the Steam Deck has a thicker design (to accommodate an internal fan and larger, sculpted grips), the Switch 2 doesn't, and as a result, it retains its thin 13.9mm profile. To unlock better performance while in console mode plugged into a TV, you can drop the Switch 2 into its included dock, which does include a cooling fan. Ever drop a Steam Deck on your chest while gaming in bed? If you've got a Switch OLED or a Steam Deck LCD / Steam Deck OLED, the leap in display size is relatively minor. But for OG Switch owners like myself, the bigger screen is delightful. I've played hundreds of hours of Mario Kart 8 Deluxe on the Switch, and even in my limited few hours with Mario Kart World, I could tell that the Switch 2's display was more immersive. While blacks on the Switch 2 display are not as inky as devices with an OLED screen, colors are more vibrant and pop thanks to its support for HDR (and presumably increased brightness to qualify as HDR compatible). I regularly play on my Steam Deck OLED and feel the screen's dynamic range is lacking despite it being an OLED panel. Sure, it would have been nice of Nintendo to go with an OLED, but the company's probably saving it for a mid-cycle refresh. I love OLED as much as the next nerd, but trust me when I say nobody is going to be fixated on black levels when they're trying to survive a chaotic 24-person round of elimination-style “Knockout Tour” in Mario Kart World. Frankly, I'm relieved that the Switch 2 doesn't have a thick profile. I've tried many handheld PCs like the Steam Deck, Asus ROG Ally X, and Lenovo Legion Go S—they're bulky handhelds that are a far cry from “portable.” Others may disagree with me, but I'm firmly of the belief that if you're going to make the dimensions of a device taller and wider, then at least keep it thin and light enough to not hurt while using it. In this regard, I'm appreciative of the Switch 2's thin profile. On the other hand, I can sympathize with gamers who feel Nintendo should have made the Switch 2 and shoved a bigger battery inside. The Switch 2's thinness also gives way to its weight: 535 grams (1.18 pounds). In comparison to Steam Decks, Nintendo's new handheld is lightweight. It's not as light as the original Switch or Switch OLED, but again, you need to remember that it's got a larger screen, larger Joy-Con 2 controllers, and a few extra components like a secondary USB-C port on the top for connecting additional accessories such as the Nintendo Switch 2 Camera. This is where I have to remind everybody that hand feel really makes a big difference. You can look at the dimensions and weight of the Switch 2 and think you have a good idea of how it compares to other similar devices, but real life tells a different story. I spent several stretches playing the Switch 2 in handheld mode for 30-45 minutes continuously and didn't feel it was ever too heavy or that I had to rest it on my lap or chest. Everybody is going to feel different, but generally, Nintendo has taken its decades of expertise designing hardware and applied it to the Switch 2. While it's impossible for me to confirm whether or not these new detachable controllers will suffer from joystick drift long-term from my brief hands-on time with them, I can tell you that their bigger size makes longer game sessions more comfortable. My fingers didn't feel as cramped trying to stretch across all of the buttons and joysticks. Get the best tech, science, and culture news in your inbox daily. Check to make sure your Nintendo Switch 2 preorder went through, stat. Nintendo's kart racer is back—and it's bigger and better in every way. Nintendo's new camera and voice chat functionality for the Switch 2 is fun, but it has some limitations that may be hard to overlook. We played a ton of Mario Kart World and also the interactive "instruction manual," Switch 2 Welcome Tour, to get a better feel for the Switch 2. We may earn a commission when you buy through links on our sites.</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://gizmodo.com/hps-17-3-laptop-is-nearly-50-off-now-the-cheapest-4-8-star-model-around-and-only-at-best-buy-2000610833'>HP's 17.3" Laptop Is Nearly 50% Off, Now the Cheapest 4.8-Star Model Around and Only at Best Buy</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://gizmodo.com', 'title': 'Gizmodo'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-06-04 13:40:45
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>This article is part of Gizmodo Deals, produced separately from the editorial team. We may earn a commission when you buy through links on the site. Phones which were formerly an accessory which allowed for internet access in a pinch are now most people's primary way of going online — so much so that a lot of folks have opted to not even owning a computer. HP has a 17.3-inch laptop that is discounted down to only $350 (45% off). This workhorse laptop is equipped with a AMD Ryzen 5 7000 Series four-core processor. The CPU is perfect for writing your college essay in Word or Google Docs as well as help you swiftly browse the web for all your research needs, browsing between multiple tabs with no slowdown. The display is nice and large at 17.3 inches across, capable of FHD 1920 x 1080 resolution to accurately display all the info you need to see. There's hardly any bezel at all so you really maximize your screen real estate while keeping the laptop compact. And the laptop itself is thin and lightweight, keeping it easy to bring back and forth from the classroom to the dorm room, or from your home to a nearby coffee shop. The screen uses an anti-glare panel which is non-reflective and low gloss, meaning you can even take it outside to work. The laptop features a full HD webcam for video calls with work or friends. It's capable of capturing vibrant clarity in low light conditions to ensure you're always seen crystal clear on the other end. The camera has a physical privacy shutter which you can close it when not in use. At the moment, this HP laptop has been marked down by a significant amount. Normally, this laptop would run you $630, but for a limited time it's been cut down by $280 (-45%). That leaves the price you now pay at just $350. Get the best tech, science, and culture news in your inbox daily. We may earn a commission when you buy through links on our sites.</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://gizmodo.com/stanley-quencher-h2-0-tumbler-drops-to-all-time-low-feels-like-a-freebie-but-stock-is-limited-2000610566'>Stanley Quencher H2.0 Tumbler Drops to All-Time Low, Feels Like a Freebie but Stock Is Limited</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://gizmodo.com', 'title': 'Gizmodo'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-06-04 12:40:32
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>This article is part of Gizmodo Deals, produced separately from the editorial team. We may earn a commission when you buy through links on the site. There's a high chance that you've seen this tumbler making the rounds. The Stanley Quencher H2.0 Tumbler has become something of a hydration status symbol. It's less of a vessel than an accessory you'll find in everything from desk setups to car cup holders and even gym selfies. Go to Amazon now and get the Stanley Quencher H2.0 Tumbler for just $21, down from its usual price of $35. That's especially helpful if you're trying to increase your daily water intake without lugging around something that feels like a small keg. It has a pretty narrow base, which makes it car cup holder-friendly, and the sturdy handle gives you a solid grip. There are purses made for that specific purpose even, Stanley's FlowState lid rotates to offer three modes: a straw opening, a wide opening for sipping or chugging, and a full cover to keep things sealed. Paired with a reusable straw and durable stainless-steel build, it's perfect for cold drinks, smoothies, or even iced coffee. And thanks to vacuum insulation, whatever you pour in stays at just the right temp for hours. Personally, I like to keep mine on my bedside table, where it really does last and last, and by morning I still have ice floating around in my drink. For just $21, which is nearly half off, this is a solid deal for a tumbler that gets as much use as your favorite coffee mug, but with a whole lot more style and capacity. If you've been thinking about upgrading your drinkware, this is one of the best ways to do it. And if your kids have been clamoring for one, now you can grant their wish. Get the best tech, science, and culture news in your inbox daily. News from the future, delivered to your present. We may earn a commission when you buy through links on our sites.</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.tomshardware.com/pc-components/cpus/intel-nova-lake-cpus-reportedly-get-a-gpu-overhaul-xe3-celestial-and-xe4-druid-ips-used-for-graphics-media-and-display'>Intel Nova Lake CPUs reportedly get a GPU overhaul — Xe3 Celestial and Xe4 Druid IPs used for graphics, media, and display</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.tomshardware.com', 'title': "Tom's Hardware"}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-06-04 11:54:01
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>When you purchase through links on our site, we may earn an affiliate commission. Intel's upcoming Nova Lake chips are expected to advance their modular design philosophy by bringing together future Xe3 and Xe4 IPs to handle different engines on the chip. Jaykihn, an avid Intel leaker, asserts that Nova Lake-S will allegedly use Celestial for its graphics engine. At the same time, Druid will handle media and display functions, likely on a separate SoC Tile. The disaggregated chiplet design, introduced for consumers with Meteor Lake, provides Intel with the flexibility to manufacture less critical chip elements using mature and cheaper fabrication nodes. Meteor Lake splits the media and display capabilities from core graphics. The media and display units were placed on a separate System-on-Chip (SoC) chiplet, manufactured using TSMC's N6 process, while the graphics engine resided on a separate tile produced with TSMC's N5 technology. Meanwhile, Bionic_Squash reports that the graphics engine will utilize a slightly modified version of Xe3, for better or worse. Should it be an improvement over vanilla Xe3, which we'll see in Panther Lake, it might be comparable to the evolution from Meteor Lake's Xe-LPG to Arrow Lake's Xe-LPG+ (mobile-only), the latter of which introduced XMX engines. Beyond Nova Lake, this is a positive indication for future graphics products from Intel. We could see the first Druid-powered engines by as early as 2026, while Celestial, which is already undergoing pre-validation, is slated to power Panther Lake CPUs next year. Get Tom's Hardware's best news and in-depth reviews, straight to your inbox. Hassam Nasir is a die-hard hardware enthusiast with years of experience as a tech editor and writer, focusing on detailed CPU comparisons and general hardware news. When he's not working, you'll find him bending tubes for his ever-evolving custom water-loop gaming rig or benchmarking the latest CPUs and GPUs just for fun. Tom's Hardware is part of Future US Inc, an international media group and leading digital publisher.</p>
+                <br/>
+                
+
+        </div>
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
+
+        <footer class="text-center text-sm text-gray-500 mt-12">
+            <div class="inline-block align-middle">
+                <a href="https://www.youtube.com/@news_n_clues" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 text-red-600 hover:text-red-700 font-semibold transition duration-300 ease-in-out">
+                    Watch Daily <span class="italic">News'n'Clues</span> Podcast on
+                    <img src="../images/yt.png" width="16" height="16">
+                </a>
+            </div>
+            <div>
+                <a href="mailto:newsnclues@gmail.com?subject=News'n'Clues Aggregator Inquiry">SoftMillennium
+                    <script>document.write(new Date().getFullYear());</script>
+                </a>
+                <!--
+            <b>Copyright &copy; <script>document.write(new Date().getFullYear());</script> - <a href='mailto:newsnclues@gmail.com?subject=News Aggregator Inquiry'>News And Clues</a></b>
+            -->
+            </div>
+        </footer>
+    </body>
+</html>
+            
