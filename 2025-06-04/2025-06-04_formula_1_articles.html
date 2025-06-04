@@ -1,0 +1,103 @@
+
+<html>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <title id="title">News'n'Clues - FORMULA_1 Article Summaries - 2025-06-04</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .menu { color: #444444; }
+            .copyright { margin: 0 auto; }
+            p { font-family: serif; }
+            body {  background-color: #2c2c2c; font-family: Arial, sans-serif; font-size: 20px; color: #f4f4f4;  }
+            a { text-decoration: none; color: #f4f4f4; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
+            .hidden {
+                display: none;
+            }            
+            
+        </style>
+    </head>
+    <body>
+        <div id="banner" class="w-full">
+            <img src="../images/banner.jpg" alt="News Banner">
+        </div>
+
+        <div id="title" class="w-full flex items-center" style="background-color: #fc4535;">
+          <a href="../index.html"><img src="../images/logo.jpg" alt="News Logo" class="h-auto"></a>
+          <div class="flex-grow text-center">
+              <div id="title_heading" class="text-4xl font-bold mb-4" style="color:#1a6198;">Article Summaries</div>
+          </div>
+        </div>
+        <div id='category_heading' class="section text-center heading">
+            FORMULA_1
+        </div>
+        <div id="articles">
+            
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.formula1.com/en/latest/article/aston-martin-chief-krack-provides-more-background-on-strolls-injury-with.4dXZwtrlleftPZoIxet80o'>Aston Martin's Krack provides more background on Stroll's injury with ‘Plan A' for Canadian to race on home soil</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.formula1.com', 'title': 'Formula 1'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-06-04 10:37:57
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>Ocon hoping Haas can ‘get back where we belong' in Canada as Bearman admits Spain ‘exposed a few weaknesses' Stella hails Piastri's progress after 1-2 in Spain as he explains ‘risk' posed by McLaren's strategy Speaking after Sunday's Grand Prix, Krack said: “As it has been known already, the whole thing started in 2023. Stroll sat out Sunday's Spanish Grand Prix due to pain in his hand and wrist “Over the last weeks, there was a mention here and there, but you are never aware how much it is, and over the weekend, I think it was just getting too much. F1 NATION: Piastri wins in dominant style as Verstappen gets everyone talking – it's our Spain GP review Krack went on to state that Aston Martin's “Plan A” is for Stroll to be back in the car for his home race in Canada next weekend, but “Plan B” involves having the likes of reserve drivers Felipe Drugovich and Stoffel Vandoorne on standby. Meanwhile, Aston Martin Driver Development Programme member Jak Crawford, who currently competes in F2, would not be an option given that he has yet to hit the required number of points for a Super Licence. F1 NATION: Piastri wins in dominant style as Verstappen gets everyone talking – it's our Spain GP review Verstappen admits Russell contact ‘shouldn't have happened' in Spanish GP as Dutch driver nears race ban threshold Horner and Wolff share their views on controversial Verstappen/Russell clash at end of Spanish GP ‘I prefer to be second than fourth' – Vasseur bullish as Ferrari jump Mercedes and Red Bull in the standings Horner and Wolff share their views on controversial Verstappen/Russell clash at end of Spanish GP</p>
+                <br/>
+                
+
+        </div>
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
+
+        <footer class="text-center text-sm text-gray-500 mt-12">
+            <div class="inline-block align-middle">
+                <a href="https://www.youtube.com/@news_n_clues" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 text-red-600 hover:text-red-700 font-semibold transition duration-300 ease-in-out">
+                    Watch Daily <span class="italic">News'n'Clues</span> Podcast on
+                    <img src="../images/yt.png" width="16" height="16">
+                </a>
+            </div>
+            <div>
+                <a href="mailto:newsnclues@gmail.com?subject=News'n'Clues Aggregator Inquiry">SoftMillennium
+                    <script>document.write(new Date().getFullYear());</script>
+                </a>
+                <!--
+            <b>Copyright &copy; <script>document.write(new Date().getFullYear());</script> - <a href='mailto:newsnclues@gmail.com?subject=News Aggregator Inquiry'>News And Clues</a></b>
+            -->
+            </div>
+        </footer>
+    </body>
+</html>
+            
