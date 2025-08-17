@@ -1,0 +1,254 @@
+
+<html>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <title id="title">News'n'Clues - TECHNOLOGY Article Summaries - 2025-08-17</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .menu { color: #444444; }
+            .copyright { margin: 0 auto; }
+            p { font-family: serif; }
+            body {  background-color: #2c2c2c; font-family: Arial, sans-serif; font-size: 20px; color: #f4f4f4;  }
+            a { text-decoration: none; color: #f4f4f4; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
+            .hidden {
+                display: none;
+            }            
+            
+        </style>
+    </head>
+    <body>
+        <div id="banner" class="w-full">
+            <img src="../images/banner.jpg" alt="News Banner">
+        </div>
+
+        <div id="title" class="w-full flex items-center" style="background-color: #fc4535;">
+          <a href="../index.html"><img src="../images/logo.jpg" alt="News Logo" class="h-auto"></a>
+          <div class="flex-grow text-center">
+              <div id="title_heading" class="text-4xl font-bold mb-4" style="color:#1a6198;">Article Summaries</div>
+          </div>
+        </div>
+        <div id='category_heading' class="section text-center heading">
+            TECHNOLOGY
+        </div>
+        <div id="articles">
+            
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://news.ycombinator.com/item?id=44933452'>ClickHouse matches PG for single-row UPDATEs and 4000 x faster for bulk UPDATEs</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://news.ycombinator.com', 'title': 'Hacker News'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-08-17 17:53:41
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>This means that if you're using Postgres primarily for storing data where it's ok if you lose a few (like time series data) then Clickhouse is the clear and obvious choice.But if the transactionality is key for you (like a financial application or the data for an application) then Postgres still makes more sense. But if the transactionality is key for you (like a financial application or the data for an application) then Postgres still makes more sense. A more fair comparison might at least do "SET synchronous_commit TO OFF" on the PostgreSQL side. I'm sure this update here is a step forward just like version-merging is much better than cancelling rows but it's always got a ton of downsides.Unrelated to updating data, the CH defaults drive me insane, the null join behavior alone made me reconsider trying to rip CH out of our infrastructure (after wasting too long trying to figure out why my query "wasn't working").Lastly I'll say, if CH does what you need and you are comfortable learning all the ends and outs, then it can do some really cool things. I almost wish they didn't use SQL as the query language, then people would think about it differently, myself included. Unrelated to updating data, the CH defaults drive me insane, the null join behavior alone made me reconsider trying to rip CH out of our infrastructure (after wasting too long trying to figure out why my query "wasn't working").Lastly I'll say, if CH does what you need and you are comfortable learning all the ends and outs, then it can do some really cool things. I almost wish they didn't use SQL as the query language, then people would think about it differently, myself included. Lastly I'll say, if CH does what you need and you are comfortable learning all the ends and outs, then it can do some really cool things. I almost wish they didn't use SQL as the query language, then people would think about it differently, myself included. We've been doing our best to address and clarify these differences, whether through product features like this one or by publishing content to educate users. For example: https://clickhouse.com/blog/postgres-to-clickhouse-data-mode... https://www.youtube.com/watch?v=9ipwqfuBEbc.From what we've observed, the learning curve typically ranges from a few weeks for smaller to medium migrations to 1–2 months for larger ones moving real-time OLAP workloads from Postgres to ClickHouse. Still, customers are making the switch and finding value — hundreds (or more) are using both technologies together to scale their real-time applications: Postgres for low-latency, high-throughput transactions and ClickHouse for blazing-fast (100x faster) analytics.We're actively working to bridge the gap between the two systems, with features like faster UPDATEs, enhanced JOINs and more. That's why I'm not sure your comment is fully generalizable — the differences largely stem from the distinct workloads they support, and we're making steady progress in narrowing that gap.- Sai from the ClickHouse team here. From what we've observed, the learning curve typically ranges from a few weeks for smaller to medium migrations to 1–2 months for larger ones moving real-time OLAP workloads from Postgres to ClickHouse. Still, customers are making the switch and finding value — hundreds (or more) are using both technologies together to scale their real-time applications: Postgres for low-latency, high-throughput transactions and ClickHouse for blazing-fast (100x faster) analytics.We're actively working to bridge the gap between the two systems, with features like faster UPDATEs, enhanced JOINs and more. That's why I'm not sure your comment is fully generalizable — the differences largely stem from the distinct workloads they support, and we're making steady progress in narrowing that gap.- Sai from the ClickHouse team here. We're actively working to bridge the gap between the two systems, with features like faster UPDATEs, enhanced JOINs and more. That's why I'm not sure your comment is fully generalizable — the differences largely stem from the distinct workloads they support, and we're making steady progress in narrowing that gap.- Sai from the ClickHouse team here. If you are needing updates then perhaps ClickHouse isn't the perfect choice. Something like ScyllaDB might be a better compromise if you want performant updates with (some sort of) consistency guarantees. Either way, CH shouldn't be the store of truth when you need record level fidelity. CH has been my favorite database since I discovered PostgreSQL 20 years ago. I figured out after 40 minutes that we are not making any progress. For each user we are probably searching 4 million users. After I added the index to a specific field, it was done quickly. This test was pretty much just trying to see how good of a job we had done, by comparing ourselves to the gold standard, Postgres. (If you're curious, we also wrote about how we built the UPDATE support in depth https://clickhouse.com/blog/updates-in-clickhouse-2-sql-styl...)We have some updates to the post in progress; we originally deliberately used cold runs for both ClickHouse & Postgres, because we wanted to look at the "raw" update speed of the engine, vs. the variability of cache hits. But TL;DR when you run a more "real world" test where caches are warm and Postgres is getting very high cache-hit ratio, its point updates are consistently ~2ms, while ClickHouse is somewhere ~6ms (bulk updates are still many multiples faster in ClickHouse even with the cache in play). But TL;DR when you run a more "real world" test where caches are warm and Postgres is getting very high cache-hit ratio, its point updates are consistently ~2ms, while ClickHouse is somewhere ~6ms (bulk updates are still many multiples faster in ClickHouse even with the cache in play). PG on the other hand completes all update work inline, and wouldn't get degrading performance under update-heavy regimes.This is just a fundamental artifact of OLAP vs OLTP, maybe OLAP can be optimized to the point where it doesn't really matter for most workloads, but a theoretical edge remains with row-based stores and updates. ClickHouse maintains updates as uncompacted patches merged in the background, which is how you would do it with a columnar store. PG on the other hand completes all update work inline, and wouldn't get degrading performance under update-heavy regimes.This is just a fundamental artifact of OLAP vs OLTP, maybe OLAP can be optimized to the point where it doesn't really matter for most workloads, but a theoretical edge remains with row-based stores and updates. This is just a fundamental artifact of OLAP vs OLTP, maybe OLAP can be optimized to the point where it doesn't really matter for most workloads, but a theoretical edge remains with row-based stores and updates. I'd wager the overhead in Postgres is probably lighter (though it's also light in ClickHouse), so you're right, this would be an interesting test. We actually had something like that planned, to run concurrent UPDATEs and SELECTs at different volumes for a period of time, to see how they each cope. Did you run any tests with the new transaction system in ClickHouse?</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://news.ycombinator.com/item?id=44932342'>Here be dragons: Preventing static damage, latchup, and metastability in the 386</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://news.ycombinator.com', 'title': 'Hacker News'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-08-17 16:08:39
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>This article, from a company that designs ESD circuits, describes various modern techniques: https://monthly-pulse.com/2022/03/29/introduction-esd-protec... You know back when I built my computers, not once did I ever use any kind of static electricity discharge “system”. (Of course it could be the climate I lived in as well) Has anybody ever actually destroyed a chip with static electricity? (Of course it could be the climate I lived in as well) (Of course it could be the climate I lived in as well) When you fry a chip is it obvious because you experience a zap?If so, then that would make all this "make sure you're grounded" ceremony less mysterious — because unless you feel a zap (even a tiny one) you probably haven't fried a chip, and it doesn't generally happen in environments where you don't feel zaps.Obvious caveat: "feeling" a zap is not a precise measurement. If so, then that would make all this "make sure you're grounded" ceremony less mysterious — because unless you feel a zap (even a tiny one) you probably haven't fried a chip, and it doesn't generally happen in environments where you don't feel zaps.Obvious caveat: "feeling" a zap is not a precise measurement. But one vital thing to understand is that a lot of those "vendor recommendations" exist to cover for rare 1% to 0.1% edge case failures.You can put together 20 PCs, with none of them dying from ESD, and conclude that ESD "isn't a real issue". And if you employ enough people, one of them might be a son of Zeus with a wild Wimshurst machine hairstyle - capable of emitting two high power ESDs, complete with an audible crackle and a visible spark, per minute. So ESD straps it is.The same applies to things like humidity control or reflow profiles for electronics. The remaining ~1% can fuck you over in mass manufacturing, so disrespect the vendor at your own peril. You can put together 20 PCs, with none of them dying from ESD, and conclude that ESD "isn't a real issue". And if you employ enough people, one of them might be a son of Zeus with a wild Wimshurst machine hairstyle - capable of emitting two high power ESDs, complete with an audible crackle and a visible spark, per minute. So ESD straps it is.The same applies to things like humidity control or reflow profiles for electronics. The same applies to things like humidity control or reflow profiles for electronics. Moisture, clothing, habits play a role so it's highly variable. It was interior Alaska, where humidity is low enough that an orange turns into a passable golf ball in a week and a half, so that was definitely a factor.TLDR static electricity is bad for electronics, and damage does not necessarily show up as failure but often manifests as flaky behavior. TLDR static electricity is bad for electronics, and damage does not necessarily show up as failure but often manifests as flaky behavior.</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.tomshardware.com/networking/is-wi-fi-bad-for-the-environment-eye-catching-london-ad-suggests-our-digital-habits-are-damaging-the-climate'>Is Wi-Fi bad for the environment? Eye-catching London ad suggests Wi-Fi is ‘damaging the climate'</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.tomshardware.com', 'title': "Tom's Hardware"}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-08-17 16:06:24
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>The ad seemingly says that Wi-Fi is bad for the environment, but its makers just want you to look closer. When you purchase through links on our site, we may earn an affiliate commission. A PhD student shared a photograph of an ad for the University of East London, implying that Wi-Fi is detrimental to the environment (h/t vx-underground). The poster says, “WiFi doesn't grow on trees. @AndyMasley you're desperately needed on the London tube!! If you visit that page, you'll see that one of the topics covered there is society's use of social media and how it's pushing data centers across the globe to produce more emissions than those generated by the global airline industry. It goes on to show how the University is driving research to make data centers more sustainable, reducing the negative impact of our use of social media on the environment. The poster doesn't really say that Wi-Fi is bad for the environment — it only tells you that it doesn't grow on trees. University of East London's ad did gather the interest of the people who saw it, especially as it seemingly contradicted something that most of us know as fact — that Wi-Fi is safe. However, this ad can be easily misunderstood by some people, especially conspiracy theorists who think wireless technology is dangerous (like 5G) and are encouraging everyone to start wearing tin foil hats. Get Tom's Hardware's best news and in-depth reviews, straight to your inbox. Jowi Morales is a tech enthusiast with years of experience working in the industry. He's been writing with several tech publications since 2021, where he's been interested in tech hardware and consumer electronics. Tom's Hardware is part of Future US Inc, an international media group and leading digital publisher. © Future US, Inc. Full 7th Floor, 130 West 42nd Street, New York,</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.tomshardware.com/tech-industry/cobrajet-nvidia-ai-powered-drone-killer-takes-out-overwhelming-enemy-drone-incursions-at-up-to-300mph'>CobraJet Nvidia AI-powered drone killer takes out 'overwhelming enemy drone incursions' at up to 300mph</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.tomshardware.com', 'title': "Tom's Hardware"}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-08-17 15:35:00
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>Let's just hope that this jet never goes rogue. When you purchase through links on our site, we may earn an affiliate commission. Defense startup SkyDefense LLC just launched an autonomous combat drone designed to take out enemy drone swarms at a much lower cost than traditional weapon systems. The company calls it the CobraJet — an uncrewed aerial vehicle (basically, a drone) designed for C-UAS (counter-unmanned aircraft system) missions. The drone combines Teledyne FLIR electro-optical and infrared sensors that do not contain restricted foreign parts, and Nvidia AI chips, allowing the drone to process the information that it sees with onboard sensors. The CobraJet is also equipped with its proprietary Visual Realtime Area Monitoring (VRAM) system, allowing ground commanders to monitor the drone during autonomous operations and communicate with and control it, if needed. This gives its operator the option to let it operate on its own during reconnaissance, patrol, and identification, but still have a human making decisions when required. Aside from its AI brain, the CobraJet also boasts an internal weapons bay and external hardpoints, allowing it to carry kamikaze drones, small missiles, or even fragmentation projectiles. This means it can operate from the back of a truck and have improved maneuverability, allowing it to go toe-to-toe with small and nimble drones. These small and cheap weapons are widely used in Russia's invasion of Ukraine, with the defending Ukrainians effectively using drones to initially counter the larger Russian army. While existing weapons like surface-to-air missiles and air-to-air missiles can engage drones, there's often a huge mismatch in price between these two platforms. Missiles often cost between half a million to more than $4 million — while you can buy a cheap drone for just $200, with the more sophisticated ones, like Iran's Shahed-136, only costing $20,000. You can also send up a platoon of combat choppers to engage a drone swarm with guns, but you're risking several multi-million-dollar weapon platforms to combat cheap suicide drones. “Our USA-made CobraJets can communicate and coordinate as a flight team, enabling them to operate as an AI-powered unmanned Air Force,” said SkyDefense LLC President Nick Verini. Get Tom's Hardware's best news and in-depth reviews, straight to your inbox. Jowi Morales is a tech enthusiast with years of experience working in the industry. Tom's Hardware is part of Future US Inc, an international media group and leading digital publisher.</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.geekwire.com/?p=885889'>Football nerd: Seattle Seahawks head coach Mike Macdonald blends tradition and innovation</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.geekwire.com', 'title': 'GeekWire'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-08-17 14:00:00
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>It's about 10 minutes into my interview with Mike Macdonald, and I get the sense that the Seattle Seahawks head coach is a little geeky. He was also a straight-A student in high school and graduated summa cum laude with a finance degree from University of Georgia. So it's not a big surprise that Macdonald embraces innovative tools and strategies. In an interview with GeekWire earlier this year at Lumen Field, Macdonald described his approach as a hybrid of traditional football fundamentals and modern technology. Thanks to advanced tracking and analytics, NFL teams have more data than ever — and it's changing how the game is played. One clear example: how coaches approach fourth down decisions. “We have a way to measure the advantage you get for going for it on fourth down,” Macdonald said. That data can shift play-calling not just on fourth down but throughout an entire drive, Macdonald said. Macdonald doesn't see analytics and instinct as mutually exclusive — instead, he views data as a decision-making tool to support what coaches already know from film, practice, and experience. We spoke to Macdonald as part of an event showcasing Microsoft's partnership with the NFL, which now includes use of the company's Copilot AI software for scouting, allowing teams to get immediate insights by simply asking questions versus waiting for analysts to crunch spreadsheets. Macdonald, who was previously the Baltimore Ravens defensive coordinator, last year became the first coach in franchise history to reach 10 wins in his first season. He'll try to top that mark as the Seahawks kick off their 2025 season next month. I get more text messages now, holy smokes.” I think it's cool to be into stuff that is high-tech, data-driven. Have a scoop that you'd like GeekWire to cover? Microsoft adds generative AI to NFL scouting app in latest evolution of sports tech partnership Seahawks quarterback takes his frustration out on a Microsoft Surface tablet Mysterious drone flights have been in the news, but Seattle Seahawks show was planned tribute to fans Tech Moves: USAFacts president stepping down; Starbucks' new COO; WSOS names leader</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.tomshardware.com/video-games/pc-gaming/steams-new-performance-overlay-is-more-accurate-than-task-manager-says-valve-gpu-utilization-monitoring-comes-directly-to-steam-in-latest-client-beta'>Steam's new Performance Overlay is more accurate than Task Manager, says Valve — GPU utilization monitoring comes directly to Steam in latest client beta</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.tomshardware.com', 'title': "Tom's Hardware"}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-08-17 12:55:00
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>When you purchase through links on our site, we may earn an affiliate commission. Valve's latest Steam Client Beta has upped the ante when it comes to GPU monitoring, claiming its in-game overlay now delivers more accurate utilization readings than Windows Task Manager. According to Valve, Task Manager has historically under-reported GPU usage, particularly for games that launch auxiliary processes alongside the main one. Steam's revamped overlay captures all these processes, trims sampling errors, and aligns its stats more closely with trusted third-party tools like MSI Afterburner. Games that split work across multiple processes can therefore have portions of their GPU activity missed, and certain workloads can appear less intensive than they actually are. "Net effect should be that in most games it's nearly the same as before, but in certain situations we previously underreported overall GPU utilization and the utilization number will now be higher and should closer match third-party tools like MSI Afterburner." The quote above has since been removed from the patch notes page because Valve's confidence didn't last long under public scrutiny. Just a couple of days later, the beta update introducing this more accurate GPU tracking was quickly pulled from distribution. Now, the patch note reads: "It was later re-released to roll back a GPU utilization monitoring change that needs more testing." This update follows earlier expansions to the overlay launched back in June, which introduced frame-level granularity like distinguishing between native frames and those generated by DLSS/FSR, alongside real-time readings of CPU load, RAM usage, clock speeds, and frame timing graphs. Those features have already transformed Steam's HUD into one of the most comprehensive in-game instruments—effectively matching tools like MangoHud and MSI's RivaTuner. Combine that with the recently-added ability to display CPU temperature (on both Windows and Linux), enabled by a trusted CPUID-derived kernel driver, and it becomes clear: Valve is moving aggressively toward making the Steam overlay the central tech monitor for gamers, even if it means wading deeper into system-level access. This kind of behavior is commonplace in business today, where a dominant player will develop a homegrown version of something that was previously offered by a third party, essentially eliminating any need to venture outward. That being said, gamers deeply invested in performance tuning, bottleneck diagnostics, and optimization, having accurate, server-less telemetry available via Steam—without relying on extra apps—could be a game-changer. It shifts hardware monitoring from niche third-party community tools into mainstream accessibility so newcomers and those less technically-inclined can also see the inner-workings of their computer, and more importantly, perhaps cultivate a new interest in it. Get Tom's Hardware's best news and in-depth reviews, straight to your inbox. If it was pulled from even this channel then there's likely some serious tuning Valve is still experimenting with. Hassam Nasir is a die-hard hardware enthusiast with years of experience as a tech editor and writer, focusing on detailed CPU comparisons and general hardware news. When he's not working, you'll find him bending tubes for his ever-evolving custom water-loop gaming rig or benchmarking the latest CPUs and GPUs just for fun. Tom's Hardware is part of Future US Inc, an international media group and leading digital publisher.</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.tomshardware.com/networking/is-wi-fi-bad-for-the-environment-eye-catching-london-ad-suggests-our-digital-habits-are-damaging-the-climate'>Is Wi-Fi bad for the environment? Eye-catching London ad suggests our digital habits are ‘damaging the climate'</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.tomshardware.com', 'title': "Tom's Hardware"}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-08-17 12:15:00
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>The ad seemingly says that Wi-Fi is bad for the environment, but its makers just want you to look closer. When you purchase through links on our site, we may earn an affiliate commission. A PhD student shared a photograph of an ad for the University of East London, implying that Wi-Fi is detrimental to the environment (h/t vx-underground). The poster says, “WiFi doesn't grow on trees. @AndyMasley you're desperately needed on the London tube!! If you visit that page, you'll see that one of the topics covered there is society's use of social media and how it's pushing data centers across the globe to produce more emissions than those generated by the global airline industry. It goes on to show how the University is driving research to make data centers more sustainable, reducing the negative impact of our use of social media on the environment. The poster doesn't really say that Wi-Fi is bad for the environment — it only tells you that it doesn't grow on trees. University of East London's ad did gather the interest of the people who saw it, especially as it seemingly contradicted something that most of us know as fact — that Wi-Fi is safe. However, this ad can be easily misunderstood by some people, especially conspiracy theorists who think wireless technology is dangerous (like 5G) and are encouraging everyone to start wearing tin foil hats. Get Tom's Hardware's best news and in-depth reviews, straight to your inbox. Jowi Morales is a tech enthusiast with years of experience working in the industry. He's been writing with several tech publications since 2021, where he's been interested in tech hardware and consumer electronics. Tom's Hardware is part of Future US Inc, an international media group and leading digital publisher. © Future US, Inc. Full 7th Floor, 130 West 42nd Street, New York,</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.wired.com/review/camp-snap-cs-8/'>This $150 'Digital Super 8' Gives the Lo-Fi Camera Craze a Moving Picture Upgrade</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.wired.com', 'title': 'WIRED'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-08-17 12:00:00
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>All products featured on WIRED are independently selected by our editors. However, when you buy something through our retail links, we may earn an affiliate commission. The Camp Snap CS-8 doesn't care about frame rates, bit rates, or whether your footage is stabilized to unerring levels of steadiness. What it offers instead is something far simpler and more deliberate: the feeling of shooting video for the sake of it. Much like Camp Snap's point-and-shoot still camera from 2023 (the company's only other major product), it's a throwback to when cameras didn't think for you and when you didn't expect to review the images you just captured until later—sometimes much later. The body is mostly plastic, with faux-metal detailing and leatherette texture meant to evoke the mechanical era rather than mimic it convincingly. If you're looking for authenticity, you're not going to find it here: There's a fake cold shoe up top and imitation screws at the base of the pistol grip. But that's not the point—this isn't Kodak's $5,000 Super 8 revival but rather a $199 camera meant to live in the real world and get passed around at parties, slung into backpacks for day trips, and used without a second thought. The settings and options are stripped back, with one dial for selecting aspect ratio (4:3, 16:9, 1:1, or 9:16) and another for the video effect. These include standard color, monochrome, and three lo-fi filters, including one that simulates the grainy, jerky look of 8-mm film. It drops the frame rate to 20 fps (it's 30 fps with the other modes) and sprinkles in digital scratches, resulting in footage that's imperfect in the most deliberate way. There's no focusing to worry about here. The 8X zoom is handled with buttons labelled “W” and “T” for wide and telephoto, though it's digital-only, and resolution drops off quickly when you push in too far. All products featured on WIRED are independently selected by our editors. The viewfinder shows an appropriately cropped preview along with battery status, but it's not especially friendly to anyone who wears glasses. If, like me, you use specs, expect to see only part of the frame unless you're squeezed up uncomfortably tight. It's not a deal-breaker, but I did find it a constant irritation rather than part of the uncompromising retro charm. Recording with the CS-8 feels more intentional than it does with a smartphone or a modern point-and-shoot camera. There's no temptation to reshoot the same five seconds 10 times in search of something “perfect.” Simply shoot your scene, then move on. It's a welcome break from videoing something on your phone, then immediately checking to make sure it looks right; here, you feel like you're capturing a moment rather than curating one. Storage is quite limited out of the box, but expandable. Swap it out for something larger (up to 128 GB is supported) and you're good for up to 16 hours. Battery life offers roughly 30 minutes of continuous recording, and the camera charges via USB-C. There's no wireless connectivity, no app, and no overcomplicated companion software to worry about; getting files off the camera means plugging it in and dragging them over to your computer. It might have been nice to have some built-in way to join all your clips into a single, shareable file, but I found it easy enough to do so using DaVinci Resolve. Image quality is, predictably, not going to compete with a modern-day mirrorless camera or even a midrange smartphone. You'll also hear the distinct sound of the trigger being pulled in almost every clip, reminding you that this is a camera with mechanical quirks, not a precision tool polished to perfection. All products featured on WIRED are independently selected by our editors. Rather than promising professional results, it's designed to be fun. For kids, it's an easy introduction to video without the distracting noise and clutter of modern camera features. Its flaws are largely in service of the camera's philosophy. It wants you to treat video as something casual and spontaneous, not something to fuss over or optimize. And that approach can be surprisingly freeing. Priced at $199 (early adopters can grab it for $149), the CS-8 sits in a strange but appealing niche. But it knows exactly what it is: a playful and nostalgia-drenched tool for making memories that feel like memories the second they're captured. You don't buy this camera to create “content;” you buy it to capture moments without overthinking the whole process. In that regard, the Camp Snap CS-8 is a success. All products featured on WIRED are independently selected by our editors. WIRED may earn a portion of sales from products that are purchased through our site as part of our Affiliate Partnerships with retailers. The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of Condé Nast.</p>
+                <br/>
+                
+
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://news.ycombinator.com/item?id=44929630'>Israeli gov. official arrested in Nevada internet crimes against children sting</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://news.ycombinator.com', 'title': 'Hacker News'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-08-17 07:45:09
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>
+
+reply
+
+* https://www.cbsnews.com/news/how-jewish-american-pedophiles-...* https://www.humanium.org/en/exposing-pedophilia-and-legal-fa...* https://www.ynetnews.com/opinions-analysis/article/ByBkeexEI
+
+* https://www.humanium.org/en/exposing-pedophilia-and-legal-fa...* https://www.ynetnews.com/opinions-analysis/article/ByBkeexEI
+
+* https://www.ynetnews.com/opinions-analysis/article/ByBkeexEI
+
+reply
+
+He ain't coming back now.
+
+reply
+
+reply
+
+reply
+
+reply
+
+But since the Israelis are noble and are the only free democracy of that region, I can't imagine they would do something like that... /Shttps://www.vice.com/en/article/saudi-arabia-may-have-helped...
+
+https://www.vice.com/en/article/saudi-arabia-may-have-helped...
+
+reply
+
+reply
+
+
+
+There are certainly real dynamics that make popular "conspiracy theories" resonate. The problem is such theories are overly simplistic tripe that play to people's gut feelings. They actually prove way too much, and mainly serve to obscure the real complexity of situations.
+
+reply
+
+reply
+
+reply
+
+reply
+
+Missed as not returned by search. As appears to be the case for this posting too. Neither is (currently) flagged.
+
+reply
+
+reply
+
+Edit: search as a whole seems to be having issues with more recent items.
+
+reply
+
+"How a future Trump Cabinet member gave a serial sex abuser the deal of a lifetime" - 
+https://www.seattletimes.com/nation-world/perversion-of-just...
+
+reply</p>
+                <br/>
+                
+
+        </div>
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
+
+        <footer class="text-center text-sm text-gray-500 mt-12">
+            <div class="inline-block align-middle">
+                <a href="https://www.youtube.com/@news_n_clues" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 text-red-600 hover:text-red-700 font-semibold transition duration-300 ease-in-out">
+                    Watch Daily <span class="italic">News'n'Clues</span> Podcast on
+                    <img src="../images/yt.png" width="16" height="16">
+                </a>
+            </div>
+            <div>
+                <a href="mailto:newsnclues@gmail.com?subject=News'n'Clues Aggregator Inquiry">SoftMillennium
+                    <script>document.write(new Date().getFullYear());</script>
+                </a>
+                <!--
+            <b>Copyright &copy; <script>document.write(new Date().getFullYear());</script> - <a href='mailto:newsnclues@gmail.com?subject=News Aggregator Inquiry'>News And Clues</a></b>
+            -->
+            </div>
+        </footer>
+    </body>
+</html>
+            
