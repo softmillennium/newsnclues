@@ -22044,3 +22044,1896 @@ reply
 Helix is more similar to Neovim than Emacs and Helix is newer and less popular than Neovim, so people are predictably curious on why they should choose Helix over Neovim.
 
 reply","{'href': 'https://news.ycombinator.com', 'title': 'Hacker News'}","technology"
+"https://news.google.com/rss/search?q=site:ycombinator.com","GitHub Copilot: Remote Code Execution via Prompt Injection (CVE-2025-53773)","https://news.ycombinator.com/item?id=45559603","Sun, 12 Oct 2025 16:48:31 GMT","
+
+reply
+
+reply
+
+With multiple AI agents simultaneously creating and editing multiple files, many devs won't be able to pick up malicious changes, even if they look at diffs.  (And there are often pressures at work to cut corners.)So far, I have only picked up agents overwriting files with instructions for them or creating instructions telling themselves to ignore some instructions in other files. (And pure laziness like disabling certain tests.) These are pretty obvious, could be prevented by changing file permissions (to a certain extent) and I use those more dangerously autonomous AI approaches for personal projects only. Would I pick up malicious changes if they were spread across many files, more sophisticated, and it was during crunch time? I don't know.If there is some software that scans edits for AI-specific issues, doesn't live in VSCode, and isn't susceptible to simple prompt injection, I would happily give it a try.
+
+So far, I have only picked up agents overwriting files with instructions for them or creating instructions telling themselves to ignore some instructions in other files. (And pure laziness like disabling certain tests.) These are pretty obvious, could be prevented by changing file permissions (to a certain extent) and I use those more dangerously autonomous AI approaches for personal projects only. Would I pick up malicious changes if they were spread across many files, more sophisticated, and it was during crunch time? I don't know.If there is some software that scans edits for AI-specific issues, doesn't live in VSCode, and isn't susceptible to simple prompt injection, I would happily give it a try.
+
+If there is some software that scans edits for AI-specific issues, doesn't live in VSCode, and isn't susceptible to simple prompt injection, I would happily give it a try.
+
+reply
+
+reply
+
+I call it ""Cross-Agent Privilege Escalation"" and described in detail how such an attack might look like with Claude Code and GitHub Copilot  (https://embracethered.com/blog/posts/2025/cross-agent-privil...).Agents that can modify their own or other agents config and security settings is something to watch out for. It's becoming a common design weakness.As more agents operate in same environment and on same data structures we will probably see more ""accidents"" but also possible exploits.
+
+Agents that can modify their own or other agents config and security settings is something to watch out for. It's becoming a common design weakness.As more agents operate in same environment and on same data structures we will probably see more ""accidents"" but also possible exploits.
+
+As more agents operate in same environment and on same data structures we will probably see more ""accidents"" but also possible exploits.
+
+reply
+
+As mentioned in the article and in previous discussions:> With the August Patch Tuesday release this is now fixed.
+
+> With the August Patch Tuesday release this is now fixed.
+
+reply
+
+reply
+
+> After reporting the vulnerability on June 29, 2025 Microsoft confirmed the repro and asked a few follow up questions. A few weeks later MSRC pointed out that it is an issue they were already tracking, and that it will be patched by August. With the August Patch Tuesday release this is now fixed.
+
+reply
+
+reply
+
+Looks like only applicable to Microsoft VS ""Editor"".  Emacs and vim users, no worry it seems.
+
+reply","{'href': 'https://news.ycombinator.com', 'title': 'Hacker News'}","technology"
+"https://news.google.com/rss/search?q=site:gizmodo.com","Another ‘Avatar' Video Game Is On the Way","https://gizmodo.com/nycc-2025-avatar-legends-fighting-game-trailer-release-date-2000671628","Sun, 12 Oct 2025 17:15:05 GMT","
+
+
+                reading time 1 minute
+      
+
+Avatar has only recently returned to television, but Nickelodeon's kept the anime franchise around through plenty of video games for consoles and phones over the years. Sure enough, there's another title joining the lineup, but this one is a fighting game.
+
+Currently called Avatar Legends: The Fighting Game, the title pits players in one-on-one brawls as characters from across the franchise. At launch, there are 12 characters, including Aang, Korra, Zuko, and Toph, and support characters can help pull off special moves similar to Mortal Kombat 1. While the launch roster is small, more will come via post-launch DLC. (The trailer makes sure to emphasize Last Airbender characters, so if you're a Korra fan, you may have to wait for your faves to join the fray.) According to the Steam page, the game will also feature a single-player campaign with an original story, “flow system” combat mechanics with movement-focused gameplay, and crossplay support.
+
+Developed by first-time studio Gameplay Group International, a big point in Avatar Legends' favor is its hand-drawn 2D animation, which helps the game retain the visual style the franchise is best known for. These characters have been all over Nickelodeon's larger brand games—including the two fighting-focused Nick All-Stars titles—so it's only fitting the franchise gets a fighting game all to itself.
+
+If Avatar Legends feels like your cup of tea, it's intended to launch on Steam, Nintendo Switch 2, PlayStation 4|5, and Xbox Series X|S in summer 2026. And if it doesn't look appealing, good news: Saber Interactive, creators of Space Marine II, are developing an action-RPG for the franchise that may be a better fit.
+
+Want more io9 news? Check out when to expect the latest Marvel, Star Wars, and Star Trek releases, what's next for the DC Universe on film and TV, and everything you need to know about the future of Doctor Who.
+
+Explore more on these topics
+
+
+    Share this story
+  
+
+
+        Subscribe and interact with our community, get up to date with our customised Newsletters and much more.
+      
+
+
+
+
+          Pandora faces a new threat from within in James Cameron's latest sci-fi epic.
+        
+
+
+          The most crucial member of the Gaang will join Zuko, Sokka, Katara, Toph, and many more in the upcoming 'Magic: The Gathering' crossover set.
+        
+
+
+          Cameron doesn't want to destroy generative AI, but he does realize that it is an existential problem for the movie industry to solve.
+        
+
+
+          The busy filmmaker will keep returning to Pandora—and it's not just because of their proven box-office power.
+        
+
+
+          Former CNN anchor Jim Acosta's interview with an AI version of a Parkland shooting victim was meant to send a message about gun violence, but it's raised deeper questions about ethics, grief, and the limits of AI.
+        
+
+
+          The director has found great success with his motion-capture epics—and is hoping to expand the world of Pandora with an animated side project.
+        
+
+©2025 GIZMODO USA LLC.
+
+All rights reserved.","{'href': 'https://gizmodo.com', 'title': 'Gizmodo'}","technology"
+"https://news.google.com/rss/search?q=site:gizmodo.com","Belkin's SoundForm ANC Wired Earbuds Are No Threat to AirPods","https://gizmodo.com/belkins-soundform-anc-wired-earbuds-sound-decent-but-theyre-no-threat-to-airpods-2000654232","Sun, 12 Oct 2025 16:00:49 GMT","
+
+
+                reading time 7 minutes
+      
+
+Inside a desk drawer next to me lives a collection of wired earbuds I can never bring myself to toss out. Although I've mainly used Bluetooth wireless earbuds for many years now—usually AirPods Pro—sometimes it's nice to just plug in a cable and listen, without the fiddliness of a wireless connection. The one thing that's missing? Active noise cancellation, or ANC.
+
+I check in from time to time on the state of wired earbuds with ANC, and I'm usually disappointed. ANC needs to be powered, and you can't get that from a 3.5mm headphone jack, so the solutions—like embedding a battery pack in the earbuds' cable, or adding the feature via a separate USB-C-powered dongle—ditch the battery-free advantage of wired audio. Same goes for using Bluetooth over-ear wireless headphones with ANC as wired headphones. Yeah, you can do it with most wireless over-ears, but they still need power for their sound filtering, and some won't even work as normal headphones once their battery is kaput.
+
+Finally, in early September, Belkin unveiled almost exactly what I'd been searching for: its $29.99 SoundForm ANC Wired Earbuds (USB-C). I previewed them at IFA 2025, where I found them comfortable, lightweight, and they sounded decent, but that was based on using them on a noisy show floor, which wasn't enough to actually evaluate them. Thankfully, Belkin sent me home with a pair to review.
+
+Belkin SoundForm ANC Wired Earbuds (USB-C)
+
+Belkin's new SoundForm ANC Wired Earbuds don't have the best noise cancellation, but they're convenient, cheap, and sound great for what they are.
+
+Pros
+
+Cons
+
+I've always really liked AirPods Pros, from the first generation to the latest AirPods Pro 3. But as good as they are, their wireless connection can still be flaky, especially after years of battery and physical wear and tear, not to mention the occasional mandatory firmware update that makes them act weird. Like when mine identified themselves as “Not Your AirPods Pro” every time I opened the case for months on end, only returning to normal after a firmware update release that coincided with the release of the AirPods Pro 3. It's been nice to go back to just plugging in a thing and having it work—no recharging, no Bluetooth pairing, no secret, software-breaking firmware updates. Just music or podcasts when I want them.
+
+Belkin's SoundForm ANC Wired Earbuds are chunky—roughly the size of my aforementioned AirPods Pro—but, for me, lightweight enough that I don't really notice them in my ears. They're also IPX5-rated, which means they aren't dust-tight, but they should withstand sweat and splashes of water—AirPods Pro 2 were IPX4 or IP54, depending on whether you bought the Lightning or USB-C version. The SoundForm ANC Wired Earbuds come in both black and white color options, and they use a flat cable that's pliable and tangle-resistant.
+
+See SoundForm ANC Wired Earbuds (USB-C) at Amazon
+
+Their in-ear tips are made of a soft silicone that's much more resistant than Apple's AirPods to the creeping horror that is my earwax. (Sorry if that's gross to read, but I know this happens for plenty of you, too.) They come with three pairs of tips, and they don't attach to the earbuds in any special, proprietary way, so picking up a set of universal fit earbud tips is doable if the included ones don't feel good.
+
+Belkin's wired earbuds are clunky in some ways. The volume and play/pause buttons on the small, inline control module work like you'd expect, but it's awkward as hell to hold down both volume up and down to cycle through the three included EQ presets: bass boost, balanced audio, and Belkin Signature Sound. And I'm not sure I like the way ANC and transparency mode are activated, by long-pressing a button on the side of the module, despite not minding a long squeeze to do the same thing on AirPods Pro. Something about it being a physical button makes me want it to work differently. But those are minor complaints, and I found I didn't really want to change the EQ preset once I set the bass boost one.
+
+The biggest compromise is right in the name: they connect with USB-C, rather than a 3.5mm headphone plug. That means you can't use them with older devices like MP3 players or pre-USB-C handheld game consoles. I did confirm that they work with my iPhone 15 Pro, Google Pixel 6, both of my Apple silicon Macs, and my Nintendo Switch 2. Asterisk on Nintendo's latest handheld: the Switch 2 Pro controller, which has a 3.5mm audio jack that lets you use headsets for GameChat, doesn't support USB-C headphones. And just so we're clear, neither does the first-generation Switch, including the OLED model, much to my disappointment.
+
+Still, it's good to know that of everything I would want to use wired headphones with, Belkin's earbuds work fine with most. USB-C also introduces another issue: longevity, or the potential lack thereof. The Belkin SoundForm ANC Wired Earbuds seem to have a hardy USB-C plug, but I've only tested them for around a month. As often as they could be plugged and unplugged over time, the mechanism that clips them into a USB-C port is bound to wear out eventually. I hope Belkin did a good job with these and that they'll last for years, but only time will tell whether that's the case.
+
+So how do they sound? Belkin outfitted the SoundForm ANC Wired Earbuds with 12mm drivers, putting them right between the AirPods Pro 2 and 3. Driver size isn't everything, and Belkin only charges $30 for these earbuds, so I didn't expect miracles—and they didn't give me any! But they did outrun my expectations with punchy bass that's not too boomy, and midrange and treble that are clear without being muddy or ear-piercingly tinny, respectively. Compared to the AirPods Pro 3, their sound profile is far cooler, with thinner low-end. It's not a fair comparison, though (the AirPods Pro 3 are pretty widely praised, after all). Overall, they're quite decent, putting out much better sound than I would expect from similarly priced wireless earbuds.
+
+It's when you start to pay attention to the details that the price tag shows. The bass gets fuzzy and weak when you turn the SoundForm ANC Wired Earbuds up to around 80 percent or so. And they lack definition in songs that need it; Belkin's earbuds didn't do any favors for tracks like Tom Waits' “Green Grass,” overly emphasizing its crackling audio and making it sound more amateurish than an intentionally ragged stylistic choice. The earbuds also have a pretty narrow sound stage, leaving audio you listen to very much confined to the area between your ears. I tend to actually like the intimate feel of that when I'm listening to something like that Tom Waits song, but it's not ideal for a bombastic track like “Through the Fire and the Flames” by DragonForce. There's also a lot of cable noise that vibrates its way up into the earbuds. I could hear rustling every time I turned my head and the cable scraped against my facial hair, and a loud thump when I reached up and grabbed the wire or tapped it with my fingertips.
+
+The SoundForm ANC Wired Earbuds only mildly cancel noise—they'll block the small desktop fan I have in my office, but generally speaking, they only deal well with certain droney sounds. Walking around near a busy street in my neighborhood, the ANC quieted other sounds well enough to listen to music and podcasts or take a phone call, but these would be your last resort on, say, an airplane or a city bus. The earbuds also have decent voice isolation. A friend I called while on that walk said that while they could tell there were cars around, my voice came through loud and clear. Turning off ANC compromised the voice isolation, such that my friend could suddenly hear way more wind and car noise. Either way, though, they said I was clear and intelligible throughout the call. That's not always the case with my AirPods Pro 2, which tend to cut out a lot and require me to constantly repeat myself when outdoors on a phone call.
+
+I genuinely didn't expect to like the Belkin SoundForm ANC Wired Earbuds as much as I do. My AirPods Pro 3 are in no danger of being replaced by them, but during the testing period, they were my go-to, anytime I was playing my Nintendo Switch 2, and I found I even liked using them while sitting and working at my laptop. I'd still rather use wireless earbuds if I'm up and about, mostly because I find all the noise from the cable bumping or rubbing, well, anything at all is just too distracting.
+
+I liked the experience, which resembled a past time when I never had to mess with Bluetooth pairing and my earbuds worked with anything that output sound. It's not the exact same, since I couldn't use these with, say, my Sony PS Vita or my old Apple iPod nano, but most of the devices I use in my daily life have a USB-C port these days, and almost all work with Belkin's earbuds the way I want them to. The one exception was with my Switch 2 Pro Controller, which only outputs audio through its 3.5mm audio jack. I didn't actually expect it to do so with the USB-C port on top, but wouldn't it have been neat if it did?
+
+If you've been missing wired earbuds, or you want something that's close to a modern Bluetooth audio experience but without the tiny, easy-to-lose earbuds and no fear of running out of battery, these are an easy recommendation for less than $30. Belkin's SoundForm ANC Wired Earbuds (USB-C) will be available Oct. 17 on Belkin's website, and soon thereafter on Amazon.
+
+See SoundForm ANC Wired Earbuds (USB-C) at Amazon
+
+Explore more on these topics
+
+
+    Share this story
+  
+
+
+        Subscribe and interact with our community, get up to date with our customised Newsletters and much more.
+      
+
+
+
+
+          Maingear's new PC puts an extra premium on its pretty build, but it's a damn nice desktop besides.
+        
+
+
+          Bose has done it again. Sorry, I said BOSE HAS DONE IT AGAIN. Can you hear me?!
+        
+
+
+          Netgear's low-end Wi-Fi 7 mesh router is simple, so long as you aren't looking for tons of configuration options.
+        
+
+
+          The Pixel Watch finally catches up to the Apple Watch and surpasses Samsung's Galaxy Watch 8 in some ways.
+        
+
+
+          Want to keep your AirPods in while driving? iOS 26 has your reckless back.
+        
+
+
+          Google's new lower-cost wireless earbuds bring more value than before, but the competition offers even more at the same price or less.
+        
+
+©2025 GIZMODO USA LLC.
+
+All rights reserved.","{'href': 'https://gizmodo.com', 'title': 'Gizmodo'}","technology"
+"https://news.google.com/rss/search?q=site:tomshardware.com","Sapphire Radeon RX 9070 XT drops to $729 —The best all-around graphics card for enthusiasts hits an all-time low on Amazon","https://www.tomshardware.com/pc-components/gpus/sapphire-radeon-rx-9070-xt-drops-to-usd729-the-best-all-around-graphics-card-for-enthusiasts-from-amds-best-partner-is-at-an-all-time-low-on-amazon","Sun, 12 Oct 2025 15:04:02 GMT","
+
+Join the Red Team without making any compromises.
+
+
+When you purchase through links on our site, we may earn an affiliate commission. Here's how it works.
+
+
+AMD's RDNA 4 lineup of GPUs has been a heaven-sent for gamers seeking premium performance without breaking the bank, well, relatively. Just like Nvidia, even the Red Team's offerings have been plagued with stock issues, forcing people to buy even basic models at over MSRP. Fortunately, sales often alleviate such dilemmas, and we've hunted down an amazing deal for you today — Sapphire's top-tier RX 9070 XT can be yours for just $729, the cheapest it's ever been.
+
+If you don't insist on Nvidia's particular feature-set, AMD's RDNA 4 lineup is perhaps the best thing that happened to the GPU market. With 16GB of VRAM, plenty of cores, TPUs, ROPs, and AI accelerators, the RX 9070 XT is a no-brainer choice for GPUs in 2025. Now, arguably its best variant is available for a record-low.
+
+Yes, AMD set the MSRP for the 9070 XT at $599, but Sapphire's Nitro+ is a flagship variant that commands a premium. Sapphire originally priced the Nitro+ at $729, but it never actually sold at that rate; just three months ago, it hit its lowest price ever of $769, so this course correction has long been due. As for the GPU itself, it doesn't really need a sales pitch. The 9070 XT is our top pick for the best GPUs you can buy today. It performs almost identically to the RTX 5070 Ti overall while costing a lot less, and even matches the RTX 4070 Ti in ray tracing performance.
+
+Include a table / charts, if possible. Put text between the widget above and the album below.
+
+The RX 9070 XT is based on the Navi 48 GPU from AMD's RDNA 4 graphics IP, and it features 4,096 Stream Processors (cores). It has 16GB of GDDR6 VRAM, which is plenty for today and tomorrow, and this Nitro+ model boosts up to 3,060 MHz while staying extremely quiet. You also get a single recessed 12V-2x6 connector for power, which allows for easy and elegant cable routing. Sapphire has included a magnetic backplate, too, which is made out of metal, so it feels really high-quality, and there's an RGB header present on-board as well for lighting sync.
+
+In our review, we praised the card for its superior value proposition, but knocked a few points for Nvidia's comparatively stronger driver suite. If creature comforts like RTX HDR, multi-frame gen and Nvidia Broadcast don't really matter to you, AMD's offering is a clear winner, especially now that power consumption for multi-monitor setups has been fixed, and the card in general has a modest TDP of 330W. We haven't even mentioned FSR 4, which has worked extensively to close the gap with DLSS and only looks to get better with Redstone.
+
+ 
+
+
+
+
+Follow Tom's Hardware on Google News, or add us as a preferred source, to get our latest news, analysis, & reviews in your feeds.
+
+Get Tom's Hardware's best news and in-depth reviews, straight to your inbox.
+
+Hassam Nasir is a die-hard hardware enthusiast with years of experience as a tech editor and writer, focusing on detailed CPU comparisons and general hardware news. When he's not working, you'll find him bending tubes for his ever-evolving custom water-loop gaming rig or benchmarking the latest CPUs and GPUs just for fun.  
+
+
+Tom's Hardware is part of Future US Inc, an international media group and leading digital publisher. Visit our corporate site.
+
+
+©
+Future US, Inc. Full 7th Floor, 130 West 42nd Street,
+New York,
+NY 10036. ","{'href': 'https://www.tomshardware.com', 'title': ""Tom's Hardware""}","technology"
+"https://news.google.com/rss/search?q=club+world+cup","Zidane Confirms Desire to Coach France","https://www.moroccoworldnews.com/2025/10/263262/zidane-confirms-desire-to-coach-france/","Sun, 12 Oct 2025 18:49:52 GMT","
+
+Home > News > Zidane Confirms Desire to Coach France
+
+Zidane Confirms his Desire to Coach France 
+
+Rabat – Zinedine Zidane stated at the Trento Sport Festival that coaching the French national team is one of his top goals.  
+
+The former Real Madrid manager recently spoke about his time in football, his approach to coaching, and his passion for the sport, confirming his plan to return to management.
+
+The World Cup winner has been away from coaching for four years, but has expressed interest in coaching France. “I will definitely return,” he told the press, making it clear that managing the national team is something he wants.
+
+Zidane stepped down from Real Madrid after the 2020–21 season. During his time there, he won three straight Champions League titles from 2016 to 2018, making him the only manager to do so. He also won two UEFA Super Cups, two FIFA Club World Cups, and two LaLiga trophies.
+
+Zidane left Madrid in 2018, then came back in 2019 for a second spell. Across both periods, he won 172 of 263 matches, with his teams scoring 596 goals.
+
+With Didier Deschamps' departure from his role as France's coach after the 2026 World Cup. The former Real Madrid legend is seen as a top candidate to take over.
+
+Over the past four years, Zidane has rejected many offers from clubs like Bayern Munich and the US national team. Though he's ready to return, he hasn't decided where yet.
+
+When asked about coaching Juventus, he said, “I don't know. It hasn't happened in the past; I made other choices. Juventus is always close to my heart. They gave me so much when I first got there.”
+
+He continued: “In terms of the future, I don't know. My feeling is that I want to be able to coach the national team in the future, even though I don't mean right now. I would like to one day, but we'll see.”
+
+Zidane is considered to be one of the greatest footballers of all time with a decorated career. He won the FIFA World Cup in 1998 against Brazil after scoring twice in the final, and also helped France win the UEFA Euro in 2000. 
+
+At the club level, Zidan played for Juventus and Real Madrid. With Real Madrid, he won the UEFA Champions League in 2002 and scored in the final and the LaLiga title in 2003, before later retiring in 2006 with the club.  
+
+Your email address will not be published. Required fields are marked *
+
+Comment * 
+
+Name * 
+
+Email * 
+
+Website 
+
+ Save my name, email, and website in this browser for the next time I comment.
+
+
+Privacy Policy Agreement *
+ I agree to the Terms & Conditions and Privacy Policy.
+									
+
+ 
+
+
+
+Login to your account below
+
+
+
+
+
+
+
+
+
+
+
+Remember Me
+
+
+
+
+
+
+
+
+Fill the forms below to register
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Please enter your username or email address to reset your password.
+
+
+
+
+
+
+
+
+
+
+
+ All Right Reserved © 2025 Morocco World News .","{'href': 'https://www.moroccoworldnews.com', 'title': 'Morocco World News'}","soccer"
+"https://news.google.com/rss/search?q=fifa+world+cup","Egypt vs Guinea-Bissau LIVE Score Updates: halftime (1-0)","https://www.vavel.com/en-us/soccer/2025/10/12/1237290-egypt-vs-guinea-bissau-live-updates-2026-qualifiers.html","Sun, 12 Oct 2025 19:52:11 GMT","
+
+ADVERTISEMENT
+
+If you want to directly stream it: Streaming services and ESPN app and ESPN Select app.
+
+If you want to watch it on internet, VAVEL US is your best option for this Matchweek 10 of the 2026 FIFA World Cup Qualifiers Match!
+
+Egypt vs Guinea-Bissau live stream: Egypt vs Guinea-Bissau face each other this Sunday (12), at the Cairo International Stadium, at 3 pm ET, for the World Cup Qualifiers. The clash is valid for the 10th round of the competition, with all the moves and emotions in real time here on VAVEL.","{'href': 'https://www.vavel.com', 'title': 'VAVEL.com'}","soccer"
+"https://news.google.com/rss/search?q=site:goal.com","Tottenham boss Martin Ho cites Diego Simeone and Michael Jordan among surprise managerial influences","https://www.goal.com/en-us/lists/tottenham-boss-cites-diego-simeone-and-michael-jordan-among-surprise-managerial-influences/blt5d80a16a1a841f23","Sun, 12 Oct 2025 15:30:51 GMT","
+
+Tottenham manager Martin Ho has credited Atletico Madrid boss Diego Simeone and basketball legend Michael Jordan as being two of the greatest influences on his burgeoning coaching career. Widely regarded as one of the most promising coaches in women's football, the 35-year-old has opened up on the figures who have helped shape him, with several other sporting greats making his list.","{'href': 'https://www.goal.com', 'title': 'Goal.com'}","soccer"
+"https://news.google.com/rss/search?q=site:goal.com","‘Cristiano Ronaldo is the biggest brand in the world'","https://www.goal.com/en-gb/lists/cristiano-ronaldo-biggest-brand-world-football-first-billionaire-one-man-show-emulating-michael-jordan-lebron-james-tiger-woods/bltc42fc4e0e91e825e","Sun, 12 Oct 2025 17:30:16 GMT","
+
+Cristiano Ronaldo is “the biggest brand in the world”, according to the vice president of his former employers at Sporting, with the Portuguese GOAT becoming a “one-man show”. CR7 has become football's first billionaire, allowing him to emulate the achievements of legendary figures such as Michael Jordan, Tiger Woods, LeBron James and Tiger Woods. There is no sign of the evergreen Al-Nassr striker slowing down.","{'href': 'https://www.goal.com', 'title': 'Goal.com'}","soccer"
+"https://news.google.com/rss/search?q=site:atptour.com","Valentin Vacherot: First-Time Winner Spotlight","https://www.atptour.com/en/news/vacherot-first-time-winner-spotlight-shanghai-2025","Sun, 12 Oct 2025 13:22:28 GMT","
+
+Valentin Vacherot became the eighth first-time winner on the ATP Tour this season and the fifth player to capture his first title at an ATP Masters 1000 event when he triumphed on Sunday at the Rolex Shanghai Masters.
+
+Vacherot upset Holger Rune and Novak Djokovic en route to the final, before he beat cousin Arthur Rinderknech in the final. The 26-year-old is the first player from Monaco to win an ATP Tour singles title.
+
+ATPTour.com caught up with Vacherot to discuss the significance of his trophy run, journey to this point and much more…
+
+What does it mean to you to win your first ATP Tour title?
+I thought my first title could be an ATP 250. But to do it at a Masters 1000 here in Shanghai — my first time in China, first time in Shanghai — I think this country will have the biggest place in my heart. It means the world to me.
+
+Could you take a moment to acknowledge some of the key figures in your life and career who have helped you to reach this milestone?
+
+A lot of people: Firstly, my parents. I play tennis thanks to them. When I was just out of the hospital, when I was just a few days old, they would put me on the side of the court and play. My brother and coach Benjamin, who has been taking care of me since I got out of college in 2021. Bernard Balleret, Benjamin's dad, not my dad. He taught me how to play tennis from 10 to 18. The guys from the Monegasque Tennis Federation.
+
+I want to thank Arthur, too. He was at Texas A&M and I didn't think about going to another school, I just trusted him to join him there and get better. As you saw, we have gotten much, much better. Standing here today with him was surreal.
+
+This is a milestone moment in your career. How will you celebrate this victory?
+
+I have no idea. I can't wait to go back home. This is going to be an amazing moment for everyone. To see my friends and my families and my parents, I will see them as soon as a I can. The season is not over, I still have some work to do. Once everything is finished, I will celebrate with my friends.
+
+Playing your cousin in the final, the first time you played each other since an ITF World Tennis Tour event in 2018... How strange is it to compare that 2018 match to the experience you shared together today?
+
+He was starting his career in 2018, one of his first ITF tournaments after finishing college. I was still in college. I was just wanting to train and went to a few ITFs and ended up playing him in the quarter-finals at one. That was fun. 
+
+Little did we know that the next time we would play would be here. I did wonder a little if I came back up in the rankings, when would be the first time we would play each other and our family would have a big laugh and a huge moment. To be in a final at a Masters 1000 final is amazing.
+
+How would you describe yourself as a player, and how would you describe yourself off the court?
+
+Off the court I am really calm, really down to earth. I am not someone you will hear much in the room. Not someone who speaks a lot. It is the little side of me that has helped me a lot on court this week in the big moments. 
+
+On court I am pretty energetic, putting all my energy on the court, in training and matches.
+
+What do you consider to be your biggest passion outside of tennis and can you tell us a little bit about that interest?
+
+I really enjoy sitting on the couch and watching Netflix. [I] play video games and I am a huge sports fan, watch football. [I] watch tennis if there are some of my favourite players playing or my friends. Football or F1, big moments I am watching. I will go on the beach a bit, walk around with my girlfriend.
+
+ 
+
+© Copyright 1994 - 2024 ATP Tour, Inc. All Rights Reserved. No part of this site may be reproduced, stored in a retrieval system or transmitted in any way or by any means (including photocopying, recording or storing it in any medium by electronic means), without the written permission of ATP Tour, Inc.. Terms & Conditions | Privacy  | Community Social Media Policy | Modern Slavery Statement | Feedback  | Cookies  | Your Privacy Choices  ","{'href': 'https://www.atptour.com', 'title': 'ATP Tour'}","tennis"
+"https://news.google.com/rss/search?q=site:hollywoodreporter.com","Real ‘Hunting Wives' Cast Reacts to ‘SNL' Spoof: “My Life Is Made”","https://www.hollywoodreporter.com/tv/tv-news/real-hunting-wives-cast-react-snl-spoof-amy-poehler-1236398975/","Sun, 12 Oct 2025 17:58:31 GMT","
+
+Subscribe for full access to The Hollywood Reporter
+
+Subscribe for full access to The Hollywood Reporter
+
+The sketch featured Amy Poehler as Malin Akerman's Margo and Chloe Fineman as Brittany Snow's Sophie.
+
+
+							By 
+
+	Carly Thomas
+
+
+Associate Editor
+
+
+	The real cast of The Hunting Wives were more than excited to see the Saturday Night Live spoof of Netflix's hit raunchy crime drama.
+
+
+	During the Oct. 11 episode of the long-running NBC sketch comedy series, the prerecorded sketch saw host Amy Poehler portray Malin Akerman's Margo, while Chloe Fineman played Brittany Snow's Sophie.
+
+
+
+
+	“Omg @nbcsnl this is the best thing I've ever seen!!! Hunting wives Season 2 premiere (?!) Yessssss!!!!!” Akerman wrote on Instagram. Snow added in her own post, “It's just us & the beans. My life is made.”
+
+	
+
+
+
+
+
+
+
+
+
+
+			Related Video		
+
+
+
+
+
+
+
+	
+	
+		
+					Related Stories		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	TV
+			
+
+
+
+	
+		
+					Charli XCX Crashes Role Model's 'Saturday Night Live' Performance		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	TV
+			
+
+
+
+	
+		
+					Tina Fey and Seth Meyers Make Surprise 'Weekend Update' Appearance With Amy Poehler on 'SNL'		
+			
+
+
+
+
+
+
+
+
+
+	The SNL parody references several scenes and moments from the hit show, including Sophie's alcoholism, Margo teaching Sophie how to hunt in a “sensual” way and that thrilling game of Spin the Bottle. It also featured Ashley Padilla as Jaime Ray Newman's Callie and Sarah Sherman as Katie Lowes' Jill.
+
+
+	“Millions of Americans tuned in for season 1 of The Hunting Wives, the straight but lesbian, horny, Republican, murder drama. And now it's back for more,” a voiceover said at the beginning of the sketch (below). “We at Netflix have rushed to get you in record time, The Hunting Wives season two. All your faves are back and they're as naughty as ever. Thighs will be squeezed. Guns will be drawn.”
+
+
+The Hunting Wives follows Sophie, who moves to East Texas and gets drawn into wealthy socialite Margo's glamorous and dangerous world with her elite group of friends. But she finds herself entangled in a dark web of obsession, seduction and secrets when a local teenage girl turns up dead. The show has also been renewed for a second season.
+
+	
+
+
+
+
+
+
+
+
+
+
+
+	“HUNTING WIVES ON @nbcsnl!! We were DYING. Love you @amypoehler @sarahsquirm @chloeiscrazy @ash.padill @malinakerman @jaimeraynewman4real,” Lowes also wrote on Instagram. She also shared a video of herself, Akerman and Newman's real-time reactions to the SNL sketch.
+
+
+	At the end of the skit, Aubrey Plaza also made a surprise cameo as the “new new girl who joins the group,” after moving from California. However, the women end up pulling out their rifles when Plaza's character reveals that she's actually a lesbian.
+
+Sign up for THR news straight to your inbox every day
+
+Send us a tip using our anonymous form.","{'href': 'https://www.hollywoodreporter.com', 'title': 'The Hollywood Reporter'}","entertainment"
+"https://news.google.com/rss/search?q=site:entertainmentnow.com","Reese Witherspoon Shares Heartfelt Tribute to Diane Keaton","https://entertainmentnow.com/news/reese-witherspoon-diane-keaton-tribute/","Sun, 12 Oct 2025 13:03:23 GMT","
+
+Actress Reese Witherspoon fondly remembered the legendary Diane Keaton during an event in Los Angeles. Witherspoon recalled how important Keaton was in the very early days of her career.
+
+A post shared by Reese Witherspoon (@reesewitherspoon)
+
+Following the news of Diane Keaton's death on October 11 at age 79, Witherspoon took a couple of minutes to pay tribute to the actress at Hello Sunshine's Shine Away event in Los Angeles. 
+
+Witherspoon, who starred alongside Keaton in the 1991 movie “Wildflower,” shared on Instagram, “Diane Keaton changed the way we all saw women on screen — smart, funny, stylish, and completely original. I'm so grateful to have had her as a mentor.”
+
+“I just wanted to talk to you for one second because — and I'm gonna try and get through this without tearing up — but I don't know if you guys heard that Diane Keaton passed today,” Witherspoon said on stage at the event.
+
+She continued, “I had to take a second to just really think about it because when I was 15-years-old, Diane was really important to me. She was one of my first mentors in this business. I was 15 years old and I was from Nashville, Tennessee, and I didn't know anybody.” 
+
+Witherspoon recalled one of her early movie auditions, where she had a “big country accent.”
+
+“And she she goes, ‘Who are you?'” Witherspoon noted.
+
+“I said, ‘I'm Reese Witherspoon, I'm from Nashville, Tennessee.' And she said, ‘Are you making that [accent] up?' And I said, ‘No, ma'am, I'm from Nashville, Tennessee, and I'm here and I'd love to be in your movie.' And she was like, ‘Well you're hired. You're hired today, tomorrow, and the next day. I don't know who you are, but I am so excited to have you,'” the actress recalled.
+
+Witherspoon shared just how meaningful it was to work with Keaton, who also directed the movie. “That was one of the most important summers of my childhood because she really took the time to pull me aside and say: ‘Stand up straight, okay? I want you to have good posture. If you're going to be an actress, you've got to work on your posture, okay?'” the actress shared.
+
+Witherspoon noted, “But the thing that I just loved about her is she was such an original. And if you just close your mind and think of Diane Keaton … I guarantee you, from ‘Annie Hall' to ‘The Godfather,' to ‘Something's Gotta Give,' she is just incredible and indelible and just a truly original person.”
+
+She added, “So for Diane, watch one of her movies and wear like a really cool, interesting outfit, black and white, take a cool picture, and just live your dream. Just be your unique, interesting self. I think Diane would be really happy. So rest in peace Diane.”
+
+Witherspoon spoke of the experience during the American Film Institute's AFI Life Achievement Award: A Tribute to Diane Keaton in 2017. “She directed me in my second film ever … I was such a novice,” she recalled.
+
+“She was just so clear,” Witherspoon said of Keaton's directing talent. “Because she has what in this business we call ‘the eye.' And that is the genius of Diane.”
+
+She added, “You are the only you there is, and she taught me to always be an original, just like her. And for that, Diane, I cannot thank you enough.”
+
+Comment
+
+ Save my name, email, and website in this browser for the next time I comment.
+
+ 
+
+
+
+
+
+Δ
+
+Previous
+
+Next
+
+
+
+
+Like EntertainmentNow?
+
+
+
+Go here and check the boxnext to EntertainmentNow
+
+
+About
+
+Contact US
+
+Privacy Policy
+
+Terms Of Service
+
+Editorial Guidelines
+
+Sitemap
+
+Copyright © 2025 Heavy, Inc. All rights reserved. Powered by WordPress VIP
+
+
+
+","{'href': 'https://entertainmentnow.com', 'title': 'EntertainmentNow'}","entertainment"
+"https://news.google.com/rss/search?q=site:entertainmentnow.com","Woody Allen's Ex Mia Farrow Shares Loving Tribute for Diane Keaton","https://entertainmentnow.com/news/woody-allen-ex-mia-farrow-tribute-diane-keaton/","Sun, 12 Oct 2025 13:29:47 GMT","
+
+Mia Farrow is remembering Diane Keaton with love and admiration, as the two women are forever linked through their shared history with filmmaker Woody Allen. The “Rosemary's Baby” star shared a touching message for her longtime friend on Instagram following the news of Keaton's death at 79.
+
+“She was an absolutely wonderful actress and a rare and fascinating person,” Farrow, 80, wrote. “Thoughts with her children and sisters. Rest in peace, Diane.”
+
+A post shared by Mia Farrow (@realmiafarrow)
+
+A spokesperson for Keaton confirmed that the beloved actress breathed her last in California on Saturday, October 11, and requested privacy on behalf of her family. Keaton and acclaimed filmmaker Woody Allen were romantically involved in the 1970s and shared a deep creative bond that shaped both of their careers. 
+
+The duo collaborated on several beloved films, including “Love and Death,” “Sleeper,” “Manhattan,” and “Play It Again, Sam.” In 1977, Keaton won the Academy Award for Best Actress for her performance in Allen's “Annie Hall.”
+
+Although their romance eventually ended, Keaton and Allen remained close friends and collaborators for decades. She later dated fellow Hollywood legends Al Pacino and Warren Beatty but never married, often saying that independence suited her best.
+
+After news of Keaton's passing, Allen was reportedly heartbroken. A source told People that the 89-year-old director was “extremely distraught and surprised and upset,” adding that her death made him reflect on his own mortality. “He appreciated her very much,” the insider said. “They had remained friends, and he was surprised by the news. Nobody seemed to know about her health.”
+
+Farrow, who also worked closely with Allen throughout the 1980s, expressed her admiration for Keaton once more in her post, highlighting the mutual respect that remained between them. Despite their different paths, Farrow and Keaton shared an unspoken connection that is reflected in her tribute.
+
+A post shared by Goldie Hawn (@goldiehawn)
+
+Keaton's death has sparked an outpouring of tributes from across Hollywood. Goldie Hawn, her “First Wives Club” co-star, shared an emotional message on Instagram, writing, “Diane, we aren't ready to lose you. You've left us with a trail of fairy dust, filled with particles of light and memories beyond imagination. You never liked praise, but there was and will be no one like you.”
+
+A post shared by Jane Fonda (@janefonda)
+
+Jane Fonda, Keaton's “Book Club” co-star, echoed that sentiment, calling her “a spark of life and light.” “She was always giggling at her own foibles, being limitlessly creative in her acting, her wardrobe, her books, her homes, and her world view,” Fonda wrote. “Unique is what she was.”
+
+Over nearly six decades in Hollywood, Keaton built one of the most admired careers in film history. She brought authenticity, humor, and heart to roles in “The Godfather,” “Annie Hall,” “Something's Gotta Give,” and “The Family Stone.” Her final film, “Summer Camp,” released in 2024, marked the close of a remarkable journey.
+
+As tributes continue to pour in, Keaton is being remembered not only for her iconic performances but for her warmth, originality, and courage to live life her own way. “She was one of a kind,” Farrow's tribute reminded the world. “A rare and fascinating person.”
+
+The Oscar-winning actress is survived by her two children, Dexter and Duke, whom she adopted in her 50s.
+
+Comment
+
+ Save my name, email, and website in this browser for the next time I comment.
+
+ 
+
+
+
+
+
+Δ
+
+Previous
+
+Next
+
+
+
+
+Like EntertainmentNow?
+
+
+
+Go here and check the boxnext to EntertainmentNow
+
+
+About
+
+Contact US
+
+Privacy Policy
+
+Terms Of Service
+
+Editorial Guidelines
+
+Sitemap
+
+Copyright © 2025 Heavy, Inc. All rights reserved. Powered by WordPress VIP
+
+
+
+","{'href': 'https://entertainmentnow.com', 'title': 'EntertainmentNow'}","entertainment"
+"https://news.google.com/rss/search?q=site:rollingstone.com","J.D. Vance Tried to Evade Journalists' Questions. It Did Not Go Well","https://www.rollingstone.com/politics/politics-news/jd-vance-homan-cdc-layoffs-pritzker-1235445756/","Sun, 12 Oct 2025 18:21:31 GMT","
+
+
+							By 
+
+	Peter Wade
+
+
+
+J.D. Vance struggled to defend the Trump administration's decisions when journalists asked him basic questions during a round of TV appearances, with one host getting so frustrated with Vance's word salad, he cut the interview short in the middle of one of the vice president's sentences.
+
+
+	Vance appeared on several Sunday morning shows. During an interview with George Stephanopoulos on ABC's This Week, the host asked Vance about Trump Border Czar Tom Homan, whom the FBI says accepted a $50,000 bag of cash from an undercover agent in a bribery investigation near the end of the Biden administration. Homan allegedly pledged to grant government contracts related to immigration in return for the money.
+
+
+	“The White House border czar, Tom Homan, was recorded on an FBI surveillance tape in September 2024 accepting $50,000 in cash. Did he keep that money or give it back?” Stephanopoulos asked Vance.
+
+
+	Vance tried to spin the story as a “ridiculous smear” and painted Homan as a target “because he's doing the job of enforcing the law.” 
+
+	
+
+
+
+
+
+
+
+
+
+
+			Popular on Rolling Stone		
+
+
+
+
+
+
+STEPHANOPOULOS: I didn't insinuate anything. I asked you whether Tom Homan accepted $50k as was heard on an audio tape recorded by the FBI in September 2024. You did not answer the question. Thank you for your time.VANCE: No, George, I sai–STEPHANOPOULOS: We'll be right back
+
+
+	Homan has denied the allegations. “Look, I did nothing criminal. I did nothing illegal,” he said during a Fox News interview, but he did not explicitly deny accepting the cash. The Trump DOJ also concluded no criminal wrongdoing took place, but when Democrats on the Senate Judiciary Committee grilled Attorney General Pam Bondi about what happened to the cash, she refused to answer. 
+
+	
+
+
+
+
+
+
+
+
+
+
+
+	“He was recorded on an audiotape in September of 2024, an FBI surveillance tape, accepting $50,000 in cash. Did he keep that money?” Stephanopoulos pressed Vance.
+
+
+	“Accepting $50,000 for doing what, George?” Vance said. “I am not even sure I understand the question. Is it illegal to take a payment for doing services? The FBI has not prosecuted him. I have never seen any evidence that he's engaged in criminal wrongdoing.”
+
+
+	Vance went on to call the line of questioning a “left-wing rabbit hole.” After that comment, Stephanopoulos quickly ended the interview.
+
+
+
+
+
+	
+		Editor's picks
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					The 250 Greatest Albums of the 21st Century So Far		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					The 100 Best TV Episodes of All Time		
+	
+
+
+
+
+
+
+
+
+
+	“It's not a weird left-wing rabbit hole. I didn't insinuate anything. I asked you whether Tom Homan accepted $50,000, as was heard on an audiotape recorded by the FBI in September 2024, and you did not answer the question. Thank you for your time this morning.”
+
+
+	“No, George, I said that I don't —” Vance started to say, but the show cut away to a commercial break.
+
+
+	Earlier in the interview, Stephanopoulos asked Vance whether he agreed with President Donald Trump‘s assertion that Illinois Gov. J.B. Pritzker “should be in jail” for “failing to protect” ICE officers in his state.
+
+
+	“I've seen the law. And when you have a group of people where the police call off the safety for ICE officials, I've understood that, and I've read it today in numerous journals, that that's illegal,” Trump said.
+
+
+	“President Trump has said that he should be in jail. Do you think Governor Pritzker has committed a crime?” Stephanopoulos asked Vance.
+
+
+	Vance tried to dodge the question by saying that Pritzker “has certainly failed to keep the people of Illinois safe.” (Meanwhile, violent crime in Chicago in recent months hit its lowest point in four decades.)
+
+
+	“I asked if you agree with President Trump that Governor Pritzker has committed a crime,” Stephanopoulos responded. But Vance kept dodging the question.
+
+
+
+
+
+	
+		Related Content
+	
+	
+
+
+
+
+
+
+	
+	
+		
+					Her Kids Are U.S. Citizens. Trump's Admin Disappeared Them Anyway		
+	
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					Nobel Peace Prize Goes to María Corina Machado, Despite Trump's Campaign		
+	
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					Trump Is Using the Shutdown to Supercharge His War on Equity		
+	
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					Donald Trump Calls Bad Bunny's Super Bowl Halftime Booking ‘Ridiculous': ‘I Never Heard of Him'		
+	
+
+
+
+
+
+
+
+
+STEPHANOPOULOS: Trump said Pritzker should be in jail. Do you think he has committed a crime?VANCE: I think Pritzker has certainly failed to keep the people of Illinois safeS: It's a yes or no questionV: I certainly think he has violated his fundamental oath. That seems pretty criminal to me
+
+
+	“George, you're going to keep on asking this question. I'm going to keep on telling you that Governor Pritzker failed to do his job,” Vance said. “He should suffer some consequences. Whether he's violated a crime, ultimately, I would leave to the courts. But I certainly think that he has violated his fundamental oath of office. That seems pretty criminal to me. I'd leave it to a judge and jury to decide whether he's actually violated the crime.”
+
+
+	Over on NBC's Meet the Press, Vance faced questions about recent layoffs of more than 1,000 federal employees at the Centers for Disease Control and Prevention (CDC), including those who are leading the nation's response to measles and workers who would respond to an Ebola outbreak. (Some of those layoffs will be reversed, the administration announced later, blaming a coding error for the wrongful terminations.)
+
+	
+
+
+
+
+
+
+
+
+
+
+
+	“During the 2019 shutdown, under the first Trump administration, which lasted 35 days, no federal workers were laid off. Why are these firings necessary?” host Kirsten Welker asked the vice president.
+
+WELKER: During the 2019 shutdown when Trump was president, no federal workers were laid off. Why are these firings necessary?VANCE: Who do we care more about- federal bureaucrats or the troops getting the payment they need?WELKER: But layoffs are a priority?VANCE: They have forced us to choose
+
+
+	“We have to lay off some federal workers in the midst of this shutdown to preserve the essential benefits for the American people that the government does provide,” Vance said.
+
+
+	Except usually during a shutdown, including the last government shutdown under the first Trump administration, federal employees are furloughed, meaning their work and compensation temporarily stop until the shutdown ends. That's very different from layoffs.
+
+
+	Vance tried to say that the layoffs were done “to preserve the essential benefits for the American people that the government does provide.” Except how is that the case? If the workers would not be paid during the shutdown anyway, what immediate cost savings would layoffs bring?
+
+
+
+
+
+	
+		Trending Stories
+	
+	
+
+
+
+
+
+
+	
+	
+		
+					Steve Martin, Jane Fonda, Bette Midler, More Stars Pay Tribute to Diane Keaton		
+	
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					Lostprophets Singer Ian Watkins Dead at 48 After Prison Attack		
+	
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					What ‘Monster: The Ed Gein Story' Gets Right and Wrong		
+	
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					'SNL' Weekend Update Roasts RFK Jr.'s Newest Conspiracy, Compares Kristi Noem to Jigsaw		
+	
+
+
+
+
+
+
+
+
+
+	Vance even tried to blame Senate Minority Leader Chuck Schumer for the erroneous firings, despite Schumer having no authority over federal worker layoffs. “The government shutdown inevitably leads to some chaos,” Vance said. “We are figuring out how to take money from some areas and give it to other areas. That chaos is because Schumer and the far-left Democrats shut down the government.”
+
+
+	According to a recent Ipsos poll, Americans mostly — by a slim margin — blame congressional Republicans for the shutdown (67 percent), followed by Democrats (63 percent) and Trump (63 percent). 
+
+We want to hear it. Send us a tip using our anonymous form.
+
+Rolling Stone is a part of Penske Media Corporation. © 2025 Rolling Stone, LLC. All rights reserved.","{'href': 'https://www.rollingstone.com', 'title': 'Rolling Stone'}","entertainment"
+"https://news.google.com/rss/search?q=site:rollingstone.com","MAGA's Unhinged Reaction to Bad Bunny at the Super Bowl: What's Happened So Far","https://www.rollingstone.com/music/music-features/bad-bunny-super-bowl-controversy-turning-point-trump-1235443824/","Sun, 12 Oct 2025 18:20:50 GMT","
+
+
+							By 
+
+	Rolling Stone
+
+
+
+	When news hit that Bad Bunny would headline the 2026 Super Bowl Halftime, his fans rejoiced. The choice made sense given that the Puerto Rican superstar is among the most streamed artists on the planet, and the performance is also set to make history: Because Bad Bunny doesn't sing in English, this will be the first halftime show in Spanish.
+
+
+	Bad Bunny took pride in that fact. “What I'm feeling goes beyond myself,” he said in a statement on the day of the announcement. “It's for those who came before me and ran countless yards so I could come in and score a touchdown … this is for my people, my culture, and our history. Ve y dile a tu abuela, que seremos el HALFTIME SHOW DEL SUPER BOWL.”
+
+
+	However, the right had an entirely different reaction. Conservative commentators immediately attacked the decision of Roc Nation, the NFL, and Apple Music and launched into a full meltdown on social media. They latched onto the fact that Bad Bunny would not be singing in English and grumbled about his political and immigration stances. (He has been outspoken about Puerto Rican independence and has called out Trump's immigration policies, saying in a recent interview that he decided not to tour in the U.S. because of fears that ICE would harass his Latino fanbase.) “The NFL is self-destructing year after year,” MAGA YouTuber Benny Johnson wrote on X.
+
+	
+
+
+
+
+
+
+
+
+
+
+			Popular on Rolling Stone		
+
+
+
+
+
+
+
+	Their protests got more dramatic as Trump advisors, and even Trump himself, weighed in. Trump called the decision to have Bad Bunny headline “absolutely ridiculous,” while the organization Turning Point USA went as far as setting up a “counterprogram” called “The All-American Halftime Show” as an alternative to the star's performance. Meanwhile, Bad Bunny has commented little, save for an SNL monologue poking fun at the situation.
+
+	
+
+
+
+
+
+
+
+
+
+
+
+	Here's everything that's happened so far.
+
+
+	Bad Bunny has often been outspoken when it comes to politics in Puerto Rico, but he did use the video for “Nuevayol” to speak up against the immigration policies of the current administration. Toward the end of the video, a voice that sounds a lot like Donald Trump's bellows out of a Seventies radio and says the following: “I made a mistake. I want to apologize to the immigrants in America. I mean the United States. I know America is the whole continent. I want to say that this country is nothing without the immigrants. This country is nothing without Mexicans, Dominicans, Puerto Ricans, Colombians, Venezuelans, Cubans.”
+
+
+
+
+
+	
+		Editor's picks
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					The 250 Greatest Albums of the 21st Century So Far		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					The 100 Best TV Episodes of All Time		
+	
+
+
+
+
+
+
+
+
+
+	Speaking to i-D, Bad Bunny said he would be skipping the U.S. during his DeBÍ TiRAR MáS FOToS tour over concerns that large gatherings of Latinos in the U.S. could be magnets for the Trump administration's anti-immigration efforts. “There was the issue of — like, fucking ICE could be outside [my concert]. And it's something that we were talking about and very concerned about,” he said of the decision. 
+
+
+	After much speculation over who would play the 2026 Super Bowl halftime show, Bad Bunny was announced as the headliner. The Puerto Rican star shared the news in an Instagram post during the matchup between the Dallas Cowboys and Green Bay Packers. In a short video, Bad Bunny's hit song “Callaita” plays as he sits atop a goal post on the shore of a Puerto Rican beach, wearing a pava hat. That same night, he went on X and seemed to reference his past comments about touring in the U.S. “After speaking with my team, I think I'll do just one show in the United States,” he wrote in Spanish.
+
+
+	After the announcement, several right-wing figures went on social media to blast the decision. A big source of their displeasure seemed to be that Bad Bunny has no songs in English, making this the first Super Bowl Halftime that'll be in Spanish. “Massive Trump hater. Anti-ICE activist. No songs in English,” MAGA YouTuber Benny Johnson wrote on X.
+
+
+
+
+
+	
+		Related Content
+	
+	
+
+
+
+
+
+
+	
+	
+		
+					Her Kids Are U.S. Citizens. Trump's Admin Disappeared Them Anyway		
+	
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					Nobel Peace Prize Goes to María Corina Machado, Despite Trump's Campaign		
+	
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					Trump Is Using the Shutdown to Supercharge His War on Equity		
+	
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					Donald Trump Calls Bad Bunny's Super Bowl Halftime Booking ‘Ridiculous': ‘I Never Heard of Him'		
+	
+
+
+
+
+
+
+
+
+
+	Conservative commentator Greg Price griped that “the NFL chose Bad Bunny to perform the Super Bowl halftime show despite the fact that he recently said he wouldn't perform in the continental United States again because ICE is deporting illegal aliens.” 
+
+	
+
+
+
+
+
+
+
+
+
+
+
+Donald Trump's former campaign manager Corey Lewandowski went on Benny Johnson's “The Benny Show,” where the host asked him if “ICE will have enforcement at the Super Bowl for the Bad Bunny Super Bowl halftime.” 
+
+
+	Lewandowski took the moment to make it about immigration and the administration's strict policies. “We will find you, we will apprehend you, we will put you in a detention facility, and we will deport you,” he threatened. “So know that is a very real situation under this administration, which is completely contrary to how it used to be.”
+
+
+Kristi Noem, the secretary of homeland security, backed Lewandowski at a later appearance on “The Benny Show,” saying ICE will be “all over” the 2026 Super Bowl.“I have the responsibility for making sure everybody goes to the Super Bowl, has the opportunity to enjoy it and to leave, and that's what America's about,” Noem said in the clip. “So yeah, we'll be all over that place. We're going to enforce the law.” 
+
+
+	Bad Bunny hosted SNL on Oct. 4 and took the opportunity to poke fun at the political reaction he received over his Super Bowl announcement. He joked that “everyone is happy” about his future gig, “even Fox News.” After, the show spliced together several right-wing hosts on the right-wing network combining to say, “Bad Bunny. Is. My favorite. Musician. And he should be the next. President.”
+
+
+	“I'm very excited to be doing the Super Bowl, and I know that people all around the world who love my music are also happy,” he said before continuing in Spanish. “… Especially all the Latinos and Latinas in the whole world, and here in the United States, all the people who have worked to open doors, more than I have achieved, who have achieved everything, demonstrating that our way, our carrying of this country, no one can ever remove nor erase.”
+
+
+	A few days after Bad Bunny's SNL appearance, Trump went on Newsmax's Greg Kelly Reports, where he was asked about the Puerto Rican star's Super Bowl Halftime Show.
+
+
+	Trump took a few shots and emphasized that he doesn't know Bad Bunny. “I never heard of him. I don't know who he is,” Trump said. “I don't know why they're doing it, it's crazy, and then they blame it on some promoter that they hired to pick up entertainment. I think it's absolutely ridiculous.”
+
+
+	Meanwhile, other conservative commentators seemed to be watching Bad Bunny's every move. When video surfaced of him sitting down during “God Bless America” at a Yankees game, they spiraled again. MAGA figure Tomi Lahren posted on X: “Bad Bunny appears to stay seated during ‘God Bless America' at Yankee Stadium… Yeah, because he has a clear disdain for America. He's an -sshole.”
+
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+		Trending Stories
+	
+	
+
+
+
+
+
+
+	
+	
+		
+					Steve Martin, Jane Fonda, Bette Midler, More Stars Pay Tribute to Diane Keaton		
+	
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					Lostprophets Singer Ian Watkins Dead at 48 After Prison Attack		
+	
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					What ‘Monster: The Ed Gein Story' Gets Right and Wrong		
+	
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					'SNL' Weekend Update Roasts RFK Jr.'s Newest Conspiracy, Compares Kristi Noem to Jigsaw		
+	
+
+
+
+
+
+
+
+
+
+	Turning Point USA, the conservative group founded by the late Charlie Kirk, announced that it would put together a counterprogram during Bad Bunny's performance, calling it “The All-American Halftime Show” to celebrate “faith, family, and freedom.”
+
+
+	On their website, the organization included a contact form to give their followers a chance to request music and artists. They offered a few options, including worship music, country, and “Anything in English.”
+
+
+Contributors: Maya Georgi, Julyssa Lopez, Charisma Madarang, Nikki McCann Ramirez
+
+We want to hear it. Send us a tip using our anonymous form.
+
+Rolling Stone is a part of Penske Media Corporation. © 2025 Rolling Stone, LLC. All rights reserved.","{'href': 'https://www.rollingstone.com', 'title': 'Rolling Stone'}","entertainment"
+"https://news.google.com/rss/search?q=site:rollingstone.com","Republicans Aren't Just Gutting Health Care. They're Taking Your Sick Leave, Too","https://www.rollingstone.com/politics/politics-features/paid-sick-leave-under-attack-republican-states-1235445210/","Sun, 12 Oct 2025 13:00:00 GMT","
+
+
+							By 
+
+	Nikki McCann Ramirez
+
+
+
+	Americans are a sick people. Among their economic peers they expect to live shorter lives, experience higher rates of chronic disease, and spend more on their care and upkeep. The baseline necessities for maintaining a healthy human body over the course of a lifetime are often a luxury. Nevertheless, one in five Americans lack the ability to take a paid sick day from work if they fall ill. 
+
+
+	Health care — from ease of access to programs like Medicaid to a woman's ability to access abortion care — is governed by a patchwork of increasingly complex state-level laws and policies. Sick leave is no different. 
+
+
+	Across the private sector and state and local governments, around 26.5 million employees do not have access to paid sick time, according to the Bureau of Labor Statistics released this year. The disparity is concentrated among low-income, part-time, and service industry workers, only about half of whom have access to paid sick days. Among the lowest 10 percent of earners, only 41 percent have paid sick leave, while 94 percent of the top 25 percent of earners have it. 
+
+	
+
+
+
+
+
+
+
+
+
+
+
+	There is no federal law guaranteeing what, in most developed countries, is an uncontested, uncontroversial workers' right. In fact, even as voters push to codify sick leave policies into local law, this year alone at least three Republican-controlled states are attempting to roll back leave provisions. 
+
+
+	In Missouri, voters overwhelmingly approved a referendum guaranteeing statewide paid sick leave, and an increase to the state's minimum wage. Shortly after the mandate went into effect, Republicans in the legislature repealed it outright. In Nebraska, Republicans tacked on an amendment to a similar law — also passed by referendum — that significantly narrowed the pool of businesses covered, and which employees were entitled to the benefit. The amendment also stripped employees of the right to sue over the enforcement of the law. In Alaska, the state's Republican administration worked to limit the scope of its own ballot-approved sick leave law via regulations instituted by the Alaska Department of Labor & Workforce Development. 
+
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+		Editor's picks
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					The 250 Greatest Albums of the 21st Century So Far		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					The 100 Best TV Episodes of All Time		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					The 500 Greatest Albums of All Time		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					100 Best Movies of the 21st Century		
+	
+
+
+
+
+
+
+
+
+
+	“Fifty-seven percent of the people voted for it,” Missouri Senate Minority Leader Doug Beck, a Democrat, tells Rolling Stone of the state's referendum. “One-hundred and nine out of 163 representative districts, which would be a super majority, voted for it. Twenty out of 34 Senate seats voted for it, and six out of eight congressional seats voted for — so it's pretty much a mandate.. Republicans overturned that.” 
+
+
+	Beck says Democrats tried to negotiate a way to preserve coverage for as many Missourians as possible, even if it meant limiting what businesses would be subject to the law, only to have the rug pulled out from them at the last moment. 
+
+
+	“We got there and … they reneged on their deal in the middle of the middle of the night,” he adds. 
+
+
+	In an era where politics tend to split the American population down the middle, support for the right to paid sick leave, and other forms of paid medical leave, is an issue that has astronomically high support across the United States. The lawmakers and advocates who spoke to Rolling Stone agreed on one thing: It's not voters who are pushing for the weakening of leave policies, but business interests and corporate lobbies. 
+
+
+	“The most vocal group against this was the restaurant industry, which, you know, relies on underpaying workers,” Beck said, adding that the Missouri Chamber of Commerce had also lobbied heavily against the legislation. 
+
+
+	Dawn Huckelbridge, founding director of the advocacy group Paid Leave for All, has been fighting for a federal law guaranteeing paid sick leave since 2019. “There's been a bill around [in Congress] forever that has never gotten a vote,” she tells Rolling Stone. “I know in the case of paid leave, paid family medical leave, it was largely the Chamber of Commerce that was a big lobbying force against it.” The general argument — similarly to arguments against increases in the minimum wage and other basic guarantees for working class people — is that the cost of a few sick days a year would place undue burdens on employers and small businesses. 
+
+
+
+
+
+	
+		Related Content
+	
+	
+
+
+
+
+
+
+	
+	
+		
+					Dem Says Mike Johnson Is Delaying Her Swearing-In to Prevent Epstein Vote		
+	
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					Dem Senator Introduces Bill to End Profiteering by Trump and Lawmakers		
+	
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					Ousted CDC Director Says RFK Jr. Tried to Bar Her From Speaking to Lawmakers		
+	
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					Tejano Icon Bobby Pulido Is Officially Running for Congress: South Texas Is ‘In My DNA'		
+	
+
+
+
+
+
+
+
+
+
+	“In states that have passed it, the vast majority of employers do support it,” Huckelbridge adds, pointing to data indicating that paid sick leave policies actually save businesses billions of dollars in the long run, and improves health outcomes for individuals and families. “There's piles of data that show this is good for business, this is good for public health, and yet in this country, we have refused to take action.” 
+
+	
+
+
+
+
+
+
+
+
+
+
+
+	The U.S. had a brief moment of clarity during the Covid-19 pandemic, when the spread of a deadly, easily transmissible virus sent the national health apparatus into a crisis. During the pandemic, the federal government passed the nation's first ever federal paid sick days and paid family leave policies — the Families First Coronavirus Response Act (FFCRA) — which was allowed to expire in 2023. 
+
+
+	Subsequent research found that the national policy prevented tens of thousands of daily coronavirus cases across states that previously lacked paid sick leave policies. 
+
+
+	“[Businesses] were fine with it. The sky didn't fall down. Business was fine,” Huckelbridge says “I think that the inaction on common sense bipartisan things like paid leave goes hand in hand with the gutting and the undermining of the little social safety net that we have.” 
+
+
+	The state-level tug of war over the expansion of paid medical leave policies is taking place amid a federal bulldozing of the nation's primary health systems. This summer, Republicans passed the largest cuts to Medicaid in the program's history, with the knowledge that over 10 million people are expected to lose access to their insurance over the next few years. The cuts are expected to decimate rural hospitals and community health clinics — which often rely on Medicaid funding to stay afloat and may be the only connection individuals have to medical care. 
+
+
+	The federal government is currently shut down after Republicans refused to extend tax credits for Affordable Care Act subsidies, which if allowed to expire would skyrocket the health care premiums of millions of Americans who purchase health care through the public marketplace. 
+
+
+	Rep. Rosa DeLauro (D-Conn.) is the House sponsor of the Healthy Families Act, which would allow workers in businesses with 15 or more employees to earn up to seven job-protected paid sick days each year. The act has been languishing in Congress without any advancement. As the Capitol sits in tense silence amid negotiations to reopen the government, American's health is at the forefront of her concerns. 
+
+
+	“Take House members, Senate members. If somebody in their family gets sick, if they get sick, they go get well. … You take as much time as you need. You don't even ask. You just do it. Your kid is sick. You go home and you take care of your kids,” she tells Rolling Stone. “It's just shortsightedness. It defies imagination that we would not think that people shouldn't have to choose between caring for their families, for themselves, or keeping their jobs.” 
+
+	
+
+
+
+
+
+
+
+
+
+
+
+	“Everything [Republicans] are doing in the health care realm is making people more sick and people will die,” she adds.
+
+
+	For health care advocates, the absence of paid leave policies are part of an intricate web of systemic failures that lead to worse outcomes for patients, and higher public expenditures for their care. Those without leave policies are less likely to seek prompt care for illnesses. Working sick gets coworkers sick. Couple that with a lack of reliable access to health insurance — or insurance that still bleeds the patients dry — and quality care facilities, and it's not hard to see why the U.S. lags behind its peers in practically every health metric. 
+
+
+
+
+
+	
+		Trending Stories
+	
+	
+
+
+
+
+
+
+	
+	
+		
+					Steve Martin, Jane Fonda, Bette Midler, More Stars Pay Tribute to Diane Keaton		
+	
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					Lostprophets Singer Ian Watkins Dead at 48 After Prison Attack		
+	
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					What ‘Monster: The Ed Gein Story' Gets Right and Wrong		
+	
+
+
+
+
+
+
+
+
+
+	
+	
+		
+					'SNL' Weekend Update Roasts RFK Jr.'s Newest Conspiracy, Compares Kristi Noem to Jigsaw		
+	
+
+
+
+
+
+
+
+
+
+	“The big context is that our health care system is broken, it is rigged against working people, and it has been that way for a long time,” Sen. Tina Smith (D-Minn.) tells Rolling Stone. “During the pandemic there was a moment of clarity, policymakers said, ‘We can't let people just we can't let people's lives fall apart,' and so we put into place sort of these pretty common-sense steps to help people. But of course, now we're seeing a huge backsliding as the Republicans are trying to unwind all of that.” 
+
+
+	Smith adds: “No wonder people in this country are pissed off when we can't do something that is so clearly in the best interest of the majority of Americans.”
+
+We want to hear it. Send us a tip using our anonymous form.
+
+Rolling Stone is a part of Penske Media Corporation. © 2025 Rolling Stone, LLC. All rights reserved.","{'href': 'https://www.rollingstone.com', 'title': 'Rolling Stone'}","entertainment"
+"https://news.google.com/rss/search?q=paranormal","Ed and Lorraine Warren's Grandson Shares Honest Thoughts on Matt Rife Buying Annabelle Doll","https://people.com/ed-lorraine-warrens-grandson-shares-beliefs-about-matt-rife-buying-the-annabelle-doll-11812305","Sun, 12 Oct 2025 18:00:00 GMT","
+
+Chris McKinnell warns that some people getting involved in the paranormal space might not understand what they're getting into
+
+Reel Appreciation/YouTube; Matt Rife/Instagram
+
+ Ed and Lorraine Warren's grandson thinks people are being flippant with some of his grandparents' most notorious artifacts.
+
+
+ Chris McKinnell, son of the Warrens' daughter, Judy Spera, appeared on the Reel Appreciation podcast. There, hosts Maria Elizabeth Darnell and David Clair-Bennett asked about his reaction to comedian Matt Rife revealing he “officially purchased” the Warren home and museum, which included the famed paranormal investigators' “entire haunted collection"" along with the infamous Annabelle doll.
+
+
+ ""I'd never even heard of him until he bought it. I didn't know who he was,"" McKinnell began.
+
+
+ The 61-year-old noted that he ""was far more concerned"" that his ""mother's husband,"" Tony Spera, was ""allowing"" paranormal objects, such as the doll, ""out on tour.""
+
+
+ Together, Judy and Tony run the New England Society for Psychic Research (NESPR), which was founded by the Warrens, and often hold paranormal conventions.
+
+
+ McKinnell called Tony ""an entertainer,"" adding that a character playing his stepfather is going to be in the next Conjuring movie.
+
+
+ ""I was willing to allow him to do that and just live his moment, for my mother's sake,"" he added. ""But then he started wanting to bring this thing on tour, and that to me was so dangerous, such a betrayal of everything my grandparents spent their lives doing.""
+
+
+ McKinnell condemned what he saw as attempts to commodify the Warrens' legacy, pointing out that some people getting involved in the paranormal space might not understand what they're getting into.
+
+
+ ""One of the worst parts of my grandparents' legacy is that my grandfather ever made the mistake of calling it a museum. It was never open to the public. That's a misconception,"" he said.
+
+
+ The Conjuring films turned the Warrens' home and basement museum, called the Warrens' Occult Museum, into a tourist attraction, but given its location in a residential neighborhood, it was closed for good in 2019.
+
+
+Bettmann/Getty Images
+
+ ""It was always by special invitation, one or two people, very small groups with specific instructions — don't touch anything, don't treat anything with disrespect, do not try to communicate with anything,"" he said of his grandparents' home.
+
+
+ ""And yet, what are they doing now? They're doing TikTok videos where they're talking to these things. They're trying to communicate with these things,"" McKinnell claimed. To me, that place is the Chernobyl of the paranormal and it bothers me to no end what can happen.""
+
+
+ Never miss a story — sign up for PEOPLE's free daily newsletter to stay up-to-date on the best of what PEOPLE has to offer​​, from celebrity news to compelling human interest stories. 
+
+
+ On Aug. 1, Rife announced on TikTok that, along with his friend, YouTube creator Elton Castee, he had “officially purchased” the Warren Occult Museum.
+
+
+ In the TikTok, Rife sat down to explain his “super random” purchase of the Connecticut home and museum, as well as the collection of haunted artifacts, which have been fodder for modern horror hits like Annabelle and the Conjuring films.
+
+
+ “This might be the most important and prominent piece of paranormal history in the world. Ed and Lorraine Warren are who took demonology and ghost hunting and paranormal investigating and made it mainstream,” Rife said in the TikTok. “I know a lot of you guys don't know [what] any of this means whatsoever, but if you follow ghost stuff, this is about as big as it gets.”
+
+
+ The comedian went on to explain that he and Castee are now the “legal guardians and caretakers” of the Warrens' home, as well as the museum and its collection of 750 artifacts. But they don't have permanent ownership, he clarified.
+
+
+ ""I must go on record and say we do not legally own the items, but we are the legal guardians and caretakers of the items for at least the next five years,” Rife said.
+
+
+ A rep for Rife confirmed the purchase as “legit” in a statement to PEOPLE in early August, while reps for the museum and Tony did not immediately respond to PEOPLE's request for comment.
+","{'href': 'https://people.com', 'title': 'People.com'}","other"
+"https://news.google.com/rss/search?q=Conspiracy+Theories","New research challenges the idea of a ‘vicious cycle' between psychological distress and conspiracy beliefs","https://theconversation.com/new-research-challenges-the-idea-of-a-vicious-cycle-between-psychological-distress-and-conspiracy-beliefs-266588","Sun, 12 Oct 2025 19:14:43 GMT","
+
+
+      Researcher in Psychology, Te Kunenga ki Pūrehuroa – Massey University
+    
+
+
+      Senior Lecturer in Psychology, Te Kunenga ki Pūrehuroa – Massey University
+    
+
+
+      Associate Professor of Psychology, Te Kunenga ki Pūrehuroa – Massey University
+    
+
+The following research is supported by the Marsden Fund, managed by the Royal Society Te Apārangi.
+
+This study was supported by the Marsden Fund, managed by the Royal Society Te Apārangi.
+
+
+
+Te Kunenga ki Pūrehuroa – Massey University provides funding as a member of The Conversation NZ.
+
+Te Kunenga ki Pūrehuroa – Massey University provides funding as a member of The Conversation AU.
+
+View all partners
+
+https://doi.org/10.64628/AA.nt3xndqxe
+
+Share article
+
+Print article
+
+A lot of research has been dedicated to understanding what makes people believe in conspiracies – and how they might be able to climb out of the rabbit hole again. 
+
+Conspiracies do happen. The Watergate scandal in the 1970s, which led to the resignation of US President Richard Nixon, is arguably the most infamous example. 
+The questioning of authority and the official narrative is something that should be encouraged. 
+
+But some people believe conspiracy theories that are contrary to evidence. Recent research found 8.9% of New Zealand participants and 10.1% of Australian participants agreed with the (false) claim fluoride is being intentionally added to the water supply by the government to make people less intelligent and easier to control"". 
+
+What draws people to conspiracies like these?
+
+One prominent theory is that conspiracy beliefs are linked to psychological distress such as anxiety and depression.
+
+Our new research explores the causal relationship – whether psychological distress actually makes people more likely to believe in conspiracy theories. We found very limited evidence for a link between elevated distress and conspiracy beliefs. 
+
+The existential threat model of conspiracy theories suggests experiences of psychological distress can make people more likely to develop conspiracy beliefs because they search for explanations for distressing events. 
+
+This model argues distress actually worsens once a conspiracy belief is formed, creating a vicious cycle where distress breeds conspiracy belief which, in turn, generates more distress. 
+
+The model also suggests this belief is exacerbated when a despised outgroup (political elites, for example) becomes salient as people try to make sense of their experience. 
+
+However, few have rigorously tested this claim. While substantial evidence for a correlation between psychological distress and belief in conspiracy theories has been established, correlation does not imply a causal link. 
+
+Some analyses of longitudinal data haven't found evidence to support the hypothesis. But no one has directly tested the claims of the existential threat model.
+
+We set out to do this using a longitudinal survey. 
+
+A longitudinal study isn't as conclusive as a true experiment but it can establish the sequence of cause and effect and rule out some alternative explanations for a relationship.
+
+Our sample consisted of 995 participants with representatives groups from New Zealand, Australia and the United Kingdom. Each month from September 2022 to February 2023, we presented participants with a survey, including 11 conspiracy theories and common measures of anxiety, depression and stress. Each month we asked them about their level of agreement with the conspiracy theories, and their levels of psychological distress.
+
+Prior to collecting the data, we specified our hypotheses in our research plan. These boiled down to the ideas that increased distress of different types (anxiety, depression, stress) will subsequently increase belief in conspiracy theories and that such beliefs will subsequently increase distress. 
+
+We found very limited evidence for elevated distress subsequently increasing belief in conspiracy theories. 
+
+We also found no evidence to support the converse – that belief in conspiracy theories increases distress. 
+
+Our findings suggest beliefs in conspiracy theories may mostly reflect a relatively stable worldview rather than being driven by temporary changes in distress. 
+
+This matters because some researchers have suggested interventions that reduce stress could be used to help reduce conspiracy beliefs. However, if stress is not driving conspiracy beliefs, as our results suggest, this approach is unlikely to be effective.
+
+We also found no evidence that conspiracy beliefs cause short-term distress. This challenges the common assumption that beliefs in conspiracy theories inherently cause harm to one's mental health, particularly stress, anxiety and depression. That said, conspiracy beliefs could still cause harm in other ways – such as by contributing to the flow of misinformation. 
+
+Our research challenges the idea of a vicious cycle of conspiracy beliefs. It appears distress may not have a key role in making people “spiral” down the rabbit hole. 
+
+Interventions that foster an analytical mindset or include critical thinking skills may be more useful.
+
+
+    Write an article and join a growing community of more than 212,500 academics and researchers from 5,330 institutions.
+  
+
+
+Register now
+
+
+
+      Copyright © 2010–2025, The Conversation US, Inc.
+","{'href': 'https://theconversation.com', 'title': 'The Conversation'}","other"
+"https://news.google.com/rss/search?q=world+news+site:theglobeandmail.com","China will not back down from Trump's tariff threat, urged U.S. to negotiate","https://www.theglobeandmail.com/business/international-business/article-china-us-tariffs-rare-earth-export-curbs/","Sun, 12 Oct 2025 13:56:06 GMT","
+
+A container ship sails from the port in Qingdao, in China's eastern Shandong province on Saturday. China accused the United States of 'double standards' on Sunday, after President Donald Trump threatened an additional 100% tariff on the world's second-largest economy.-/AFP/Getty Images
+
+China signalled on Sunday that it would not back down in the face of a 100 per cent tariff threat from U.S. President Donald Trump and urged the United States to resolve differences through negotiations instead of threats. Trump responded by taking a less confrontational approach without retreating from his demands, while his vice president seemed to warn Beijing not to react aggressively.
+
+“China's stance is consistent,” the Commerce Ministry said in a statement posted online. “We do not want a tariff war but we are not afraid of one.”
+
+It was China's first official comment on Trump's threat to jack up the tax on imports from China by Nov. 1 in response to new Chinese restrictions on the export of rare earths, which are vital to a wide range of consumer and military products.
+
+Hours later, Trump used his Truth Social platform to send a message to Chinese leader Xi Jinping.
+
+“Don't worry about China, it will all be fine!” the Republican president wrote. “Highly respected President Xi just had a bad moment. He doesn't want Depression for his country, and neither do I. The U.S.A. wants to help China, not hurt it!!!”
+
+Trump may have had an eye toward to U.S. financial markets on the eve of the new business week. The stock market will be open Monday, though bond markets will close for the Columbus Day holiday. On Friday, the broad S&P 500 stock market index plunged 2.7 per cent, its worst day in about six months after Trump's tariff threat.
+
+The back and forth threatens to derail a possible meeting between Trump and Xi and end a truce in a trade war in which new tariffs from both sides briefly topped 100 per cent in April.
+
+Vice President JD Vance said Trump was committed to protecting America's economic livelihoods while making the U.S. more self-sufficient. He said the fact that China has “so much control over critical supply in the United States of America” is the definition of a national emergency and therefore justifies Trump's move to impose tough tariffs.
+
+“It's going to be delicate dance and a lot of it is going to depend on how the Chinese respond. If they respond in a highly aggressive manner, I guarantee you the president of the United States has far more cards than the People's Republic of China,” Vance said on Fox News Channel's “Sunday Morning Futures.”
+
+“If, however, they're willing to be reasonable, then Donald Trump is always willing to be a reasonable negotiator. We're going to find out a lot in the weeks to come about whether China wants to start a trade war with us or whether they actually want to be reasonable,” Vance continued. “I hope they choose the path of reason. The president of the United States is going to defend America regardless.”
+
+Trump says U.S. will impose additional 100% tariff on China
+
+Trump has raised taxes on imports from many U.S. trading partners since taking office in January, seeking to win concessions. China has been one of the few countries that hasn't backed down, relying on its economic clout.
+
+“Frequently resorting to the threat of high tariffs is not the correct way to get along with China,” the Commerce Ministry said in its post, which was presented as a series of answers from an unnamed spokesperson to four questions from unspecified media outlets.
+
+The statement called for addressing any concerns through dialogue.
+
+“If the U.S. side obstinately insists on its practice, China will be sure to resolutely take corresponding measures to safeguard its legitimate rights and interests,” the post said.
+
+In addition to the 100 per cent tariff, Trump threatened to impose export controls on what he called “critical software,” without specifying what that means.
+
+Both sides accuse the other of violating the spirit of the truce by imposing new restrictions on trade.
+
+Shares in rare earth companies jump as China expands export controls, tightens semiconductor restrictions
+
+Trump said in a social media post that China is “becoming very hostile” and that it is holding the world captive by restricting access to rare earth metals and magnets.
+
+The Chinese Commerce Ministry post said the U.S. has introduced several new restrictions in recent weeks, including expanding the number of Chinese companies subject to U.S. export controls.
+
+On rare earths, the ministry said that export licenses would be granted for legitimate civilian uses, noting that the minerals also have military applications.
+
+The new regulations include a requirement that foreign companies get Chinese government approval to export items that contain rare earths sourced from China, no matter where the products are manufactured.
+
+China accounts for nearly 70 per cent of the world's rare earths mining and controls roughly 90 per cent of their global processing. Access to the material is a key point of contention in trade talks between Washington and Beijing.
+
+The critical minerals go into many products, from jet engines, radar systems and electric vehicles to consumer electronics including laptops and phones. China's export controls have hit European and other manufacturers, as well as American ones.
+
+The Commerce Ministry statement said that the U.S. is also ignoring Chinese concerns by going forward with new port fees on Chinese ships that take effect Tuesday. China announced Friday that it would impose port fees on American ships in response.
+
+Report an editorial error
+
+Report a technical issue
+
+Authors and topics you follow will be added to your personal news feed in Following.
+
+© Copyright 2025 The Globe and Mail Inc. All rights reserved.
+
+Andrew Saunders, President and CEO","{'href': 'https://www.theglobeandmail.com', 'title': 'The Globe and Mail'}","world"
+"https://news.google.com/rss/search?q=fifa+world+cup","Faroe Islands stuns Czech Republic to keep World Cup hopes alive, Netherlands and Scotland win","https://www.foxsports.com/articles/soccer/faroe-islands-stuns-czech-republic-to-keep-world-cup-hopes-alive-netherlands-and-scotland-win","Sun, 12 Oct 2025 19:58:20 GMT","
+
+
+            POPULAR SEARCHES
+          
+
+
+            BROWSE BY
+          
+
+Tiny Faroe Islands took a big step toward its first World Cup on Sunday with a stunning 2-1 win against the Czech Republic.
+
+Ranked 136th by FIFA, the nation with a population of less than 55,000 put itself in contention for the playoffs for next year's tournament in the United States, Canada and Mexico. 
+
+The Faroe Islands, located halfway between Scotland and Iceland, has a land area of just 540 square miles. It has long been a minnow of European soccer and at its lowest point was ranked 198th. 
+
+But a run of four wins from its last five qualifying matches has seen it climb to third in Group L. Victory against the second-placed Czechs means just one point separates the teams in the likely race to be runner-up in the group and secure a place in the playoffs. 
+
+Substitute Martin Agnarsson scored in the 81st minute to not only deliver a blow to Czech chances of qualifying automatically as group winner but place major doubts over the runner-up position with one game remaining for both teams.
+
+Hanus Sorensen had put host Faroe Islands ahead in the 67th minute at Torsvollur, a stadium with a capacity of just over 6,000 in the capital Torshavn. Adam Karabec had leveled in the 78th.
+
+Croatia leads the group on goal difference and played Gibraltar later Sunday. With two games in hand over the Czech Republic and the Faroe Islands, it is heavy favorite to win the group.
+
+Netherlands continues to lead the way in Group G after a 4-0 win against Finland in Amsterdam. 
+
+Memphis Depay scored from the penalty spot for a record-extending 54th goal for his country. The former Manchester United forward has scored seven goals in six qualifying games during this campaign. 
+
+Donyell Malen, Virgil van Dijk and Cody Gakpo were also on target for the Dutch who top the group on 16 points with two games remaining. 
+
+Scotland picked up a third win in Group C by beating Belarus 2-1. 
+
+Goals from Che Adams and Scott McTominay put Scotland in control at Hampden Park, with Gleb Kuchko pulling one back in stoppage time for Belarus. 
+
+Scotland leads the group ahead of second-placed Denmark's home game against Greece later Sunday. 
+
+___
+
+James Robson is at https://x.com/jamesalanrobson
+
+___
+
+AP soccer: https://apnews.com/hub/soccer","{'href': 'https://www.foxsports.com', 'title': 'FOX Sports'}","soccer"
