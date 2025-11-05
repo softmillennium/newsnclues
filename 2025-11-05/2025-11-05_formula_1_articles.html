@@ -1,0 +1,103 @@
+
+<html>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <title id="title">News'n'Clues - FORMULA_1 Article Summaries - 2025-11-05</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .menu { color: #444444; }
+            .copyright { margin: 0 auto; }
+            p { font-family: serif; }
+            body {  background-color: #2c2c2c; font-family: Arial, sans-serif; font-size: 20px; color: #f4f4f4;  }
+            a { text-decoration: none; color: #f4f4f4; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
+            .hidden {
+                display: none;
+            }            
+            
+        </style>
+    </head>
+    <body>
+        <div id="banner" class="w-full">
+            <img src="../images/banner.jpg" alt="News Banner">
+        </div>
+
+        <div id="title" class="w-full flex items-center" style="background-color: #fc4535;">
+          <a href="../index.html"><img src="../images/logo.jpg" alt="News Logo" class="h-auto"></a>
+          <div class="flex-grow text-center">
+              <div id="title_heading" class="text-4xl font-bold mb-4" style="color:#1a6198;">Article Summaries</div>
+          </div>
+        </div>
+        <div id='category_heading' class="section text-center heading">
+            FORMULA_1
+        </div>
+        <div id="articles">
+            
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.formula1.com/en/latest/article/formula-1-and-heineken-announce-expanded-multi-year-global-partnership.61O9NdI9p6GFUJmIpEBHsE'>Formula 1 and Heineken announce expanded multi-year Global Partnership</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.formula1.com', 'title': 'Formula 1'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-11-05 09:44:31
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>The two brands are set to extend their near decade-long collaboration. Formula 1 has today announced the extension and expansion of its Global Partnership with Heineken following nearly 10 years of collaboration between the two brands to bring fans together both at and beyond Grands Prix events. The F1 Fan Zone, elevated to be presented by Heineken 0.0, will include new in-person installations and vivid branding across each race weekend. Heineken will also launch the ‘Heineken Star Fans' campaign, designed to celebrate the best fans across the season through an online content series, dedicated pages on F1.com, awards, and exclusive competitions. The inaugural holder is Brandon Burgess, who captured the attention of fans and media around the world with his ambitious quest to attend every race in 2025 on a budget while juggling a full-time job. Next year, Heineken will be offering another fan the chance to get their hands on this coveted Season Ticket for them and a friend to experience every twist and turn of every race via F1 Unlocked. The global beer brand will continue to use F1's platform to provide messaging around responsible consumption and promote Heineken 0.0 – a premium zero-alcohol product – while continuing to deliver trackside branding, Paddock Club hospitality and co-branded products across each season. Stefano Domenicali, President & CEO, Formula 1, said: “For nearly a decade Heineken has stood alongside Formula 1 with a shared passion for creating an unrivalled experience and spectacle for our fans. I want to thank the Heineken family, Dolf and his team for their continued support and I am delighted that our partnership will bring even more excitement to spectators both at and away from track for many years to come. “In motorsport, innovation is in our DNA, so I'm thrilled that Heineken continues to push the boundaries of engaging fans and taking them even closer to the action.” Dolf van den Brink, CEO & Chairman of the Executive Board at Heineken, added: “After almost a decade of creating unforgettable fan experiences together, I'm thrilled we will be extending and expanding our partnership with Formula 1. “This new chapter of our partnership is about more than sponsorship – it's about connecting with fans, creating unique experiences, and celebrating the global F1 fandom. “We can't wait to deliver more fan-first activations, shared experiences, and showcase the incredible energy that surrounds F1, both on and off the track – all with a cold Heineken (0.0) beer in hand."</p>
+                <br/>
+                
+
+        </div>
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
+
+        <footer class="text-center text-sm text-gray-500 mt-12">
+            <div class="inline-block align-middle">
+                <a href="https://www.youtube.com/@news_n_clues" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 text-red-600 hover:text-red-700 font-semibold transition duration-300 ease-in-out">
+                    Watch Daily <span class="italic">News'n'Clues</span> Podcast on
+                    <img src="../images/yt.png" width="16" height="16">
+                </a>
+            </div>
+            <div>
+                <a href="mailto:newsnclues@gmail.com?subject=News'n'Clues Aggregator Inquiry">SoftMillennium
+                    <script>document.write(new Date().getFullYear());</script>
+                </a>
+                <!--
+            <b>Copyright &copy; <script>document.write(new Date().getFullYear());</script> - <a href='mailto:newsnclues@gmail.com?subject=News Aggregator Inquiry'>News And Clues</a></b>
+            -->
+            </div>
+        </footer>
+    </body>
+</html>
+            
