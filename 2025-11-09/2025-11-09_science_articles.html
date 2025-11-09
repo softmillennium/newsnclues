@@ -1,0 +1,103 @@
+
+<html>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <title id="title">News'n'Clues - SCIENCE Article Summaries - 2025-11-09</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .menu { color: #444444; }
+            .copyright { margin: 0 auto; }
+            p { font-family: serif; }
+            body {  background-color: #2c2c2c; font-family: Arial, sans-serif; font-size: 20px; color: #f4f4f4;  }
+            a { text-decoration: none; color: #f4f4f4; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
+            .hidden {
+                display: none;
+            }            
+            
+        </style>
+    </head>
+    <body>
+        <div id="banner" class="w-full">
+            <img src="../images/banner.jpg" alt="News Banner">
+        </div>
+
+        <div id="title" class="w-full flex items-center" style="background-color: #fc4535;">
+          <a href="../index.html"><img src="../images/logo.jpg" alt="News Logo" class="h-auto"></a>
+          <div class="flex-grow text-center">
+              <div id="title_heading" class="text-4xl font-bold mb-4" style="color:#1a6198;">Article Summaries</div>
+          </div>
+        </div>
+        <div id='category_heading' class="section text-center heading">
+            SCIENCE
+        </div>
+        <div id="articles">
+            
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.sciencedaily.com/releases/2025/11/251108083912.htm'>Stanford discovers an extraordinary crystal that could transform quantum tech</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.sciencedaily.com', 'title': 'ScienceDaily'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-11-09 06:27:41
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>Superconductivity and quantum computing have moved from theoretical physics into real-world innovation. Yet many of these technologies only function at cryogenic temperatures (near absolute zero), where most materials lose their defining properties. Finding materials that perform under such extreme cold has long been one of science's biggest hurdles. Instead of deteriorating, it becomes significantly more capable, outperforming other known materials by a wide margin. The researchers believe this discovery could open the door to a new class of light-based and mechanical cryogenic devices that propel quantum computing, space exploration, and other advanced technologies. But it also works at cryogenic temperatures, which is beneficial for building quantum transducers and switches that are current bottlenecks in quantum technologies," explained the study's senior author Jelena Vuckovic, professor of electrical engineering at Stanford. STO's optical behavior is "non-linear," meaning that when an electric field is applied, its optical and mechanical properties shift dramatically. This electro-optic effect allows scientists to adjust the frequency, intensity, phase, and direction of light in ways that other materials cannot. Such versatility could enable entirely new types of low-temperature devices. STO is also piezoelectric, meaning it physically expands and contracts in response to electric fields. This makes it ideal for developing new electromechanical components that function efficiently in extreme cold. "At low temperature, not only is strontium titanate the most electrically tunable optical material we know of, but it's also the most piezoelectrically tunable material," said Christopher Anderson, co-first author and now a faculty member at the University of Illinois, Urbana-Champaign. It's not expensive," said co-first author Giovanni Scuri, a postdoctoral scholar in Vuckovic's lab. "In fact, it has often been used as a diamond substitute in jewelry or as a substrate for growing other, more valuable materials. The decision to test STO was guided by an understanding of what characteristics make materials highly tunable. Scuri added that the framework they developed could help identify or enhance other nonlinear materials for a variety of operating conditions. Its nonlinear optical response was 20 times greater than that of lithium niobate, the leading nonlinear optical material, and nearly triple that of barium titanate, the previous cryogenic benchmark. This adjustment moved STO closer to a state called quantum criticality, producing even greater tunability. "We precisely tuned our recipe to get the best possible performance." It can be synthesized, structurally modified, and fabricated at wafer scale using existing semiconductor equipment. These features make it well-suited for next-generation quantum devices, such as laser-based switches used to control and transmit quantum information. The research was partially funded by Samsung Electronics and Google's quantum computing division, both of which are searching for materials to advance their quantum hardware. The team's next goal is to design fully functional cryogenic devices based on STO's unique properties. Contributors include Aaron Chan and Lu Li from the University of Michigan; Sungjun Eun, Alexander D. White, Geun Ho Ahn, Amir Safavi-Naeini, and Kasper Van Gasse from Stanford's E. L. Ginzton Laboratory; and Christine Jilly from the Stanford Nano Shared Facilities. Note: Content may be edited for style and length. Concerning New Research Reveals That the Ground Beneath Arizona Is Collapsing Popular Diabetes Drug Metformin May Cancel Out Exercise Benefits, Study Warns Gray Hair May Be Your Body's Secret Cancer Defense Stay informed with ScienceDaily's free email newsletter, updated daily and weekly. Or view our many newsfeeds in your RSS reader: Keep up to date with the latest news from ScienceDaily via social networks: Tell us what you think of ScienceDaily -- we welcome both positive and negative comments.</p>
+                <br/>
+                
+
+        </div>
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
+
+        <footer class="text-center text-sm text-gray-500 mt-12">
+            <div class="inline-block align-middle">
+                <a href="https://www.youtube.com/@news_n_clues" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 text-red-600 hover:text-red-700 font-semibold transition duration-300 ease-in-out">
+                    Watch Daily <span class="italic">News'n'Clues</span> Podcast on
+                    <img src="../images/yt.png" width="16" height="16">
+                </a>
+            </div>
+            <div>
+                <a href="mailto:newsnclues@gmail.com?subject=News'n'Clues Aggregator Inquiry">SoftMillennium
+                    <script>document.write(new Date().getFullYear());</script>
+                </a>
+                <!--
+            <b>Copyright &copy; <script>document.write(new Date().getFullYear());</script> - <a href='mailto:newsnclues@gmail.com?subject=News Aggregator Inquiry'>News And Clues</a></b>
+            -->
+            </div>
+        </footer>
+    </body>
+</html>
+            
