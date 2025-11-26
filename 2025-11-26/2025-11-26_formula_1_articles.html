@@ -1,0 +1,103 @@
+
+<html>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <title id="title">News'n'Clues - FORMULA_1 Article Summaries - 2025-11-26</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .menu { color: #444444; }
+            .copyright { margin: 0 auto; }
+            p { font-family: serif; }
+            body {  background-color: #2c2c2c; font-family: Arial, sans-serif; font-size: 20px; color: #f4f4f4;  }
+            a { text-decoration: none; color: #f4f4f4; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
+            .hidden {
+                display: none;
+            }            
+            
+        </style>
+    </head>
+    <body>
+        <div id="banner" class="w-full">
+            <img src="../images/banner.jpg" alt="News Banner">
+        </div>
+
+        <div id="title" class="w-full flex items-center" style="background-color: #fc4535;">
+          <a href="../index.html"><img src="../images/logo.jpg" alt="News Logo" class="h-auto"></a>
+          <div class="flex-grow text-center">
+              <div id="title_heading" class="text-4xl font-bold mb-4" style="color:#1a6198;">Article Summaries</div>
+          </div>
+        </div>
+        <div id='category_heading' class="section text-center heading">
+            FORMULA_1
+        </div>
+        <div id="articles">
+            
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.formula1.com/en/latest/article/power-rankings-who-impressed-our-judges-at-the-las-vegas-grand-prix.5BxLJPlLSmE62Ix2rGgc0y'>POWER RANKINGS: Who impressed our judges at the Las Vegas Grand Prix?</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.formula1.com', 'title': 'Formula 1'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2025-11-26 08:26:57
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>Max Verstappen took a crucial win in the Las Vegas Grand Prix, and with both McLaren drivers disqualified, slashed Lando Norris' championship lead to just 24 points. Check out the latest scores and overall leaderboard below... Having overtaken poleman Lando Norris when the McLaren driver ran wide at Turn 1, Max Verstappen never looked back en route to his sixth win of the 2025 campaign. The Red Bull driver briefly had to soak up pressure from George Russell's Mercedes, but thereafter cruised to a 20-second-plus win. With Norris and team mate Oscar Piastri both disqualified, Verstappen remains a real threat for the title with two Grands Prix and a Sprint remaining, as the Dutchman sits tied on points with Piastri and just 24 behind Norris. A seventh pole position of the season – achieved in treacherous conditions – put Norris in prime position for victory and practically allowed him to place one hand on a maiden Drivers' World Championship. Biding his time to overtake Russell in the second stint, Norris was comfortably P2 until backing off substantially over the final laps. The team's call was linked to concerns over skid block wear which would ultimately prove futile as he was disqualified – a result that could have huge ramifications for the title. Another impressive Qualifying performance on a low-downforce, high-speed circuit similar to Baku left Carlos Sainz third on the grid, which eventually became P5 in the final classification. Promoted two places due to McLaren's disqualification, Sainz achieved his second-best result of the season after his Baku podium, finishing more than 10 seconds clear of Isack Hadjar. Having just missed out on a Q3 appearance after finishing P11 in Qualifying, Nico Hulkenberg utilised the hard tyre in the opening stint compared to all those ahead on the medium rubber. Extending his first stint, which ultimately allowed him to rejoin in P9, the Kick Sauber driver was never headed again and jumped up to seventh in the final classification. A winner in Las Vegas 12 months ago, Russell ultimately had to settle for the runner-up spot in 2025 having nursed a steering issue from the opening laps. Pushing too hard in the second stint destroyed his tyres and allowed Norris back ahead, but P2 beckoned with McLaren's impending infringement. Going under the radar, Hadjar bagged more points for Racing Bulls and back-to-back scores in the process having been classified sixth in Las Vegas. Having made his sole pit stop, Hadjar circulated alone for the second stint to solidify Racing Bulls' P6 in the Teams' Championship. Starting P9 and having just avoided been taken out through the opening corner, Leclerc went on to overtake Ollie Bearman, Piastri and Hadjar, as well as Sainz as the Williams exited the pits. Sub-optimal strategy meant he rejoined behind Piastri and slipped away from the battling McLaren driver and Antonelli ahead, the Ferrari driver eventually classified P4. Left only P5 on the grid, Piastri slipped behind both Racing Bulls at the first corner which included contact from Liam Lawson. Stuck behind Antonelli in the final phase and eventually being disqualified from P4, a potential 30-point gap to Norris is just 24 heading to Qatar. McLaren's double disqualification helped move Ocon and Haas team mate Bearman into the points, the American team also moving ahead of Aston Martin in the Teams' Championship by a single point as a result.</p>
+                <br/>
+                
+
+        </div>
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
+
+        <footer class="text-center text-sm text-gray-500 mt-12">
+            <div class="inline-block align-middle">
+                <a href="https://www.youtube.com/@news_n_clues" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 text-red-600 hover:text-red-700 font-semibold transition duration-300 ease-in-out">
+                    Watch Daily <span class="italic">News'n'Clues</span> Podcast on
+                    <img src="../images/yt.png" width="16" height="16">
+                </a>
+            </div>
+            <div>
+                <a href="mailto:newsnclues@gmail.com?subject=News'n'Clues Aggregator Inquiry">SoftMillennium
+                    <script>document.write(new Date().getFullYear());</script>
+                </a>
+                <!--
+            <b>Copyright &copy; <script>document.write(new Date().getFullYear());</script> - <a href='mailto:newsnclues@gmail.com?subject=News Aggregator Inquiry'>News And Clues</a></b>
+            -->
+            </div>
+        </footer>
+    </body>
+</html>
+            
