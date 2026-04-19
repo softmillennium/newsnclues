@@ -1,0 +1,103 @@
+
+<html>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <title id="title">News'n'Clues - FORMULA_1 Article Summaries - 2026-04-19</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .menu { color: #444444; }
+            .copyright { margin: 0 auto; }
+            p { font-family: serif; }
+            body {  background-color: #2c2c2c; font-family: Arial, sans-serif; font-size: 20px; color: #f4f4f4;  }
+            a { text-decoration: none; color: #f4f4f4; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
+            .hidden {
+                display: none;
+            }            
+            
+        </style>
+    </head>
+    <body>
+        <div id="banner" class="w-full">
+            <img src="../images/banner.jpg" alt="News Banner">
+        </div>
+
+        <div id="title" class="w-full flex items-center" style="background-color: #fc4535;">
+          <a href="../index.html"><img src="../images/logo.jpg" alt="News Logo" class="h-auto"></a>
+          <div class="flex-grow text-center">
+              <div id="title_heading" class="text-4xl font-bold mb-4" style="color:#1a6198;">Article Summaries</div>
+          </div>
+        </div>
+        <div id='category_heading' class="section text-center heading">
+            FORMULA_1
+        </div>
+        <div id="articles">
+            
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.formula1.com/en/latest/article/the-state-of-play-at-aston-martin-after-three-rounds-of-the-2026-season.3OIUIgiMal6dG90xZbUqS4'>The state of play at Aston Martin after three rounds of the 2026 season</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.formula1.com', 'title': 'Formula 1'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2026-04-19 10:57:31
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>After three rounds of the 2026 season, how are Aston Martin faring - and what can they do to improve their fortunes? A myriad of issues have curtailed plenty of sessions for Fernando Alonso and Lance Stroll already this year, but there were signs in Japan last time out that some of those problems are starting to be solved… Aston Martin were late to the Barcelona Shakedown, but when they did arrive their car turned heads with what looked a very interesting chassis design. Even George Russell said they were ones to watch. But it soon became apparent that things were not in a good way with the car or the Honda engine in Bahrain for pre-season testing. Both Alonso and Stroll stopped out on track at various points, and the team completed the fewest laps of anyone at both the first and second test – they managed a total of 334 laps across the six days of testing, in contrast to McLaren who totalled 821 laps. Newey revealed in Australia that vibrations were limiting how many consecutive laps the car could run before reliability became a factor. Neither car was classified as finishing in Australia after pulling into the pits with reliability issues, even though Stroll did un-retire and come back out late on to gather more data for the team. Aston Martin have yet to get a car into Q2 in Qualifying, with Alonso's 17th in Melbourne their best grid slot of the season so far. But Alonso managed 52 laps at Suzuka last time out, finishing the race one lap down. It also shows that Alonso has lost none of his reaction times nor reflexes despite being 44 years young. Reliability seems to be improving too, and while Stroll retired from the race in Japan, the team managed to get both cars through practice and Qualifying with fewer issues than before. The April break also gives them a chance to catch up not just with development, but also in manufacturing parts – they were short on battery components in the first three races, and stopped out of caution on a few occasions. Then comes a tightly packed midfield, with Alpine, Racing Bulls, Audi, Haas and even Red Bull all vying for the points – and Aston Martin remain some way behind that gaggle on pure pace alone. And the issues with the Honda power unit have been so large, Aston Martin have yet to truly understand just where their chassis is in terms of competitiveness. Alonso though, sounded cautiously optimistic when he stated that “clear progress” had already been made from Australia to Japan. “We know the issues we have so it's about tackling those as quickly as we can,” Stroll added at Suzuka, the Canadian at least taking the positives of racing wheel to wheel with his team mate. Chief Trackside Officer, Mike Krack, called Alonso managing a full race distance in Japan a “significant moment” for the team, before also adding that there is work to be done. “It's also clear the performance level of our package is far from where it needs to be and we must work hard to deliver improvements,” he concluded. With greater reliability comes more lap time in practice and the races, more data gathered and so a clearer direction with which to head in terms of development. They also need to keep team morale boosted, with both drivers so far coping admirably with the difficult circumstances they have found themselves in so far in 2026. But if the situation does not improve, or even worsens, it is hard to say whether Alonso will remain relatively chipper after admitting that time is not on his side as he hunts that elusive third Drivers' crown.</p>
+                <br/>
+                
+
+        </div>
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
+
+        <footer class="text-center text-sm text-gray-500 mt-12">
+            <div class="inline-block align-middle">
+                <a href="https://www.youtube.com/@news_n_clues" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 text-red-600 hover:text-red-700 font-semibold transition duration-300 ease-in-out">
+                    Watch Daily <span class="italic">News'n'Clues</span> Podcast on
+                    <img src="../images/yt.png" width="16" height="16">
+                </a>
+            </div>
+            <div>
+                <a href="mailto:newsnclues@gmail.com?subject=News'n'Clues Aggregator Inquiry">SoftMillennium
+                    <script>document.write(new Date().getFullYear());</script>
+                </a>
+                <!--
+            <b>Copyright &copy; <script>document.write(new Date().getFullYear());</script> - <a href='mailto:newsnclues@gmail.com?subject=News Aggregator Inquiry'>News And Clues</a></b>
+            -->
+            </div>
+        </footer>
+    </body>
+</html>
+            
