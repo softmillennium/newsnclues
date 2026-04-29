@@ -1,0 +1,103 @@
+
+<html>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <title id="title">News'n'Clues - FORMULA_1 Article Summaries - 2026-04-29</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .menu { color: #444444; }
+            .copyright { margin: 0 auto; }
+            p { font-family: serif; }
+            body {  background-color: #2c2c2c; font-family: Arial, sans-serif; font-size: 20px; color: #f4f4f4;  }
+            a { text-decoration: none; color: #f4f4f4; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
+            .hidden {
+                display: none;
+            }            
+            
+        </style>
+    </head>
+    <body>
+        <div id="banner" class="w-full">
+            <img src="../images/banner.jpg" alt="News Banner">
+        </div>
+
+        <div id="title" class="w-full flex items-center" style="background-color: #fc4535;">
+          <a href="../index.html"><img src="../images/logo.jpg" alt="News Logo" class="h-auto"></a>
+          <div class="flex-grow text-center">
+              <div id="title_heading" class="text-4xl font-bold mb-4" style="color:#1a6198;">Article Summaries</div>
+          </div>
+        </div>
+        <div id='category_heading' class="section text-center heading">
+            FORMULA_1
+        </div>
+        <div id="articles">
+            
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.formula1.com/en/latest/article/the-state-of-play-at-mercedes-after-three-rounds-of-the-2026-season.6dFELAJooKg3fOnZ68Dm1i'>The state of play at Mercedes after three rounds of the 2026 season</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.formula1.com', 'title': 'Formula 1'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2026-04-29 13:06:00
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>Isack Hadjar talks with Lawrence Barretto on his rise through the Red Bull ranks Mercedes are the team to beat in 2026 so far, but will Kimi Antonelli and George Russell manage to stay ahead of the chasing pack? Mercedes lead both championships after three rounds of the 2026 season, and have won every race thus far courtesy of George Russell and Kimi Antonelli. But can they keep their nose in front as the development race hots up? After dominating the turbo-hybrid era, Mercedes struggled in the ground effect era of racing that lasted from 2022 to 2025, managing no titles and just a handful of wins. But in these new regulations, the Silver Arrows are off to a flying start. Many expected them to be strong, with the power unit set to play such a crucial part in determining the pecking order. They have also grabbed every pole on offer, with their drivers again splitting the four opportunities to start from P1 at two apiece. The only real blot on their copybook was Antonelli's crash in FP3 at Albert Park, but he bounced back from that admirably to qualify second just hours later, and then finish in P2 in the Grand Prix. Mercedes could not really have hoped for better – Russell was off the podium in Japan, but apart from that it has all been going to plan for the Silver Arrows. They have two drivers who are performing well, both over one lap and during the race. The way Antonelli has stepped up in his second season in F1 is also a big positive, with the teenager really carrying some self-belief to each and every race – something that will only increase if he continues to win. Their engine is the best on show at the moment, and Mercedes seem to have a better understanding of it than any of their customer teams including McLaren, giving them an edge over the current World Champions. They might have lost a few key staff members over the past few years, but with Toto Wolff at the helm, Andrew Shovlin in situ and Pete ‘Bono' Bonnington steering Antonelli in the right direction, Mercedes still have plenty of experience where it matters. Reliability has been good, but not perfect for Mercedes – Russell suffered some issues when Qualifying in China, and Antonelli also ran into problems in the race. Antonelli's crash in Australia also showed how on edge these cars can be, and how easy it is to get it wrong – something that will be less forgiving at some circuits. But Antonelli has already shown himself to be a match for his team mate, and not yet overawed by the fact they seem to be fighting for the Championship. Antonelli is already looking for ways to “improve” in this spring break. He says the team also know they need to keep “raising our game.” “We had a real battle [in Japan] and we know that it's not going to be easy to keep up this run of form," he added. "We're looking forward to using the time ahead of Miami well and hopefully putting ourselves in a strong position once the season resumes." Meanwhile Russell acknowledged that Mercedes' competitors will be chasing them down. "It's clear from [Japan] that our competitors are beginning to optimise their cars much more now," he said. Trackside Engineering Director Andrew Shovlin said the team know where their focus will be in terms of upgrades. Once the cars get into free air, they can break free of their rivals but if they get caught in the dirty air – which happened to Russell in Japan – a lot of their pace advantage disappears. Get on top of that, out-develop the rest, build enough of a lead in both Championships in case anyone brings a big package of upgrades mid-season… And Mercedes should be in the fight for both titles once again.</p>
+                <br/>
+                
+
+        </div>
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
+
+        <footer class="text-center text-sm text-gray-500 mt-12">
+            <div class="inline-block align-middle">
+                <a href="https://www.youtube.com/@news_n_clues" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 text-red-600 hover:text-red-700 font-semibold transition duration-300 ease-in-out">
+                    Watch Daily <span class="italic">News'n'Clues</span> Podcast on
+                    <img src="../images/yt.png" width="16" height="16">
+                </a>
+            </div>
+            <div>
+                <a href="mailto:newsnclues@gmail.com?subject=News'n'Clues Aggregator Inquiry">SoftMillennium
+                    <script>document.write(new Date().getFullYear());</script>
+                </a>
+                <!--
+            <b>Copyright &copy; <script>document.write(new Date().getFullYear());</script> - <a href='mailto:newsnclues@gmail.com?subject=News Aggregator Inquiry'>News And Clues</a></b>
+            -->
+            </div>
+        </footer>
+    </body>
+</html>
+            
