@@ -1,0 +1,103 @@
+
+<html>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <title id="title">News'n'Clues - BUSINESS Article Summaries - 2026-05-23</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .menu { color: #444444; }
+            .copyright { margin: 0 auto; }
+            p { font-family: serif; }
+            body {  background-color: #2c2c2c; font-family: Arial, sans-serif; font-size: 20px; color: #f4f4f4;  }
+            a { text-decoration: none; color: #f4f4f4; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
+            .hidden {
+                display: none;
+            }            
+            
+        </style>
+    </head>
+    <body>
+        <div id="banner" class="w-full">
+            <img src="../images/banner.jpg" alt="News Banner">
+        </div>
+
+        <div id="title" class="w-full flex items-center" style="background-color: #fc4535;">
+          <a href="../index.html"><img src="../images/logo.jpg" alt="News Logo" class="h-auto"></a>
+          <div class="flex-grow text-center">
+              <div id="title_heading" class="text-4xl font-bold mb-4" style="color:#1a6198;">Article Summaries</div>
+          </div>
+        </div>
+        <div id='category_heading' class="section text-center heading">
+            BUSINESS
+        </div>
+        <div id="articles">
+            
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.businessinsider.com/experts-react-donald-trump-new-immigration-policy-green-card-applications-2026-5'>What smart people are saying about the Trump administration's green card crackdown</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.businessinsider.com', 'title': 'Business Insider'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2026-05-23 02:17:00
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>President Donald Trump's latest immigration crackdown is triggering alarm, confusion, and fierce debate among lawyers, advocates, and many in the business world who rely on visa holders for skilled labor. On Friday, US Citizenship and Immigration Services announced it would grant "adjustment of status" — the process that allows some immigrants already in the US to apply for a green card without leaving the country — "only in extraordinary circumstances," potentially forcing many applicants to return to their home countries and wait abroad while their cases are processed. While a USCIS spokesperson told Business Insider that applicants who "provide an economic benefit or otherwise are in the national interest" may still qualify for exemptions, it remains unclear how broadly the administration plans to enforce the new restrictions or how many immigrants could ultimately be affected. Here's what smart people are saying about the sweeping policy shift. "So everyone on a O1 or H1B visa would have to stop working legally in the US, go back to their country and wait for years of backlog?" "This includes top scientists in our universities, founders of billion dollar companies." Davidov added in subsequent tweets that Iranians and Ukrainians can't really return to their home countries for safety reasons, and that immigrants such as Elon Musk, Jensen Huang, and Sergey Brin have created some of the country's most valuable companies. Andrew Ng, AI entrepreneur and cofounder of Coursera, called asking green card applicants to apply outside the US only "a capricious attack on legal immigration." Reid Hoffman, cofounder of LinkedIn and a prominent Trump critic in Silicon Valley, wrote on X that the DHS's new policies are a "harmful move for tech, business, and America broadly." "Does this mean AI Researchers, employees, and students will now have to leave the country and wait through a backlog process to continue their work?" "It will rip talented, hardworking immigrants out from America and our economy, congest an already overburdened backlog, and further break an already broken immigration system," said Clarke on X. "This administration has made the pain of immigrants a priority, and that won't change until there's no one left to hurt." "The policy is a radical expansion of DHS's 'quiet quitting' on legal immigration that has been going on for months," Bier also wrote in a blog post. USCIS has gone from the 'quiet-quit' to walking out on 1.2 million green card applicants." "Forcing green card applicants to leave will render many green card applicants ineligible because, when they leave the United States, they will trigger the 3- or 10-year bars on receiving an immigrant visa based on accrual of unlawful presence," Bier added. Yann LeCun, a pioneer in AI research and the former Chief AI Scientist at Meta, had a very curt and perplexed response to the change in green card policy. Every time  publishes a story, you'll get an alert straight to your inbox! Look out for an alert in your inbox the next time  publishes a story! Every time a new  story is published, you'll get an alert straight to your inbox! Look out for an alert in your inbox the next time a new  story is published! By clicking “Sign up”, you agree to receive emails from Business Insider. In addition, you accept Insider's Terms of Service and Privacy Policy.</p>
+                <br/>
+                
+
+        </div>
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
+
+        <footer class="text-center text-sm text-gray-500 mt-12">
+            <div class="inline-block align-middle">
+                <a href="https://www.youtube.com/@news_n_clues" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 text-red-600 hover:text-red-700 font-semibold transition duration-300 ease-in-out">
+                    Watch Daily <span class="italic">News'n'Clues</span> Podcast on
+                    <img src="../images/yt.png" width="16" height="16">
+                </a>
+            </div>
+            <div>
+                <a href="mailto:newsnclues@gmail.com?subject=News'n'Clues Aggregator Inquiry">SoftMillennium
+                    <script>document.write(new Date().getFullYear());</script>
+                </a>
+                <!--
+            <b>Copyright &copy; <script>document.write(new Date().getFullYear());</script> - <a href='mailto:newsnclues@gmail.com?subject=News Aggregator Inquiry'>News And Clues</a></b>
+            -->
+            </div>
+        </footer>
+    </body>
+</html>
+            
