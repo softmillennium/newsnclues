@@ -1,0 +1,103 @@
+
+<html>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <title id="title">News'n'Clues - TENNIS Article Summaries - 2026-05-23</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .menu { color: #444444; }
+            .copyright { margin: 0 auto; }
+            p { font-family: serif; }
+            body {  background-color: #2c2c2c; font-family: Arial, sans-serif; font-size: 20px; color: #f4f4f4;  }
+            a { text-decoration: none; color: #f4f4f4; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
+            .hidden {
+                display: none;
+            }            
+            
+        </style>
+    </head>
+    <body>
+        <div id="banner" class="w-full">
+            <img src="../images/banner.jpg" alt="News Banner">
+        </div>
+
+        <div id="title" class="w-full flex items-center" style="background-color: #fc4535;">
+          <a href="../index.html"><img src="../images/logo.jpg" alt="News Logo" class="h-auto"></a>
+          <div class="flex-grow text-center">
+              <div id="title_heading" class="text-4xl font-bold mb-4" style="color:#1a6198;">Article Summaries</div>
+          </div>
+        </div>
+        <div id='category_heading' class="section text-center heading">
+            TENNIS
+        </div>
+        <div id="articles">
+            
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.tennis.com/news/articles/novak-djokovic-if-healthy-i-always-have-that-belief-to-challenge-for-major-titles-roland-garros-preview'>Novak Djokovic: If healthy, "I always have that belief" to challenge for major titles</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.tennis.com', 'title': 'Tennis.com'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2026-05-23 04:10:46
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>Speaking to media in Paris on his 39th birthday, Djokovic says things have been positive in the last 10 days to get his body ready for Roland Garros.ByTENNIS.comPublished May 22, 2026 copy_link On the eve of Roland Garros, which is also his 39th birthday, Novak Djokovic admits that he's been through "challenging times with [his] body through the last six to eight months." But when he's healthy, the Serb declares, he "always [has]" the belief that he can challenge for major titles.The 24-time Grand Slam singles champion continues his quest for a record-setting 25th Slam title in Paris this year, after falling one match short at January's Australian Open. There, he upset Jannik Sinner in the semifinals before falling to Carlos Alcaraz. There, he upset Jannik Sinner in the semifinals before falling to Carlos Alcaraz. He did that without any tournament play leading into the event, a position that Djokovic finds himself in again after playing just one match during the clay-court season, and losing it.Read more: Roland Garros men's preview: Can anyone make Jannik Sinner feel the pressure in Paris? "I wanted to play more, but my body was not allowing me," he said in his pre-tournament press conference, which was not abbreviated unlike that of other high-profile players. Read more: Roland Garros men's preview: Can anyone make Jannik Sinner feel the pressure in Paris? "I wanted to play more, but my body was not allowing me," he said in his pre-tournament press conference, which was not abbreviated unlike that of other high-profile players. "I wanted to play more, but my body was not allowing me," he said in his pre-tournament press conference, which was not abbreviated unlike that of other high-profile players. It is a favorable position for anyone, let alone a legend, to be in, considering Alcaraz is missing the tournament due to injury.But it's not something Djokovic says he's preoccupied with. "Of course, you know, it's a big blow for the tournament not to have him," Djokovic said. "Whether that changes my approach to this tournament, I don't think it does significantly change." "Of course, you know, it's a big blow for the tournament not to have him," Djokovic said. "Whether that changes my approach to this tournament, I don't think it does significantly change." "Of course, you know, it's a big blow for the tournament not to have him," Djokovic said. "Whether that changes my approach to this tournament, I don't think it does significantly change." I don't know whether that's going to be the case, you know, for the entire tournament, however long that tournament will be for me. So can't wait to get on a court and start competing. "Djokovic will face big-serving Frenchman Giovanni Mpetshi Perricard in the first round. So can't wait to get on a court and start competing. "Djokovic will face big-serving Frenchman Giovanni Mpetshi Perricard in the first round. Djokovic will face big-serving Frenchman Giovanni Mpetshi Perricard in the first round.</p>
+                <br/>
+                
+
+        </div>
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
+
+        <footer class="text-center text-sm text-gray-500 mt-12">
+            <div class="inline-block align-middle">
+                <a href="https://www.youtube.com/@news_n_clues" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 text-red-600 hover:text-red-700 font-semibold transition duration-300 ease-in-out">
+                    Watch Daily <span class="italic">News'n'Clues</span> Podcast on
+                    <img src="../images/yt.png" width="16" height="16">
+                </a>
+            </div>
+            <div>
+                <a href="mailto:newsnclues@gmail.com?subject=News'n'Clues Aggregator Inquiry">SoftMillennium
+                    <script>document.write(new Date().getFullYear());</script>
+                </a>
+                <!--
+            <b>Copyright &copy; <script>document.write(new Date().getFullYear());</script> - <a href='mailto:newsnclues@gmail.com?subject=News Aggregator Inquiry'>News And Clues</a></b>
+            -->
+            </div>
+        </footer>
+    </body>
+</html>
+            
