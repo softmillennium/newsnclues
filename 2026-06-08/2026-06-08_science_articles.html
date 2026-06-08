@@ -1,0 +1,103 @@
+
+<html>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <title id="title">News'n'Clues - SCIENCE Article Summaries - 2026-06-08</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .menu { color: #444444; }
+            .copyright { margin: 0 auto; }
+            p { font-family: serif; }
+            body {  background-color: #2c2c2c; font-family: Arial, sans-serif; font-size: 20px; color: #f4f4f4;  }
+            a { text-decoration: none; color: #f4f4f4; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
+            .hidden {
+                display: none;
+            }            
+            
+        </style>
+    </head>
+    <body>
+        <div id="banner" class="w-full">
+            <img src="../images/banner.jpg" alt="News Banner">
+        </div>
+
+        <div id="title" class="w-full flex items-center" style="background-color: #fc4535;">
+          <a href="../index.html"><img src="../images/logo.jpg" alt="News Logo" class="h-auto"></a>
+          <div class="flex-grow text-center">
+              <div id="title_heading" class="text-4xl font-bold mb-4" style="color:#1a6198;">Article Summaries</div>
+          </div>
+        </div>
+        <div id='category_heading' class="section text-center heading">
+            SCIENCE
+        </div>
+        <div id="articles">
+            
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.sciencedaily.com/releases/2026/06/260606075513.htm'>Doctors thought this kidney drug helped some patients. It may help millions more.</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.sciencedaily.com', 'title': 'ScienceDaily'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2026-06-08 04:22:22
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>Large international studies have found that the kidney disease drug finerenone may benefit far more patients than current treatment guidelines recommend. Researchers reported that the medication helps protect kidney function, lowers the risk of cardiovascular complications, and improves survival in people with chronic kidney disease (CKD). Finerenone is a non-steroidal mineralocorticoid receptor antagonist currently approved to treat CKD associated with type 2 diabetes. Researchers have become increasingly interested in whether the drug could help a broader range of kidney disease patients because excessive activation of the mineralocorticoid receptor contributes to inflammation and scarring in many kidney disorders. To investigate this possibility, scientists from The George Institute for Global Health launched a series of studies examining finerenone in populations beyond those covered by its current approval. The FIND-CKD trial, led by Professor Hiddo Heerspink of The George Institute and Professor Vlado Perkovic of UNSW Sydney, enrolled 1,584 people with non-diabetic CKD across 24 countries. Patients who received finerenone in addition to standard treatment experienced a significantly slower decline in kidney function compared with those receiving standard care alone. A second analysis, led by Associate Professor Brendon Neuen of The George Institute and published in JAMA, focused on participants with glomerular diseases. These conditions involve immune-related damage to the kidney's filtering units and often have limited treatment options. Among these patients, finerenone lowered the risk of kidney failure or CKD progression by 26% compared with placebo. In a third study published in The Lancet, researchers combined data from the FIND-CKD trial with two earlier phase III studies involving patients with diabetic CKD. The pooled analysis included 14,574 participants with both diabetic and non-diabetic chronic kidney disease. Compared with placebo, finerenone reduced the risk of kidney failure or disease progression by 24%. "Although diabetes is the single most common cause of chronic kidney disease worldwide, most people living with CKD do not have diabetes and currently have few effective treatment options. However, treatment discontinuation and hospitalizations related to hyperkalaemia were uncommon. Chronic kidney disease affects roughly one in ten people worldwide, representing about 850 million individuals. A/Prof Neuen said, "Taken together, these findings suggest that expanding the use of finerenone in patients with CKD has the potential to meaningfully reduce kidney failure and cardiovascular complications for millions of people worldwide." Researchers Discover a Hidden Vitamin D Problem That Persists Year-Round Scientists Discover Key Alzheimer's “Tipping Point” That May Decide Who Gets Dementia Stay informed with ScienceDaily's free email newsletter, updated daily and weekly. Keep up to date with the latest news from ScienceDaily via social networks: Tell us what you think of ScienceDaily -- we welcome both positive and negative comments.</p>
+                <br/>
+                
+
+        </div>
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
+
+        <footer class="text-center text-sm text-gray-500 mt-12">
+            <div class="inline-block align-middle">
+                <a href="https://www.youtube.com/@news_n_clues" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 text-red-600 hover:text-red-700 font-semibold transition duration-300 ease-in-out">
+                    Watch Daily <span class="italic">News'n'Clues</span> Podcast on
+                    <img src="../images/yt.png" width="16" height="16">
+                </a>
+            </div>
+            <div>
+                <a href="mailto:newsnclues@gmail.com?subject=News'n'Clues Aggregator Inquiry">SoftMillennium
+                    <script>document.write(new Date().getFullYear());</script>
+                </a>
+                <!--
+            <b>Copyright &copy; <script>document.write(new Date().getFullYear());</script> - <a href='mailto:newsnclues@gmail.com?subject=News Aggregator Inquiry'>News And Clues</a></b>
+            -->
+            </div>
+        </footer>
+    </body>
+</html>
+            
