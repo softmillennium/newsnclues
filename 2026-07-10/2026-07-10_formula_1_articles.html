@@ -1,0 +1,103 @@
+
+<html>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <title id="title">News'n'Clues - FORMULA_1 Article Summaries - 2026-07-10</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .menu { color: #444444; }
+            .copyright { margin: 0 auto; }
+            p { font-family: serif; }
+            body {  background-color: #2c2c2c; font-family: Arial, sans-serif; font-size: 20px; color: #f4f4f4;  }
+            a { text-decoration: none; color: #f4f4f4; }
+            .section { margin-bottom: 20px; }
+            .heading {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #fc4535, #1a6198);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                line-height: 1.3; /* Prevents letters from being cut off */
+                padding-bottom: 5px; /* Ensures space below the text */
+                margin: 30px;
+            }
+            .hidden {
+                display: none;
+            }            
+            
+        </style>
+    </head>
+    <body>
+        <div id="banner" class="w-full">
+            <img src="../images/banner.jpg" alt="News Banner">
+        </div>
+
+        <div id="title" class="w-full flex items-center" style="background-color: #fc4535;">
+          <a href="../index.html"><img src="../images/logo.jpg" alt="News Logo" class="h-auto"></a>
+          <div class="flex-grow text-center">
+              <div id="title_heading" class="text-4xl font-bold mb-4" style="color:#1a6198;">Article Summaries</div>
+          </div>
+        </div>
+        <div id='category_heading' class="section text-center heading">
+            FORMULA_1
+        </div>
+        <div id="articles">
+            
+                <div id='article_title' class='text-3xl text-gray-300 leading-tight'>
+                    <a target='_blank' href='https://www.formula1.com/en/latest/article/all-the-f1-teams-and-drivers-who-will-be-in-action-at-the-2026-goodwood-festival-of-speed.5AIArrigIyP8Ys55qTJm0r'>All the F1 teams and drivers who will be in action at the 2026 Goodwood Festival of Speed</a>
+                </div>
+                <div id='article_attribution'  style='mb-1'>
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Source:</span> {'href': 'https://www.formula1.com', 'title': 'Formula 1'}&nbsp;&nbsp;&nbsp;
+                    <span class='text-1.5xl font-extrabold text-gray-500 leading-tight'>Published:</span> 2026-07-10 00:57:37
+                    <i class="fas fa-chevron-down expand-icon text-gray-500" aria-hidden="true"></i>
+                </div>
+                <p class='hidden' class='text-gray-500'>The Goodwood Festival of Speed will make its return this weekend, with action set to take place from July 9-12. A host of familiar faces from the world of Formula 1 are set to make an appearance at the annual event, as many prepare to tackle its world-famous hillclimb in some iconic machinery. F1.com has rounded up all of the F1 teams and drivers to look out for at this year's Goodwood Festival of Speed… The Silver Arrows will also have a fan hub at the event, where visitors can experience what it is like to carry out a pit stop on the W09, Mercedes' car from their championship-winning 2018 campaign. As such, there is sure to be plenty for fans to enjoy from the Scuderia during this year's event. Lando Norris is set to appear on the Balcony of Goodwood House on Saturday – a moment that will be made even more exciting by the fact that he will be joined by one of his heroes, nine-time Moto GP World Champion Valentino Rossi. Reserve driver Leonardo Fornaroli takes to the wheel of the same challenger on Thursday, Friday and Sunday, while he will also share driving duties of three heritage cars with former F1 racer Bruno Senna and McLaren heritage driver Rob Garofall. Some familiar names will be in action for Red Bull, with Isack Hadjar representing the squad along with reserve driver Yuki Tsunoda and long-term member of the stable Patrick Friesacher. Sister team Racing Bulls are also set to be represented. Both Liam Lawson and Arvid Lindblad are heading to Goodwood, as is reserve driver and 2025 Super Formula Championship winner Ayumu Iwasa. Also in attendance will be reserve driver Paul Aron, F2 racer Alex Dunne and F1 ACADEMY race winner Nina Gademan. In celebration of 30 years since Damon Hill clinched the World Championship, Williams have restored his FW18 which will be driven by Hill himself at the event. Aston Martin will be represented by reserve driver Jak Crawford and the team's Head of F1 Academy and Driver Ambassador Jessica Hawkins. Your ultimate companion into the world of Formula 1</p>
+                <br/>
+                
+
+        </div>
+
+        <script>
+            // Get all article attribution elements
+            const articleAttributions = document.querySelectorAll('#article_attribution');
+
+            // Add an event listener to each attribution element
+            articleAttributions.forEach(attribution => {
+            attribution.addEventListener('click', () => {
+                // Get the next paragraph element (the article text)
+                const articleText = attribution.nextElementSibling;
+
+                // Toggle the visibility of the article text
+                articleText.classList.toggle('hidden');
+
+                // Toggle the expand icon
+                const expandIcon = attribution.querySelector('.expand-icon');
+                expandIcon.classList.toggle('fa-chevron-down');
+                expandIcon.classList.toggle('fa-chevron-up');
+            });
+            });    
+        </script>
+
+        <footer class="text-center text-sm text-gray-500 mt-12">
+            <div class="inline-block align-middle">
+                <a href="https://www.youtube.com/@news_n_clues" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 text-red-600 hover:text-red-700 font-semibold transition duration-300 ease-in-out">
+                    Watch Daily <span class="italic">News'n'Clues</span> Podcast on
+                    <img src="../images/yt.png" width="16" height="16">
+                </a>
+            </div>
+            <div>
+                <a href="mailto:newsnclues@gmail.com?subject=News'n'Clues Aggregator Inquiry">SoftMillennium
+                    <script>document.write(new Date().getFullYear());</script>
+                </a>
+                <!--
+            <b>Copyright &copy; <script>document.write(new Date().getFullYear());</script> - <a href='mailto:newsnclues@gmail.com?subject=News Aggregator Inquiry'>News And Clues</a></b>
+            -->
+            </div>
+        </footer>
+    </body>
+</html>
+            
